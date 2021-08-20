@@ -32,4 +32,21 @@ public class PADateTime {
 
 		return new CivilDate((int) month, day, (int) year);
 	}
+
+	/**
+	 * Calculate day number for a date.
+	 */
+	public int civilDateToDayNumber(int month, int day, int year) {
+		if (month <= 2) {
+			month = month - 1;
+			month = (PAUtil.isLeapYear(year)) ? month * 62 : month * 63;
+			month = (int) Math.floor((double) month / 2);
+		} else {
+			month = (int) Math.floor(((double) month + 1) * 30.6);
+			month = (PAUtil.isLeapYear(year)) ? month - 62 : month - 63;
+		}
+
+		return month + day;
+	}
+
 }
