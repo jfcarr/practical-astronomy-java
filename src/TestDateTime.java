@@ -28,4 +28,13 @@ public class TestDateTime {
 		testLib.setTestName("Date of Easter for 2020").Assert(4, dateOfEaster.month)
 				.Assert((double) 12, dateOfEaster.day).Assert(2020, dateOfEaster.year);
 	}
+
+	public void testCivilDateToDayNumber() {
+		TestLib testLib = new TestLib();
+
+		testLib.setTestName("Day Number for 1/1/2000").Assert(1, paDateTime.civilDateToDayNumber(1, 1, 2000));
+		testLib.setTestName("Day Number for 3/1/2000").Assert(61, paDateTime.civilDateToDayNumber(3, 1, 2000));
+		testLib.setTestName("Day Number for 6/1/2003").Assert(152, paDateTime.civilDateToDayNumber(6, 1, 2003));
+		testLib.setTestName("Day Number for 11/27/2009").Assert(331, paDateTime.civilDateToDayNumber(11, 27, 2009));
+	}
 }

@@ -7,5 +7,6 @@ public class Main {
 		TestDateTime testDateTime = new TestDateTime();
 
 		testDateTime.testDateOfEaster();
+		testDateTime.testCivilDateToDayNumber();
 	}
 }
