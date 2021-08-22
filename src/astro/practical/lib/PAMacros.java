@@ -60,4 +60,98 @@ public class PAMacros {
 
 		return d;
 	}
+
+	/**
+	 * Convert a Greenwich Date/Civil Date (day,month,year) to Julian Date
+	 * 
+	 * Original macro name: CDJD
+	 */
+	public static double civilDateToJulianDate(double day, double month, double year) {
+		double fDay = (double) day;
+		double fMonth = (double) month;
+		double fYear = (double) year;
+
+		double y = (fMonth < 3) ? fYear - 1 : fYear;
+		double m = (fMonth < 3) ? fMonth + 12 : fMonth;
+
+		double b;
+
+		if (fYear > 1582) {
+			double a = Math.floor(y / 100);
+			b = 2 - a + Math.floor(a / 4);
+		} else {
+			if (fYear == 1582 && fMonth > 10) {
+				double a = Math.floor(y / 100);
+				b = 2 - a + Math.floor(a / 4);
+			} else {
+				if (fYear == 1582 && fMonth == 10 && fDay >= 15) {
+					double a = Math.floor(y / 100);
+					b = 2 - a + Math.floor(a / 4);
+				} else
+					b = 0;
+			}
+		}
+
+		double c = (y < 0) ? Math.floor(((365.25 * y) - 0.75)) : Math.floor(365.25 * y);
+		double d = Math.floor(30.6001 * (m + 1.0));
+
+		return b + c + d + fDay + 1720994.5;
+	}
+
+	/**
+	 * Returns the day part of a Julian Date
+	 * 
+	 * Original macro name: JDCDay
+	 */
+	public static double julianDateDay(double julianDate) {
+		double i = Math.floor(julianDate + 0.5);
+		double f = julianDate + 0.5 - i;
+		double a = Math.floor((i - 1867216.25) / 36524.25);
+		double b = (i > 2299160) ? i + 1 + a - Math.floor(a / 4) : i;
+		double c = b + 1524;
+		double d = Math.floor((c - 122.1) / 365.25);
+		double e = Math.floor(365.25 * d);
+		double g = Math.floor((c - e) / 30.6001);
+
+		return c - e + f - Math.floor(30.6001 * g);
+	}
+
+	/**
+	 * Returns the month part of a Julian Date
+	 * 
+	 * Original macro name: JDCMonth
+	 */
+	public static int julianDateMonth(double julianDate) {
+		double i = Math.floor(julianDate + 0.5);
+		double a = Math.floor((i - 1867216.25) / 36524.25);
+		double b = (i > 2299160) ? i + 1 + a - Math.floor(a / 4) : i;
+		double c = b + 1524;
+		double d = Math.floor((c - 122.1) / 365.25);
+		double e = Math.floor(365.25 * d);
+		double g = Math.floor((c - e) / 30.6001);
+
+		double returnValue = (g < 13.5) ? g - 1 : g - 13;
+
+		return (int) returnValue;
+	}
+
+	/**
+	 * Returns the year part of a Julian Date
+	 * 
+	 * Original macro name: JDCYear
+	 */
+	public static int julianDateYear(double julianDate) {
+		double i = Math.floor(julianDate + 0.5);
+		double a = Math.floor((i - 1867216.25) / 36524.25);
+		double b = (i > 2299160) ? i + 1.0 + a - Math.floor(a / 4.0) : i;
+		double c = b + 1524;
+		double d = Math.floor((c - 122.1) / 365.25);
+		double e = Math.floor(365.25 * d);
+		double g = Math.floor((c - e) / 30.6001);
+		double h = (g < 13.5) ? g - 1 : g - 13;
+
+		double returnValue = (h > 2.5) ? d - 4716 : d - 4715;
+
+		return (int) returnValue;
+	}
 }

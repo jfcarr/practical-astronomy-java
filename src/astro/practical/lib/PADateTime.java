@@ -66,4 +66,49 @@ public class PADateTime {
 
 		return new CivilTime(hours, minutes, seconds);
 	}
+
+	/**
+	 * Convert local Civil Time to Universal Time
+	 */
+	public UniversalDateTime localCivilTimeToUniversalTime(double lctHours, double lctMinutes, double lctSeconds,
+			boolean isDaylightSavings, int zoneCorrection, double localDay, int localMonth, int localYear) {
+		double lct = this.civilTimeToDecimalHours(lctHours, lctMinutes, lctSeconds);
+
+		int daylightSavingsOffset = (isDaylightSavings) ? 1 : 0;
+
+		double utInterim = lct - daylightSavingsOffset - zoneCorrection;
+		double gdayInterim = localDay + (utInterim / 24);
+
+		double jd = PAMacros.civilDateToJulianDate(gdayInterim, localMonth, localYear);
+
+		double gDay = PAMacros.julianDateDay(jd);
+		int gMonth = PAMacros.julianDateMonth(jd);
+		int gYear = PAMacros.julianDateYear(jd);
+
+		double ut = 24 * (gDay - Math.floor(gDay));
+
+		return new UniversalDateTime(PAMacros.decimalHoursHour(ut), PAMacros.decimalHoursMinute(ut),
+				(int) PAMacros.decimalHoursSecond(ut), (int) Math.floor(gDay), gMonth, gYear);
+	}
+
+	/**
+	 * Convert Universal Time to local Civil Time
+	 */
+	public CivilDateTime universalTimeToLocalCivilTime(double utHours, double utMinutes, double utSeconds,
+			boolean isDaylightSavings, int zoneCorrection, int gwDay, int gwMonth, int gwYear) {
+		int dstValue = (isDaylightSavings) ? 1 : 0;
+		double ut = PAMacros.hmsToDH(utHours, utMinutes, utSeconds);
+		double zoneTime = ut + zoneCorrection;
+		double localTime = zoneTime + dstValue;
+		double localJDPlusLocalTime = PAMacros.civilDateToJulianDate(gwDay, gwMonth, gwYear) + (localTime / 24);
+		double localDay = PAMacros.julianDateDay(localJDPlusLocalTime);
+		double integerDay = Math.floor(localDay);
+		int localMonth = PAMacros.julianDateMonth(localJDPlusLocalTime);
+		int localYear = PAMacros.julianDateYear(localJDPlusLocalTime);
+
+		double lct = 24 * (localDay - integerDay);
+
+		return new CivilDateTime(PAMacros.decimalHoursHour(lct), PAMacros.decimalHoursMinute(lct),
+				(int) PAMacros.decimalHoursSecond(lct), (int) integerDay, localMonth, localYear);
+	}
 }

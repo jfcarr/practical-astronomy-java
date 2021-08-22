@@ -1,5 +1,7 @@
 import astro.practical.containers.CivilDate;
+import astro.practical.containers.CivilDateTime;
 import astro.practical.containers.CivilTime;
+import astro.practical.containers.UniversalDateTime;
 import astro.practical.lib.PAUtil;
 import astro.practical.test.TestLib;
 
@@ -50,5 +52,19 @@ public class TestDateTime {
 
 		testLib.setTestName("Convert Decimal Hours to Civil Time").Assert((double) 18, civilTime.hours)
 				.Assert((double) 31, civilTime.minutes).Assert((double) 27, civilTime.seconds);
+	}
+
+	public void testLocalCivilTimeToFromUniversalTime() {
+		TestLib testLib = new TestLib();
+
+		UniversalDateTime uDT = paDateTime.localCivilTimeToUniversalTime(3, 37, 0, true, 4, 1, 7, 2013);
+
+		testLib.setTestName("Convert Local Civil Time to Universal Time").Assert(22, uDT.hours).Assert(37, uDT.minutes)
+				.Assert(0, uDT.seconds).Assert(30, uDT.day).Assert(6, uDT.month).Assert(2013, uDT.year);
+
+		CivilDateTime cDT = paDateTime.universalTimeToLocalCivilTime(22, 37, 0, true, 4, 30, 6, 2013);
+
+		testLib.setTestName("Convert Universal Time to Local Civil Time").Assert(3, cDT.hours).Assert(37, cDT.minutes)
+				.Assert(0, cDT.seconds).Assert(1, cDT.day).Assert(7, cDT.month).Assert(2013, cDT.year);
 	}
 }
