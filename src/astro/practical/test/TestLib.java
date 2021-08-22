@@ -7,10 +7,10 @@ public class TestLib {
 
 	private boolean LogMessage(Boolean passed, Object expectedValue, Object actualValue) {
 		if (passed) {
-			System.out.println("[Passed] [" + testName + "] Expected " + String.valueOf(expectedValue) + " got "
+			System.out.println("[Passed] [" + testName + "] Expected " + String.valueOf(expectedValue) + ", got "
 					+ String.valueOf(actualValue));
 		} else {
-			System.out.println("[Failed] [" + testName + "] Expected " + String.valueOf(expectedValue) + " got "
+			System.out.println("[Failed] [" + testName + "] Expected " + String.valueOf(expectedValue) + ", got "
 					+ String.valueOf(actualValue));
 			throw new Error("Test failed.  Exiting...");
 		}

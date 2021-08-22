@@ -9,5 +9,6 @@ public class Main {
 		testDateTime.testDateOfEaster();
 		testDateTime.testCivilDateToDayNumber();
 		testDateTime.testCivilTimeToFromDecimalHours();
+		testDateTime.testLocalCivilTimeToFromUniversalTime();
 	}
 }
