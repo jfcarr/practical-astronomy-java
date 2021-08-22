@@ -12,7 +12,7 @@ If you're interested in this topic, please buy the book! It provides far more de
 - [x] Convert -> Civil Date to Day Number
 - [x] Convert -> Civil Time <-> Decimal Hours
 - [x] Convert -> Local Civil Time <-> Universal Time
-- [ ] Convert -> Universal Time <-> Greenwich Sidereal Time
+- [x] Convert -> Universal Time <-> Greenwich Sidereal Time
 - [ ] Convert -> Greenwich Sidereal Time <-> Local Sidereal Time
 
 ### Coordinates

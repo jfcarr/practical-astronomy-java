@@ -15,3 +15,4 @@ clean:
 	-rm -f astro/practical/containers/*.class
 	-rm -f astro/practical/lib/*.class
 	-rm -f astro/practical/test/*.class
+	-rm -f astro/practical/types/*.class

@@ -1,4 +1,4 @@
-package astro.practical.containers;
+package astro.practical.types;
 
 /**
  * Base class for date/time representations.

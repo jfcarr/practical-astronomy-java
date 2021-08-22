@@ -1,13 +1,12 @@
 package astro.practical.containers;
 
-public class CivilTime {
-	public double hours;
-	public double minutes;
-	public double seconds;
+import astro.practical.types.Time;
 
+/**
+ * Representation of Civil Time (hours, minutes, seconds)
+ */
+public class CivilTime extends Time {
 	public CivilTime(double hours, double minutes, double seconds) {
-		this.hours = hours;
-		this.minutes = minutes;
-		this.seconds = seconds;
+		super(hours, minutes, seconds);
 	}
 }
