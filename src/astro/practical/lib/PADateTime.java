@@ -49,4 +49,21 @@ public class PADateTime {
 		return month + day;
 	}
 
+	/**
+	 * Convert Civil Time (hours,minutes,seconds) to Decimal Hours
+	 */
+	public double civilTimeToDecimalHours(double hours, double minutes, double seconds) {
+		return PAMacros.hmsToDH(hours, minutes, seconds);
+	}
+
+	/**
+	 * Convert Decimal Hours to Civil Time (hours,minutes,seconds)
+	 */
+	public CivilTime decimalHoursToCivilTime(double decimalHours) {
+		double hours = PAMacros.decimalHoursHour(decimalHours);
+		double minutes = PAMacros.decimalHoursMinute(decimalHours);
+		double seconds = PAMacros.decimalHoursSecond(decimalHours);
+
+		return new CivilTime(hours, minutes, seconds);
+	}
 }
