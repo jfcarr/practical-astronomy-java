@@ -1,6 +1,7 @@
 package astro.practical.lib;
 
 import astro.practical.containers.*;
+import astro.practical.types.PAWarningFlag;
 
 /**
  * Date and Time Calculations
@@ -110,5 +111,51 @@ public class PADateTime {
 
 		return new CivilDateTime(PAMacros.decimalHoursHour(lct), PAMacros.decimalHoursMinute(lct),
 				(int) PAMacros.decimalHoursSecond(lct), (int) integerDay, localMonth, localYear);
+	}
+
+	/**
+	 * Convert Universal Time to Greenwich Sidereal Time
+	 */
+	public GreenwichSiderealTime universalTimeToGreenwichSiderealTime(double utHours, double utMinutes,
+			double utSeconds, double gwDay, int gwMonth, int gwYear) {
+		double jd = PAMacros.civilDateToJulianDate(gwDay, gwMonth, gwYear);
+		double s = jd - 2451545;
+		double t = s / 36525;
+		double t01 = 6.697374558 + (2400.051336 * t) + (0.000025862 * t * t);
+		double t02 = t01 - (24.0 * Math.floor(t01 / 24));
+		double ut = PAMacros.hmsToDH(utHours, utMinutes, utSeconds);
+		double a = ut * 1.002737909;
+		double gst1 = t02 + a;
+		double gst2 = gst1 - (24.0 * Math.floor(gst1 / 24));
+
+		double gstHours = PAMacros.decimalHoursHour(gst2);
+		double gstMinutes = PAMacros.decimalHoursMinute(gst2);
+		double gstSeconds = PAMacros.decimalHoursSecond(gst2);
+
+		return new GreenwichSiderealTime(gstHours, gstMinutes, gstSeconds);
+	}
+
+	/**
+	 * Convert Greenwich Sidereal Time to Universal Time
+	 */
+	public UniversalTime greenwichSiderealTimeToUniversalTime(double gstHours, double gstMinutes, double gstSeconds,
+			double gwDay, int gwMonth, int gwYear) {
+		double jd = PAMacros.civilDateToJulianDate(gwDay, gwMonth, gwYear);
+		double s = jd - 2451545;
+		double t = s / 36525;
+		double t01 = 6.697374558 + (2400.051336 * t) + (0.000025862 * t * t);
+		double t02 = t01 - (24 * Math.floor(t01 / 24));
+		double gstHours1 = PAMacros.hmsToDH(gstHours, gstMinutes, gstSeconds);
+
+		double a = gstHours1 - t02;
+		double b = a - (24 * Math.floor(a / 24));
+		double ut = b * 0.9972695663;
+		double utHours = PAMacros.decimalHoursHour(ut);
+		double utMinutes = PAMacros.decimalHoursMinute(ut);
+		double utSeconds = PAMacros.decimalHoursSecond(ut);
+
+		PAWarningFlag warningFlag = (ut < 0.065574) ? PAWarningFlag.WARNING : PAWarningFlag.OK;
+
+		return new UniversalTime(utHours, utMinutes, utSeconds, warningFlag);
 	}
 }

@@ -1,6 +1,7 @@
 package astro.practical.test;
 
 import astro.practical.lib.PAUtil;
+import astro.practical.types.PAWarningFlag;
 
 public class TestLib {
 	public String testName = "No test name specified";
@@ -38,6 +39,12 @@ public class TestLib {
 
 	public TestLib Assert(Double expectedValue, Double actualValue) {
 		LogMessage((PAUtil.round(expectedValue, 8) == PAUtil.round(actualValue, 8)), expectedValue, actualValue);
+
+		return this;
+	}
+
+	public TestLib Assert(PAWarningFlag expectedValue, PAWarningFlag actualValue) {
+		LogMessage((expectedValue == actualValue), expectedValue, actualValue);
 
 		return this;
 	}
