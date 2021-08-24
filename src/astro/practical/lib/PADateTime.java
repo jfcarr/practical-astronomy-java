@@ -158,4 +158,38 @@ public class PADateTime {
 
 		return new UniversalTime(utHours, utMinutes, utSeconds, warningFlag);
 	}
+
+	/**
+	 * Convert Greenwich Sidereal Time to Local Sidereal Time
+	 */
+	public LocalSiderealTime greenwichSiderealTimeToLocalSiderealTime(double gstHours, double gstMinutes,
+			double gstSeconds, double geographicalLongitude) {
+		double gst = PAMacros.hmsToDH(gstHours, gstMinutes, gstSeconds);
+		double offset = geographicalLongitude / 15;
+		double lstHours1 = gst + offset;
+		double lstHours2 = lstHours1 - (24 * Math.floor(lstHours1 / 24));
+
+		double lstHours = PAMacros.decimalHoursHour(lstHours2);
+		double lstMinutes = PAMacros.decimalHoursMinute(lstHours2);
+		double lstSeconds = PAMacros.decimalHoursSecond(lstHours2);
+
+		return new LocalSiderealTime(lstHours, lstMinutes, lstSeconds);
+	}
+
+	/**
+	 * Convert Local Sidereal Time to Greenwich Sidereal Time
+	 */
+	public GreenwichSiderealTime localSiderealTimeToGreenwichSiderealTime(double lstHours, double lstMinutes,
+			double lstSeconds, double geographicalLongitude) {
+		var gst = PAMacros.hmsToDH(lstHours, lstMinutes, lstSeconds);
+		var longHours = geographicalLongitude / 15;
+		var gst1 = gst - longHours;
+		var gst2 = gst1 - (24 * Math.floor(gst1 / 24));
+
+		var gstHours = PAMacros.decimalHoursHour(gst2);
+		var gstMinutes = PAMacros.decimalHoursMinute(gst2);
+		var gstSeconds = PAMacros.decimalHoursSecond(gst2);
+
+		return new GreenwichSiderealTime(gstHours, gstMinutes, gstSeconds);
+	}
 }

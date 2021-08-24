@@ -2,6 +2,7 @@ import astro.practical.containers.CivilDate;
 import astro.practical.containers.CivilDateTime;
 import astro.practical.containers.CivilTime;
 import astro.practical.containers.GreenwichSiderealTime;
+import astro.practical.containers.LocalSiderealTime;
 import astro.practical.containers.UniversalDateTime;
 import astro.practical.containers.UniversalTime;
 import astro.practical.lib.PAUtil;
@@ -83,5 +84,19 @@ public class TestDateTime {
 
 		testLib.setTestName("Convert Greenwich Sidereal Time to Universal Time").Assert(14.0, uT.hours)
 				.Assert(36.0, uT.minutes).Assert(51.67, uT.seconds).Assert(PAWarningFlag.OK, uT.warningFlag);
+	}
+
+	public void testGreenwichSiderealTimeToFromLocalSiderealTime() {
+		TestLib testLib = new TestLib();
+
+		LocalSiderealTime lST = paDateTime.greenwichSiderealTimeToLocalSiderealTime(4, 40, 5.23, -64);
+
+		testLib.setTestName("Convert Greenwich Sidereal Time to Local Sidereal Time").Assert(0.0, lST.hours)
+				.Assert(24.0, lST.minutes).Assert(5.23, lST.seconds);
+
+		GreenwichSiderealTime gST = paDateTime.localSiderealTimeToGreenwichSiderealTime(0, 24, 5.23, -64);
+
+		testLib.setTestName("Convert Local Sidereal Time to Greenwich Sidereal Time").Assert(4.0, gST.hours)
+				.Assert(40.0, gST.minutes).Assert(5.23, gST.seconds);
 	}
 }

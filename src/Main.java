@@ -11,5 +11,6 @@ public class Main {
 		testDateTime.testCivilTimeToFromDecimalHours();
 		testDateTime.testLocalCivilTimeToFromUniversalTime();
 		testDateTime.testUniversalTimeToFromGreenwichSiderealTime();
+		testDateTime.testGreenwichSiderealTimeToFromLocalSiderealTime();
 	}
 }
