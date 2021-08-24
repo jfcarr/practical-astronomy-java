@@ -1,5 +1,8 @@
 package astro.practical.types;
 
+/**
+ * Simple Date type (month, day, year)
+ */
 public class Date {
 	public int month;
 	public double day;

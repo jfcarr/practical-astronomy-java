@@ -3,6 +3,11 @@ package astro.practical.containers;
 import astro.practical.types.Time;
 import astro.practical.types.PAWarningFlag;
 
+/**
+ * Representation of Universal Time (hours, minutes seconds)
+ * 
+ * Warning flag is optional. (Indicates calculation status)
+ */
 public class UniversalTime extends Time {
 	public PAWarningFlag warningFlag;
 

@@ -1,5 +1,12 @@
 package astro.practical.types;
 
+/**
+ * Warning flag indicating calculation status.
+ */
 public enum PAWarningFlag {
-	OK, WARNING
+	/** Calculation is good. */
+	OK,
+
+	/** Calculation may be inaccurate. */
+	WARNING
 }

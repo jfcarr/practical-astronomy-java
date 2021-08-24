@@ -4,6 +4,9 @@ import java.math.BigDecimal;
 import java.math.RoundingMode;
 
 public class PAUtil {
+	/**
+	 * Round a double value to specified number of places.
+	 */
 	public static double round(double value, int places) {
 		if (places < 0)
 			throw new IllegalArgumentException();

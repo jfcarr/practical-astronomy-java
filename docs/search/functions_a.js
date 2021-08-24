@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['time_127',['Time',['../classastro_1_1practical_1_1types_1_1Time.html#a134fdcf88f194bf704d93ef7e07e82aa',1,'astro::practical::types::Time']]]
+  ['settestname_144',['setTestName',['../classastro_1_1practical_1_1test_1_1TestLib.html#a880fbfff6e664fe95451b7716811f9b2',1,'astro::practical::test::TestLib']]]
 ];

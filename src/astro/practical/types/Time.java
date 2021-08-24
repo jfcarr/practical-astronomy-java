@@ -1,5 +1,8 @@
 package astro.practical.types;
 
+/**
+ * Simple Time type (hours, minutes, seconds)
+ */
 public class Time {
 	public double hours;
 	public double minutes;

@@ -91,31 +91,31 @@ $(document).ready(function(){initNavTree('PAUtil_8java_source.html',''); initRes
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">import</span> java.math.RoundingMode;</div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
 <div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="classastro_1_1practical_1_1lib_1_1PAUtil.html">    6</a></span>&#160;<span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="classastro_1_1practical_1_1lib_1_1PAUtil.html">PAUtil</a> {</div>
-<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="classastro_1_1practical_1_1lib_1_1PAUtil.html#a3af69cfbf5990d739a9ffc3cc489de89">    7</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">double</span> <a class="code" href="classastro_1_1practical_1_1lib_1_1PAUtil.html#a3af69cfbf5990d739a9ffc3cc489de89">round</a>(<span class="keywordtype">double</span> value, <span class="keywordtype">int</span> places) {</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;        <span class="keywordflow">if</span> (places &lt; 0)</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;            <span class="keywordflow">throw</span> <span class="keyword">new</span> IllegalArgumentException();</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        BigDecimal bd = <span class="keyword">new</span> BigDecimal(Double.toString(value));</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        bd = bd.setScale(places, RoundingMode.HALF_UP);</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        <span class="keywordflow">return</span> bd.doubleValue();</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    }</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
-<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="classastro_1_1practical_1_1lib_1_1PAUtil.html#a683bdf95f4d29a058558f9e9e010f539">   19</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">boolean</span> <a class="code" href="classastro_1_1practical_1_1lib_1_1PAUtil.html#a683bdf95f4d29a058558f9e9e010f539">isLeapYear</a>(<span class="keywordtype">int</span> inputYear) {</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="keywordtype">double</span> year = inputYear;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <span class="keywordflow">if</span> (year % 4 == 0) {</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;            <span class="keywordflow">if</span> (year % 100 == 0)</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;                <span class="keywordflow">return</span> (year % 400 == 0) ? true : <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;            <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        } <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    }</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;}</div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="classastro_1_1practical_1_1lib_1_1PAUtil.html#a3af69cfbf5990d739a9ffc3cc489de89">   10</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">double</span> <a class="code" href="classastro_1_1practical_1_1lib_1_1PAUtil.html#a3af69cfbf5990d739a9ffc3cc489de89">round</a>(<span class="keywordtype">double</span> value, <span class="keywordtype">int</span> places) {</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        <span class="keywordflow">if</span> (places &lt; 0)</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;            <span class="keywordflow">throw</span> <span class="keyword">new</span> IllegalArgumentException();</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        BigDecimal bd = <span class="keyword">new</span> BigDecimal(Double.toString(value));</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        bd = bd.setScale(places, RoundingMode.HALF_UP);</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        <span class="keywordflow">return</span> bd.doubleValue();</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    }</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="classastro_1_1practical_1_1lib_1_1PAUtil.html#a683bdf95f4d29a058558f9e9e010f539">   22</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">boolean</span> <a class="code" href="classastro_1_1practical_1_1lib_1_1PAUtil.html#a683bdf95f4d29a058558f9e9e010f539">isLeapYear</a>(<span class="keywordtype">int</span> inputYear) {</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="keywordtype">double</span> year = inputYear;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <span class="keywordflow">if</span> (year % 4 == 0) {</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;            <span class="keywordflow">if</span> (year % 100 == 0)</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;                <span class="keywordflow">return</span> (year % 400 == 0) ? true : <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        } <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    }</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;}</div>
 <div class="ttc" id="aclassastro_1_1practical_1_1lib_1_1PAUtil_html"><div class="ttname"><a href="classastro_1_1practical_1_1lib_1_1PAUtil.html">astro.practical.lib.PAUtil</a></div><div class="ttdef"><b>Definition:</b> <a href="PAUtil_8java_source.html#l00006">PAUtil.java:6</a></div></div>
-<div class="ttc" id="aclassastro_1_1practical_1_1lib_1_1PAUtil_html_a3af69cfbf5990d739a9ffc3cc489de89"><div class="ttname"><a href="classastro_1_1practical_1_1lib_1_1PAUtil.html#a3af69cfbf5990d739a9ffc3cc489de89">astro.practical.lib.PAUtil.round</a></div><div class="ttdeci">static double round(double value, int places)</div><div class="ttdef"><b>Definition:</b> <a href="PAUtil_8java_source.html#l00007">PAUtil.java:7</a></div></div>
-<div class="ttc" id="aclassastro_1_1practical_1_1lib_1_1PAUtil_html_a683bdf95f4d29a058558f9e9e010f539"><div class="ttname"><a href="classastro_1_1practical_1_1lib_1_1PAUtil.html#a683bdf95f4d29a058558f9e9e010f539">astro.practical.lib.PAUtil.isLeapYear</a></div><div class="ttdeci">static boolean isLeapYear(int inputYear)</div><div class="ttdef"><b>Definition:</b> <a href="PAUtil_8java_source.html#l00019">PAUtil.java:19</a></div></div>
+<div class="ttc" id="aclassastro_1_1practical_1_1lib_1_1PAUtil_html_a3af69cfbf5990d739a9ffc3cc489de89"><div class="ttname"><a href="classastro_1_1practical_1_1lib_1_1PAUtil.html#a3af69cfbf5990d739a9ffc3cc489de89">astro.practical.lib.PAUtil.round</a></div><div class="ttdeci">static double round(double value, int places)</div><div class="ttdef"><b>Definition:</b> <a href="PAUtil_8java_source.html#l00010">PAUtil.java:10</a></div></div>
+<div class="ttc" id="aclassastro_1_1practical_1_1lib_1_1PAUtil_html_a683bdf95f4d29a058558f9e9e010f539"><div class="ttname"><a href="classastro_1_1practical_1_1lib_1_1PAUtil.html#a683bdf95f4d29a058558f9e9e010f539">astro.practical.lib.PAUtil.isLeapYear</a></div><div class="ttdeci">static boolean isLeapYear(int inputYear)</div><div class="ttdef"><b>Definition:</b> <a href="PAUtil_8java_source.html#l00022">PAUtil.java:22</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

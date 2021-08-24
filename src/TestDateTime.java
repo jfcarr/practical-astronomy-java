@@ -16,6 +16,9 @@ public class TestDateTime {
 		paDateTime = new astro.practical.lib.PADateTime();
 	}
 
+	/**
+	 * Test Date of Easter.
+	 */
 	public void testDateOfEaster() {
 		CivilDate dateOfEaster;
 
@@ -37,6 +40,9 @@ public class TestDateTime {
 				.Assert((double) 12, dateOfEaster.day).Assert(2020, dateOfEaster.year);
 	}
 
+	/**
+	 * Test Civil Date to Day Number.
+	 */
 	public void testCivilDateToDayNumber() {
 		TestLib testLib = new TestLib();
 
@@ -46,6 +52,9 @@ public class TestDateTime {
 		testLib.setTestName("Day Number for 11/27/2009").Assert(331, paDateTime.civilDateToDayNumber(11, 27, 2009));
 	}
 
+	/**
+	 * Test Civil Time to/from Decimal Hours.
+	 */
 	public void testCivilTimeToFromDecimalHours() {
 		TestLib testLib = new TestLib();
 
@@ -58,6 +67,9 @@ public class TestDateTime {
 				.Assert((double) 31, civilTime.minutes).Assert((double) 27, civilTime.seconds);
 	}
 
+	/**
+	 * Test Local Civil Time to/from Universal Time.
+	 */
 	public void testLocalCivilTimeToFromUniversalTime() {
 		TestLib testLib = new TestLib();
 
@@ -72,6 +84,9 @@ public class TestDateTime {
 				.Assert(0, cDT.seconds).Assert(1, cDT.day).Assert(7, cDT.month).Assert(2013, cDT.year);
 	}
 
+	/**
+	 * Test Universal Time to/from Greenwich Sidereal Time.
+	 */
 	public void testUniversalTimeToFromGreenwichSiderealTime() {
 		TestLib testLib = new TestLib();
 
@@ -86,6 +101,9 @@ public class TestDateTime {
 				.Assert(36.0, uT.minutes).Assert(51.67, uT.seconds).Assert(PAWarningFlag.OK, uT.warningFlag);
 	}
 
+	/**
+	 * Test Greenwich Sidereal Time to/from Local Sidereal Time.
+	 */
 	public void testGreenwichSiderealTimeToFromLocalSiderealTime() {
 		TestLib testLib = new TestLib();
 
