@@ -1,6 +1,7 @@
 public class Main {
 	public static void main(String[] args) {
 		testDateTime();
+		testCoordinates();
 	}
 
 	public static void testDateTime() {
@@ -12,5 +13,11 @@ public class Main {
 		testDateTime.testLocalCivilTimeToFromUniversalTime();
 		testDateTime.testUniversalTimeToFromGreenwichSiderealTime();
 		testDateTime.testGreenwichSiderealTimeToFromLocalSiderealTime();
+	}
+
+	public static void testCoordinates() {
+		TestCoordinates testCoordinates = new TestCoordinates();
+
+		testCoordinates.testAngleToFromDecimalDegrees();
 	}
 }
