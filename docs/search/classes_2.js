@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['greenwichsiderealtime_84',['GreenwichSiderealTime',['../classastro_1_1practical_1_1containers_1_1GreenwichSiderealTime.html',1,'astro::practical::containers']]]
+  ['date_94',['Date',['../classastro_1_1practical_1_1types_1_1Date.html',1,'astro::practical::types']]],
+  ['datetime_95',['DateTime',['../classastro_1_1practical_1_1types_1_1DateTime.html',1,'astro::practical::types']]]
 ];
