@@ -1,5 +1,8 @@
 var dir_a093864e3da3b16c7d963d8b949f9869 =
 [
+    [ "Angle.java", "Angle_8java.html", [
+      [ "Angle", "classastro_1_1practical_1_1containers_1_1Angle.html", "classastro_1_1practical_1_1containers_1_1Angle" ]
+    ] ],
     [ "CivilDate.java", "CivilDate_8java.html", [
       [ "CivilDate", "classastro_1_1practical_1_1containers_1_1CivilDate.html", "classastro_1_1practical_1_1containers_1_1CivilDate" ]
     ] ],

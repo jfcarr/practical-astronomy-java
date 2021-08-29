@@ -4,6 +4,9 @@ var dir_68267d1309a1af8e8297ef4c3efbcdba =
     [ "Main.java", "Main_8java.html", [
       [ "Main", "classMain.html", null ]
     ] ],
+    [ "TestCoordinates.java", "TestCoordinates_8java.html", [
+      [ "TestCoordinates", "classTestCoordinates.html", "classTestCoordinates" ]
+    ] ],
     [ "TestDateTime.java", "TestDateTime_8java.html", [
       [ "TestDateTime", "classTestDateTime.html", "classTestDateTime" ]
     ] ]

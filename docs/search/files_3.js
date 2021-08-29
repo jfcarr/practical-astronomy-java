@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['localsiderealtime_2ejava_106',['LocalSiderealTime.java',['../LocalSiderealTime_8java.html',1,'']]]
+  ['greenwichsiderealtime_2ejava_120',['GreenwichSiderealTime.java',['../GreenwichSiderealTime_8java.html',1,'']]]
 ];

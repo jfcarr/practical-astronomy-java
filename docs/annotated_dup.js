@@ -3,6 +3,7 @@ var annotated_dup =
     [ "astro", null, [
       [ "practical", null, [
         [ "containers", "namespaceastro_1_1practical_1_1containers.html", [
+          [ "Angle", "classastro_1_1practical_1_1containers_1_1Angle.html", "classastro_1_1practical_1_1containers_1_1Angle" ],
           [ "CivilDate", "classastro_1_1practical_1_1containers_1_1CivilDate.html", "classastro_1_1practical_1_1containers_1_1CivilDate" ],
           [ "CivilDateTime", "classastro_1_1practical_1_1containers_1_1CivilDateTime.html", "classastro_1_1practical_1_1containers_1_1CivilDateTime" ],
           [ "CivilTime", "classastro_1_1practical_1_1containers_1_1CivilTime.html", "classastro_1_1practical_1_1containers_1_1CivilTime" ],
@@ -12,6 +13,7 @@ var annotated_dup =
           [ "UniversalTime", "classastro_1_1practical_1_1containers_1_1UniversalTime.html", "classastro_1_1practical_1_1containers_1_1UniversalTime" ]
         ] ],
         [ "lib", "namespaceastro_1_1practical_1_1lib.html", [
+          [ "PACoordinates", "classastro_1_1practical_1_1lib_1_1PACoordinates.html", "classastro_1_1practical_1_1lib_1_1PACoordinates" ],
           [ "PADateTime", "classastro_1_1practical_1_1lib_1_1PADateTime.html", "classastro_1_1practical_1_1lib_1_1PADateTime" ],
           [ "PAMacros", "classastro_1_1practical_1_1lib_1_1PAMacros.html", null ],
           [ "PAUtil", "classastro_1_1practical_1_1lib_1_1PAUtil.html", null ]
@@ -28,5 +30,6 @@ var annotated_dup =
       ] ]
     ] ],
     [ "Main", "classMain.html", null ],
+    [ "TestCoordinates", "classTestCoordinates.html", "classTestCoordinates" ],
     [ "TestDateTime", "classTestDateTime.html", "classTestDateTime" ]
 ];
