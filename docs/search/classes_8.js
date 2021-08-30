@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['universaldatetime_108',['UniversalDateTime',['../classastro_1_1practical_1_1containers_1_1UniversalDateTime.html',1,'astro::practical::containers']]],
-  ['universaltime_109',['UniversalTime',['../classastro_1_1practical_1_1containers_1_1UniversalTime.html',1,'astro::practical::containers']]]
+  ['rightascension_114',['RightAscension',['../classastro_1_1practical_1_1containers_1_1RightAscension.html',1,'astro::practical::containers']]]
 ];

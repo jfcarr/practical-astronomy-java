@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['main_2ejava_122',['Main.java',['../Main_8java.html',1,'']]]
+  ['localsiderealtime_2ejava_133',['LocalSiderealTime.java',['../LocalSiderealTime_8java.html',1,'']]]
 ];

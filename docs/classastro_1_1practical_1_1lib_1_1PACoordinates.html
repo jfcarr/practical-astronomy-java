@@ -95,10 +95,14 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aa02ccfbc3e1fe1b58624427acefe4ea2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a00447028bb7e2390fbb676667dca5453"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classastro_1_1practical_1_1containers_1_1Angle.html">Angle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classastro_1_1practical_1_1lib_1_1PACoordinates.html#a00447028bb7e2390fbb676667dca5453">decimalDegreesToAngle</a> (double decimalDegrees)</td></tr>
 <tr class="separator:a00447028bb7e2390fbb676667dca5453"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e30d9722eb33997e46295b723b4bdd9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classastro_1_1practical_1_1containers_1_1HourAngle.html">HourAngle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classastro_1_1practical_1_1lib_1_1PACoordinates.html#a2e30d9722eb33997e46295b723b4bdd9">rightAscensionToHourAngle</a> (double raHours, double raMinutes, double raSeconds, double lctHours, double lctMinutes, double lctSeconds, boolean isDaylightSavings, int zoneCorrection, double localDay, int localMonth, int localYear, double geographicalLongitude)</td></tr>
+<tr class="separator:a2e30d9722eb33997e46295b723b4bdd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c584d324750fc55fd58890837182319"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classastro_1_1practical_1_1containers_1_1RightAscension.html">RightAscension</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classastro_1_1practical_1_1lib_1_1PACoordinates.html#a3c584d324750fc55fd58890837182319">hourAngleToRightAscension</a> (double hourAngleHours, double hourAngleMinutes, double hourAngleSeconds, double lctHours, double lctMinutes, double lctSeconds, boolean isDaylightSaving, int zoneCorrection, double localDay, int localMonth, int localYear, double geographicalLongitude)</td></tr>
+<tr class="separator:a3c584d324750fc55fd58890837182319"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="PACoordinates_8java_source.html#l00005">5</a> of file <a class="el" href="PACoordinates_8java_source.html">PACoordinates.java</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PACoordinates_8java_source.html#l00007">7</a> of file <a class="el" href="PACoordinates_8java_source.html">PACoordinates.java</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="aa02ccfbc3e1fe1b58624427acefe4ea2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa02ccfbc3e1fe1b58624427acefe4ea2">&#9670;&nbsp;</a></span>angleToDecimalDegrees()</h2>
@@ -133,7 +137,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Convert an Angle (degrees, minutes, and seconds) to Decimal Degrees </p>
 
-<p class="definition">Definition at line <a class="el" href="PACoordinates_8java_source.html#l00009">9</a> of file <a class="el" href="PACoordinates_8java_source.html">PACoordinates.java</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PACoordinates_8java_source.html#l00011">11</a> of file <a class="el" href="PACoordinates_8java_source.html">PACoordinates.java</a>.</p>
 
 </div>
 </div>
@@ -154,7 +158,191 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Convert Decimal Degrees to an Angle (degrees, minutes, and seconds) </p>
 
-<p class="definition">Definition at line <a class="el" href="PACoordinates_8java_source.html#l00021">21</a> of file <a class="el" href="PACoordinates_8java_source.html">PACoordinates.java</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PACoordinates_8java_source.html#l00023">23</a> of file <a class="el" href="PACoordinates_8java_source.html">PACoordinates.java</a>.</p>
+
+</div>
+</div>
+<a id="a3c584d324750fc55fd58890837182319"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c584d324750fc55fd58890837182319">&#9670;&nbsp;</a></span>hourAngleToRightAscension()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classastro_1_1practical_1_1containers_1_1RightAscension.html">RightAscension</a> hourAngleToRightAscension </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>hourAngleHours</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>hourAngleMinutes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>hourAngleSeconds</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>lctHours</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>lctMinutes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>lctSeconds</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">boolean&#160;</td>
+          <td class="paramname"><em>isDaylightSaving</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>zoneCorrection</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>localDay</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>localMonth</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>localYear</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>geographicalLongitude</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Convert Hour Angle to Right Ascension</p>
+<dl class="section return"><dt>Returns</dt><dd>RightAscension </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="PACoordinates_8java_source.html#l00062">62</a> of file <a class="el" href="PACoordinates_8java_source.html">PACoordinates.java</a>.</p>
+
+</div>
+</div>
+<a id="a2e30d9722eb33997e46295b723b4bdd9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e30d9722eb33997e46295b723b4bdd9">&#9670;&nbsp;</a></span>rightAscensionToHourAngle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classastro_1_1practical_1_1containers_1_1HourAngle.html">HourAngle</a> rightAscensionToHourAngle </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>raHours</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>raMinutes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>raSeconds</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>lctHours</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>lctMinutes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>lctSeconds</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">boolean&#160;</td>
+          <td class="paramname"><em>isDaylightSavings</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>zoneCorrection</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>localDay</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>localMonth</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>localYear</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>geographicalLongitude</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Convert Right Ascension to Hour Angle</p>
+<dl class="section return"><dt>Returns</dt><dd>tuple &lt;double hourAngleHours, double hourAngleMinutes, double hourAngleSeconds&gt; </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="PACoordinates_8java_source.html#l00042">42</a> of file <a class="el" href="PACoordinates_8java_source.html">PACoordinates.java</a>.</p>
 
 </div>
 </div>

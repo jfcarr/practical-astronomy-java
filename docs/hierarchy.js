@@ -20,7 +20,9 @@ var hierarchy =
     [ "Time", "classastro_1_1practical_1_1types_1_1Time.html", [
       [ "CivilTime", "classastro_1_1practical_1_1containers_1_1CivilTime.html", null ],
       [ "GreenwichSiderealTime", "classastro_1_1practical_1_1containers_1_1GreenwichSiderealTime.html", null ],
+      [ "HourAngle", "classastro_1_1practical_1_1containers_1_1HourAngle.html", null ],
       [ "LocalSiderealTime", "classastro_1_1practical_1_1containers_1_1LocalSiderealTime.html", null ],
+      [ "RightAscension", "classastro_1_1practical_1_1containers_1_1RightAscension.html", null ],
       [ "UniversalTime", "classastro_1_1practical_1_1containers_1_1UniversalTime.html", null ]
     ] ]
 ];
