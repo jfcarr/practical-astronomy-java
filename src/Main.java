@@ -19,5 +19,6 @@ public class Main {
 		TestCoordinates testCoordinates = new TestCoordinates();
 
 		testCoordinates.testAngleToFromDecimalDegrees();
+		testCoordinates.testRightAscensionToFromHourAngle();
 	}
 }

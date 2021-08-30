@@ -15,8 +15,14 @@ var dir_a093864e3da3b16c7d963d8b949f9869 =
     [ "GreenwichSiderealTime.java", "GreenwichSiderealTime_8java.html", [
       [ "GreenwichSiderealTime", "classastro_1_1practical_1_1containers_1_1GreenwichSiderealTime.html", "classastro_1_1practical_1_1containers_1_1GreenwichSiderealTime" ]
     ] ],
+    [ "HourAngle.java", "HourAngle_8java.html", [
+      [ "HourAngle", "classastro_1_1practical_1_1containers_1_1HourAngle.html", "classastro_1_1practical_1_1containers_1_1HourAngle" ]
+    ] ],
     [ "LocalSiderealTime.java", "LocalSiderealTime_8java.html", [
       [ "LocalSiderealTime", "classastro_1_1practical_1_1containers_1_1LocalSiderealTime.html", "classastro_1_1practical_1_1containers_1_1LocalSiderealTime" ]
+    ] ],
+    [ "RightAscension.java", "RightAscension_8java.html", [
+      [ "RightAscension", "classastro_1_1practical_1_1containers_1_1RightAscension.html", "classastro_1_1practical_1_1containers_1_1RightAscension" ]
     ] ],
     [ "UniversalDateTime.java", "UniversalDateTime_8java.html", [
       [ "UniversalDateTime", "classastro_1_1practical_1_1containers_1_1UniversalDateTime.html", "classastro_1_1practical_1_1containers_1_1UniversalDateTime" ]

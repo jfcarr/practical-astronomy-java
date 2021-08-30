@@ -1,7 +1,8 @@
 var searchData=
 [
-  ['testcoordinates_104',['TestCoordinates',['../classTestCoordinates.html',1,'']]],
-  ['testdatetime_105',['TestDateTime',['../classTestDateTime.html',1,'']]],
-  ['testlib_106',['TestLib',['../classastro_1_1practical_1_1test_1_1TestLib.html',1,'astro::practical::test']]],
-  ['time_107',['Time',['../classastro_1_1practical_1_1types_1_1Time.html',1,'astro::practical::types']]]
+  ['pacoordinates_109',['PACoordinates',['../classastro_1_1practical_1_1lib_1_1PACoordinates.html',1,'astro::practical::lib']]],
+  ['padatetime_110',['PADateTime',['../classastro_1_1practical_1_1lib_1_1PADateTime.html',1,'astro::practical::lib']]],
+  ['pamacros_111',['PAMacros',['../classastro_1_1practical_1_1lib_1_1PAMacros.html',1,'astro::practical::lib']]],
+  ['pautil_112',['PAUtil',['../classastro_1_1practical_1_1lib_1_1PAUtil.html',1,'astro::practical::lib']]],
+  ['pawarningflag_113',['PAWarningFlag',['../enumastro_1_1practical_1_1types_1_1PAWarningFlag.html',1,'astro::practical::types']]]
 ];
