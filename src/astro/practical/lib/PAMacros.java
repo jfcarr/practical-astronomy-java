@@ -154,4 +154,148 @@ public class PAMacros {
 
 		return (int) returnValue;
 	}
+
+	/**
+	 * Convert Right Ascension to Hour Angle
+	 * 
+	 * Original macro name: RAHA
+	 */
+	public static double rightAscensionToHourAngle(double raHours, double raMinutes, double raSeconds, double lctHours,
+			double lctMinutes, double lctSeconds, int daylightSaving, int zoneCorrection, double localDay,
+			int localMonth, int localYear, double geographicalLongitude) {
+		double a = localCivilTimeToUniversalTime(lctHours, lctMinutes, lctSeconds, daylightSaving, zoneCorrection,
+				localDay, localMonth, localYear);
+		double b = localCivilTimeGreenwichDay(lctHours, lctMinutes, lctSeconds, daylightSaving, zoneCorrection,
+				localDay, localMonth, localYear);
+		int c = localCivilTimeGreenwichMonth(lctHours, lctMinutes, lctSeconds, daylightSaving, zoneCorrection, localDay,
+				localMonth, localYear);
+		int d = localCivilTimeGreenwichYear(lctHours, lctMinutes, lctSeconds, daylightSaving, zoneCorrection, localDay,
+				localMonth, localYear);
+		double e = universalTimeToGreenwichSiderealTime(a, 0, 0, b, c, d);
+		double f = greenwichSiderealTimeToLocalSiderealTime(e, 0, 0, geographicalLongitude);
+		double g = hmsToDH(raHours, raMinutes, raSeconds);
+		double h = f - g;
+
+		return (h < 0) ? 24 + h : h;
+	}
+
+	/**
+	 * Convert Hour Angle to Right Ascension
+	 * 
+	 * Original macro name: HARA
+	 */
+	public static double hourAngleToRightAscension(double hourAngleHours, double hourAngleMinutes,
+			double hourAngleSeconds, double lctHours, double lctMinutes, double lctSeconds, int daylightSaving,
+			int zoneCorrection, double localDay, int localMonth, int localYear, double geographicalLongitude) {
+		double a = localCivilTimeToUniversalTime(lctHours, lctMinutes, lctSeconds, daylightSaving, zoneCorrection,
+				localDay, localMonth, localYear);
+		double b = localCivilTimeGreenwichDay(lctHours, lctMinutes, lctSeconds, daylightSaving, zoneCorrection,
+				localDay, localMonth, localYear);
+		int c = localCivilTimeGreenwichMonth(lctHours, lctMinutes, lctSeconds, daylightSaving, zoneCorrection, localDay,
+				localMonth, localYear);
+		int d = localCivilTimeGreenwichYear(lctHours, lctMinutes, lctSeconds, daylightSaving, zoneCorrection, localDay,
+				localMonth, localYear);
+		double e = universalTimeToGreenwichSiderealTime(a, 0, 0, b, c, d);
+		double f = greenwichSiderealTimeToLocalSiderealTime(e, 0, 00, geographicalLongitude);
+		double g = hmsToDH(hourAngleHours, hourAngleMinutes, hourAngleSeconds);
+		double h = f - g;
+
+		return (h < 0) ? 24 + h : h;
+	}
+
+	/**
+	 * Convert Local Civil Time to Universal Time
+	 * 
+	 * Original macro name: LctUT
+	 */
+	public static double localCivilTimeToUniversalTime(double lctHours, double lctMinutes, double lctSeconds,
+			int daylightSaving, int zoneCorrection, double localDay, int localMonth, int localYear) {
+		double a = hmsToDH(lctHours, lctMinutes, lctSeconds);
+		double b = a - daylightSaving - zoneCorrection;
+		double c = localDay + (b / 24);
+		double d = civilDateToJulianDate(c, localMonth, localYear);
+		double e = julianDateDay(d);
+		double e1 = Math.floor(e);
+
+		return 24 * (e - e1);
+	}
+
+	/**
+	 * Determine Greenwich Day for Local Time
+	 * 
+	 * Original macro name: LctGDay
+	 */
+	public static double localCivilTimeGreenwichDay(double lctHours, double lctMinutes, double lctSeconds,
+			int daylightSaving, int zoneCorrection, double localDay, int localMonth, int localYear) {
+		double a = hmsToDH(lctHours, lctMinutes, lctSeconds);
+		double b = a - daylightSaving - zoneCorrection;
+		double c = localDay + (b / 24);
+		double d = civilDateToJulianDate(c, localMonth, localYear);
+		double e = julianDateDay(d);
+
+		return Math.floor(e);
+	}
+
+	/**
+	 * Determine Greenwich Month for Local Time
+	 * 
+	 * Original macro name: LctGMonth
+	 */
+	public static int localCivilTimeGreenwichMonth(double lctHours, double lctMinutes, double lctSeconds,
+			int daylightSaving, int zoneCorrection, double localDay, int localMonth, int localYear) {
+		double a = hmsToDH(lctHours, lctMinutes, lctSeconds);
+		double b = a - daylightSaving - zoneCorrection;
+		double c = localDay + (b / 24);
+		double d = civilDateToJulianDate(c, localMonth, localYear);
+
+		return julianDateMonth(d);
+	}
+
+	/**
+	 * Determine Greenwich Year for Local Time
+	 * 
+	 * Original macro name: LctGYear
+	 */
+	public static int localCivilTimeGreenwichYear(double lctHours, double lctMinutes, double lctSeconds,
+			int daylightSaving, int zoneCorrection, double localDay, int localMonth, int localYear) {
+		double a = hmsToDH(lctHours, lctMinutes, lctSeconds);
+		double b = a - daylightSaving - zoneCorrection;
+		double c = localDay + (b / 24);
+		double d = civilDateToJulianDate(c, localMonth, localYear);
+
+		return julianDateYear(d);
+	}
+
+	/**
+	 * Convert Universal Time to Greenwich Sidereal Time
+	 * 
+	 * Original macro name: UTGST
+	 */
+	public static double universalTimeToGreenwichSiderealTime(double uHours, double uMinutes, double uSeconds,
+			double greenwichDay, int greenwichMonth, int greenwichYear) {
+		double a = civilDateToJulianDate(greenwichDay, greenwichMonth, greenwichYear);
+		double b = a - 2451545;
+		double c = b / 36525;
+		double d = 6.697374558 + (2400.051336 * c) + (0.000025862 * c * c);
+		double e = d - (24 * Math.floor(d / 24));
+		double f = hmsToDH(uHours, uMinutes, uSeconds);
+		double g = f * 1.002737909;
+		double h = e + g;
+
+		return h - (24 * Math.floor(h / 24));
+	}
+
+	/**
+	 * Convert Greenwich Sidereal Time to Local Sidereal Time
+	 * 
+	 * Original macro name: GSTLST
+	 */
+	public static double greenwichSiderealTimeToLocalSiderealTime(double greenwichHours, double greenwichMinutes,
+			double greenwichSeconds, double geographicalLongitude) {
+		double a = hmsToDH(greenwichHours, greenwichMinutes, greenwichSeconds);
+		double b = geographicalLongitude / 15;
+		double c = a + b;
+
+		return c - (24 * Math.floor(c / 24));
+	}
 }
