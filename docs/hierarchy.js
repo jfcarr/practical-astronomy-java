@@ -8,6 +8,8 @@ var hierarchy =
       [ "CivilDateTime", "classastro_1_1practical_1_1containers_1_1CivilDateTime.html", null ],
       [ "UniversalDateTime", "classastro_1_1practical_1_1containers_1_1UniversalDateTime.html", null ]
     ] ],
+    [ "EquatorialCoordinates", "classastro_1_1practical_1_1containers_1_1EquatorialCoordinates.html", null ],
+    [ "HorizonCoordinates", "classastro_1_1practical_1_1containers_1_1HorizonCoordinates.html", null ],
     [ "Main", "classMain.html", null ],
     [ "PACoordinates", "classastro_1_1practical_1_1lib_1_1PACoordinates.html", null ],
     [ "PADateTime", "classastro_1_1practical_1_1lib_1_1PADateTime.html", null ],

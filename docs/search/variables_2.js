@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['minutes_205',['minutes',['../classastro_1_1practical_1_1containers_1_1Angle.html#aa3162948b9a2411e31bc630b41c8d055',1,'astro.practical.containers.Angle.minutes()'],['../classastro_1_1practical_1_1types_1_1DateTime.html#ab693b677bdc9ded12b06daf49778101c',1,'astro.practical.types.DateTime.minutes()'],['../classastro_1_1practical_1_1types_1_1Time.html#aa3162948b9a2411e31bc630b41c8d055',1,'astro.practical.types.Time.minutes()']]],
-  ['month_206',['month',['../classastro_1_1practical_1_1types_1_1Date.html#aedb06abe5aff12fa3e7e0e71a374edfb',1,'astro.practical.types.Date.month()'],['../classastro_1_1practical_1_1types_1_1DateTime.html#aedb06abe5aff12fa3e7e0e71a374edfb',1,'astro.practical.types.DateTime.month()']]]
+  ['houranglehours_264',['hourAngleHours',['../classastro_1_1practical_1_1containers_1_1EquatorialCoordinates.html#a13d05a0e4ddf8d4da90928d0adf6c191',1,'astro::practical::containers::EquatorialCoordinates']]],
+  ['hourangleminutes_265',['hourAngleMinutes',['../classastro_1_1practical_1_1containers_1_1EquatorialCoordinates.html#a01f2e7f2d0bebea882a64252569ac147',1,'astro::practical::containers::EquatorialCoordinates']]],
+  ['hourangleseconds_266',['hourAngleSeconds',['../classastro_1_1practical_1_1containers_1_1EquatorialCoordinates.html#ae3a9c7dfbed5342339604b1ce9b61a67',1,'astro::practical::containers::EquatorialCoordinates']]],
+  ['hours_267',['hours',['../classastro_1_1practical_1_1types_1_1DateTime.html#af23005df06fc3cd4264e5eee2dfa2f8c',1,'astro.practical.types.DateTime.hours()'],['../classastro_1_1practical_1_1types_1_1Time.html#af3d82d91d4bd4785b2928cfaf6d7a96b',1,'astro.practical.types.Time.hours()']]]
 ];

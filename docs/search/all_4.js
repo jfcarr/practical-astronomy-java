@@ -1,8 +1,8 @@
 var searchData=
 [
-  ['hmstodh_33',['hmsToDH',['../classastro_1_1practical_1_1lib_1_1PAMacros.html#a2d77bd05b929600e1ab1fe0177d467c0',1,'astro::practical::lib::PAMacros']]],
-  ['hourangle_34',['HourAngle',['../classastro_1_1practical_1_1containers_1_1HourAngle.html',1,'HourAngle'],['../classastro_1_1practical_1_1containers_1_1HourAngle.html#af2649251b39646bfc835e108dde39885',1,'astro.practical.containers.HourAngle.HourAngle()']]],
-  ['hourangle_2ejava_35',['HourAngle.java',['../HourAngle_8java.html',1,'']]],
-  ['hourangletorightascension_36',['hourAngleToRightAscension',['../classastro_1_1practical_1_1lib_1_1PACoordinates.html#a3c584d324750fc55fd58890837182319',1,'astro.practical.lib.PACoordinates.hourAngleToRightAscension()'],['../classastro_1_1practical_1_1lib_1_1PAMacros.html#a0d6b024fbb1010d8a73767cb99616e85',1,'astro.practical.lib.PAMacros.hourAngleToRightAscension()']]],
-  ['hours_37',['hours',['../classastro_1_1practical_1_1types_1_1DateTime.html#af23005df06fc3cd4264e5eee2dfa2f8c',1,'astro.practical.types.DateTime.hours()'],['../classastro_1_1practical_1_1types_1_1Time.html#af3d82d91d4bd4785b2928cfaf6d7a96b',1,'astro.practical.types.Time.hours()']]]
+  ['getdateofeaster_48',['getDateOfEaster',['../classastro_1_1practical_1_1lib_1_1PADateTime.html#a5091e5f746edf8d9d3b330d0ac66a91f',1,'astro::practical::lib::PADateTime']]],
+  ['greenwichsiderealtime_49',['GreenwichSiderealTime',['../classastro_1_1practical_1_1containers_1_1GreenwichSiderealTime.html',1,'GreenwichSiderealTime'],['../classastro_1_1practical_1_1containers_1_1GreenwichSiderealTime.html#ace708f8d778f72857a61f5909974413f',1,'astro.practical.containers.GreenwichSiderealTime.GreenwichSiderealTime()']]],
+  ['greenwichsiderealtime_2ejava_50',['GreenwichSiderealTime.java',['../GreenwichSiderealTime_8java.html',1,'']]],
+  ['greenwichsiderealtimetolocalsiderealtime_51',['greenwichSiderealTimeToLocalSiderealTime',['../classastro_1_1practical_1_1lib_1_1PADateTime.html#ab2eceb5e09df3ecec388d90e51109213',1,'astro.practical.lib.PADateTime.greenwichSiderealTimeToLocalSiderealTime()'],['../classastro_1_1practical_1_1lib_1_1PAMacros.html#a4763befafc3c500153a874ad5e7dad77',1,'astro.practical.lib.PAMacros.greenwichSiderealTimeToLocalSiderealTime()']]],
+  ['greenwichsiderealtimetouniversaltime_52',['greenwichSiderealTimeToUniversalTime',['../classastro_1_1practical_1_1lib_1_1PADateTime.html#ad793ce500a7f4869310fb8508db88302',1,'astro::practical::lib::PADateTime']]]
 ];

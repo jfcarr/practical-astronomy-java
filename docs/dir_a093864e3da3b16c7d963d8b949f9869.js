@@ -12,8 +12,14 @@ var dir_a093864e3da3b16c7d963d8b949f9869 =
     [ "CivilTime.java", "CivilTime_8java.html", [
       [ "CivilTime", "classastro_1_1practical_1_1containers_1_1CivilTime.html", "classastro_1_1practical_1_1containers_1_1CivilTime" ]
     ] ],
+    [ "EquatorialCoordinates.java", "EquatorialCoordinates_8java.html", [
+      [ "EquatorialCoordinates", "classastro_1_1practical_1_1containers_1_1EquatorialCoordinates.html", "classastro_1_1practical_1_1containers_1_1EquatorialCoordinates" ]
+    ] ],
     [ "GreenwichSiderealTime.java", "GreenwichSiderealTime_8java.html", [
       [ "GreenwichSiderealTime", "classastro_1_1practical_1_1containers_1_1GreenwichSiderealTime.html", "classastro_1_1practical_1_1containers_1_1GreenwichSiderealTime" ]
+    ] ],
+    [ "HorizonCoordinates.java", "HorizonCoordinates_8java.html", [
+      [ "HorizonCoordinates", "classastro_1_1practical_1_1containers_1_1HorizonCoordinates.html", "classastro_1_1practical_1_1containers_1_1HorizonCoordinates" ]
     ] ],
     [ "HourAngle.java", "HourAngle_8java.html", [
       [ "HourAngle", "classastro_1_1practical_1_1containers_1_1HourAngle.html", "classastro_1_1practical_1_1containers_1_1HourAngle" ]

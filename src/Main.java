@@ -20,5 +20,6 @@ public class Main {
 
 		testCoordinates.testAngleToFromDecimalDegrees();
 		testCoordinates.testRightAscensionToFromHourAngle();
+		testCoordinates.testEquatorialCoordinatesToFromHorizonCoordinates();
 	}
 }

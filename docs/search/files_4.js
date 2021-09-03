@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['hourangle_2ejava_132',['HourAngle.java',['../HourAngle_8java.html',1,'']]]
+  ['greenwichsiderealtime_2ejava_165',['GreenwichSiderealTime.java',['../GreenwichSiderealTime_8java.html',1,'']]]
 ];

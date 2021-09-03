@@ -1,22 +1,5 @@
 var searchData=
 [
-  ['testangletofromdecimaldegrees_71',['testAngleToFromDecimalDegrees',['../classTestCoordinates.html#a4c18cd3555ee3674ba5e645399c9085f',1,'TestCoordinates']]],
-  ['testcivildatetodaynumber_72',['testCivilDateToDayNumber',['../classTestDateTime.html#a4e68f30151eaf4850b62e363f42542ef',1,'TestDateTime']]],
-  ['testciviltimetofromdecimalhours_73',['testCivilTimeToFromDecimalHours',['../classTestDateTime.html#a2c88e6819c73795d056d58b4c5981fb8',1,'TestDateTime']]],
-  ['testcoordinates_74',['TestCoordinates',['../classTestCoordinates.html',1,'TestCoordinates'],['../classTestCoordinates.html#a22922264bf821aa17aeebaba0bf55ab1',1,'TestCoordinates.TestCoordinates()']]],
-  ['testcoordinates_75',['testCoordinates',['../classMain.html#a782c36108b1ec82a5ce456394cafdb50',1,'Main']]],
-  ['testcoordinates_2ejava_76',['TestCoordinates.java',['../TestCoordinates_8java.html',1,'']]],
-  ['testdateofeaster_77',['testDateOfEaster',['../classTestDateTime.html#aacab4bb177ff69590e9af83912075418',1,'TestDateTime']]],
-  ['testdatetime_78',['TestDateTime',['../classTestDateTime.html',1,'TestDateTime'],['../classTestDateTime.html#a63f8a134da17151af37b7d655cb50fa7',1,'TestDateTime.TestDateTime()']]],
-  ['testdatetime_79',['testDateTime',['../classMain.html#a6a2b50d4208f7a6dab79fc53c8e8cc53',1,'Main']]],
-  ['testdatetime_2ejava_80',['TestDateTime.java',['../TestDateTime_8java.html',1,'']]],
-  ['testgreenwichsiderealtimetofromlocalsiderealtime_81',['testGreenwichSiderealTimeToFromLocalSiderealTime',['../classTestDateTime.html#a18f372ac3668f4a3dede0b1afed2577f',1,'TestDateTime']]],
-  ['testlib_82',['TestLib',['../classastro_1_1practical_1_1test_1_1TestLib.html',1,'astro::practical::test']]],
-  ['testlib_2ejava_83',['TestLib.java',['../TestLib_8java.html',1,'']]],
-  ['testlocalciviltimetofromuniversaltime_84',['testLocalCivilTimeToFromUniversalTime',['../classTestDateTime.html#ac3a02163371fa3178e9788ca63a877ca',1,'TestDateTime']]],
-  ['testname_85',['testName',['../classastro_1_1practical_1_1test_1_1TestLib.html#a8c99aebd19403c704eb314d28bab10dd',1,'astro::practical::test::TestLib']]],
-  ['testrightascensiontofromhourangle_86',['testRightAscensionToFromHourAngle',['../classTestCoordinates.html#a832e0bce7e2b3e424745e822a3305e20',1,'TestCoordinates']]],
-  ['testuniversaltimetofromgreenwichsiderealtime_87',['testUniversalTimeToFromGreenwichSiderealTime',['../classTestDateTime.html#a9d2f983281f1b5de36694778e47e28f7',1,'TestDateTime']]],
-  ['time_88',['Time',['../classastro_1_1practical_1_1types_1_1Time.html',1,'Time'],['../classastro_1_1practical_1_1types_1_1Time.html#a134fdcf88f194bf704d93ef7e07e82aa',1,'astro.practical.types.Time.Time()']]],
-  ['time_2ejava_89',['Time.java',['../Time_8java.html',1,'']]]
+  ['seconds_97',['seconds',['../classastro_1_1practical_1_1containers_1_1Angle.html#a6664ee0d5227cf47362c565f9fab37f5',1,'astro.practical.containers.Angle.seconds()'],['../classastro_1_1practical_1_1types_1_1DateTime.html#a77bd4f876bdc3afed5acdd936f775d34',1,'astro.practical.types.DateTime.seconds()'],['../classastro_1_1practical_1_1types_1_1Time.html#a6664ee0d5227cf47362c565f9fab37f5',1,'astro.practical.types.Time.seconds()']]],
+  ['settestname_98',['setTestName',['../classastro_1_1practical_1_1test_1_1TestLib.html#a880fbfff6e664fe95451b7716811f9b2',1,'astro::practical::test::TestLib']]]
 ];
