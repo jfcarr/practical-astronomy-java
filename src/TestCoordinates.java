@@ -67,4 +67,13 @@ public class TestCoordinates {
 				.Assert(13, equatorialCoordinates.declinationMinutes)
 				.Assert(10, equatorialCoordinates.declinationSeconds);
 	}
+
+	public void testMeanObliquityOfTheEcliptic() {
+		TestLib testLib = new TestLib();
+
+		double meanObliquityOfTheEcliptic = PAUtil.round(paCoordinates.meanObliquityOfTheEcliptic(6, 7, 2009), 8);
+
+		testLib.setTestName("Mean Obliquity of the Ecliptic for 7/6/2009").Assert(23.43805531,
+				meanObliquityOfTheEcliptic);
+	}
 }
