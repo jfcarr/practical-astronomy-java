@@ -1,4 +1,6 @@
 import astro.practical.containers.Angle;
+import astro.practical.containers.EquatorialCoordinates;
+import astro.practical.containers.HorizonCoordinates;
 import astro.practical.containers.HourAngle;
 import astro.practical.containers.RightAscension;
 import astro.practical.lib.PACoordinates;
@@ -41,5 +43,28 @@ public class TestCoordinates {
 		testLib.setTestName(
 				"Right Ascension for Hour Angle 9h 52m 23.66s, Local Civil Time 14:36:51.67, Local Date 4/22/1980, Geographical Latitude -64d")
 				.Assert(18, rightAscension.hours).Assert(32, rightAscension.minutes).Assert(21, rightAscension.seconds);
+	}
+
+	public void testEquatorialCoordinatesToFromHorizonCoordinates() {
+		TestLib testLib = new TestLib();
+
+		HorizonCoordinates horizonCoordinates = paCoordinates.equatorialCoordinatesToHorizonCoordinates(5, 51, 44, 23,
+				13, 10, 52);
+
+		testLib.setTestName(
+				"Horizon Coordinates for Hour Angle 05:51:44 and Declination 23d 13m 10s and Geographical Latitude 52d")
+				.Assert(283, horizonCoordinates.azimuthDegrees).Assert(16, horizonCoordinates.azimuthMinutes)
+				.Assert(15.7, horizonCoordinates.azimuthSeconds).Assert(19, horizonCoordinates.altitudeDegrees)
+				.Assert(20, horizonCoordinates.altitudeMinutes).Assert(3.64, horizonCoordinates.altitudeSeconds);
+
+		EquatorialCoordinates equatorialCoordinates = paCoordinates.horizonCoordinatesToEquatorialCoordinates(283, 16,
+				15.7, 19, 20, 3.64, 52);
+
+		testLib.setTestName(
+				"Equatorial Coordinates for Azimuth 283d 16m 15.7s and Altitude 19d 20m 3.64s and Geographical Latitude 52d")
+				.Assert(5, equatorialCoordinates.hourAngleHours).Assert(51, equatorialCoordinates.hourAngleMinutes)
+				.Assert(44, equatorialCoordinates.hourAngleSeconds).Assert(23, equatorialCoordinates.declinationDegrees)
+				.Assert(13, equatorialCoordinates.declinationMinutes)
+				.Assert(10, equatorialCoordinates.declinationSeconds);
 	}
 }

@@ -1,6 +1,8 @@
 package astro.practical.lib;
 
 import astro.practical.containers.Angle;
+import astro.practical.containers.EquatorialCoordinates;
+import astro.practical.containers.HorizonCoordinates;
 import astro.practical.containers.HourAngle;
 import astro.practical.containers.RightAscension;
 
@@ -73,5 +75,53 @@ public class PACoordinates {
 		double rightAscensionSeconds = PAMacros.decimalHoursSecond(rightAscension);
 
 		return new RightAscension(rightAscensionHours, rightAscensionMinutes, rightAscensionSeconds);
+	}
+
+	/**
+	 * Convert Equatorial Coordinates to Horizon Coordinates
+	 */
+	public HorizonCoordinates equatorialCoordinatesToHorizonCoordinates(double hourAngleHours, double hourAngleMinutes,
+			double hourAngleSeconds, double declinationDegrees, double declinationMinutes, double declinationSeconds,
+			double geographicalLatitude) {
+		double azimuthInDecimalDegrees = PAMacros.equatorialCoordinatesToAzimuth(hourAngleHours, hourAngleMinutes,
+				hourAngleSeconds, declinationDegrees, declinationMinutes, declinationSeconds, geographicalLatitude);
+
+		double altitudeInDecimalDegrees = PAMacros.equatorialCoordinatesToAltitude(hourAngleHours, hourAngleMinutes,
+				hourAngleSeconds, declinationDegrees, declinationMinutes, declinationSeconds, geographicalLatitude);
+
+		double azimuthDegrees = PAMacros.decimalDegreesDegrees(azimuthInDecimalDegrees);
+		double azimuthMinutes = PAMacros.decimalDegreesMinutes(azimuthInDecimalDegrees);
+		double azimuthSeconds = PAMacros.decimalDegreesSeconds(azimuthInDecimalDegrees);
+
+		double altitudeDegrees = PAMacros.decimalDegreesDegrees(altitudeInDecimalDegrees);
+		double altitudeMinutes = PAMacros.decimalDegreesMinutes(altitudeInDecimalDegrees);
+		double altitudeSeconds = PAMacros.decimalDegreesSeconds(altitudeInDecimalDegrees);
+
+		return new HorizonCoordinates(azimuthDegrees, azimuthMinutes, azimuthSeconds, altitudeDegrees, altitudeMinutes,
+				altitudeSeconds);
+	}
+
+	/**
+	 * Convert Horizon Coordinates to Equatorial Coordinates
+	 */
+	public EquatorialCoordinates horizonCoordinatesToEquatorialCoordinates(double azimuthDegrees, double azimuthMinutes,
+			double azimuthSeconds, double altitudeDegrees, double altitudeMinutes, double altitudeSeconds,
+			double geographicalLatitude) {
+		double hourAngleInDecimalDegrees = PAMacros.horizonCoordinatesToHourAngle(azimuthDegrees, azimuthMinutes,
+				azimuthSeconds, altitudeDegrees, altitudeMinutes, altitudeSeconds, geographicalLatitude);
+
+		double declinationInDecimalDegrees = PAMacros.horizonCoordinatesToDeclination(azimuthDegrees, azimuthMinutes,
+				azimuthSeconds, altitudeDegrees, altitudeMinutes, altitudeSeconds, geographicalLatitude);
+
+		int hourAngleHours = PAMacros.decimalHoursHour(hourAngleInDecimalDegrees);
+		int hourAngleMinutes = PAMacros.decimalHoursMinute(hourAngleInDecimalDegrees);
+		double hourAngleSeconds = PAMacros.decimalHoursSecond(hourAngleInDecimalDegrees);
+
+		double declinationDegrees = PAMacros.decimalDegreesDegrees(declinationInDecimalDegrees);
+		double declinationMinutes = PAMacros.decimalDegreesMinutes(declinationInDecimalDegrees);
+		double declinationSeconds = PAMacros.decimalDegreesSeconds(declinationInDecimalDegrees);
+
+		return new EquatorialCoordinates(hourAngleHours, hourAngleMinutes, hourAngleSeconds, declinationDegrees,
+				declinationMinutes, declinationSeconds);
 	}
 }
