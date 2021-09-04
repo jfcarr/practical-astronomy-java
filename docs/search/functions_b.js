@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['settestname_237',['setTestName',['../classastro_1_1practical_1_1test_1_1TestLib.html#a880fbfff6e664fe95451b7716811f9b2',1,'astro::practical::test::TestLib']]]
+  ['obliq_264',['obliq',['../classastro_1_1practical_1_1lib_1_1PAMacros.html#ad7263328f064c4fc5cb0ecd8f4bbfce3',1,'astro::practical::lib::PAMacros']]]
 ];

@@ -1,6 +1,6 @@
 package astro.practical.containers;
 
-public class EquatorialCoordinates {
+public class EquatorialCoordinatesHA {
 	public double hourAngleHours;
 	public double hourAngleMinutes;
 	public double hourAngleSeconds;
@@ -8,7 +8,7 @@ public class EquatorialCoordinates {
 	public double declinationMinutes;
 	public double declinationSeconds;
 
-	public EquatorialCoordinates(double hourAngleHours, double hourAngleMinutes, double hourAngleSeconds,
+	public EquatorialCoordinatesHA(double hourAngleHours, double hourAngleMinutes, double hourAngleSeconds,
 			double declinationDegrees, double declinationMinutes, double declinationSeconds) {
 		this.hourAngleHours = hourAngleHours;
 		this.hourAngleMinutes = hourAngleMinutes;

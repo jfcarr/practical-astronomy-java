@@ -1,5 +1,7 @@
 import astro.practical.containers.Angle;
-import astro.practical.containers.EquatorialCoordinates;
+import astro.practical.containers.EclipticCoordinates;
+import astro.practical.containers.EquatorialCoordinatesHA;
+import astro.practical.containers.EquatorialCoordinatesRA;
 import astro.practical.containers.HorizonCoordinates;
 import astro.practical.containers.HourAngle;
 import astro.practical.containers.RightAscension;
@@ -57,7 +59,7 @@ public class TestCoordinates {
 				.Assert(15.7, horizonCoordinates.azimuthSeconds).Assert(19, horizonCoordinates.altitudeDegrees)
 				.Assert(20, horizonCoordinates.altitudeMinutes).Assert(3.64, horizonCoordinates.altitudeSeconds);
 
-		EquatorialCoordinates equatorialCoordinates = paCoordinates.horizonCoordinatesToEquatorialCoordinates(283, 16,
+		EquatorialCoordinatesHA equatorialCoordinates = paCoordinates.horizonCoordinatesToEquatorialCoordinates(283, 16,
 				15.7, 19, 20, 3.64, 52);
 
 		testLib.setTestName(
@@ -75,5 +77,33 @@ public class TestCoordinates {
 
 		testLib.setTestName("Mean Obliquity of the Ecliptic for 7/6/2009").Assert(23.43805531,
 				meanObliquityOfTheEcliptic);
+	}
+
+	public void testEclipticCoordinateToFromEquatorialCoordinate() {
+		TestLib testLib = new TestLib();
+
+		EquatorialCoordinatesRA equatorialCoordinatesRA = paCoordinates.eclipticCoordinateToEquatorialCoordinate(139,
+				41, 10, 4, 52, 31, 6, 7, 2009);
+
+		testLib.setTestName(
+				"Equatorial Coordinates for Ecliptic Longitude 139d 41m 10s and Ecliptic Latitude 4d 52m 31s and Greenwich Date 7/6/2009")
+				.Assert(9, equatorialCoordinatesRA.rightAscensionHours)
+				.Assert(34, equatorialCoordinatesRA.rightAscensionMinutes)
+				.Assert(53.4, equatorialCoordinatesRA.rightAscensionSeconds)
+				.Assert(19, equatorialCoordinatesRA.declinationDegrees)
+				.Assert(32, equatorialCoordinatesRA.declinationMinutes)
+				.Assert(8.52, equatorialCoordinatesRA.declinationSeconds);
+
+		EclipticCoordinates eclipticCoordinates = paCoordinates.equatorialCoordinateToEclipticCoordinate(9, 34, 53.4,
+				19, 32, 8.52, 6, 7, 2009);
+
+		testLib.setTestName(
+				"Ecliptic Coordinates for Right Ascension 9h 34m 53.4s and Declination 19d 32h 8.52s and Greenwich Date 7/6/2009")
+				.Assert(139, eclipticCoordinates.eclipticLongitudeDegrees)
+				.Assert(41, eclipticCoordinates.eclipticLongitudeMinutes)
+				.Assert(9.97, eclipticCoordinates.eclipticLongitudeSeconds)
+				.Assert(4, eclipticCoordinates.eclipticLatitudeDegrees)
+				.Assert(52, eclipticCoordinates.eclipticLatitudeMinutes)
+				.Assert(30.99, eclipticCoordinates.eclipticLatitudeSeconds);
 	}
 }

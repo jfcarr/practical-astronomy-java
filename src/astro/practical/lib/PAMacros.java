@@ -305,9 +305,9 @@ public class PAMacros {
 	 * Original macro name: DMSDD
 	 */
 	public static double degreesMinutesSecondsToDecimalDegrees(double degrees, double minutes, double seconds) {
-		var a = Math.abs(seconds) / 60;
-		var b = (Math.abs(minutes) + a) / 60;
-		var c = Math.abs(degrees) + b;
+		double a = Math.abs(seconds) / 60;
+		double b = (Math.abs(minutes) + a) / 60;
+		double c = Math.abs(degrees) + b;
 
 		return (degrees < 0 || minutes < 0 || seconds < 0) ? -c : c;
 	}
@@ -418,7 +418,7 @@ public class PAMacros {
 	 * 
 	 * Original macro name: DHDD
 	 */
-	public static double DegreeHoursToDecimalDegrees(double degreeHours) {
+	public static double degreeHoursToDecimalDegrees(double degreeHours) {
 		return degreeHours * 15;
 	}
 
@@ -459,5 +459,68 @@ public class PAMacros {
 		double i = decimalDegreesToDegreeHours(wToDegrees(Math.atan2(g, h)));
 
 		return i - 24 * Math.floor(i / 24);
+	}
+
+	/**
+	 * Obliquity of the Ecliptic for a Greenwich Date
+	 * 
+	 * Original macro name: Obliq
+	 */
+	public static double obliq(double greenwichDay, int greenwichMonth, int greenwichYear) {
+		double a = civilDateToJulianDate(greenwichDay, greenwichMonth, greenwichYear);
+		double b = a - 2415020;
+		double c = (b / 36525) - 1;
+		double d = c * (46.815 + c * (0.0006 - (c * 0.00181)));
+		double e = d / 3600;
+
+		return 23.43929167 - e + nutatObl(greenwichDay, greenwichMonth, greenwichYear);
+	}
+
+	/**
+	 * Nutation of Obliquity
+	 * 
+	 * Original macro name: NutatObl
+	 */
+	public static double nutatObl(double greenwichDay, int greenwichMonth, int greenwichYear) {
+		double dj = civilDateToJulianDate(greenwichDay, greenwichMonth, greenwichYear) - 2415020;
+		double t = dj / 36525;
+		double t2 = t * t;
+
+		double a = 100.0021358 * t;
+		double b = 360 * (a - Math.floor(a));
+
+		double l1 = 279.6967 + 0.000303 * t2 + b;
+		double l2 = 2 * Math.toRadians(l1);
+
+		a = 1336.855231 * t;
+		b = 360 * (a - Math.floor(a));
+
+		double d1 = 270.4342 - 0.001133 * t2 + b;
+		double d2 = 2 * Math.toRadians(d1);
+
+		a = 99.99736056 * t;
+		b = 360 * (a - Math.floor(a));
+
+		double m1 = Math.toRadians(358.4758 - 0.00015 * t2 + b);
+
+		a = 1325.552359 * t;
+		b = 360 * (a - Math.floor(a));
+
+		double m2 = Math.toRadians(296.1046 + 0.009192 * t2 + b);
+
+		a = 5.372616667 * t;
+		b = 360 * (a - Math.floor(a));
+
+		double n1 = Math.toRadians(259.1833 + 0.002078 * t2 - b);
+
+		double n2 = 2 * n1;
+
+		double ddo = (9.21 + 0.00091 * t) * Math.cos(n1);
+		ddo = ddo + (0.5522 - 0.00029 * t) * Math.cos(l2) - 0.0904 * Math.cos(n2);
+		ddo = ddo + 0.0884 * Math.cos(d2) + 0.0216 * Math.cos(l2 + m1);
+		ddo = ddo + 0.0183 * Math.cos(d2 - n1) + 0.0113 * Math.cos(d2 + m2);
+		ddo = ddo - 0.0093 * Math.cos(l2 - m1) - 0.0066 * Math.cos(l2 - n1);
+
+		return ddo / 3600;
 	}
 }

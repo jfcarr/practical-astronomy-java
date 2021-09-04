@@ -8,7 +8,8 @@ var hierarchy =
       [ "CivilDateTime", "classastro_1_1practical_1_1containers_1_1CivilDateTime.html", null ],
       [ "UniversalDateTime", "classastro_1_1practical_1_1containers_1_1UniversalDateTime.html", null ]
     ] ],
-    [ "EquatorialCoordinates", "classastro_1_1practical_1_1containers_1_1EquatorialCoordinates.html", null ],
+    [ "EclipticCoordinates", "classastro_1_1practical_1_1containers_1_1EclipticCoordinates.html", null ],
+    [ "EquatorialCoordinatesHA", "classastro_1_1practical_1_1containers_1_1EquatorialCoordinatesHA.html", null ],
     [ "HorizonCoordinates", "classastro_1_1practical_1_1containers_1_1HorizonCoordinates.html", null ],
     [ "Main", "classMain.html", null ],
     [ "PACoordinates", "classastro_1_1practical_1_1lib_1_1PACoordinates.html", null ],
@@ -16,6 +17,9 @@ var hierarchy =
     [ "PAMacros", "classastro_1_1practical_1_1lib_1_1PAMacros.html", null ],
     [ "PAUtil", "classastro_1_1practical_1_1lib_1_1PAUtil.html", null ],
     [ "PAWarningFlag", "enumastro_1_1practical_1_1types_1_1PAWarningFlag.html", null ],
+    [ "RightAscensionDeclination", "classastro_1_1practical_1_1types_1_1RightAscensionDeclination.html", [
+      [ "EquatorialCoordinatesRA", "classastro_1_1practical_1_1containers_1_1EquatorialCoordinatesRA.html", null ]
+    ] ],
     [ "TestCoordinates", "classTestCoordinates.html", null ],
     [ "TestDateTime", "classTestDateTime.html", null ],
     [ "TestLib", "classastro_1_1practical_1_1test_1_1TestLib.html", null ],
