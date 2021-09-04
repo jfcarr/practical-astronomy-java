@@ -22,5 +22,6 @@ public class Main {
 		testCoordinates.testRightAscensionToFromHourAngle();
 		testCoordinates.testEquatorialCoordinatesToFromHorizonCoordinates();
 		testCoordinates.testMeanObliquityOfTheEcliptic();
+		testCoordinates.testEclipticCoordinateToFromEquatorialCoordinate();
 	}
 }
