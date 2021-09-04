@@ -1,7 +1,9 @@
 var searchData=
 [
-  ['houranglehours_269',['hourAngleHours',['../classastro_1_1practical_1_1containers_1_1EquatorialCoordinates.html#a13d05a0e4ddf8d4da90928d0adf6c191',1,'astro::practical::containers::EquatorialCoordinates']]],
-  ['hourangleminutes_270',['hourAngleMinutes',['../classastro_1_1practical_1_1containers_1_1EquatorialCoordinates.html#a01f2e7f2d0bebea882a64252569ac147',1,'astro::practical::containers::EquatorialCoordinates']]],
-  ['hourangleseconds_271',['hourAngleSeconds',['../classastro_1_1practical_1_1containers_1_1EquatorialCoordinates.html#ae3a9c7dfbed5342339604b1ce9b61a67',1,'astro::practical::containers::EquatorialCoordinates']]],
-  ['hours_272',['hours',['../classastro_1_1practical_1_1types_1_1DateTime.html#af23005df06fc3cd4264e5eee2dfa2f8c',1,'astro.practical.types.DateTime.hours()'],['../classastro_1_1practical_1_1types_1_1Time.html#af3d82d91d4bd4785b2928cfaf6d7a96b',1,'astro.practical.types.Time.hours()']]]
+  ['eclipticlatitudedegrees_302',['eclipticLatitudeDegrees',['../classastro_1_1practical_1_1containers_1_1EclipticCoordinates.html#a0c494e717bdf92259a3115259150d177',1,'astro::practical::containers::EclipticCoordinates']]],
+  ['eclipticlatitudeminutes_303',['eclipticLatitudeMinutes',['../classastro_1_1practical_1_1containers_1_1EclipticCoordinates.html#a1ac955ede2f51af4c855694c5220a9e3',1,'astro::practical::containers::EclipticCoordinates']]],
+  ['eclipticlatitudeseconds_304',['eclipticLatitudeSeconds',['../classastro_1_1practical_1_1containers_1_1EclipticCoordinates.html#a2f2eee77d10980ae95f3174320da6107',1,'astro::practical::containers::EclipticCoordinates']]],
+  ['eclipticlongitudedegrees_305',['eclipticLongitudeDegrees',['../classastro_1_1practical_1_1containers_1_1EclipticCoordinates.html#a0f3afbf3bb62521b80a3da1a213d61f9',1,'astro::practical::containers::EclipticCoordinates']]],
+  ['eclipticlongitudeminutes_306',['eclipticLongitudeMinutes',['../classastro_1_1practical_1_1containers_1_1EclipticCoordinates.html#afcb681d16985590e269d1498e52bbd67',1,'astro::practical::containers::EclipticCoordinates']]],
+  ['eclipticlongitudeseconds_307',['eclipticLongitudeSeconds',['../classastro_1_1practical_1_1containers_1_1EclipticCoordinates.html#a840f165c96b3beb57eb52e698a36b192',1,'astro::practical::containers::EclipticCoordinates']]]
 ];

@@ -7,7 +7,9 @@ var annotated_dup =
           [ "CivilDate", "classastro_1_1practical_1_1containers_1_1CivilDate.html", "classastro_1_1practical_1_1containers_1_1CivilDate" ],
           [ "CivilDateTime", "classastro_1_1practical_1_1containers_1_1CivilDateTime.html", "classastro_1_1practical_1_1containers_1_1CivilDateTime" ],
           [ "CivilTime", "classastro_1_1practical_1_1containers_1_1CivilTime.html", "classastro_1_1practical_1_1containers_1_1CivilTime" ],
-          [ "EquatorialCoordinates", "classastro_1_1practical_1_1containers_1_1EquatorialCoordinates.html", "classastro_1_1practical_1_1containers_1_1EquatorialCoordinates" ],
+          [ "EclipticCoordinates", "classastro_1_1practical_1_1containers_1_1EclipticCoordinates.html", "classastro_1_1practical_1_1containers_1_1EclipticCoordinates" ],
+          [ "EquatorialCoordinatesHA", "classastro_1_1practical_1_1containers_1_1EquatorialCoordinatesHA.html", "classastro_1_1practical_1_1containers_1_1EquatorialCoordinatesHA" ],
+          [ "EquatorialCoordinatesRA", "classastro_1_1practical_1_1containers_1_1EquatorialCoordinatesRA.html", "classastro_1_1practical_1_1containers_1_1EquatorialCoordinatesRA" ],
           [ "GreenwichSiderealTime", "classastro_1_1practical_1_1containers_1_1GreenwichSiderealTime.html", "classastro_1_1practical_1_1containers_1_1GreenwichSiderealTime" ],
           [ "HorizonCoordinates", "classastro_1_1practical_1_1containers_1_1HorizonCoordinates.html", "classastro_1_1practical_1_1containers_1_1HorizonCoordinates" ],
           [ "HourAngle", "classastro_1_1practical_1_1containers_1_1HourAngle.html", "classastro_1_1practical_1_1containers_1_1HourAngle" ],
@@ -29,6 +31,7 @@ var annotated_dup =
           [ "Date", "classastro_1_1practical_1_1types_1_1Date.html", "classastro_1_1practical_1_1types_1_1Date" ],
           [ "DateTime", "classastro_1_1practical_1_1types_1_1DateTime.html", "classastro_1_1practical_1_1types_1_1DateTime" ],
           [ "PAWarningFlag", "enumastro_1_1practical_1_1types_1_1PAWarningFlag.html", "enumastro_1_1practical_1_1types_1_1PAWarningFlag" ],
+          [ "RightAscensionDeclination", "classastro_1_1practical_1_1types_1_1RightAscensionDeclination.html", "classastro_1_1practical_1_1types_1_1RightAscensionDeclination" ],
           [ "Time", "classastro_1_1practical_1_1types_1_1Time.html", "classastro_1_1practical_1_1types_1_1Time" ]
         ] ]
       ] ]

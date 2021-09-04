@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['ok_83',['OK',['../enumastro_1_1practical_1_1types_1_1PAWarningFlag.html#a509f04652b5e1b2d2b9e6bc121a87e50',1,'astro::practical::types::PAWarningFlag']]]
+  ['nutatobl_95',['nutatObl',['../classastro_1_1practical_1_1lib_1_1PAMacros.html#aca641a22163fb30495fb01ad9829166d',1,'astro::practical::lib::PAMacros']]]
 ];

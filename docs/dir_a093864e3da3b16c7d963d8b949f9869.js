@@ -12,8 +12,14 @@ var dir_a093864e3da3b16c7d963d8b949f9869 =
     [ "CivilTime.java", "CivilTime_8java.html", [
       [ "CivilTime", "classastro_1_1practical_1_1containers_1_1CivilTime.html", "classastro_1_1practical_1_1containers_1_1CivilTime" ]
     ] ],
-    [ "EquatorialCoordinates.java", "EquatorialCoordinates_8java.html", [
-      [ "EquatorialCoordinates", "classastro_1_1practical_1_1containers_1_1EquatorialCoordinates.html", "classastro_1_1practical_1_1containers_1_1EquatorialCoordinates" ]
+    [ "EclipticCoordinates.java", "EclipticCoordinates_8java.html", [
+      [ "EclipticCoordinates", "classastro_1_1practical_1_1containers_1_1EclipticCoordinates.html", "classastro_1_1practical_1_1containers_1_1EclipticCoordinates" ]
+    ] ],
+    [ "EquatorialCoordinatesHA.java", "EquatorialCoordinatesHA_8java.html", [
+      [ "EquatorialCoordinatesHA", "classastro_1_1practical_1_1containers_1_1EquatorialCoordinatesHA.html", "classastro_1_1practical_1_1containers_1_1EquatorialCoordinatesHA" ]
+    ] ],
+    [ "EquatorialCoordinatesRA.java", "EquatorialCoordinatesRA_8java.html", [
+      [ "EquatorialCoordinatesRA", "classastro_1_1practical_1_1containers_1_1EquatorialCoordinatesRA.html", "classastro_1_1practical_1_1containers_1_1EquatorialCoordinatesRA" ]
     ] ],
     [ "GreenwichSiderealTime.java", "GreenwichSiderealTime_8java.html", [
       [ "GreenwichSiderealTime", "classastro_1_1practical_1_1containers_1_1GreenwichSiderealTime.html", "classastro_1_1practical_1_1containers_1_1GreenwichSiderealTime" ]
