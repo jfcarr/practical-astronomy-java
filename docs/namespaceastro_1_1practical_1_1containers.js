@@ -7,6 +7,7 @@ var namespaceastro_1_1practical_1_1containers =
     [ "EclipticCoordinates", "classastro_1_1practical_1_1containers_1_1EclipticCoordinates.html", "classastro_1_1practical_1_1containers_1_1EclipticCoordinates" ],
     [ "EquatorialCoordinatesHA", "classastro_1_1practical_1_1containers_1_1EquatorialCoordinatesHA.html", "classastro_1_1practical_1_1containers_1_1EquatorialCoordinatesHA" ],
     [ "EquatorialCoordinatesRA", "classastro_1_1practical_1_1containers_1_1EquatorialCoordinatesRA.html", "classastro_1_1practical_1_1containers_1_1EquatorialCoordinatesRA" ],
+    [ "GalacticCoordinates", "classastro_1_1practical_1_1containers_1_1GalacticCoordinates.html", "classastro_1_1practical_1_1containers_1_1GalacticCoordinates" ],
     [ "GreenwichSiderealTime", "classastro_1_1practical_1_1containers_1_1GreenwichSiderealTime.html", "classastro_1_1practical_1_1containers_1_1GreenwichSiderealTime" ],
     [ "HorizonCoordinates", "classastro_1_1practical_1_1containers_1_1HorizonCoordinates.html", "classastro_1_1practical_1_1containers_1_1HorizonCoordinates" ],
     [ "HourAngle", "classastro_1_1practical_1_1containers_1_1HourAngle.html", "classastro_1_1practical_1_1containers_1_1HourAngle" ],

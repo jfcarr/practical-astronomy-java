@@ -23,5 +23,6 @@ public class Main {
 		testCoordinates.testEquatorialCoordinatesToFromHorizonCoordinates();
 		testCoordinates.testMeanObliquityOfTheEcliptic();
 		testCoordinates.testEclipticCoordinateToFromEquatorialCoordinate();
+		testCoordinates.testEquatorialCoordinateToFromGalacticCoordinate();
 	}
 }

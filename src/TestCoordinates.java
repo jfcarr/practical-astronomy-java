@@ -2,6 +2,7 @@ import astro.practical.containers.Angle;
 import astro.practical.containers.EclipticCoordinates;
 import astro.practical.containers.EquatorialCoordinatesHA;
 import astro.practical.containers.EquatorialCoordinatesRA;
+import astro.practical.containers.GalacticCoordinates;
 import astro.practical.containers.HorizonCoordinates;
 import astro.practical.containers.HourAngle;
 import astro.practical.containers.RightAscension;
@@ -99,11 +100,33 @@ public class TestCoordinates {
 
 		testLib.setTestName(
 				"Ecliptic Coordinates for Right Ascension 9h 34m 53.4s and Declination 19d 32h 8.52s and Greenwich Date 7/6/2009")
-				.Assert(139, eclipticCoordinates.eclipticLongitudeDegrees)
-				.Assert(41, eclipticCoordinates.eclipticLongitudeMinutes)
-				.Assert(9.97, eclipticCoordinates.eclipticLongitudeSeconds)
-				.Assert(4, eclipticCoordinates.eclipticLatitudeDegrees)
-				.Assert(52, eclipticCoordinates.eclipticLatitudeMinutes)
-				.Assert(30.99, eclipticCoordinates.eclipticLatitudeSeconds);
+				.Assert(139, eclipticCoordinates.longitudeDegrees).Assert(41, eclipticCoordinates.longitudeMinutes)
+				.Assert(9.97, eclipticCoordinates.longitudeSeconds).Assert(4, eclipticCoordinates.latitudeDegrees)
+				.Assert(52, eclipticCoordinates.latitudeMinutes).Assert(30.99, eclipticCoordinates.latitudeSeconds);
+	}
+
+	public void testEquatorialCoordinateToFromGalacticCoordinate() {
+		TestLib testLib = new TestLib();
+
+		GalacticCoordinates galacticCoordinates = paCoordinates.equatorialCoordinateToGalacticCoordinate(10, 21, 0, 10,
+				3, 11);
+
+		testLib.setTestName(
+				"Galactic Coordinates for Equatorial Longitude 10d 21m 0s and Equatorial Latitude 10d 3m 11s")
+				.Assert(232, galacticCoordinates.longitudeDegrees).Assert(14, galacticCoordinates.longitudeMinutes)
+				.Assert(52.38, galacticCoordinates.longitudeSeconds).Assert(51, galacticCoordinates.latitudeDegrees)
+				.Assert(7, galacticCoordinates.latitudeMinutes).Assert(20.16, galacticCoordinates.latitudeSeconds);
+
+		EquatorialCoordinatesRA equatorialCoordinatesRA = paCoordinates.galacticCoordinateToEquatorialCoordinate(232,
+				14, 52.38, 51, 7, 20.16);
+
+		testLib.setTestName(
+				"Equatorial Coordinates for Galactic Longitude 232d 14m 52.38s and Galactic Latitude 51d 7m 20.16s")
+				.Assert(10, equatorialCoordinatesRA.rightAscensionHours)
+				.Assert(21, equatorialCoordinatesRA.rightAscensionMinutes)
+				.Assert(0, equatorialCoordinatesRA.rightAscensionSeconds)
+				.Assert(10, equatorialCoordinatesRA.declinationDegrees)
+				.Assert(3, equatorialCoordinatesRA.declinationMinutes)
+				.Assert(11, equatorialCoordinatesRA.declinationSeconds);
 	}
 }

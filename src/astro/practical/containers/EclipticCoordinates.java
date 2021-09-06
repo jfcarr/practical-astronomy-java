@@ -1,21 +1,10 @@
 package astro.practical.containers;
 
-public class EclipticCoordinates {
-	public double eclipticLongitudeDegrees;
-	public double eclipticLongitudeMinutes;
-	public double eclipticLongitudeSeconds;
-	public double eclipticLatitudeDegrees;
-	public double eclipticLatitudeMinutes;
-	public double eclipticLatitudeSeconds;
+import astro.practical.types.CoordinatesLongLat;
 
-	public EclipticCoordinates(double eclipticLongitudeDegrees, double eclipticLongitudeMinutes,
-			double eclipticLongitudeSeconds, double eclipticLatitudeDegrees, double eclipticLatitudeMinutes,
-			double eclipticLatitudeSeconds) {
-		this.eclipticLongitudeDegrees = eclipticLongitudeDegrees;
-		this.eclipticLongitudeMinutes = eclipticLongitudeMinutes;
-		this.eclipticLongitudeSeconds = eclipticLongitudeSeconds;
-		this.eclipticLatitudeDegrees = eclipticLatitudeDegrees;
-		this.eclipticLatitudeMinutes = eclipticLatitudeMinutes;
-		this.eclipticLatitudeSeconds = eclipticLatitudeSeconds;
+public class EclipticCoordinates extends CoordinatesLongLat {
+	public EclipticCoordinates(double longitudeDegrees, double longitudeMinutes, double longitudeSeconds,
+			double latitudeDegrees, double latitudeMinutes, double latitudeSeconds) {
+		super(longitudeDegrees, longitudeMinutes, longitudeSeconds, latitudeDegrees, latitudeMinutes, latitudeSeconds);
 	}
 }

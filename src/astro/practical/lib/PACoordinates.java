@@ -4,6 +4,7 @@ import astro.practical.containers.Angle;
 import astro.practical.containers.EclipticCoordinates;
 import astro.practical.containers.EquatorialCoordinatesHA;
 import astro.practical.containers.EquatorialCoordinatesRA;
+import astro.practical.containers.GalacticCoordinates;
 import astro.practical.containers.HorizonCoordinates;
 import astro.practical.containers.HourAngle;
 import astro.practical.containers.RightAscension;
@@ -208,5 +209,64 @@ public class PACoordinates {
 
 		return new EclipticCoordinates(outEclLongDeg, outEclLongMin, outEclLongSec, outEclLatDeg, outEclLatMin,
 				outEclLatSec);
+	}
+
+	/**
+	 * Convert Equatorial Coordinates to Galactic Coordinates
+	 */
+	public GalacticCoordinates equatorialCoordinateToGalacticCoordinate(double raHours, double raMinutes,
+			double raSeconds, double decDegrees, double decMinutes, double decSeconds) {
+		double raDeg = PAMacros.degreeHoursToDecimalDegrees(PAMacros.hmsToDH(raHours, raMinutes, raSeconds));
+		double decDeg = PAMacros.degreesMinutesSecondsToDecimalDegrees(decDegrees, decMinutes, decSeconds);
+		double raRad = Math.toRadians(raDeg);
+		double decRad = Math.toRadians(decDeg);
+		double sinB = Math.cos(decRad) * Math.cos(Math.toRadians(27.4)) * Math.cos(raRad - Math.toRadians(192.25))
+				+ Math.sin(decRad) * Math.sin(Math.toRadians(27.4));
+		double bRadians = Math.asin(sinB);
+		double bDeg = PAMacros.wToDegrees(bRadians);
+		double y = Math.sin(decRad) - sinB * Math.sin(Math.toRadians(27.4));
+		double x = Math.cos(decRad) * Math.sin(raRad - Math.toRadians(192.25)) * Math.cos(Math.toRadians(27.4));
+		double longDeg1 = PAMacros.wToDegrees(Math.atan2(y, x)) + 33;
+		double longDeg2 = longDeg1 - 360 * Math.floor(longDeg1 / 360);
+
+		double galLongDeg = PAMacros.decimalDegreesDegrees(longDeg2);
+		double galLongMin = PAMacros.decimalDegreesMinutes(longDeg2);
+		double galLongSec = PAMacros.decimalDegreesSeconds(longDeg2);
+		double galLatDeg = PAMacros.decimalDegreesDegrees(bDeg);
+		double galLatMin = PAMacros.decimalDegreesMinutes(bDeg);
+		double galLatSec = PAMacros.decimalDegreesSeconds(bDeg);
+
+		return new GalacticCoordinates(galLongDeg, galLongMin, galLongSec, galLatDeg, galLatMin, galLatSec);
+	}
+
+	/**
+	 * Convert Galactic Coordinates to Equatorial Coordinates
+	 */
+	public EquatorialCoordinatesRA galacticCoordinateToEquatorialCoordinate(double galLongDeg, double galLongMin,
+			double galLongSec, double galLatDeg, double galLatMin, double galLatSec) {
+		double glongDeg = PAMacros.degreesMinutesSecondsToDecimalDegrees(galLongDeg, galLongMin, galLongSec);
+		double glatDeg = PAMacros.degreesMinutesSecondsToDecimalDegrees(galLatDeg, galLatMin, galLatSec);
+		double glongRad = Math.toRadians(glongDeg);
+		double glatRad = Math.toRadians(glatDeg);
+		double sinDec = Math.cos(glatRad) * Math.cos(Math.toRadians(27.4)) * Math.sin(glongRad - Math.toRadians(33.0))
+				+ Math.sin(glatRad) * Math.sin(Math.toRadians(27.4));
+		double decRadians = Math.asin(sinDec);
+		double decDeg = PAMacros.wToDegrees(decRadians);
+		double y = Math.cos(glatRad) * Math.cos(glongRad - Math.toRadians(33.0));
+		double x = Math.sin(glatRad) * Math.cos(Math.toRadians(27.4))
+				- Math.cos(glatRad) * Math.sin(Math.toRadians(27.4)) * Math.sin(glongRad - Math.toRadians(33.0));
+
+		double raDeg1 = PAMacros.wToDegrees(Math.atan2(y, x)) + 192.25;
+		double raDeg2 = raDeg1 - 360 * Math.floor(raDeg1 / 360);
+		double raHours1 = PAMacros.decimalDegreesToDegreeHours(raDeg2);
+
+		double raHours = PAMacros.decimalHoursHour(raHours1);
+		double raMinutes = PAMacros.decimalHoursMinute(raHours1);
+		double raSeconds = PAMacros.decimalHoursSecond(raHours1);
+		double decDegrees = PAMacros.decimalDegreesDegrees(decDeg);
+		double decMinutes = PAMacros.decimalDegreesMinutes(decDeg);
+		double decSeconds = PAMacros.decimalDegreesSeconds(decDeg);
+
+		return new EquatorialCoordinatesRA(raHours, raMinutes, raSeconds, decDegrees, decMinutes, decSeconds);
 	}
 }

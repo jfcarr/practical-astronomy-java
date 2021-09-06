@@ -10,6 +10,7 @@ var annotated_dup =
           [ "EclipticCoordinates", "classastro_1_1practical_1_1containers_1_1EclipticCoordinates.html", "classastro_1_1practical_1_1containers_1_1EclipticCoordinates" ],
           [ "EquatorialCoordinatesHA", "classastro_1_1practical_1_1containers_1_1EquatorialCoordinatesHA.html", "classastro_1_1practical_1_1containers_1_1EquatorialCoordinatesHA" ],
           [ "EquatorialCoordinatesRA", "classastro_1_1practical_1_1containers_1_1EquatorialCoordinatesRA.html", "classastro_1_1practical_1_1containers_1_1EquatorialCoordinatesRA" ],
+          [ "GalacticCoordinates", "classastro_1_1practical_1_1containers_1_1GalacticCoordinates.html", "classastro_1_1practical_1_1containers_1_1GalacticCoordinates" ],
           [ "GreenwichSiderealTime", "classastro_1_1practical_1_1containers_1_1GreenwichSiderealTime.html", "classastro_1_1practical_1_1containers_1_1GreenwichSiderealTime" ],
           [ "HorizonCoordinates", "classastro_1_1practical_1_1containers_1_1HorizonCoordinates.html", "classastro_1_1practical_1_1containers_1_1HorizonCoordinates" ],
           [ "HourAngle", "classastro_1_1practical_1_1containers_1_1HourAngle.html", "classastro_1_1practical_1_1containers_1_1HourAngle" ],
@@ -28,6 +29,7 @@ var annotated_dup =
           [ "TestLib", "classastro_1_1practical_1_1test_1_1TestLib.html", "classastro_1_1practical_1_1test_1_1TestLib" ]
         ] ],
         [ "types", "namespaceastro_1_1practical_1_1types.html", [
+          [ "CoordinatesLongLat", "classastro_1_1practical_1_1types_1_1CoordinatesLongLat.html", "classastro_1_1practical_1_1types_1_1CoordinatesLongLat" ],
           [ "Date", "classastro_1_1practical_1_1types_1_1Date.html", "classastro_1_1practical_1_1types_1_1Date" ],
           [ "DateTime", "classastro_1_1practical_1_1types_1_1DateTime.html", "classastro_1_1practical_1_1types_1_1DateTime" ],
           [ "PAWarningFlag", "enumastro_1_1practical_1_1types_1_1PAWarningFlag.html", "enumastro_1_1practical_1_1types_1_1PAWarningFlag" ],

@@ -1,6 +1,10 @@
 var hierarchy =
 [
     [ "Angle", "classastro_1_1practical_1_1containers_1_1Angle.html", null ],
+    [ "CoordinatesLongLat", "classastro_1_1practical_1_1types_1_1CoordinatesLongLat.html", [
+      [ "EclipticCoordinates", "classastro_1_1practical_1_1containers_1_1EclipticCoordinates.html", null ],
+      [ "GalacticCoordinates", "classastro_1_1practical_1_1containers_1_1GalacticCoordinates.html", null ]
+    ] ],
     [ "Date", "classastro_1_1practical_1_1types_1_1Date.html", [
       [ "CivilDate", "classastro_1_1practical_1_1containers_1_1CivilDate.html", null ]
     ] ],
@@ -8,7 +12,6 @@ var hierarchy =
       [ "CivilDateTime", "classastro_1_1practical_1_1containers_1_1CivilDateTime.html", null ],
       [ "UniversalDateTime", "classastro_1_1practical_1_1containers_1_1UniversalDateTime.html", null ]
     ] ],
-    [ "EclipticCoordinates", "classastro_1_1practical_1_1containers_1_1EclipticCoordinates.html", null ],
     [ "EquatorialCoordinatesHA", "classastro_1_1practical_1_1containers_1_1EquatorialCoordinatesHA.html", null ],
     [ "HorizonCoordinates", "classastro_1_1practical_1_1containers_1_1HorizonCoordinates.html", null ],
     [ "Main", "classMain.html", null ],

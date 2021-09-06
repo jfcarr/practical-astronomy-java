@@ -21,6 +21,9 @@ var dir_a093864e3da3b16c7d963d8b949f9869 =
     [ "EquatorialCoordinatesRA.java", "EquatorialCoordinatesRA_8java.html", [
       [ "EquatorialCoordinatesRA", "classastro_1_1practical_1_1containers_1_1EquatorialCoordinatesRA.html", "classastro_1_1practical_1_1containers_1_1EquatorialCoordinatesRA" ]
     ] ],
+    [ "GalacticCoordinates.java", "GalacticCoordinates_8java.html", [
+      [ "GalacticCoordinates", "classastro_1_1practical_1_1containers_1_1GalacticCoordinates.html", "classastro_1_1practical_1_1containers_1_1GalacticCoordinates" ]
+    ] ],
     [ "GreenwichSiderealTime.java", "GreenwichSiderealTime_8java.html", [
       [ "GreenwichSiderealTime", "classastro_1_1practical_1_1containers_1_1GreenwichSiderealTime.html", "classastro_1_1practical_1_1containers_1_1GreenwichSiderealTime" ]
     ] ],
