@@ -1,5 +1,8 @@
 var dir_03538083908cf9568c8217ca65f2d767 =
 [
+    [ "CoordinatesLongLat.java", "CoordinatesLongLat_8java.html", [
+      [ "CoordinatesLongLat", "classastro_1_1practical_1_1types_1_1CoordinatesLongLat.html", "classastro_1_1practical_1_1types_1_1CoordinatesLongLat" ]
+    ] ],
     [ "Date.java", "Date_8java.html", [
       [ "Date", "classastro_1_1practical_1_1types_1_1Date.html", "classastro_1_1practical_1_1types_1_1Date" ]
     ] ],
