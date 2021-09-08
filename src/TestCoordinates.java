@@ -9,6 +9,7 @@ import astro.practical.containers.RightAscension;
 import astro.practical.lib.PACoordinates;
 import astro.practical.lib.PAUtil;
 import astro.practical.test.TestLib;
+import astro.practical.types.PAAngleMeasure;
 
 public class TestCoordinates {
 	PACoordinates paCoordinates;
@@ -128,5 +129,16 @@ public class TestCoordinates {
 				.Assert(10, equatorialCoordinatesRA.declinationDegrees)
 				.Assert(3, equatorialCoordinatesRA.declinationMinutes)
 				.Assert(11, equatorialCoordinatesRA.declinationSeconds);
+	}
+
+	public void testAngleBetweenTwoObjects() {
+		TestLib testLib = new TestLib();
+
+		Angle angle = paCoordinates.angleBetweenTwoObjects(5, 13, 31.7, -8, 13, 30, 6, 44, 13.4, -16, 41, 11,
+				PAAngleMeasure.Hours);
+
+		testLib.setTestName(
+				"Angle for RA (1) 5h 13m 31.7s and Declination (1) -8d 13m 30s and RA (2) 6h 44m 13.4s and Declination (2) -16d 41m 11s and measurement in hours")
+				.Assert(23, angle.degrees).Assert(40, angle.minutes).Assert(25.86, angle.seconds);
 	}
 }

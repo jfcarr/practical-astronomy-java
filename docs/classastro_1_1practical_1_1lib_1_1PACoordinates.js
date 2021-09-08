@@ -1,5 +1,6 @@
 var classastro_1_1practical_1_1lib_1_1PACoordinates =
 [
+    [ "angleBetweenTwoObjects", "classastro_1_1practical_1_1lib_1_1PACoordinates.html#a17d89e91ab74295b2c506bbe656176a4", null ],
     [ "angleToDecimalDegrees", "classastro_1_1practical_1_1lib_1_1PACoordinates.html#aa02ccfbc3e1fe1b58624427acefe4ea2", null ],
     [ "decimalDegreesToAngle", "classastro_1_1practical_1_1lib_1_1PACoordinates.html#a00447028bb7e2390fbb676667dca5453", null ],
     [ "eclipticCoordinateToEquatorialCoordinate", "classastro_1_1practical_1_1lib_1_1PACoordinates.html#a5f54a5273355f679f6cde74ad6bc9e14", null ],
