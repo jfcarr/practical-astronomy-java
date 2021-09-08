@@ -8,6 +8,7 @@ import astro.practical.containers.GalacticCoordinates;
 import astro.practical.containers.HorizonCoordinates;
 import astro.practical.containers.HourAngle;
 import astro.practical.containers.RightAscension;
+import astro.practical.types.PAAngleMeasure;
 
 public class PACoordinates {
 	/**
@@ -268,5 +269,44 @@ public class PACoordinates {
 		double decSeconds = PAMacros.decimalDegreesSeconds(decDeg);
 
 		return new EquatorialCoordinatesRA(raHours, raMinutes, raSeconds, decDegrees, decMinutes, decSeconds);
+	}
+
+	/**
+	 * Calculate the angle between two celestial objects
+	 */
+	public Angle angleBetweenTwoObjects(double raLong1HourDeg, double raLong1Min, double raLong1Sec, double decLat1Deg,
+			double decLat1Min, double decLat1Sec, double raLong2HourDeg, double raLong2Min, double raLong2Sec,
+			double decLat2Deg, double decLat2Min, double decLat2Sec, PAAngleMeasure hourOrDegree) {
+		double raLong1Decimal = (hourOrDegree == PAAngleMeasure.Hours)
+				? PAMacros.hmsToDH(raLong1HourDeg, raLong1Min, raLong1Sec)
+				: PAMacros.degreesMinutesSecondsToDecimalDegrees(raLong1HourDeg, raLong1Min, raLong1Sec);
+		double raLong1Deg = (hourOrDegree == PAAngleMeasure.Hours)
+				? PAMacros.degreeHoursToDecimalDegrees(raLong1Decimal)
+				: raLong1Decimal;
+
+		double raLong1Rad = Math.toRadians(raLong1Deg);
+		double decLat1Deg1 = PAMacros.degreesMinutesSecondsToDecimalDegrees(decLat1Deg, decLat1Min, decLat1Sec);
+		double decLat1Rad = Math.toRadians(decLat1Deg1);
+
+		double raLong2Decimal = (hourOrDegree == PAAngleMeasure.Hours)
+				? PAMacros.hmsToDH(raLong2HourDeg, raLong2Min, raLong2Sec)
+				: PAMacros.degreesMinutesSecondsToDecimalDegrees(raLong2HourDeg, raLong2Min, raLong2Sec);
+		double raLong2Deg = (hourOrDegree == PAAngleMeasure.Hours)
+				? PAMacros.degreeHoursToDecimalDegrees(raLong2Decimal)
+				: raLong2Decimal;
+		double raLong2Rad = Math.toRadians(raLong2Deg);
+		double decLat2Deg1 = PAMacros.degreesMinutesSecondsToDecimalDegrees(decLat2Deg, decLat2Min, decLat2Sec);
+		double decLat2Rad = Math.toRadians(decLat2Deg1);
+
+		double cosD = Math.sin(decLat1Rad) * Math.sin(decLat2Rad)
+				+ Math.cos(decLat1Rad) * Math.cos(decLat2Rad) * Math.cos(raLong1Rad - raLong2Rad);
+		double dRad = Math.acos(cosD);
+		double dDeg = PAMacros.wToDegrees(dRad);
+
+		double angleDeg = PAMacros.decimalDegreesDegrees(dDeg);
+		double angleMin = PAMacros.decimalDegreesMinutes(dDeg);
+		double angleSec = PAMacros.decimalDegreesSeconds(dDeg);
+
+		return new Angle(angleDeg, angleMin, angleSec);
 	}
 }

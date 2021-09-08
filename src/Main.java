@@ -24,5 +24,6 @@ public class Main {
 		testCoordinates.testMeanObliquityOfTheEcliptic();
 		testCoordinates.testEclipticCoordinateToFromEquatorialCoordinate();
 		testCoordinates.testEquatorialCoordinateToFromGalacticCoordinate();
+		testCoordinates.testAngleBetweenTwoObjects();
 	}
 }
