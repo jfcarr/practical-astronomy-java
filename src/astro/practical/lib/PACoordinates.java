@@ -9,6 +9,8 @@ import astro.practical.containers.HorizonCoordinates;
 import astro.practical.containers.HourAngle;
 import astro.practical.containers.RightAscension;
 import astro.practical.types.PAAngleMeasure;
+import astro.practical.types.RiseSetStatus;
+import astro.practical.containers.RiseSet;
 
 public class PACoordinates {
 	/**
@@ -308,5 +310,50 @@ public class PACoordinates {
 		double angleSec = PAMacros.decimalDegreesSeconds(dDeg);
 
 		return new Angle(angleDeg, angleMin, angleSec);
+	}
+
+	/**
+	 * Calculate rising and setting times for an object.
+	 */
+	public RiseSet risingAndSetting(double raHours, double raMinutes, double raSeconds, double decDeg, double decMin,
+			double decSec, double gwDateDay, int gwDateMonth, int gwDateYear, double geogLongDeg, double geogLatDeg,
+			double vertShiftDeg) {
+		double raHours1 = PAMacros.hmsToDH(raHours, raMinutes, raSeconds);
+		double decRad = Math.toRadians(PAMacros.degreesMinutesSecondsToDecimalDegrees(decDeg, decMin, decSec));
+		double verticalDisplRadians = Math.toRadians(vertShiftDeg);
+		double geoLatRadians = Math.toRadians(geogLatDeg);
+		double cosH = -(Math.sin(verticalDisplRadians) + Math.sin(geoLatRadians) * Math.sin(decRad))
+				/ (Math.cos(geoLatRadians) * Math.cos(decRad));
+		double hHours = PAMacros.decimalDegreesToDegreeHours(PAMacros.wToDegrees(Math.acos(cosH)));
+		double lstRiseHours = (raHours1 - hHours) - 24 * Math.floor((raHours1 - hHours) / 24);
+		double lstSetHours = (raHours1 + hHours) - 24 * Math.floor((raHours1 + hHours) / 24);
+		double aDeg = PAMacros
+				.wToDegrees(Math.acos((Math.sin(decRad) + Math.sin(verticalDisplRadians) * Math.sin(geoLatRadians))
+						/ (Math.cos(verticalDisplRadians) * Math.cos(geoLatRadians))));
+		double azRiseDeg = aDeg - 360 * Math.floor(aDeg / 360);
+		double azSetDeg = (360 - aDeg) - 360 * Math.floor((360 - aDeg) / 360);
+		double utRiseHours1 = PAMacros.greenwichSiderealTimeToUniversalTime(
+				PAMacros.localSiderealTimeToGreenwichSiderealTime(lstRiseHours, 0, 0, geogLongDeg), 0, 0, gwDateDay,
+				gwDateMonth, gwDateYear);
+		double utSetHours1 = PAMacros.greenwichSiderealTimeToUniversalTime(
+				PAMacros.localSiderealTimeToGreenwichSiderealTime(lstSetHours, 0, 0, geogLongDeg), 0, 0, gwDateDay,
+				gwDateMonth, gwDateYear);
+		double utRiseAdjustedHours = utRiseHours1 + 0.008333;
+		double utSetAdjustedHours = utSetHours1 + 0.008333;
+
+		RiseSetStatus riseSetStatus = RiseSetStatus.OK;
+		if (cosH > 1)
+			riseSetStatus = RiseSetStatus.NEVERRISES;
+		if (cosH < -1)
+			riseSetStatus = RiseSetStatus.CIRCUMPOLAR;
+
+		var utRiseHour = (riseSetStatus == RiseSetStatus.OK) ? PAMacros.decimalHoursHour(utRiseAdjustedHours) : 0;
+		var utRiseMin = (riseSetStatus == RiseSetStatus.OK) ? PAMacros.decimalHoursMinute(utRiseAdjustedHours) : 0;
+		var utSetHour = (riseSetStatus == RiseSetStatus.OK) ? PAMacros.decimalHoursHour(utSetAdjustedHours) : 0;
+		var utSetMin = (riseSetStatus == RiseSetStatus.OK) ? PAMacros.decimalHoursMinute(utSetAdjustedHours) : 0;
+		var azRise = (riseSetStatus == RiseSetStatus.OK) ? PAUtil.round(azRiseDeg, 2) : 0;
+		var azSet = (riseSetStatus == RiseSetStatus.OK) ? PAUtil.round(azSetDeg, 2) : 0;
+
+		return new RiseSet(riseSetStatus, utRiseHour, utRiseMin, utSetHour, utSetMin, azRise, azSet);
 	}
 }

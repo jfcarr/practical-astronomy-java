@@ -6,10 +6,12 @@ import astro.practical.containers.GalacticCoordinates;
 import astro.practical.containers.HorizonCoordinates;
 import astro.practical.containers.HourAngle;
 import astro.practical.containers.RightAscension;
+import astro.practical.containers.RiseSet;
 import astro.practical.lib.PACoordinates;
 import astro.practical.lib.PAUtil;
 import astro.practical.test.TestLib;
 import astro.practical.types.PAAngleMeasure;
+import astro.practical.types.RiseSetStatus;
 
 public class TestCoordinates {
 	PACoordinates paCoordinates;
@@ -140,5 +142,17 @@ public class TestCoordinates {
 		testLib.setTestName(
 				"Angle for RA (1) 5h 13m 31.7s and Declination (1) -8d 13m 30s and RA (2) 6h 44m 13.4s and Declination (2) -16d 41m 11s and measurement in hours")
 				.Assert(23, angle.degrees).Assert(40, angle.minutes).Assert(25.86, angle.seconds);
+	}
+
+	public void testRisingAndSetting() {
+		TestLib testLib = new TestLib();
+
+		RiseSet riseSet = paCoordinates.risingAndSetting(23, 39, 20, 21, 42, 0, 24, 8, 2010, 64, 30, 0.5667);
+
+		testLib.setTestName(
+				"Rise and Set Times for Right Ascension 23h 39m 20s and Declination 21d 42m 0s and Greenwich Date 8/24/2010 and Geographical Longitude/Latitude 64d/30d and Vertical Shift 0.5667d")
+				.Assert(RiseSetStatus.OK, riseSet.riseSetStatus).Assert(14, riseSet.utRiseHour)
+				.Assert(16, riseSet.utRiseMin).Assert(4, riseSet.utSetHour).Assert(10, riseSet.utSetMin)
+				.Assert(64.36, riseSet.azRise).Assert(295.64, riseSet.azSet);
 	}
 }

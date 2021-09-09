@@ -18,6 +18,9 @@ var dir_03538083908cf9568c8217ca65f2d767 =
     [ "RightAscensionDeclination.java", "RightAscensionDeclination_8java.html", [
       [ "RightAscensionDeclination", "classastro_1_1practical_1_1types_1_1RightAscensionDeclination.html", "classastro_1_1practical_1_1types_1_1RightAscensionDeclination" ]
     ] ],
+    [ "RiseSetStatus.java", "RiseSetStatus_8java.html", [
+      [ "RiseSetStatus", "enumastro_1_1practical_1_1types_1_1RiseSetStatus.html", "enumastro_1_1practical_1_1types_1_1RiseSetStatus" ]
+    ] ],
     [ "Time.java", "Time_8java.html", [
       [ "Time", "classastro_1_1practical_1_1types_1_1Time.html", "classastro_1_1practical_1_1types_1_1Time" ]
     ] ]

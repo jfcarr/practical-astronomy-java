@@ -2,6 +2,7 @@ package astro.practical.test;
 
 import astro.practical.lib.PAUtil;
 import astro.practical.types.PAWarningFlag;
+import astro.practical.types.RiseSetStatus;
 
 public class TestLib {
 	public String testName = "No test name specified";
@@ -62,6 +63,15 @@ public class TestLib {
 	 * Assert that two PAWarningFlag values are equal.
 	 */
 	public TestLib Assert(PAWarningFlag expectedValue, PAWarningFlag actualValue) {
+		LogMessage((expectedValue == actualValue), expectedValue, actualValue);
+
+		return this;
+	}
+
+	/**
+	 * Assert that two RiseSetStatus values are equal.
+	 */
+	public TestLib Assert(RiseSetStatus expectedValue, RiseSetStatus actualValue) {
 		LogMessage((expectedValue == actualValue), expectedValue, actualValue);
 
 		return this;
