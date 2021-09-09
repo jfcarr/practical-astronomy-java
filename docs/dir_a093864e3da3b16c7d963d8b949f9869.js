@@ -39,6 +39,9 @@ var dir_a093864e3da3b16c7d963d8b949f9869 =
     [ "RightAscension.java", "RightAscension_8java.html", [
       [ "RightAscension", "classastro_1_1practical_1_1containers_1_1RightAscension.html", "classastro_1_1practical_1_1containers_1_1RightAscension" ]
     ] ],
+    [ "RiseSet.java", "RiseSet_8java.html", [
+      [ "RiseSet", "classastro_1_1practical_1_1containers_1_1RiseSet.html", "classastro_1_1practical_1_1containers_1_1RiseSet" ]
+    ] ],
     [ "UniversalDateTime.java", "UniversalDateTime_8java.html", [
       [ "UniversalDateTime", "classastro_1_1practical_1_1containers_1_1UniversalDateTime.html", "classastro_1_1practical_1_1containers_1_1UniversalDateTime" ]
     ] ],

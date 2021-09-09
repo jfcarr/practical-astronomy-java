@@ -16,6 +16,7 @@ var annotated_dup =
           [ "HourAngle", "classastro_1_1practical_1_1containers_1_1HourAngle.html", "classastro_1_1practical_1_1containers_1_1HourAngle" ],
           [ "LocalSiderealTime", "classastro_1_1practical_1_1containers_1_1LocalSiderealTime.html", "classastro_1_1practical_1_1containers_1_1LocalSiderealTime" ],
           [ "RightAscension", "classastro_1_1practical_1_1containers_1_1RightAscension.html", "classastro_1_1practical_1_1containers_1_1RightAscension" ],
+          [ "RiseSet", "classastro_1_1practical_1_1containers_1_1RiseSet.html", "classastro_1_1practical_1_1containers_1_1RiseSet" ],
           [ "UniversalDateTime", "classastro_1_1practical_1_1containers_1_1UniversalDateTime.html", "classastro_1_1practical_1_1containers_1_1UniversalDateTime" ],
           [ "UniversalTime", "classastro_1_1practical_1_1containers_1_1UniversalTime.html", "classastro_1_1practical_1_1containers_1_1UniversalTime" ]
         ] ],
@@ -35,6 +36,7 @@ var annotated_dup =
           [ "PAAngleMeasure", "enumastro_1_1practical_1_1types_1_1PAAngleMeasure.html", "enumastro_1_1practical_1_1types_1_1PAAngleMeasure" ],
           [ "PAWarningFlag", "enumastro_1_1practical_1_1types_1_1PAWarningFlag.html", "enumastro_1_1practical_1_1types_1_1PAWarningFlag" ],
           [ "RightAscensionDeclination", "classastro_1_1practical_1_1types_1_1RightAscensionDeclination.html", "classastro_1_1practical_1_1types_1_1RightAscensionDeclination" ],
+          [ "RiseSetStatus", "enumastro_1_1practical_1_1types_1_1RiseSetStatus.html", "enumastro_1_1practical_1_1types_1_1RiseSetStatus" ],
           [ "Time", "classastro_1_1practical_1_1types_1_1Time.html", "classastro_1_1practical_1_1types_1_1Time" ]
         ] ]
       ] ]

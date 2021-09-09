@@ -149,6 +149,10 @@ Static Public Member Functions</h2></td></tr>
 <tr class="separator:ad7263328f064c4fc5cb0ecd8f4bbfce3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aca641a22163fb30495fb01ad9829166d"><td class="memItemLeft" align="right" valign="top">static double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classastro_1_1practical_1_1lib_1_1PAMacros.html#aca641a22163fb30495fb01ad9829166d">nutatObl</a> (double greenwichDay, int greenwichMonth, int greenwichYear)</td></tr>
 <tr class="separator:aca641a22163fb30495fb01ad9829166d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a643e8667d6a73d1211dbdf66096108fb"><td class="memItemLeft" align="right" valign="top">static double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classastro_1_1practical_1_1lib_1_1PAMacros.html#a643e8667d6a73d1211dbdf66096108fb">localSiderealTimeToGreenwichSiderealTime</a> (double localHours, double localMinutes, double localSeconds, double longitude)</td></tr>
+<tr class="separator:a643e8667d6a73d1211dbdf66096108fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aacce7a24cd53ee927a7369788de8fef3"><td class="memItemLeft" align="right" valign="top">static double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classastro_1_1practical_1_1lib_1_1PAMacros.html#aacce7a24cd53ee927a7369788de8fef3">greenwichSiderealTimeToUniversalTime</a> (double greenwichSiderealHours, double greenwichSiderealMinutes, double greenwichSiderealSeconds, double greenwichDay, int greenwichMonth, int greenwichYear)</td></tr>
+<tr class="separator:aacce7a24cd53ee927a7369788de8fef3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
@@ -675,6 +679,70 @@ Static Public Member Functions</h2></td></tr>
 <p>Original macro name: GSTLST </p>
 
 <p class="definition">Definition at line <a class="el" href="PAMacros_8java_source.html#l00293">293</a> of file <a class="el" href="PAMacros_8java_source.html">PAMacros.java</a>.</p>
+
+</div>
+</div>
+<a id="aacce7a24cd53ee927a7369788de8fef3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aacce7a24cd53ee927a7369788de8fef3">&#9670;&nbsp;</a></span>greenwichSiderealTimeToUniversalTime()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static double greenwichSiderealTimeToUniversalTime </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>greenwichSiderealHours</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>greenwichSiderealMinutes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>greenwichSiderealSeconds</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>greenwichDay</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>greenwichMonth</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>greenwichYear</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Convert Greenwich Sidereal Time to Universal Time</p>
+<p>Original macro name: GSTUT </p>
+
+<p class="definition">Definition at line <a class="el" href="PAMacros_8java_source.html#l00546">546</a> of file <a class="el" href="PAMacros_8java_source.html">PAMacros.java</a>.</p>
 
 </div>
 </div>
@@ -1355,6 +1423,58 @@ Static Public Member Functions</h2></td></tr>
 <p>Original macro name: LctUT </p>
 
 <p class="definition">Definition at line <a class="el" href="PAMacros_8java_source.html#l00211">211</a> of file <a class="el" href="PAMacros_8java_source.html">PAMacros.java</a>.</p>
+
+</div>
+</div>
+<a id="a643e8667d6a73d1211dbdf66096108fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a643e8667d6a73d1211dbdf66096108fb">&#9670;&nbsp;</a></span>localSiderealTimeToGreenwichSiderealTime()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static double localSiderealTimeToGreenwichSiderealTime </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>localHours</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>localMinutes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>localSeconds</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>longitude</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Convert Local Sidereal Time to Greenwich Sidereal Time</p>
+<p>Original macro name: LSTGST </p>
+
+<p class="definition">Definition at line <a class="el" href="PAMacros_8java_source.html#l00532">532</a> of file <a class="el" href="PAMacros_8java_source.html">PAMacros.java</a>.</p>
 
 </div>
 </div>

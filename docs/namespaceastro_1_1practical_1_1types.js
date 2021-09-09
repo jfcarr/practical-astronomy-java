@@ -6,5 +6,6 @@ var namespaceastro_1_1practical_1_1types =
     [ "PAAngleMeasure", "enumastro_1_1practical_1_1types_1_1PAAngleMeasure.html", "enumastro_1_1practical_1_1types_1_1PAAngleMeasure" ],
     [ "PAWarningFlag", "enumastro_1_1practical_1_1types_1_1PAWarningFlag.html", "enumastro_1_1practical_1_1types_1_1PAWarningFlag" ],
     [ "RightAscensionDeclination", "classastro_1_1practical_1_1types_1_1RightAscensionDeclination.html", "classastro_1_1practical_1_1types_1_1RightAscensionDeclination" ],
+    [ "RiseSetStatus", "enumastro_1_1practical_1_1types_1_1RiseSetStatus.html", "enumastro_1_1practical_1_1types_1_1RiseSetStatus" ],
     [ "Time", "classastro_1_1practical_1_1types_1_1Time.html", "classastro_1_1practical_1_1types_1_1Time" ]
 ];

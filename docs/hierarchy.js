@@ -24,6 +24,8 @@ var hierarchy =
     [ "RightAscensionDeclination", "classastro_1_1practical_1_1types_1_1RightAscensionDeclination.html", [
       [ "EquatorialCoordinatesRA", "classastro_1_1practical_1_1containers_1_1EquatorialCoordinatesRA.html", null ]
     ] ],
+    [ "RiseSet", "classastro_1_1practical_1_1containers_1_1RiseSet.html", null ],
+    [ "RiseSetStatus", "enumastro_1_1practical_1_1types_1_1RiseSetStatus.html", null ],
     [ "TestCoordinates", "classTestCoordinates.html", null ],
     [ "TestDateTime", "classTestDateTime.html", null ],
     [ "TestLib", "classastro_1_1practical_1_1test_1_1TestLib.html", null ],
