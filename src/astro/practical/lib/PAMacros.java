@@ -523,4 +523,38 @@ public class PAMacros {
 
 		return ddo / 3600;
 	}
+
+	/**
+	 * Convert Local Sidereal Time to Greenwich Sidereal Time
+	 * 
+	 * Original macro name: LSTGST
+	 */
+	public static double localSiderealTimeToGreenwichSiderealTime(double localHours, double localMinutes,
+			double localSeconds, double longitude) {
+		double a = hmsToDH(localHours, localMinutes, localSeconds);
+		double b = longitude / 15;
+		double c = a - b;
+
+		return c - (24 * Math.floor(c / 24));
+	}
+
+	/**
+	 * Convert Greenwich Sidereal Time to Universal Time
+	 * 
+	 * Original macro name: GSTUT
+	 */
+	public static double greenwichSiderealTimeToUniversalTime(double greenwichSiderealHours,
+			double greenwichSiderealMinutes, double greenwichSiderealSeconds, double greenwichDay, int greenwichMonth,
+			int greenwichYear) {
+		double a = civilDateToJulianDate(greenwichDay, greenwichMonth, greenwichYear);
+		double b = a - 2451545;
+		double c = b / 36525;
+		double d = 6.697374558 + (2400.051336 * c) + (0.000025862 * c * c);
+		double e = d - (24 * Math.floor(d / 24));
+		double f = hmsToDH(greenwichSiderealHours, greenwichSiderealMinutes, greenwichSiderealSeconds);
+		double g = f - e;
+		double h = g - (24 * Math.floor(g / 24));
+
+		return h * 0.9972695663;
+	}
 }
