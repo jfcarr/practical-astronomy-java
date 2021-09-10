@@ -117,10 +117,12 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a17d89e91ab74295b2c506bbe656176a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a973b93d7a9737cdd4c84415b605d60f0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classastro_1_1practical_1_1containers_1_1RiseSet.html">RiseSet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classastro_1_1practical_1_1lib_1_1PACoordinates.html#a973b93d7a9737cdd4c84415b605d60f0">risingAndSetting</a> (double raHours, double raMinutes, double raSeconds, double decDeg, double decMin, double decSec, double gwDateDay, int gwDateMonth, int gwDateYear, double geogLongDeg, double geogLatDeg, double vertShiftDeg)</td></tr>
 <tr class="separator:a973b93d7a9737cdd4c84415b605d60f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c8d4f7c3ff98cf7869e6eae907cabaf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classastro_1_1practical_1_1types_1_1RightAscensionDeclination.html">RightAscensionDeclination</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classastro_1_1practical_1_1lib_1_1PACoordinates.html#a0c8d4f7c3ff98cf7869e6eae907cabaf">correctForPrecession</a> (double raHour, double raMinutes, double raSeconds, double decDeg, double decMinutes, double decSeconds, double epoch1Day, int epoch1Month, int epoch1Year, double epoch2Day, int epoch2Month, int epoch2Year)</td></tr>
+<tr class="separator:a0c8d4f7c3ff98cf7869e6eae907cabaf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="PACoordinates_8java_source.html#l00015">15</a> of file <a class="el" href="PACoordinates_8java_source.html">PACoordinates.java</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PACoordinates_8java_source.html#l00016">16</a> of file <a class="el" href="PACoordinates_8java_source.html">PACoordinates.java</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a17d89e91ab74295b2c506bbe656176a4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a17d89e91ab74295b2c506bbe656176a4">&#9670;&nbsp;</a></span>angleBetweenTwoObjects()</h2>
@@ -215,7 +217,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Calculate the angle between two celestial objects </p>
 
-<p class="definition">Definition at line <a class="el" href="PACoordinates_8java_source.html#l00279">279</a> of file <a class="el" href="PACoordinates_8java_source.html">PACoordinates.java</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PACoordinates_8java_source.html#l00280">280</a> of file <a class="el" href="PACoordinates_8java_source.html">PACoordinates.java</a>.</p>
 
 </div>
 </div>
@@ -252,7 +254,98 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Convert an Angle (degrees, minutes, and seconds) to Decimal Degrees </p>
 
-<p class="definition">Definition at line <a class="el" href="PACoordinates_8java_source.html#l00019">19</a> of file <a class="el" href="PACoordinates_8java_source.html">PACoordinates.java</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PACoordinates_8java_source.html#l00020">20</a> of file <a class="el" href="PACoordinates_8java_source.html">PACoordinates.java</a>.</p>
+
+</div>
+</div>
+<a id="a0c8d4f7c3ff98cf7869e6eae907cabaf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c8d4f7c3ff98cf7869e6eae907cabaf">&#9670;&nbsp;</a></span>correctForPrecession()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classastro_1_1practical_1_1types_1_1RightAscensionDeclination.html">RightAscensionDeclination</a> correctForPrecession </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>raHour</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>raMinutes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>raSeconds</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>decDeg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>decMinutes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>decSeconds</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>epoch1Day</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>epoch1Month</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>epoch1Year</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>epoch2Day</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>epoch2Month</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>epoch2Year</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Calculate precession (corrected coordinates between two epochs) </p>
+
+<p class="definition">Definition at line <a class="el" href="PACoordinates_8java_source.html#l00364">364</a> of file <a class="el" href="PACoordinates_8java_source.html">PACoordinates.java</a>.</p>
 
 </div>
 </div>
@@ -273,7 +366,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Convert Decimal Degrees to an Angle (degrees, minutes, and seconds) </p>
 
-<p class="definition">Definition at line <a class="el" href="PACoordinates_8java_source.html#l00031">31</a> of file <a class="el" href="PACoordinates_8java_source.html">PACoordinates.java</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PACoordinates_8java_source.html#l00032">32</a> of file <a class="el" href="PACoordinates_8java_source.html">PACoordinates.java</a>.</p>
 
 </div>
 </div>
@@ -346,7 +439,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Convert Ecliptic Coordinates to Equatorial Coordinates </p>
 
-<p class="definition">Definition at line <a class="el" href="PACoordinates_8java_source.html#l00150">150</a> of file <a class="el" href="PACoordinates_8java_source.html">PACoordinates.java</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PACoordinates_8java_source.html#l00151">151</a> of file <a class="el" href="PACoordinates_8java_source.html">PACoordinates.java</a>.</p>
 
 </div>
 </div>
@@ -407,7 +500,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Convert Equatorial Coordinates to Horizon Coordinates </p>
 
-<p class="definition">Definition at line <a class="el" href="PACoordinates_8java_source.html#l00089">89</a> of file <a class="el" href="PACoordinates_8java_source.html">PACoordinates.java</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PACoordinates_8java_source.html#l00090">90</a> of file <a class="el" href="PACoordinates_8java_source.html">PACoordinates.java</a>.</p>
 
 </div>
 </div>
@@ -480,7 +573,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Convert Equatorial Coordinates to Ecliptic Coordinates </p>
 
-<p class="definition">Definition at line <a class="el" href="PACoordinates_8java_source.html#l00187">187</a> of file <a class="el" href="PACoordinates_8java_source.html">PACoordinates.java</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PACoordinates_8java_source.html#l00188">188</a> of file <a class="el" href="PACoordinates_8java_source.html">PACoordinates.java</a>.</p>
 
 </div>
 </div>
@@ -535,7 +628,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Convert Equatorial Coordinates to Galactic Coordinates </p>
 
-<p class="definition">Definition at line <a class="el" href="PACoordinates_8java_source.html#l00220">220</a> of file <a class="el" href="PACoordinates_8java_source.html">PACoordinates.java</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PACoordinates_8java_source.html#l00221">221</a> of file <a class="el" href="PACoordinates_8java_source.html">PACoordinates.java</a>.</p>
 
 </div>
 </div>
@@ -590,7 +683,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Convert Galactic Coordinates to Equatorial Coordinates </p>
 
-<p class="definition">Definition at line <a class="el" href="PACoordinates_8java_source.html#l00248">248</a> of file <a class="el" href="PACoordinates_8java_source.html">PACoordinates.java</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PACoordinates_8java_source.html#l00249">249</a> of file <a class="el" href="PACoordinates_8java_source.html">PACoordinates.java</a>.</p>
 
 </div>
 </div>
@@ -651,7 +744,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Convert Horizon Coordinates to Equatorial Coordinates </p>
 
-<p class="definition">Definition at line <a class="el" href="PACoordinates_8java_source.html#l00113">113</a> of file <a class="el" href="PACoordinates_8java_source.html">PACoordinates.java</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PACoordinates_8java_source.html#l00114">114</a> of file <a class="el" href="PACoordinates_8java_source.html">PACoordinates.java</a>.</p>
 
 </div>
 </div>
@@ -743,7 +836,7 @@ Public Member Functions</h2></td></tr>
 <p>Convert Hour Angle to Right Ascension</p>
 <dl class="section return"><dt>Returns</dt><dd>RightAscension </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="PACoordinates_8java_source.html#l00070">70</a> of file <a class="el" href="PACoordinates_8java_source.html">PACoordinates.java</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PACoordinates_8java_source.html#l00071">71</a> of file <a class="el" href="PACoordinates_8java_source.html">PACoordinates.java</a>.</p>
 
 </div>
 </div>
@@ -780,7 +873,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Calculate Mean Obliquity of the Ecliptic for a Greenwich Date </p>
 
-<p class="definition">Definition at line <a class="el" href="PACoordinates_8java_source.html#l00137">137</a> of file <a class="el" href="PACoordinates_8java_source.html">PACoordinates.java</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PACoordinates_8java_source.html#l00138">138</a> of file <a class="el" href="PACoordinates_8java_source.html">PACoordinates.java</a>.</p>
 
 </div>
 </div>
@@ -872,7 +965,7 @@ Public Member Functions</h2></td></tr>
 <p>Convert Right Ascension to Hour Angle</p>
 <dl class="section return"><dt>Returns</dt><dd>tuple &lt;double hourAngleHours, double hourAngleMinutes, double hourAngleSeconds&gt; </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="PACoordinates_8java_source.html#l00050">50</a> of file <a class="el" href="PACoordinates_8java_source.html">PACoordinates.java</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PACoordinates_8java_source.html#l00051">51</a> of file <a class="el" href="PACoordinates_8java_source.html">PACoordinates.java</a>.</p>
 
 </div>
 </div>
@@ -963,7 +1056,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Calculate rising and setting times for an object. </p>
 
-<p class="definition">Definition at line <a class="el" href="PACoordinates_8java_source.html#l00318">318</a> of file <a class="el" href="PACoordinates_8java_source.html">PACoordinates.java</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PACoordinates_8java_source.html#l00319">319</a> of file <a class="el" href="PACoordinates_8java_source.html">PACoordinates.java</a>.</p>
 
 </div>
 </div>

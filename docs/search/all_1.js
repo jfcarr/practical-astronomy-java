@@ -11,5 +11,6 @@ var searchData=
   ['civiltime_2ejava_25',['CivilTime.java',['../CivilTime_8java.html',1,'']]],
   ['civiltimetodecimalhours_26',['civilTimeToDecimalHours',['../classastro_1_1practical_1_1lib_1_1PADateTime.html#a78342888d4774484fc53b4b5b1ac5d6e',1,'astro::practical::lib::PADateTime']]],
   ['coordinateslonglat_27',['CoordinatesLongLat',['../classastro_1_1practical_1_1types_1_1CoordinatesLongLat.html',1,'CoordinatesLongLat'],['../classastro_1_1practical_1_1types_1_1CoordinatesLongLat.html#ac5406f7af09481b70edfdfbd8eea16ad',1,'astro.practical.types.CoordinatesLongLat.CoordinatesLongLat()']]],
-  ['coordinateslonglat_2ejava_28',['CoordinatesLongLat.java',['../CoordinatesLongLat_8java.html',1,'']]]
+  ['coordinateslonglat_2ejava_28',['CoordinatesLongLat.java',['../CoordinatesLongLat_8java.html',1,'']]],
+  ['correctforprecession_29',['correctForPrecession',['../classastro_1_1practical_1_1lib_1_1PACoordinates.html#a0c8d4f7c3ff98cf7869e6eae907cabaf',1,'astro::practical::lib::PACoordinates']]]
 ];

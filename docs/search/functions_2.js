@@ -1,16 +1,16 @@
 var searchData=
 [
-  ['date_260',['Date',['../classastro_1_1practical_1_1types_1_1Date.html#a85b969ba94dd6940c727fe8f91590a68',1,'astro::practical::types::Date']]],
-  ['datetime_261',['DateTime',['../classastro_1_1practical_1_1types_1_1DateTime.html#a9312e3bbcc80dc8c52a89bf74eba3493',1,'astro::practical::types::DateTime']]],
-  ['decimaldegreesdegrees_262',['decimalDegreesDegrees',['../classastro_1_1practical_1_1lib_1_1PAMacros.html#ab78ff0f9ed8803437d341aba37ae72f5',1,'astro::practical::lib::PAMacros']]],
-  ['decimaldegreesminutes_263',['decimalDegreesMinutes',['../classastro_1_1practical_1_1lib_1_1PAMacros.html#ab5082700e793463508aed2b4f4bccb5f',1,'astro::practical::lib::PAMacros']]],
-  ['decimaldegreesseconds_264',['decimalDegreesSeconds',['../classastro_1_1practical_1_1lib_1_1PAMacros.html#ad11f9008e32f59f1d16c23ef098ab02d',1,'astro::practical::lib::PAMacros']]],
-  ['decimaldegreestoangle_265',['decimalDegreesToAngle',['../classastro_1_1practical_1_1lib_1_1PACoordinates.html#a00447028bb7e2390fbb676667dca5453',1,'astro::practical::lib::PACoordinates']]],
-  ['decimaldegreestodegreehours_266',['decimalDegreesToDegreeHours',['../classastro_1_1practical_1_1lib_1_1PAMacros.html#a2ade9c0b76e9e65eb577821b61800d0b',1,'astro::practical::lib::PAMacros']]],
-  ['decimalhourshour_267',['decimalHoursHour',['../classastro_1_1practical_1_1lib_1_1PAMacros.html#a1e294baeeb63b3eab0f981a18cdf9201',1,'astro::practical::lib::PAMacros']]],
-  ['decimalhoursminute_268',['decimalHoursMinute',['../classastro_1_1practical_1_1lib_1_1PAMacros.html#a0aed9826ed1121bd8a04ab4ef6159629',1,'astro::practical::lib::PAMacros']]],
-  ['decimalhourssecond_269',['decimalHoursSecond',['../classastro_1_1practical_1_1lib_1_1PAMacros.html#a822966ff672529c3209cda571e21ebee',1,'astro::practical::lib::PAMacros']]],
-  ['decimalhourstociviltime_270',['decimalHoursToCivilTime',['../classastro_1_1practical_1_1lib_1_1PADateTime.html#aae974d039c50dc7302905507e4bd5dd0',1,'astro::practical::lib::PADateTime']]],
-  ['degreehourstodecimaldegrees_271',['degreeHoursToDecimalDegrees',['../classastro_1_1practical_1_1lib_1_1PAMacros.html#a58f634d321d89d19dd649477de6091b4',1,'astro::practical::lib::PAMacros']]],
-  ['degreesminutessecondstodecimaldegrees_272',['degreesMinutesSecondsToDecimalDegrees',['../classastro_1_1practical_1_1lib_1_1PAMacros.html#a7a08e59a46e81f47d9e9fe359b9134a5',1,'astro::practical::lib::PAMacros']]]
+  ['date_262',['Date',['../classastro_1_1practical_1_1types_1_1Date.html#a85b969ba94dd6940c727fe8f91590a68',1,'astro::practical::types::Date']]],
+  ['datetime_263',['DateTime',['../classastro_1_1practical_1_1types_1_1DateTime.html#a9312e3bbcc80dc8c52a89bf74eba3493',1,'astro::practical::types::DateTime']]],
+  ['decimaldegreesdegrees_264',['decimalDegreesDegrees',['../classastro_1_1practical_1_1lib_1_1PAMacros.html#ab78ff0f9ed8803437d341aba37ae72f5',1,'astro::practical::lib::PAMacros']]],
+  ['decimaldegreesminutes_265',['decimalDegreesMinutes',['../classastro_1_1practical_1_1lib_1_1PAMacros.html#ab5082700e793463508aed2b4f4bccb5f',1,'astro::practical::lib::PAMacros']]],
+  ['decimaldegreesseconds_266',['decimalDegreesSeconds',['../classastro_1_1practical_1_1lib_1_1PAMacros.html#ad11f9008e32f59f1d16c23ef098ab02d',1,'astro::practical::lib::PAMacros']]],
+  ['decimaldegreestoangle_267',['decimalDegreesToAngle',['../classastro_1_1practical_1_1lib_1_1PACoordinates.html#a00447028bb7e2390fbb676667dca5453',1,'astro::practical::lib::PACoordinates']]],
+  ['decimaldegreestodegreehours_268',['decimalDegreesToDegreeHours',['../classastro_1_1practical_1_1lib_1_1PAMacros.html#a2ade9c0b76e9e65eb577821b61800d0b',1,'astro::practical::lib::PAMacros']]],
+  ['decimalhourshour_269',['decimalHoursHour',['../classastro_1_1practical_1_1lib_1_1PAMacros.html#a1e294baeeb63b3eab0f981a18cdf9201',1,'astro::practical::lib::PAMacros']]],
+  ['decimalhoursminute_270',['decimalHoursMinute',['../classastro_1_1practical_1_1lib_1_1PAMacros.html#a0aed9826ed1121bd8a04ab4ef6159629',1,'astro::practical::lib::PAMacros']]],
+  ['decimalhourssecond_271',['decimalHoursSecond',['../classastro_1_1practical_1_1lib_1_1PAMacros.html#a822966ff672529c3209cda571e21ebee',1,'astro::practical::lib::PAMacros']]],
+  ['decimalhourstociviltime_272',['decimalHoursToCivilTime',['../classastro_1_1practical_1_1lib_1_1PADateTime.html#aae974d039c50dc7302905507e4bd5dd0',1,'astro::practical::lib::PADateTime']]],
+  ['degreehourstodecimaldegrees_273',['degreeHoursToDecimalDegrees',['../classastro_1_1practical_1_1lib_1_1PAMacros.html#a58f634d321d89d19dd649477de6091b4',1,'astro::practical::lib::PAMacros']]],
+  ['degreesminutessecondstodecimaldegrees_274',['degreesMinutesSecondsToDecimalDegrees',['../classastro_1_1practical_1_1lib_1_1PAMacros.html#a7a08e59a46e81f47d9e9fe359b9134a5',1,'astro::practical::lib::PAMacros']]]
 ];
