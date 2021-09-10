@@ -11,6 +11,7 @@ import astro.practical.lib.PACoordinates;
 import astro.practical.lib.PAUtil;
 import astro.practical.test.TestLib;
 import astro.practical.types.PAAngleMeasure;
+import astro.practical.types.RightAscensionDeclination;
 import astro.practical.types.RiseSetStatus;
 
 public class TestCoordinates {
@@ -154,5 +155,21 @@ public class TestCoordinates {
 				.Assert(RiseSetStatus.OK, riseSet.riseSetStatus).Assert(14, riseSet.utRiseHour)
 				.Assert(16, riseSet.utRiseMin).Assert(4, riseSet.utSetHour).Assert(10, riseSet.utSetMin)
 				.Assert(64.36, riseSet.azRise).Assert(295.64, riseSet.azSet);
+	}
+
+	public void testCorrectForPrecession() {
+		TestLib testLib = new TestLib();
+
+		RightAscensionDeclination rightAscensionDeclination = paCoordinates.correctForPrecession(9, 10, 43, 14, 23, 25,
+				0.923, 1, 1950, 1, 6, 1979);
+
+		testLib.setTestName(
+				"Corrected Precession for Right Ascension 9h 10m 43s and Declination 14d 23m 25s and Epoch 1 Date 1/0.923/1950 and Epoch 2 Date 6/1/1979")
+				.Assert(9, rightAscensionDeclination.rightAscensionHours)
+				.Assert(12, rightAscensionDeclination.rightAscensionMinutes)
+				.Assert(20.18, rightAscensionDeclination.rightAscensionSeconds)
+				.Assert(14, rightAscensionDeclination.declinationDegrees)
+				.Assert(16, rightAscensionDeclination.declinationMinutes)
+				.Assert(9.12, rightAscensionDeclination.declinationSeconds);
 	}
 }

@@ -8,9 +8,10 @@ import astro.practical.containers.GalacticCoordinates;
 import astro.practical.containers.HorizonCoordinates;
 import astro.practical.containers.HourAngle;
 import astro.practical.containers.RightAscension;
-import astro.practical.types.PAAngleMeasure;
-import astro.practical.types.RiseSetStatus;
 import astro.practical.containers.RiseSet;
+import astro.practical.types.PAAngleMeasure;
+import astro.practical.types.RightAscensionDeclination;
+import astro.practical.types.RiseSetStatus;
 
 public class PACoordinates {
 	/**
@@ -355,5 +356,35 @@ public class PACoordinates {
 		var azSet = (riseSetStatus == RiseSetStatus.OK) ? PAUtil.round(azSetDeg, 2) : 0;
 
 		return new RiseSet(riseSetStatus, utRiseHour, utRiseMin, utSetHour, utSetMin, azRise, azSet);
+	}
+
+	/**
+	 * Calculate precession (corrected coordinates between two epochs)
+	 */
+	public RightAscensionDeclination correctForPrecession(double raHour, double raMinutes, double raSeconds,
+			double decDeg, double decMinutes, double decSeconds, double epoch1Day, int epoch1Month, int epoch1Year,
+			double epoch2Day, int epoch2Month, int epoch2Year) {
+		double ra1Rad = Math
+				.toRadians(PAMacros.degreeHoursToDecimalDegrees(PAMacros.hmsToDH(raHour, raMinutes, raSeconds)));
+		double dec1Rad = Math.toRadians(PAMacros.degreesMinutesSecondsToDecimalDegrees(decDeg, decMinutes, decSeconds));
+		double tCenturies = (PAMacros.civilDateToJulianDate(epoch1Day, epoch1Month, epoch1Year) - 2415020) / 36525;
+		double mSec = 3.07234 + (0.00186 * tCenturies);
+		double nArcsec = 20.0468 - (0.0085 * tCenturies);
+		double nYears = (PAMacros.civilDateToJulianDate(epoch2Day, epoch2Month, epoch2Year)
+				- PAMacros.civilDateToJulianDate(epoch1Day, epoch1Month, epoch1Year)) / 365.25;
+		double s1Hours = ((mSec + (nArcsec * Math.sin(ra1Rad) * Math.tan(dec1Rad) / 15)) * nYears) / 3600;
+		double ra2Hours = PAMacros.hmsToDH(raHour, raMinutes, raSeconds) + s1Hours;
+		double s2Deg = (nArcsec * Math.cos(ra1Rad) * nYears) / 3600;
+		double dec2Deg = PAMacros.degreesMinutesSecondsToDecimalDegrees(decDeg, decMinutes, decSeconds) + s2Deg;
+
+		int correctedRAHour = PAMacros.decimalHoursHour(ra2Hours);
+		int correctedRAMinutes = PAMacros.decimalHoursMinute(ra2Hours);
+		double correctedRASeconds = PAMacros.decimalHoursSecond(ra2Hours);
+		double correctedDecDeg = PAMacros.decimalDegreesDegrees(dec2Deg);
+		double correctedDecMinutes = PAMacros.decimalDegreesMinutes(dec2Deg);
+		double correctedDecSeconds = PAMacros.decimalDegreesSeconds(dec2Deg);
+
+		return new RightAscensionDeclination(correctedRAHour, correctedRAMinutes, correctedRASeconds, correctedDecDeg,
+				correctedDecMinutes, correctedDecSeconds);
 	}
 }

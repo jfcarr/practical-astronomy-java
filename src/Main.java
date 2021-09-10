@@ -26,5 +26,6 @@ public class Main {
 		testCoordinates.testEquatorialCoordinateToFromGalacticCoordinate();
 		testCoordinates.testAngleBetweenTwoObjects();
 		testCoordinates.testRisingAndSetting();
+		testCoordinates.testCorrectForPrecession();
 	}
 }
