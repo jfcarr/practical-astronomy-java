@@ -3,6 +3,7 @@ var classTestCoordinates =
     [ "TestCoordinates", "classTestCoordinates.html#a22922264bf821aa17aeebaba0bf55ab1", null ],
     [ "testAngleBetweenTwoObjects", "classTestCoordinates.html#ae694b3721de6156036ab64f541ac9e9a", null ],
     [ "testAngleToFromDecimalDegrees", "classTestCoordinates.html#a4c18cd3555ee3674ba5e645399c9085f", null ],
+    [ "testCorrectForAberration", "classTestCoordinates.html#a0bc145beb0b8dbccd43eab173cd1ef71", null ],
     [ "testCorrectForPrecession", "classTestCoordinates.html#abaa787ed3361bc4bc5240b87cfb9f35f", null ],
     [ "testEclipticCoordinateToFromEquatorialCoordinate", "classTestCoordinates.html#a273efa91f5deec2908e118bd0d3857b8", null ],
     [ "testEquatorialCoordinatesToFromHorizonCoordinates", "classTestCoordinates.html#aa822bd2d174932ee5cd674d04092b390", null ],

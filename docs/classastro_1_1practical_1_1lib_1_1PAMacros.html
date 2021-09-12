@@ -153,6 +153,10 @@ Static Public Member Functions</h2></td></tr>
 <tr class="separator:a643e8667d6a73d1211dbdf66096108fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aacce7a24cd53ee927a7369788de8fef3"><td class="memItemLeft" align="right" valign="top">static double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classastro_1_1practical_1_1lib_1_1PAMacros.html#aacce7a24cd53ee927a7369788de8fef3">greenwichSiderealTimeToUniversalTime</a> (double greenwichSiderealHours, double greenwichSiderealMinutes, double greenwichSiderealSeconds, double greenwichDay, int greenwichMonth, int greenwichYear)</td></tr>
 <tr class="separator:aacce7a24cd53ee927a7369788de8fef3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afbefcefc0dbb382b18b68886b3be0d6f"><td class="memItemLeft" align="right" valign="top">static double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classastro_1_1practical_1_1lib_1_1PAMacros.html#afbefcefc0dbb382b18b68886b3be0d6f">sunLong</a> (double lch, double lcm, double lcs, int ds, int zc, double ld, int lm, int ly)</td></tr>
+<tr class="separator:afbefcefc0dbb382b18b68886b3be0d6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75c31010344aaa36374d002051feada7"><td class="memItemLeft" align="right" valign="top">static double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classastro_1_1practical_1_1lib_1_1PAMacros.html#a75c31010344aaa36374d002051feada7">trueAnomaly</a> (double am, double ec)</td></tr>
+<tr class="separator:a75c31010344aaa36374d002051feada7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
@@ -1667,6 +1671,122 @@ Static Public Member Functions</h2></td></tr>
 <p>Original macro name: RAHA </p>
 
 <p class="definition">Definition at line <a class="el" href="PAMacros_8java_source.html#l00163">163</a> of file <a class="el" href="PAMacros_8java_source.html">PAMacros.java</a>.</p>
+
+</div>
+</div>
+<a id="afbefcefc0dbb382b18b68886b3be0d6f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afbefcefc0dbb382b18b68886b3be0d6f">&#9670;&nbsp;</a></span>sunLong()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static double sunLong </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>lch</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>lcm</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>lcs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>ds</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>zc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>ld</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>lm</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>ly</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Calculate Sun's ecliptic longitude</p>
+<p>Original macro name: SunLong </p>
+
+<p class="definition">Definition at line <a class="el" href="PAMacros_8java_source.html#l00566">566</a> of file <a class="el" href="PAMacros_8java_source.html">PAMacros.java</a>.</p>
+
+</div>
+</div>
+<a id="a75c31010344aaa36374d002051feada7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a75c31010344aaa36374d002051feada7">&#9670;&nbsp;</a></span>trueAnomaly()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static double trueAnomaly </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>am</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>ec</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Solve Kepler's equation, and return value of the true anomaly in radians</p>
+<p>Original macro name: TrueAnomaly </p>
+
+<p class="definition">Definition at line <a class="el" href="PAMacros_8java_source.html#l00625">625</a> of file <a class="el" href="PAMacros_8java_source.html">PAMacros.java</a>.</p>
 
 </div>
 </div>

@@ -3,6 +3,7 @@ var annotated_dup =
     [ "astro", null, [
       [ "practical", null, [
         [ "containers", "namespaceastro_1_1practical_1_1containers.html", [
+          [ "Aberration", "classastro_1_1practical_1_1containers_1_1Aberration.html", "classastro_1_1practical_1_1containers_1_1Aberration" ],
           [ "Angle", "classastro_1_1practical_1_1containers_1_1Angle.html", "classastro_1_1practical_1_1containers_1_1Angle" ],
           [ "CivilDate", "classastro_1_1practical_1_1containers_1_1CivilDate.html", "classastro_1_1practical_1_1containers_1_1CivilDate" ],
           [ "CivilDateTime", "classastro_1_1practical_1_1containers_1_1CivilDateTime.html", "classastro_1_1practical_1_1containers_1_1CivilDateTime" ],
