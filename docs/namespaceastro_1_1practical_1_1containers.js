@@ -12,6 +12,7 @@ var namespaceastro_1_1practical_1_1containers =
     [ "HorizonCoordinates", "classastro_1_1practical_1_1containers_1_1HorizonCoordinates.html", "classastro_1_1practical_1_1containers_1_1HorizonCoordinates" ],
     [ "HourAngle", "classastro_1_1practical_1_1containers_1_1HourAngle.html", "classastro_1_1practical_1_1containers_1_1HourAngle" ],
     [ "LocalSiderealTime", "classastro_1_1practical_1_1containers_1_1LocalSiderealTime.html", "classastro_1_1practical_1_1containers_1_1LocalSiderealTime" ],
+    [ "Nutation", "classastro_1_1practical_1_1containers_1_1Nutation.html", "classastro_1_1practical_1_1containers_1_1Nutation" ],
     [ "RightAscension", "classastro_1_1practical_1_1containers_1_1RightAscension.html", "classastro_1_1practical_1_1containers_1_1RightAscension" ],
     [ "RiseSet", "classastro_1_1practical_1_1containers_1_1RiseSet.html", "classastro_1_1practical_1_1containers_1_1RiseSet" ],
     [ "UniversalDateTime", "classastro_1_1practical_1_1containers_1_1UniversalDateTime.html", "classastro_1_1practical_1_1containers_1_1UniversalDateTime" ],

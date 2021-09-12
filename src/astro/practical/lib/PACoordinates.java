@@ -7,6 +7,7 @@ import astro.practical.containers.EquatorialCoordinatesRA;
 import astro.practical.containers.GalacticCoordinates;
 import astro.practical.containers.HorizonCoordinates;
 import astro.practical.containers.HourAngle;
+import astro.practical.containers.Nutation;
 import astro.practical.containers.RightAscension;
 import astro.practical.containers.RiseSet;
 import astro.practical.types.PAAngleMeasure;
@@ -386,5 +387,31 @@ public class PACoordinates {
 
 		return new RightAscensionDeclination(correctedRAHour, correctedRAMinutes, correctedRASeconds, correctedDecDeg,
 				correctedDecMinutes, correctedDecSeconds);
+	}
+
+	/**
+	 * Calculate nutation for two values: ecliptic longitude and obliquity, for a
+	 * Greenwich date.
+	 */
+	public Nutation nutationInEclipticLongitudeAndObliquity(double greenwichDay, int greenwichMonth,
+			int greenwichYear) {
+		double jdDays = PAMacros.civilDateToJulianDate(greenwichDay, greenwichMonth, greenwichYear);
+		double tCenturies = (jdDays - 2415020) / 36525;
+		double aDeg = 100.0021358 * tCenturies;
+		double l1Deg = 279.6967 + (0.000303 * tCenturies * tCenturies);
+		double lDeg1 = l1Deg + 360 * (aDeg - Math.floor(aDeg));
+		double lDeg2 = lDeg1 - 360 * Math.floor(lDeg1 / 360);
+		double lRad = Math.toRadians(lDeg2);
+		double bDeg = 5.372617 * tCenturies;
+		double nDeg1 = 259.1833 - 360 * (bDeg - Math.floor(bDeg));
+		double nDeg2 = nDeg1 - 360 * (Math.floor(nDeg1 / 360));
+		double nRad = Math.toRadians(nDeg2);
+		double nutInLongArcsec = -17.2 * Math.sin(nRad) - 1.3 * Math.sin(2 * lRad);
+		double nutInOblArcsec = 9.2 * Math.cos(nRad) + 0.5 * Math.cos(2 * lRad);
+
+		double nutInLongDeg = nutInLongArcsec / 3600;
+		double nutInOblDeg = nutInOblArcsec / 3600;
+
+		return new Nutation(nutInLongDeg, nutInOblDeg);
 	}
 }

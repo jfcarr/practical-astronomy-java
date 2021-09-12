@@ -27,5 +27,6 @@ public class Main {
 		testCoordinates.testAngleBetweenTwoObjects();
 		testCoordinates.testRisingAndSetting();
 		testCoordinates.testCorrectForPrecession();
+		testCoordinates.testNutationInEclipticLongitudeAndObliquity();
 	}
 }

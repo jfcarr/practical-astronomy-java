@@ -5,6 +5,7 @@ import astro.practical.containers.EquatorialCoordinatesRA;
 import astro.practical.containers.GalacticCoordinates;
 import astro.practical.containers.HorizonCoordinates;
 import astro.practical.containers.HourAngle;
+import astro.practical.containers.Nutation;
 import astro.practical.containers.RightAscension;
 import astro.practical.containers.RiseSet;
 import astro.practical.lib.PACoordinates;
@@ -171,5 +172,15 @@ public class TestCoordinates {
 				.Assert(14, rightAscensionDeclination.declinationDegrees)
 				.Assert(16, rightAscensionDeclination.declinationMinutes)
 				.Assert(9.12, rightAscensionDeclination.declinationSeconds);
+	}
+
+	public void testNutationInEclipticLongitudeAndObliquity() {
+		TestLib testLib = new TestLib();
+
+		Nutation nutation = paCoordinates.nutationInEclipticLongitudeAndObliquity(1, 9, 1988);
+
+		testLib.setTestName("Nutation in Ecliptic Longitude and Obliquity for Greenwich Date 9/1/1988")
+				.Assert(0.001525808, PAUtil.round(nutation.eclipticLongitudeDegrees, 9))
+				.Assert(0.0025671, PAUtil.round(nutation.obliquityDegrees, 7));
 	}
 }

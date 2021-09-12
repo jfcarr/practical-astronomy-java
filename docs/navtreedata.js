@@ -46,6 +46,7 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
+"Angle_8java.html",
 ""
 ];
 
