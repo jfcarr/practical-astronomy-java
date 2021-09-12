@@ -1,5 +1,9 @@
 var searchData=
 [
-  ['minutes_369',['minutes',['../classastro_1_1practical_1_1containers_1_1Angle.html#aa3162948b9a2411e31bc630b41c8d055',1,'astro.practical.containers.Angle.minutes()'],['../classastro_1_1practical_1_1types_1_1DateTime.html#ab693b677bdc9ded12b06daf49778101c',1,'astro.practical.types.DateTime.minutes()'],['../classastro_1_1practical_1_1types_1_1Time.html#aa3162948b9a2411e31bc630b41c8d055',1,'astro.practical.types.Time.minutes()']]],
-  ['month_370',['month',['../classastro_1_1practical_1_1types_1_1Date.html#aedb06abe5aff12fa3e7e0e71a374edfb',1,'astro.practical.types.Date.month()'],['../classastro_1_1practical_1_1types_1_1DateTime.html#aedb06abe5aff12fa3e7e0e71a374edfb',1,'astro.practical.types.DateTime.month()']]]
+  ['latitudedegrees_376',['latitudeDegrees',['../classastro_1_1practical_1_1types_1_1CoordinatesLongLat.html#a4b61e2bf872ba83cc205c56c22361a18',1,'astro::practical::types::CoordinatesLongLat']]],
+  ['latitudeminutes_377',['latitudeMinutes',['../classastro_1_1practical_1_1types_1_1CoordinatesLongLat.html#a9f686947be6a055f65a253b2e327f2db',1,'astro::practical::types::CoordinatesLongLat']]],
+  ['latitudeseconds_378',['latitudeSeconds',['../classastro_1_1practical_1_1types_1_1CoordinatesLongLat.html#ada16cff4bac8db00bf81d222921252a3',1,'astro::practical::types::CoordinatesLongLat']]],
+  ['longitudedegrees_379',['longitudeDegrees',['../classastro_1_1practical_1_1types_1_1CoordinatesLongLat.html#a623d9e58238c87f269f583b6463e9a32',1,'astro::practical::types::CoordinatesLongLat']]],
+  ['longitudeminutes_380',['longitudeMinutes',['../classastro_1_1practical_1_1types_1_1CoordinatesLongLat.html#ac48dc8a6362bfb343783cf025b5294c5',1,'astro::practical::types::CoordinatesLongLat']]],
+  ['longitudeseconds_381',['longitudeSeconds',['../classastro_1_1practical_1_1types_1_1CoordinatesLongLat.html#ab24bcd7c469aebd058463fd3546a0e00',1,'astro::practical::types::CoordinatesLongLat']]]
 ];

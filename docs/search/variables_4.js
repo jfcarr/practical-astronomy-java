@@ -1,9 +1,8 @@
 var searchData=
 [
-  ['latitudedegrees_363',['latitudeDegrees',['../classastro_1_1practical_1_1types_1_1CoordinatesLongLat.html#a4b61e2bf872ba83cc205c56c22361a18',1,'astro::practical::types::CoordinatesLongLat']]],
-  ['latitudeminutes_364',['latitudeMinutes',['../classastro_1_1practical_1_1types_1_1CoordinatesLongLat.html#a9f686947be6a055f65a253b2e327f2db',1,'astro::practical::types::CoordinatesLongLat']]],
-  ['latitudeseconds_365',['latitudeSeconds',['../classastro_1_1practical_1_1types_1_1CoordinatesLongLat.html#ada16cff4bac8db00bf81d222921252a3',1,'astro::practical::types::CoordinatesLongLat']]],
-  ['longitudedegrees_366',['longitudeDegrees',['../classastro_1_1practical_1_1types_1_1CoordinatesLongLat.html#a623d9e58238c87f269f583b6463e9a32',1,'astro::practical::types::CoordinatesLongLat']]],
-  ['longitudeminutes_367',['longitudeMinutes',['../classastro_1_1practical_1_1types_1_1CoordinatesLongLat.html#ac48dc8a6362bfb343783cf025b5294c5',1,'astro::practical::types::CoordinatesLongLat']]],
-  ['longitudeseconds_368',['longitudeSeconds',['../classastro_1_1practical_1_1types_1_1CoordinatesLongLat.html#ab24bcd7c469aebd058463fd3546a0e00',1,'astro::practical::types::CoordinatesLongLat']]]
+  ['houranglehours_371',['hourAngleHours',['../classastro_1_1practical_1_1containers_1_1EquatorialCoordinatesHA.html#a13d05a0e4ddf8d4da90928d0adf6c191',1,'astro::practical::containers::EquatorialCoordinatesHA']]],
+  ['hourangleminutes_372',['hourAngleMinutes',['../classastro_1_1practical_1_1containers_1_1EquatorialCoordinatesHA.html#a01f2e7f2d0bebea882a64252569ac147',1,'astro::practical::containers::EquatorialCoordinatesHA']]],
+  ['hourangleseconds_373',['hourAngleSeconds',['../classastro_1_1practical_1_1containers_1_1EquatorialCoordinatesHA.html#ae3a9c7dfbed5342339604b1ce9b61a67',1,'astro::practical::containers::EquatorialCoordinatesHA']]],
+  ['hours_374',['Hours',['../enumastro_1_1practical_1_1types_1_1PAAngleMeasure.html#ad0a1b7b79421ba02b6a23d15f06bb56f',1,'astro::practical::types::PAAngleMeasure']]],
+  ['hours_375',['hours',['../classastro_1_1practical_1_1types_1_1DateTime.html#af23005df06fc3cd4264e5eee2dfa2f8c',1,'astro.practical.types.DateTime.hours()'],['../classastro_1_1practical_1_1types_1_1Time.html#af3d82d91d4bd4785b2928cfaf6d7a96b',1,'astro.practical.types.Time.hours()']]]
 ];

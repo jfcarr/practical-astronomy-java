@@ -1,4 +1,7 @@
 var searchData=
 [
-  ['seconds_377',['seconds',['../classastro_1_1practical_1_1containers_1_1Angle.html#a6664ee0d5227cf47362c565f9fab37f5',1,'astro.practical.containers.Angle.seconds()'],['../classastro_1_1practical_1_1types_1_1DateTime.html#a77bd4f876bdc3afed5acdd936f775d34',1,'astro.practical.types.DateTime.seconds()'],['../classastro_1_1practical_1_1types_1_1Time.html#a6664ee0d5227cf47362c565f9fab37f5',1,'astro.practical.types.Time.seconds()']]]
+  ['rightascensionhours_387',['rightAscensionHours',['../classastro_1_1practical_1_1types_1_1RightAscensionDeclination.html#a3cfea4fe0daa407fe9ee5becf08baca9',1,'astro::practical::types::RightAscensionDeclination']]],
+  ['rightascensionminutes_388',['rightAscensionMinutes',['../classastro_1_1practical_1_1types_1_1RightAscensionDeclination.html#a244f37cf540d07d8e6946c8ca126f319',1,'astro::practical::types::RightAscensionDeclination']]],
+  ['rightascensionseconds_389',['rightAscensionSeconds',['../classastro_1_1practical_1_1types_1_1RightAscensionDeclination.html#a411112390370bb6a0fb8e656b0b342b8',1,'astro::practical::types::RightAscensionDeclination']]],
+  ['risesetstatus_390',['riseSetStatus',['../classastro_1_1practical_1_1containers_1_1RiseSet.html#a31e2309841cf47a16e3856c2eb75faf9',1,'astro::practical::containers::RiseSet']]]
 ];

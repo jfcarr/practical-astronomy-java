@@ -36,6 +36,9 @@ var dir_a093864e3da3b16c7d963d8b949f9869 =
     [ "LocalSiderealTime.java", "LocalSiderealTime_8java.html", [
       [ "LocalSiderealTime", "classastro_1_1practical_1_1containers_1_1LocalSiderealTime.html", "classastro_1_1practical_1_1containers_1_1LocalSiderealTime" ]
     ] ],
+    [ "Nutation.java", "Nutation_8java.html", [
+      [ "Nutation", "classastro_1_1practical_1_1containers_1_1Nutation.html", "classastro_1_1practical_1_1containers_1_1Nutation" ]
+    ] ],
     [ "RightAscension.java", "RightAscension_8java.html", [
       [ "RightAscension", "classastro_1_1practical_1_1containers_1_1RightAscension.html", "classastro_1_1practical_1_1containers_1_1RightAscension" ]
     ] ],

@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['year_385',['year',['../classastro_1_1practical_1_1types_1_1Date.html#abeac221e38b7b9ce7df8722c842bf671',1,'astro.practical.types.Date.year()'],['../classastro_1_1practical_1_1types_1_1DateTime.html#abeac221e38b7b9ce7df8722c842bf671',1,'astro.practical.types.DateTime.year()']]]
+  ['warning_397',['WARNING',['../enumastro_1_1practical_1_1types_1_1PAWarningFlag.html#a1dfc73ab73898d3f4f348d462a5d126a',1,'astro::practical::types::PAWarningFlag']]],
+  ['warningflag_398',['warningFlag',['../classastro_1_1practical_1_1containers_1_1UniversalTime.html#ae9ef7eeb80a39bb1ddc5f79ce8fa93d9',1,'astro::practical::containers::UniversalTime']]]
 ];
