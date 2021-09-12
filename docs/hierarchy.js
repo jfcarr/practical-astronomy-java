@@ -1,5 +1,6 @@
 var hierarchy =
 [
+    [ "Aberration", "classastro_1_1practical_1_1containers_1_1Aberration.html", null ],
     [ "Angle", "classastro_1_1practical_1_1containers_1_1Angle.html", null ],
     [ "CoordinatesLongLat", "classastro_1_1practical_1_1types_1_1CoordinatesLongLat.html", [
       [ "EclipticCoordinates", "classastro_1_1practical_1_1containers_1_1EclipticCoordinates.html", null ],

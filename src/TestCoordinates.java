@@ -1,3 +1,4 @@
+import astro.practical.containers.Aberration;
 import astro.practical.containers.Angle;
 import astro.practical.containers.EclipticCoordinates;
 import astro.practical.containers.EquatorialCoordinatesHA;
@@ -182,5 +183,17 @@ public class TestCoordinates {
 		testLib.setTestName("Nutation in Ecliptic Longitude and Obliquity for Greenwich Date 9/1/1988")
 				.Assert(0.001525808, PAUtil.round(nutation.eclipticLongitudeDegrees, 9))
 				.Assert(0.0025671, PAUtil.round(nutation.obliquityDegrees, 7));
+	}
+
+	public void testCorrectForAberration() {
+		TestLib testLib = new TestLib();
+
+		Aberration aberration = paCoordinates.correctForAberration(0, 0, 0, 8, 9, 1988, 352, 37, 10.1, -1, 32, 56.4);
+
+		testLib.setTestName(
+				"Ecliptic Coordinates, corrected for aberration, for UT 00:00:00 and Greenwich Date 9/8/1988 and Ecliptic Longitude 352d 37m 10.1s and Ecliptic Latitude -1d 32m 56.4s")
+				.Assert(352, aberration.apparentEclLongDeg).Assert(37, aberration.apparentEclLongMin)
+				.Assert(30.45, aberration.apparentEclLongSec).Assert(-1, aberration.apparentEclLatDeg)
+				.Assert(32, aberration.apparentEclLatMin).Assert(56.33, aberration.apparentEclLatSec);
 	}
 }

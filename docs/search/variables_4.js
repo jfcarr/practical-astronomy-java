@@ -1,8 +1,8 @@
 var searchData=
 [
-  ['houranglehours_371',['hourAngleHours',['../classastro_1_1practical_1_1containers_1_1EquatorialCoordinatesHA.html#a13d05a0e4ddf8d4da90928d0adf6c191',1,'astro::practical::containers::EquatorialCoordinatesHA']]],
-  ['hourangleminutes_372',['hourAngleMinutes',['../classastro_1_1practical_1_1containers_1_1EquatorialCoordinatesHA.html#a01f2e7f2d0bebea882a64252569ac147',1,'astro::practical::containers::EquatorialCoordinatesHA']]],
-  ['hourangleseconds_373',['hourAngleSeconds',['../classastro_1_1practical_1_1containers_1_1EquatorialCoordinatesHA.html#ae3a9c7dfbed5342339604b1ce9b61a67',1,'astro::practical::containers::EquatorialCoordinatesHA']]],
-  ['hours_374',['Hours',['../enumastro_1_1practical_1_1types_1_1PAAngleMeasure.html#ad0a1b7b79421ba02b6a23d15f06bb56f',1,'astro::practical::types::PAAngleMeasure']]],
-  ['hours_375',['hours',['../classastro_1_1practical_1_1types_1_1DateTime.html#af23005df06fc3cd4264e5eee2dfa2f8c',1,'astro.practical.types.DateTime.hours()'],['../classastro_1_1practical_1_1types_1_1Time.html#af3d82d91d4bd4785b2928cfaf6d7a96b',1,'astro.practical.types.Time.hours()']]]
+  ['houranglehours_396',['hourAngleHours',['../classastro_1_1practical_1_1containers_1_1EquatorialCoordinatesHA.html#a13d05a0e4ddf8d4da90928d0adf6c191',1,'astro::practical::containers::EquatorialCoordinatesHA']]],
+  ['hourangleminutes_397',['hourAngleMinutes',['../classastro_1_1practical_1_1containers_1_1EquatorialCoordinatesHA.html#a01f2e7f2d0bebea882a64252569ac147',1,'astro::practical::containers::EquatorialCoordinatesHA']]],
+  ['hourangleseconds_398',['hourAngleSeconds',['../classastro_1_1practical_1_1containers_1_1EquatorialCoordinatesHA.html#ae3a9c7dfbed5342339604b1ce9b61a67',1,'astro::practical::containers::EquatorialCoordinatesHA']]],
+  ['hours_399',['hours',['../classastro_1_1practical_1_1types_1_1DateTime.html#af23005df06fc3cd4264e5eee2dfa2f8c',1,'astro.practical.types.DateTime.hours()'],['../classastro_1_1practical_1_1types_1_1Time.html#af3d82d91d4bd4785b2928cfaf6d7a96b',1,'astro.practical.types.Time.hours()']]],
+  ['hours_400',['Hours',['../enumastro_1_1practical_1_1types_1_1PAAngleMeasure.html#ad0a1b7b79421ba02b6a23d15f06bb56f',1,'astro::practical::types::PAAngleMeasure']]]
 ];
