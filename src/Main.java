@@ -28,5 +28,6 @@ public class Main {
 		testCoordinates.testRisingAndSetting();
 		testCoordinates.testCorrectForPrecession();
 		testCoordinates.testNutationInEclipticLongitudeAndObliquity();
+		testCoordinates.testCorrectForAberration();
 	}
 }

@@ -1,5 +1,6 @@
 package astro.practical.lib;
 
+import astro.practical.containers.Aberration;
 import astro.practical.containers.Angle;
 import astro.practical.containers.EclipticCoordinates;
 import astro.practical.containers.EquatorialCoordinatesHA;
@@ -413,5 +414,33 @@ public class PACoordinates {
 		double nutInOblDeg = nutInOblArcsec / 3600;
 
 		return new Nutation(nutInLongDeg, nutInOblDeg);
+	}
+
+	/**
+	 * Correct ecliptic coordinates for the effects of aberration.
+	 */
+	public Aberration correctForAberration(double utHour, double utMinutes, double utSeconds, double gwDay, int gwMonth,
+			int gwYear, double trueEclLongDeg, double trueEclLongMin, double trueEclLongSec, double trueEclLatDeg,
+			double trueEclLatMin, double trueEclLatSec) {
+		double trueLongDeg = PAMacros.degreesMinutesSecondsToDecimalDegrees(trueEclLongDeg, trueEclLongMin,
+				trueEclLongSec);
+		double trueLatDeg = PAMacros.degreesMinutesSecondsToDecimalDegrees(trueEclLatDeg, trueEclLatMin, trueEclLatSec);
+		double sunTrueLongDeg = PAMacros.sunLong(utHour, utMinutes, utSeconds, 0, 0, gwDay, gwMonth, gwYear);
+		double dlongArcsec = -20.5 * Math.cos(Math.toRadians(sunTrueLongDeg - trueLongDeg))
+				/ Math.cos(Math.toRadians(trueLatDeg));
+		double dlatArcsec = -20.5 * Math.sin(Math.toRadians(sunTrueLongDeg - trueLongDeg))
+				* Math.sin(Math.toRadians(trueLatDeg));
+		double apparentLongDeg = trueLongDeg + (dlongArcsec / 3600);
+		double apparentLatDeg = trueLatDeg + (dlatArcsec / 3600);
+
+		double apparentEclLongDeg = PAMacros.decimalDegreesDegrees(apparentLongDeg);
+		double apparentEclLongMin = PAMacros.decimalDegreesMinutes(apparentLongDeg);
+		double apparentEclLongSec = PAMacros.decimalDegreesSeconds(apparentLongDeg);
+		double apparentEclLatDeg = PAMacros.decimalDegreesDegrees(apparentLatDeg);
+		double apparentEclLatMin = PAMacros.decimalDegreesMinutes(apparentLatDeg);
+		double apparentEclLatSec = PAMacros.decimalDegreesSeconds(apparentLatDeg);
+
+		return new Aberration(apparentEclLongDeg, apparentEclLongMin, apparentEclLongSec, apparentEclLatDeg,
+				apparentEclLatMin, apparentEclLatSec);
 	}
 }
