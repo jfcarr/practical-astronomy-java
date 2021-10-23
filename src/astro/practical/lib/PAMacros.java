@@ -1,5 +1,7 @@
 package astro.practical.lib;
 
+import astro.practical.types.CoordinateType;
+
 public class PAMacros {
 
 	/**
@@ -639,5 +641,68 @@ public class PAMacros {
 		double at = 2.0 * Math.atan(a);
 
 		return at;
+	}
+
+	/**
+	 * Calculate effects of refraction
+	 * 
+	 * Original macro name: Refract
+	 */
+	public static double refract(double y2, CoordinateType sw, double pr, double tr) {
+		double y = Math.toRadians(y2);
+
+		double d = (sw == CoordinateType.TRUE) ? -1.0 : 1.0;
+
+		if (d == -1) {
+			double y3 = y;
+			double y1 = y;
+			double r1 = 0.0;
+
+			while (true) {
+				double yNew = y1 + r1;
+				double rfNew = refract_L3035(pr, tr, yNew, d);
+
+				if (y < -0.087)
+					return 0;
+
+				double r2 = rfNew;
+
+				if ((r2 == 0) || (Math.abs(r2 - r1) < 0.000001)) {
+					double qNew = y3;
+
+					return wToDegrees(qNew + rfNew);
+				}
+
+				r1 = r2;
+			}
+		}
+
+		double rf = refract_L3035(pr, tr, y, d);
+
+		if (y < -0.087)
+			return 0;
+
+		double q = y;
+
+		return wToDegrees(q + rf);
+	}
+
+	/**
+	 * Helper function for Refract
+	 */
+	public static double refract_L3035(double pr, double tr, double y, double d) {
+		if (y < 0.2617994) {
+			if (y < -0.087)
+				return 0;
+
+			double yd = wToDegrees(y);
+			double a = ((0.00002 * yd + 0.0196) * yd + 0.1594) * pr;
+			double b = (273.0 + tr) * ((0.0845 * yd + 0.505) * yd + 1);
+
+			return Math.toRadians(-(a / b) * d);
+
+		}
+
+		return -d * 0.00007888888 * pr / ((273.0 + tr) * Math.tan(y));
 	}
 }
