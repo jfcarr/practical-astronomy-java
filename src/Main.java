@@ -29,5 +29,6 @@ public class Main {
 		testCoordinates.testCorrectForPrecession();
 		testCoordinates.testNutationInEclipticLongitudeAndObliquity();
 		testCoordinates.testCorrectForAberration();
+		testCoordinates.testRefraction();
 	}
 }

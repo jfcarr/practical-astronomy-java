@@ -7,6 +7,7 @@ import astro.practical.containers.GalacticCoordinates;
 import astro.practical.containers.HorizonCoordinates;
 import astro.practical.containers.HourAngle;
 import astro.practical.containers.Nutation;
+import astro.practical.containers.Refraction;
 import astro.practical.containers.RightAscension;
 import astro.practical.containers.RiseSet;
 import astro.practical.lib.PACoordinates;
@@ -15,6 +16,7 @@ import astro.practical.test.TestLib;
 import astro.practical.types.PAAngleMeasure;
 import astro.practical.types.RightAscensionDeclination;
 import astro.practical.types.RiseSetStatus;
+import astro.practical.types.CoordinateType;
 
 public class TestCoordinates {
 	PACoordinates paCoordinates;
@@ -195,5 +197,17 @@ public class TestCoordinates {
 				.Assert(352, aberration.apparentEclLongDeg).Assert(37, aberration.apparentEclLongMin)
 				.Assert(30.45, aberration.apparentEclLongSec).Assert(-1, aberration.apparentEclLatDeg)
 				.Assert(32, aberration.apparentEclLatMin).Assert(56.33, aberration.apparentEclLatSec);
+	}
+
+	public void testRefraction() {
+		TestLib testLib = new TestLib();
+
+		Refraction refraction = paCoordinates.atmosphericRefraction(23, 14, 0, 40, 10, 0, CoordinateType.TRUE, 0.17,
+				51.2036110, 0, 0, 23, 3, 1987, 1, 1, 24, 1012, 21.7);
+
+		testLib.setTestName("RA/Dec, corrected for atmospheric refraction").Assert(23, refraction.correctedRAHour)
+				.Assert(13, refraction.correctedRAMin).Assert(44.74, refraction.correctedRASec)
+				.Assert(40, refraction.correctedDecDeg).Assert(19, refraction.correctedDecMin)
+				.Assert(45.76, refraction.correctedDecSec);
 	}
 }
