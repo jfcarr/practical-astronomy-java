@@ -9,7 +9,6 @@ import astro.practical.containers.GalacticCoordinates;
 import astro.practical.containers.HorizonCoordinates;
 import astro.practical.containers.HourAngle;
 import astro.practical.containers.Nutation;
-import astro.practical.containers.Refraction;
 import astro.practical.containers.RightAscension;
 import astro.practical.containers.RiseSet;
 import astro.practical.types.CoordinateType;
@@ -451,10 +450,11 @@ public class PACoordinates {
 	 * 
 	 * NOTE: Valid values for coordinate_type are "TRUE" and "APPARENT".
 	 */
-	public Refraction atmosphericRefraction(double trueRAHour, double trueRAMin, double trueRASec, double trueDecDeg,
-			double trueDecMin, double trueDecSec, CoordinateType coordinateType, double geogLongDeg, double geogLatDeg,
-			int daylightSavingHours, int timezoneHours, double lcdDay, int lcdMonth, int lcdYear, double lctHour,
-			double lctMin, double lctSec, double atmosphericPressureMbar, double atmosphericTemperatureCelsius) {
+	public RightAscensionDeclination atmosphericRefraction(double trueRAHour, double trueRAMin, double trueRASec,
+			double trueDecDeg, double trueDecMin, double trueDecSec, CoordinateType coordinateType, double geogLongDeg,
+			double geogLatDeg, int daylightSavingHours, int timezoneHours, double lcdDay, int lcdMonth, int lcdYear,
+			double lctHour, double lctMin, double lctSec, double atmosphericPressureMbar,
+			double atmosphericTemperatureCelsius) {
 		double haHour = PAMacros.rightAscensionToHourAngle(trueRAHour, trueRAMin, trueRASec, lctHour, lctMin, lctSec,
 				daylightSavingHours, timezoneHours, lcdDay, lcdMonth, lcdYear, geogLongDeg);
 		double azimuthDeg = PAMacros.equatorialCoordinatesToAzimuth(haHour, 0, 0, trueDecDeg, trueDecMin, trueDecSec,
@@ -478,7 +478,7 @@ public class PACoordinates {
 		double correctedDecMin = PAMacros.decimalDegreesMinutes(correctedDecDeg1);
 		double correctedDecSec = PAMacros.decimalDegreesSeconds(correctedDecDeg1);
 
-		return new Refraction(correctedRAHour, correctedRAMin, correctedRASec, correctedDecDeg, correctedDecMin,
-				correctedDecSec);
+		return new RightAscensionDeclination(correctedRAHour, correctedRAMin, correctedRASec, correctedDecDeg,
+				correctedDecMin, correctedDecSec);
 	}
 }
