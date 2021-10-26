@@ -1,6 +1,7 @@
 package astro.practical.lib;
 
 import astro.practical.types.CoordinateType;
+import astro.practical.types.ParallaxHelper;
 
 public class PAMacros {
 
@@ -705,4 +706,171 @@ public class PAMacros {
 
 		return -d * 0.00007888888 * pr / ((273.0 + tr) * Math.tan(y));
 	}
+
+	/**
+	 * Calculate corrected hour angle in decimal hours
+	 * 
+	 * Original macro name: ParallaxHA
+	 */
+	public static double parallaxHA(double hh, double hm, double hs, double dd, double dm, double ds, CoordinateType sw,
+			double gp, double ht, double hp) {
+		double a = Math.toRadians(gp);
+		double c1 = Math.cos(a);
+		double s1 = Math.sin(a);
+
+		double u = Math.atan(0.996647 * s1 / c1);
+		double c2 = Math.cos(u);
+		double s2 = Math.sin(u);
+		double b = ht / 6378160;
+
+		double rs = (0.996647 * s2) + (b * s1);
+
+		double rc = c2 + (b * c1);
+		double tp = 6.283185308;
+
+		double rp = 1.0 / Math.sin(Math.toRadians(hp));
+
+		double x = Math.toRadians(degreeHoursToDecimalDegrees(hmsToDH(hh, hm, hs)));
+		double x1 = x;
+		double y = Math.toRadians(degreesMinutesSecondsToDecimalDegrees(dd, dm, ds));
+		double y1 = y;
+
+		double d = (sw == CoordinateType.TRUE) ? 1.0 : -1.0;
+
+		if (d == 1) {
+			ParallaxHelper result = parallaxHA_L2870(x, y, rc, rp, rs, tp);
+
+			return decimalDegreesToDegreeHours(wToDegrees(result.p));
+		}
+
+		double p1 = 0.0;
+		double q1 = 0.0;
+		double xLoop = x;
+		double yLoop = y;
+
+		while (true) {
+			ParallaxHelper result = parallaxHA_L2870(xLoop, yLoop, rc, rp, rs, tp);
+			double p2 = result.p - xLoop;
+			double q2 = result.q - yLoop;
+
+			double aa = Math.abs(p2 - p1);
+			double bb = Math.abs(q2 - q1);
+
+			if ((aa < 0.000001) && (bb < 0.000001)) {
+				double p = x1 - p2;
+
+				return decimalDegreesToDegreeHours(wToDegrees(p));
+			}
+
+			xLoop = x1 - p2;
+			yLoop = y1 - q2;
+			p1 = p2;
+			q1 = q2;
+		}
+
+		// return DecimalDegreesToDegreeHours(Degrees(0));
+	}
+
+	/**
+	 * Helper function for parallax_ha
+	 */
+	public static ParallaxHelper parallaxHA_L2870(double x, double y, double rc, double rp, double rs, double tp) {
+		double cx = Math.cos(x);
+		double sy = Math.sin(y);
+		double cy = Math.cos(y);
+
+		double aa = (rc * Math.sin(x)) / ((rp * cy) - (rc * cx));
+
+		double dx = Math.atan(aa);
+		double p = x + dx;
+		double cp = Math.cos(p);
+
+		p = p - tp * Math.floor(p / tp);
+		double q = Math.atan(cp * (rp * sy - rs) / (rp * cy * cx - rc));
+
+		return new ParallaxHelper(p, q);
+	}
+
+	/**
+	 * Calculate corrected declination in decimal degrees
+	 * 
+	 * Original macro name: ParallaxDec
+	 */
+	public static double parallaxDec(double hh, double hm, double hs, double dd, double dm, double ds,
+			CoordinateType sw, double gp, double ht, double hp) {
+		double a = Math.toRadians(gp);
+		double c1 = Math.cos(a);
+		double s1 = Math.sin(a);
+
+		double u = Math.atan(0.996647 * s1 / c1);
+
+		double c2 = Math.cos(u);
+		double s2 = Math.sin(u);
+		double b = ht / 6378160;
+		double rs = (0.996647 * s2) + (b * s1);
+
+		double rc = c2 + (b * c1);
+		double tp = 6.283185308;
+
+		double rp = 1.0 / Math.sin(Math.toRadians(hp));
+
+		double x = Math.toRadians(degreeHoursToDecimalDegrees(hmsToDH(hh, hm, hs)));
+		double x1 = x;
+
+		double y = Math.toRadians(degreesMinutesSecondsToDecimalDegrees(dd, dm, ds));
+		double y1 = y;
+
+		double d = (sw == CoordinateType.TRUE) ? 1.0 : -1.0;
+
+		if (d == 1) {
+			ParallaxHelper result = parallaxDec_L2870(x, y, rc, rp, rs, tp);
+
+			return wToDegrees(result.q);
+		}
+
+		double p1 = 0.0;
+		// double q1 = 0.0;
+
+		double xLoop = x;
+		double yLoop = y;
+
+		while (true) {
+			ParallaxHelper result = parallaxDec_L2870(xLoop, yLoop, rc, rp, rs, tp);
+			double p2 = result.p - xLoop;
+			double q2 = result.q - yLoop;
+			double aa = Math.abs(p2 - p1);
+
+			if ((aa < 0.000001) && (b < 0.000001)) {
+				var q = y1 - q2;
+
+				return wToDegrees(q);
+			}
+			xLoop = x1 - p2;
+			yLoop = y1 - q2;
+			p1 = p2;
+			// q1 = q2;
+		}
+
+		// return Degrees(0.0);
+	}
+
+	/**
+	 * Helper function for parallax_dec
+	 */
+	public static ParallaxHelper parallaxDec_L2870(double x, double y, double rc, double rp, double rs, double tp) {
+		double cx = Math.cos(x);
+		double sy = Math.sin(y);
+		double cy = Math.cos(y);
+
+		double aa = (rc * Math.sin(x)) / ((rp * cy) - (rc * cx));
+		double dx = Math.atan(aa);
+		double p = x + dx;
+		double cp = Math.cos(p);
+
+		p = p - tp * Math.floor(p / tp);
+		double q = Math.atan(cp * (rp * sy - rs) / (rp * cy * cx - rc));
+
+		return new ParallaxHelper(p, q);
+	}
+
 }
