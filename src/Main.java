@@ -30,5 +30,6 @@ public class Main {
 		testCoordinates.testNutationInEclipticLongitudeAndObliquity();
 		testCoordinates.testCorrectForAberration();
 		testCoordinates.testRefraction();
+		testCoordinates.testParallax();
 	}
 }

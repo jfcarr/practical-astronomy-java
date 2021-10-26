@@ -211,4 +211,18 @@ public class TestCoordinates {
 				.Assert(40, correctedCoordinates.declinationDegrees).Assert(19, correctedCoordinates.declinationMinutes)
 				.Assert(45.76, correctedCoordinates.declinationSeconds);
 	}
+
+	public void testParallax() {
+		TestLib testLib = new TestLib();
+
+		RightAscensionDeclination correctedCoordinates = paCoordinates.correctionsForGeocentricParallax(22, 35, 19, -7,
+				41, 13, CoordinateType.TRUE, 1.019167, -100, 50, 60, 0, -6, 26, 2, 1979, 10, 45, 0);
+
+		testLib.setTestName("RA/Dec, corrected for geocentric parallax")
+				.Assert(22, correctedCoordinates.rightAscensionHours)
+				.Assert(36, correctedCoordinates.rightAscensionMinutes)
+				.Assert(43.22, correctedCoordinates.rightAscensionSeconds)
+				.Assert(-8, correctedCoordinates.declinationDegrees).Assert(32, correctedCoordinates.declinationMinutes)
+				.Assert(17.4, correctedCoordinates.declinationSeconds);
+	}
 }

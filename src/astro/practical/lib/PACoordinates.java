@@ -481,4 +481,34 @@ public class PACoordinates {
 		return new RightAscensionDeclination(correctedRAHour, correctedRAMin, correctedRASec, correctedDecDeg,
 				correctedDecMin, correctedDecSec);
 	}
+
+	/**
+	 * Calculate corrected RA/Dec, accounting for geocentric parallax.
+	 */
+	public RightAscensionDeclination correctionsForGeocentricParallax(double raHour, double raMin, double raSec,
+			double decDeg, double decMin, double decSec, CoordinateType coordinateType, double equatorialHorParallaxDeg,
+			double geogLongDeg, double geogLatDeg, double heightM, int daylightSaving, int timezoneHours, double lcdDay,
+			int lcdMonth, int lcdYear, double lctHour, double lctMin, double lctSec) {
+		double haHours = PAMacros.rightAscensionToHourAngle(raHour, raMin, raSec, lctHour, lctMin, lctSec,
+				daylightSaving, timezoneHours, lcdDay, lcdMonth, lcdYear, geogLongDeg);
+
+		double correctedHAHours = PAMacros.parallaxHA(haHours, 0, 0, decDeg, decMin, decSec, coordinateType, geogLatDeg,
+				heightM, equatorialHorParallaxDeg);
+
+		double correctedRAHours = PAMacros.hourAngleToRightAscension(correctedHAHours, 0, 0, lctHour, lctMin, lctSec,
+				daylightSaving, timezoneHours, lcdDay, lcdMonth, lcdYear, geogLongDeg);
+
+		double correctedDecDeg1 = PAMacros.parallaxDec(haHours, 0, 0, decDeg, decMin, decSec, coordinateType,
+				geogLatDeg, heightM, equatorialHorParallaxDeg);
+
+		int correctedRAHour = PAMacros.decimalHoursHour(correctedRAHours);
+		int correctedRAMin = PAMacros.decimalHoursMinute(correctedRAHours);
+		double correctedRASec = PAMacros.decimalHoursSecond(correctedRAHours);
+		double correctedDecDeg = PAMacros.decimalDegreesDegrees(correctedDecDeg1);
+		double correctedDecMin = PAMacros.decimalDegreesMinutes(correctedDecDeg1);
+		double correctedDecSec = PAMacros.decimalDegreesSeconds(correctedDecDeg1);
+
+		return new RightAscensionDeclination(correctedRAHour, correctedRAMin, correctedRASec, correctedDecDeg,
+				correctedDecMin, correctedDecSec);
+	}
 }
