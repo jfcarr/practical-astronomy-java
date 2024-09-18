@@ -26,7 +26,7 @@ var NAVTREE =
 [
   [ "Practical Astronomy Algorithms in Java", "index.html", [
     [ "Packages", "namespaces.html", [
-      [ "Packages", "namespaces.html", "namespaces_dup" ]
+      [ "Package List", "namespaces.html", null ]
     ] ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
@@ -46,8 +46,8 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"",
-"enumastro_1_1practical_1_1types_1_1RiseSetStatus.html#ae3dfc7fd0187724721f9bc13732e01e1"
+"Aberration_8java.html",
+"dir_d0a7c00fa3ca6a5c4d9f3fcc4116cee7.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

@@ -10,6 +10,8 @@ var classTestCoordinates =
     [ "testEquatorialCoordinateToFromGalacticCoordinate", "classTestCoordinates.html#a1a8ecc8751a4a0980f8c240c6931fe37", null ],
     [ "testMeanObliquityOfTheEcliptic", "classTestCoordinates.html#a92283bda18660ad3be68650a565de3c1", null ],
     [ "testNutationInEclipticLongitudeAndObliquity", "classTestCoordinates.html#a27fc7283d6d2dba9b6b0b39c157e6269", null ],
+    [ "testParallax", "classTestCoordinates.html#a720b8ca330a3fa28218a7bac6b070e43", null ],
+    [ "testRefraction", "classTestCoordinates.html#ab9f5ec9bfe3edecde5bb0019b370a668", null ],
     [ "testRightAscensionToFromHourAngle", "classTestCoordinates.html#a832e0bce7e2b3e424745e822a3305e20", null ],
     [ "testRisingAndSetting", "classTestCoordinates.html#af2a47796d5a269482dffb65a037236d3", null ]
 ];

@@ -1,9 +1,8 @@
 var searchData=
 [
-  ['rightascension_338',['RightAscension',['../classastro_1_1practical_1_1containers_1_1RightAscension.html#a460cd2b7e3e7137f547be885f51f48d0',1,'astro::practical::containers::RightAscension']]],
-  ['rightascensiondeclination_339',['RightAscensionDeclination',['../classastro_1_1practical_1_1types_1_1RightAscensionDeclination.html#a7a37aa4fc2a5f10fa6db1d3186780d3e',1,'astro::practical::types::RightAscensionDeclination']]],
-  ['rightascensiontohourangle_340',['rightAscensionToHourAngle',['../classastro_1_1practical_1_1lib_1_1PACoordinates.html#a2e30d9722eb33997e46295b723b4bdd9',1,'astro.practical.lib.PACoordinates.rightAscensionToHourAngle()'],['../classastro_1_1practical_1_1lib_1_1PAMacros.html#aa8af7767bf041707efd8f447a17a0a13',1,'astro.practical.lib.PAMacros.rightAscensionToHourAngle()']]],
-  ['riseset_341',['RiseSet',['../classastro_1_1practical_1_1containers_1_1RiseSet.html#a3609df0ac44ee5e1b7c21ef092bcd5c8',1,'astro::practical::containers::RiseSet']]],
-  ['risingandsetting_342',['risingAndSetting',['../classastro_1_1practical_1_1lib_1_1PACoordinates.html#a973b93d7a9737cdd4c84415b605d60f0',1,'astro::practical::lib::PACoordinates']]],
-  ['round_343',['round',['../classastro_1_1practical_1_1lib_1_1PAUtil.html#a3af69cfbf5990d739a9ffc3cc489de89',1,'astro::practical::lib::PAUtil']]]
+  ['parallaxdec_0',['parallaxDec',['../classastro_1_1practical_1_1lib_1_1PAMacros.html#a020352f4e3ab5f22b94f93fbbf2cf238',1,'astro::practical::lib::PAMacros']]],
+  ['parallaxdec_5fl2870_1',['parallaxDec_L2870',['../classastro_1_1practical_1_1lib_1_1PAMacros.html#a9de622a77b9e27ba50aa9f3edefe6faf',1,'astro::practical::lib::PAMacros']]],
+  ['parallaxha_2',['parallaxHA',['../classastro_1_1practical_1_1lib_1_1PAMacros.html#aa739e42c3616c95b164bb517b888b4c0',1,'astro::practical::lib::PAMacros']]],
+  ['parallaxha_5fl2870_3',['parallaxHA_L2870',['../classastro_1_1practical_1_1lib_1_1PAMacros.html#a39a384a2246444eeff831e9dd9316914',1,'astro::practical::lib::PAMacros']]],
+  ['parallaxhelper_4',['ParallaxHelper',['../classastro_1_1practical_1_1types_1_1complex_1_1ParallaxHelper.html#af79837c04d7d5a6e18c8eebf49e940d4',1,'astro::practical::types::complex::ParallaxHelper']]]
 ];

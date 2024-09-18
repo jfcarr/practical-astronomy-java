@@ -1,6 +1,19 @@
 var searchData=
 [
-  ['seconds_153',['seconds',['../classastro_1_1practical_1_1containers_1_1Angle.html#a6664ee0d5227cf47362c565f9fab37f5',1,'astro.practical.containers.Angle.seconds()'],['../classastro_1_1practical_1_1types_1_1DateTime.html#a77bd4f876bdc3afed5acdd936f775d34',1,'astro.practical.types.DateTime.seconds()'],['../classastro_1_1practical_1_1types_1_1Time.html#a6664ee0d5227cf47362c565f9fab37f5',1,'astro.practical.types.Time.seconds()']]],
-  ['settestname_154',['setTestName',['../classastro_1_1practical_1_1test_1_1TestLib.html#a880fbfff6e664fe95451b7716811f9b2',1,'astro::practical::test::TestLib']]],
-  ['sunlong_155',['sunLong',['../classastro_1_1practical_1_1lib_1_1PAMacros.html#afbefcefc0dbb382b18b68886b3be0d6f',1,'astro::practical::lib::PAMacros']]]
+  ['refract_0',['refract',['../classastro_1_1practical_1_1lib_1_1PAMacros.html#abf591a5e5e745c6c8e70e5d51d6daf8d',1,'astro::practical::lib::PAMacros']]],
+  ['refract_5fl3035_1',['refract_L3035',['../classastro_1_1practical_1_1lib_1_1PAMacros.html#a535f60db0b3f68b05bef8496f7c3b57c',1,'astro::practical::lib::PAMacros']]],
+  ['rightascension_2',['rightascension',['../classastro_1_1practical_1_1types_1_1complex_1_1RightAscension.html',1,'RightAscension'],['../classastro_1_1practical_1_1types_1_1complex_1_1RightAscension.html#a460cd2b7e3e7137f547be885f51f48d0',1,'astro.practical.types.complex.RightAscension.RightAscension()']]],
+  ['rightascension_2ejava_3',['RightAscension.java',['../RightAscension_8java.html',1,'']]],
+  ['rightascensiondeclination_4',['rightascensiondeclination',['../classastro_1_1practical_1_1types_1_1complex_1_1RightAscensionDeclination.html',1,'RightAscensionDeclination'],['../classastro_1_1practical_1_1types_1_1complex_1_1RightAscensionDeclination.html#a7a37aa4fc2a5f10fa6db1d3186780d3e',1,'astro.practical.types.complex.RightAscensionDeclination.RightAscensionDeclination()']]],
+  ['rightascensiondeclination_2ejava_5',['RightAscensionDeclination.java',['../RightAscensionDeclination_8java.html',1,'']]],
+  ['rightascensionhours_6',['rightAscensionHours',['../classastro_1_1practical_1_1types_1_1complex_1_1RightAscensionDeclination.html#a3cfea4fe0daa407fe9ee5becf08baca9',1,'astro::practical::types::complex::RightAscensionDeclination']]],
+  ['rightascensionminutes_7',['rightAscensionMinutes',['../classastro_1_1practical_1_1types_1_1complex_1_1RightAscensionDeclination.html#a244f37cf540d07d8e6946c8ca126f319',1,'astro::practical::types::complex::RightAscensionDeclination']]],
+  ['rightascensionseconds_8',['rightAscensionSeconds',['../classastro_1_1practical_1_1types_1_1complex_1_1RightAscensionDeclination.html#a411112390370bb6a0fb8e656b0b342b8',1,'astro::practical::types::complex::RightAscensionDeclination']]],
+  ['rightascensiontohourangle_9',['rightascensiontohourangle',['../classastro_1_1practical_1_1lib_1_1PACoordinates.html#a2e30d9722eb33997e46295b723b4bdd9',1,'astro.practical.lib.PACoordinates.rightAscensionToHourAngle()'],['../classastro_1_1practical_1_1lib_1_1PAMacros.html#aa8af7767bf041707efd8f447a17a0a13',1,'astro.practical.lib.PAMacros.rightAscensionToHourAngle()']]],
+  ['riseset_10',['riseset',['../classastro_1_1practical_1_1types_1_1complex_1_1RiseSet.html',1,'RiseSet'],['../classastro_1_1practical_1_1types_1_1complex_1_1RiseSet.html#a3609df0ac44ee5e1b7c21ef092bcd5c8',1,'astro.practical.types.complex.RiseSet.RiseSet()']]],
+  ['riseset_2ejava_11',['RiseSet.java',['../RiseSet_8java.html',1,'']]],
+  ['risesetstatus_12',['risesetstatus',['../enumastro_1_1practical_1_1types_1_1RiseSetStatus.html',1,'RiseSetStatus'],['../classastro_1_1practical_1_1types_1_1complex_1_1RiseSet.html#a31e2309841cf47a16e3856c2eb75faf9',1,'astro.practical.types.complex.RiseSet.riseSetStatus']]],
+  ['risesetstatus_2ejava_13',['RiseSetStatus.java',['../RiseSetStatus_8java.html',1,'']]],
+  ['risingandsetting_14',['risingAndSetting',['../classastro_1_1practical_1_1lib_1_1PACoordinates.html#a973b93d7a9737cdd4c84415b605d60f0',1,'astro::practical::lib::PACoordinates']]],
+  ['round_15',['round',['../classastro_1_1practical_1_1lib_1_1PAUtil.html#a3af69cfbf5990d739a9ffc3cc489de89',1,'astro::practical::lib::PAUtil']]]
 ];

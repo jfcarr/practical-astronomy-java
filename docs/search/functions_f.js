@@ -1,7 +1,26 @@
 var searchData=
 [
-  ['universaldatetime_369',['UniversalDateTime',['../classastro_1_1practical_1_1containers_1_1UniversalDateTime.html#a53001cb4a485bc8608981f228a6e988d',1,'astro::practical::containers::UniversalDateTime']]],
-  ['universaltime_370',['UniversalTime',['../classastro_1_1practical_1_1containers_1_1UniversalTime.html#a8fcc5ebc7072b144ac61942f18ea4266',1,'astro.practical.containers.UniversalTime.UniversalTime(double hours, double minutes, double seconds)'],['../classastro_1_1practical_1_1containers_1_1UniversalTime.html#a8f5d8157183671f23e6b68fdba4a68bc',1,'astro.practical.containers.UniversalTime.UniversalTime(double hours, double minutes, double seconds, PAWarningFlag paWarningFlag)']]],
-  ['universaltimetogreenwichsiderealtime_371',['universalTimeToGreenwichSiderealTime',['../classastro_1_1practical_1_1lib_1_1PADateTime.html#a5ec2adf3adc6c1814cc724c3d220e2bb',1,'astro.practical.lib.PADateTime.universalTimeToGreenwichSiderealTime()'],['../classastro_1_1practical_1_1lib_1_1PAMacros.html#ac123adc4d79b223c58a601e64fb4134d',1,'astro.practical.lib.PAMacros.universalTimeToGreenwichSiderealTime()']]],
-  ['universaltimetolocalciviltime_372',['universalTimeToLocalCivilTime',['../classastro_1_1practical_1_1lib_1_1PADateTime.html#a33a6e28efb029e6fda435283c9c0d907',1,'astro::practical::lib::PADateTime']]]
+  ['testanglebetweentwoobjects_0',['testAngleBetweenTwoObjects',['../classTestCoordinates.html#ae694b3721de6156036ab64f541ac9e9a',1,'TestCoordinates']]],
+  ['testangletofromdecimaldegrees_1',['testAngleToFromDecimalDegrees',['../classTestCoordinates.html#a4c18cd3555ee3674ba5e645399c9085f',1,'TestCoordinates']]],
+  ['testcivildatetodaynumber_2',['testCivilDateToDayNumber',['../classTestDateTime.html#a4e68f30151eaf4850b62e363f42542ef',1,'TestDateTime']]],
+  ['testciviltimetofromdecimalhours_3',['testCivilTimeToFromDecimalHours',['../classTestDateTime.html#a2c88e6819c73795d056d58b4c5981fb8',1,'TestDateTime']]],
+  ['testcoordinates_4',['testcoordinates',['../classMain.html#a782c36108b1ec82a5ce456394cafdb50',1,'Main.testCoordinates()'],['../classTestCoordinates.html#a22922264bf821aa17aeebaba0bf55ab1',1,'TestCoordinates.TestCoordinates()']]],
+  ['testcorrectforaberration_5',['testCorrectForAberration',['../classTestCoordinates.html#a0bc145beb0b8dbccd43eab173cd1ef71',1,'TestCoordinates']]],
+  ['testcorrectforprecession_6',['testCorrectForPrecession',['../classTestCoordinates.html#abaa787ed3361bc4bc5240b87cfb9f35f',1,'TestCoordinates']]],
+  ['testdateofeaster_7',['testDateOfEaster',['../classTestDateTime.html#aacab4bb177ff69590e9af83912075418',1,'TestDateTime']]],
+  ['testdatetime_8',['testdatetime',['../classTestDateTime.html#a63f8a134da17151af37b7d655cb50fa7',1,'TestDateTime.TestDateTime()'],['../classMain.html#a6a2b50d4208f7a6dab79fc53c8e8cc53',1,'Main.testDateTime()']]],
+  ['testeclipticcoordinatetofromequatorialcoordinate_9',['testEclipticCoordinateToFromEquatorialCoordinate',['../classTestCoordinates.html#a273efa91f5deec2908e118bd0d3857b8',1,'TestCoordinates']]],
+  ['testequatorialcoordinatestofromhorizoncoordinates_10',['testEquatorialCoordinatesToFromHorizonCoordinates',['../classTestCoordinates.html#aa822bd2d174932ee5cd674d04092b390',1,'TestCoordinates']]],
+  ['testequatorialcoordinatetofromgalacticcoordinate_11',['testEquatorialCoordinateToFromGalacticCoordinate',['../classTestCoordinates.html#a1a8ecc8751a4a0980f8c240c6931fe37',1,'TestCoordinates']]],
+  ['testgreenwichsiderealtimetofromlocalsiderealtime_12',['testGreenwichSiderealTimeToFromLocalSiderealTime',['../classTestDateTime.html#a18f372ac3668f4a3dede0b1afed2577f',1,'TestDateTime']]],
+  ['testlocalciviltimetofromuniversaltime_13',['testLocalCivilTimeToFromUniversalTime',['../classTestDateTime.html#ac3a02163371fa3178e9788ca63a877ca',1,'TestDateTime']]],
+  ['testmeanobliquityoftheecliptic_14',['testMeanObliquityOfTheEcliptic',['../classTestCoordinates.html#a92283bda18660ad3be68650a565de3c1',1,'TestCoordinates']]],
+  ['testnutationineclipticlongitudeandobliquity_15',['testNutationInEclipticLongitudeAndObliquity',['../classTestCoordinates.html#a27fc7283d6d2dba9b6b0b39c157e6269',1,'TestCoordinates']]],
+  ['testparallax_16',['testParallax',['../classTestCoordinates.html#a720b8ca330a3fa28218a7bac6b070e43',1,'TestCoordinates']]],
+  ['testrefraction_17',['testRefraction',['../classTestCoordinates.html#ab9f5ec9bfe3edecde5bb0019b370a668',1,'TestCoordinates']]],
+  ['testrightascensiontofromhourangle_18',['testRightAscensionToFromHourAngle',['../classTestCoordinates.html#a832e0bce7e2b3e424745e822a3305e20',1,'TestCoordinates']]],
+  ['testrisingandsetting_19',['testRisingAndSetting',['../classTestCoordinates.html#af2a47796d5a269482dffb65a037236d3',1,'TestCoordinates']]],
+  ['testuniversaltimetofromgreenwichsiderealtime_20',['testUniversalTimeToFromGreenwichSiderealTime',['../classTestDateTime.html#a9d2f983281f1b5de36694778e47e28f7',1,'TestDateTime']]],
+  ['time_21',['Time',['../classastro_1_1practical_1_1types_1_1complex_1_1Time.html#a134fdcf88f194bf704d93ef7e07e82aa',1,'astro::practical::types::complex::Time']]],
+  ['trueanomaly_22',['trueAnomaly',['../classastro_1_1practical_1_1lib_1_1PAMacros.html#a75c31010344aaa36374d002051feada7',1,'astro::practical::lib::PAMacros']]]
 ];
