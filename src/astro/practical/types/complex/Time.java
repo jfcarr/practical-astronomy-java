@@ -1,4 +1,4 @@
-package astro.practical.types;
+package astro.practical.types.complex;
 
 /**
  * Simple Time type (hours, minutes, seconds)

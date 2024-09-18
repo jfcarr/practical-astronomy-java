@@ -1,6 +1,4 @@
-package astro.practical.containers;
-
-import astro.practical.types.Date;
+package astro.practical.types.complex;
 
 /**
  * Representation of Civil Date (month, day, and year)

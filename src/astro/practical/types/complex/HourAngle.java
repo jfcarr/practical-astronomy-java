@@ -1,6 +1,4 @@
-package astro.practical.containers;
-
-import astro.practical.types.Time;
+package astro.practical.types.complex;
 
 public class HourAngle extends Time {
 	public HourAngle(double hours, double minutes, double seconds) {

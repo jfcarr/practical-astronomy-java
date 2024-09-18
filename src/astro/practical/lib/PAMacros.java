@@ -1,7 +1,7 @@
 package astro.practical.lib;
 
 import astro.practical.types.CoordinateType;
-import astro.practical.types.ParallaxHelper;
+import astro.practical.types.complex.ParallaxHelper;
 
 public class PAMacros {
 

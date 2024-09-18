@@ -1,20 +1,20 @@
 package astro.practical.lib;
 
-import astro.practical.containers.Aberration;
-import astro.practical.containers.Angle;
-import astro.practical.containers.EclipticCoordinates;
-import astro.practical.containers.EquatorialCoordinatesHA;
-import astro.practical.containers.EquatorialCoordinatesRA;
-import astro.practical.containers.GalacticCoordinates;
-import astro.practical.containers.HorizonCoordinates;
-import astro.practical.containers.HourAngle;
-import astro.practical.containers.Nutation;
-import astro.practical.containers.RightAscension;
-import astro.practical.containers.RiseSet;
 import astro.practical.types.CoordinateType;
 import astro.practical.types.PAAngleMeasure;
-import astro.practical.types.RightAscensionDeclination;
 import astro.practical.types.RiseSetStatus;
+import astro.practical.types.complex.Aberration;
+import astro.practical.types.complex.Angle;
+import astro.practical.types.complex.EclipticCoordinates;
+import astro.practical.types.complex.EquatorialCoordinatesHA;
+import astro.practical.types.complex.EquatorialCoordinatesRA;
+import astro.practical.types.complex.GalacticCoordinates;
+import astro.practical.types.complex.HorizonCoordinates;
+import astro.practical.types.complex.HourAngle;
+import astro.practical.types.complex.Nutation;
+import astro.practical.types.complex.RightAscension;
+import astro.practical.types.complex.RightAscensionDeclination;
+import astro.practical.types.complex.RiseSet;
 
 public class PACoordinates {
 	/**

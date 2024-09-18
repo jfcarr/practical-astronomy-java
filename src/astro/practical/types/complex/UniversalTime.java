@@ -1,6 +1,5 @@
-package astro.practical.containers;
+package astro.practical.types.complex;
 
-import astro.practical.types.Time;
 import astro.practical.types.PAWarningFlag;
 
 /**

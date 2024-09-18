@@ -1,6 +1,4 @@
-package astro.practical.containers;
-
-import astro.practical.types.RightAscensionDeclination;
+package astro.practical.types.complex;
 
 public class EquatorialCoordinatesRA extends RightAscensionDeclination {
 	public EquatorialCoordinatesRA(double rightAscensionHours, double rightAscensionMinutes,

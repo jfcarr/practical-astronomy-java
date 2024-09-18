@@ -1,6 +1,4 @@
-package astro.practical.containers;
-
-import astro.practical.types.Time;
+package astro.practical.types.complex;
 
 /**
  * Representation of Local Sidereal Time (hours, minutes, seconds)

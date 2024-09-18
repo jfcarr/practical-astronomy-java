@@ -1,4 +1,4 @@
-package astro.practical.containers;
+package astro.practical.types.complex;
 
 public class Aberration {
 	public double apparentEclLongDeg;

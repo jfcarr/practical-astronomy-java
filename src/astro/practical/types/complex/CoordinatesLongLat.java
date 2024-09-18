@@ -1,4 +1,4 @@
-package astro.practical.types;
+package astro.practical.types.complex;
 
 public class CoordinatesLongLat {
 	public double longitudeDegrees;

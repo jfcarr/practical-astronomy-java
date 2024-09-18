@@ -1,6 +1,4 @@
-package astro.practical.containers;
-
-import astro.practical.types.CoordinatesLongLat;
+package astro.practical.types.complex;
 
 public class EclipticCoordinates extends CoordinatesLongLat {
 	public EclipticCoordinates(double longitudeDegrees, double longitudeMinutes, double longitudeSeconds,

@@ -1,13 +1,13 @@
-import astro.practical.containers.CivilDate;
-import astro.practical.containers.CivilDateTime;
-import astro.practical.containers.CivilTime;
-import astro.practical.containers.GreenwichSiderealTime;
-import astro.practical.containers.LocalSiderealTime;
-import astro.practical.containers.UniversalDateTime;
-import astro.practical.containers.UniversalTime;
 import astro.practical.lib.PAUtil;
 import astro.practical.test.TestLib;
 import astro.practical.types.PAWarningFlag;
+import astro.practical.types.complex.CivilDate;
+import astro.practical.types.complex.CivilDateTime;
+import astro.practical.types.complex.CivilTime;
+import astro.practical.types.complex.GreenwichSiderealTime;
+import astro.practical.types.complex.LocalSiderealTime;
+import astro.practical.types.complex.UniversalDateTime;
+import astro.practical.types.complex.UniversalTime;
 
 public class TestDateTime {
 	astro.practical.lib.PADateTime paDateTime;

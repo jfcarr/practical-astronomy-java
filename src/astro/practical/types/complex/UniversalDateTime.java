@@ -1,6 +1,4 @@
-package astro.practical.containers;
-
-import astro.practical.types.DateTime;
+package astro.practical.types.complex;
 
 /**
  * Representation of full Universal date and time.

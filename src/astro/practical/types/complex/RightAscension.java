@@ -1,6 +1,4 @@
-package astro.practical.containers;
-
-import astro.practical.types.Time;
+package astro.practical.types.complex;
 
 public class RightAscension extends Time {
 	public RightAscension(double hours, double minutes, double seconds) {
