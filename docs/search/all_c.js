@@ -18,5 +18,6 @@ var searchData=
   ['pautil_15',['PAUtil',['../classastro_1_1practical_1_1lib_1_1PAUtil.html',1,'astro::practical::lib']]],
   ['pautil_2ejava_16',['PAUtil.java',['../PAUtil_8java.html',1,'']]],
   ['pawarningflag_17',['PAWarningFlag',['../enumastro_1_1practical_1_1types_1_1PAWarningFlag.html',1,'astro::practical::types']]],
-  ['pawarningflag_2ejava_18',['PAWarningFlag.java',['../PAWarningFlag_8java.html',1,'']]]
+  ['pawarningflag_2ejava_18',['PAWarningFlag.java',['../PAWarningFlag_8java.html',1,'']]],
+  ['positionangleofpole_19',['positionAngleOfPole',['../classastro_1_1practical_1_1types_1_1complex_1_1SelenographicCoordinates1.html#a31604cc375b75df1301da06356544bb5',1,'astro::practical::types::complex::SelenographicCoordinates1']]]
 ];

@@ -15,5 +15,7 @@ var classTestCoordinates =
     [ "testParallax", "classTestCoordinates.html#a720b8ca330a3fa28218a7bac6b070e43", null ],
     [ "testRefraction", "classTestCoordinates.html#ab9f5ec9bfe3edecde5bb0019b370a668", null ],
     [ "testRightAscensionToFromHourAngle", "classTestCoordinates.html#a832e0bce7e2b3e424745e822a3305e20", null ],
-    [ "testRisingAndSetting", "classTestCoordinates.html#af2a47796d5a269482dffb65a037236d3", null ]
+    [ "testRisingAndSetting", "classTestCoordinates.html#af2a47796d5a269482dffb65a037236d3", null ],
+    [ "testSelenographicCoordinates1", "classTestCoordinates.html#a1e0176cb437459714515a650bb588faf", null ],
+    [ "testSelenographicCoordinates2", "classTestCoordinates.html#aac90f6b1d4d7e453f6c0707e5406fd43", null ]
 ];

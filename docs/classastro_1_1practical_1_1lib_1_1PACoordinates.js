@@ -19,5 +19,7 @@ var classastro_1_1practical_1_1lib_1_1PACoordinates =
     [ "meanObliquityOfTheEcliptic", "classastro_1_1practical_1_1lib_1_1PACoordinates.html#ac0d6d6d6b92bab079372766e04fee177", null ],
     [ "nutationInEclipticLongitudeAndObliquity", "classastro_1_1practical_1_1lib_1_1PACoordinates.html#a5bb6897b3878d2085ced03729982d7a0", null ],
     [ "rightAscensionToHourAngle", "classastro_1_1practical_1_1lib_1_1PACoordinates.html#a2e30d9722eb33997e46295b723b4bdd9", null ],
-    [ "risingAndSetting", "classastro_1_1practical_1_1lib_1_1PACoordinates.html#a973b93d7a9737cdd4c84415b605d60f0", null ]
+    [ "risingAndSetting", "classastro_1_1practical_1_1lib_1_1PACoordinates.html#a973b93d7a9737cdd4c84415b605d60f0", null ],
+    [ "selenographicCoordinates1", "classastro_1_1practical_1_1lib_1_1PACoordinates.html#a696fa25fb193c0408632d337df29069b", null ],
+    [ "selenographicCoordinates2", "classastro_1_1practical_1_1lib_1_1PACoordinates.html#a8da72cabe33e5fc081520d6623931cbe", null ]
 ];

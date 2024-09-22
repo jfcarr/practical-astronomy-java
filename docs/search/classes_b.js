@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['testcoordinates_0',['TestCoordinates',['../classTestCoordinates.html',1,'']]],
-  ['testdatetime_1',['TestDateTime',['../classTestDateTime.html',1,'']]],
-  ['testlib_2',['TestLib',['../classastro_1_1practical_1_1test_1_1TestLib.html',1,'astro::practical::test']]],
-  ['time_3',['Time',['../classastro_1_1practical_1_1types_1_1complex_1_1Time.html',1,'astro::practical::types::complex']]]
+  ['selenographiccoordinates1_0',['SelenographicCoordinates1',['../classastro_1_1practical_1_1types_1_1complex_1_1SelenographicCoordinates1.html',1,'astro::practical::types::complex']]],
+  ['selenographiccoordinates2_1',['SelenographicCoordinates2',['../classastro_1_1practical_1_1types_1_1complex_1_1SelenographicCoordinates2.html',1,'astro::practical::types::complex']]]
 ];

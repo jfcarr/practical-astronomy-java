@@ -1,8 +1,17 @@
 var searchData=
 [
   ['seconds_0',['seconds',['../classastro_1_1practical_1_1types_1_1complex_1_1Angle.html#a6664ee0d5227cf47362c565f9fab37f5',1,'astro.practical.types.complex.Angle.seconds'],['../classastro_1_1practical_1_1types_1_1complex_1_1DateTime.html#a77bd4f876bdc3afed5acdd936f775d34',1,'astro.practical.types.complex.DateTime.seconds'],['../classastro_1_1practical_1_1types_1_1complex_1_1Time.html#a6664ee0d5227cf47362c565f9fab37f5',1,'astro.practical.types.complex.Time.seconds']]],
-  ['settestname_1',['setTestName',['../classastro_1_1practical_1_1test_1_1TestLib.html#a880fbfff6e664fe95451b7716811f9b2',1,'astro::practical::test::TestLib']]],
-  ['sundia_2',['sunDia',['../classastro_1_1practical_1_1lib_1_1PAMacros.html#ab7cbb01b53baea4cc61ff05ab5b9f158',1,'astro::practical::lib::PAMacros']]],
-  ['sundist_3',['sunDist',['../classastro_1_1practical_1_1lib_1_1PAMacros.html#a25de2bcdd24dfec825e4cb03ab89b8e1',1,'astro::practical::lib::PAMacros']]],
-  ['sunlong_4',['sunLong',['../classastro_1_1practical_1_1lib_1_1PAMacros.html#afbefcefc0dbb382b18b68886b3be0d6f',1,'astro::practical::lib::PAMacros']]]
+  ['selenographiccoordinates1_1',['selenographiccoordinates1',['../classastro_1_1practical_1_1types_1_1complex_1_1SelenographicCoordinates1.html',1,'SelenographicCoordinates1'],['../classastro_1_1practical_1_1types_1_1complex_1_1SelenographicCoordinates1.html#aad96fbf83ca48c636a4a90c9fb0cb5fd',1,'astro.practical.types.complex.SelenographicCoordinates1.SelenographicCoordinates1()'],['../classastro_1_1practical_1_1lib_1_1PACoordinates.html#a696fa25fb193c0408632d337df29069b',1,'astro.practical.lib.PACoordinates.selenographicCoordinates1()']]],
+  ['selenographiccoordinates1_2ejava_2',['SelenographicCoordinates1.java',['../SelenographicCoordinates1_8java.html',1,'']]],
+  ['selenographiccoordinates2_3',['selenographiccoordinates2',['../classastro_1_1practical_1_1types_1_1complex_1_1SelenographicCoordinates2.html',1,'SelenographicCoordinates2'],['../classastro_1_1practical_1_1lib_1_1PACoordinates.html#a8da72cabe33e5fc081520d6623931cbe',1,'astro.practical.lib.PACoordinates.selenographicCoordinates2()'],['../classastro_1_1practical_1_1types_1_1complex_1_1SelenographicCoordinates2.html#a1a19cab5829c90672cb3e143e3f5bc54',1,'astro.practical.types.complex.SelenographicCoordinates2.SelenographicCoordinates2()']]],
+  ['selenographiccoordinates2_2ejava_4',['SelenographicCoordinates2.java',['../SelenographicCoordinates2_8java.html',1,'']]],
+  ['settestname_5',['setTestName',['../classastro_1_1practical_1_1test_1_1TestLib.html#a880fbfff6e664fe95451b7716811f9b2',1,'astro::practical::test::TestLib']]],
+  ['subearthlatitude_6',['subEarthLatitude',['../classastro_1_1practical_1_1types_1_1complex_1_1SelenographicCoordinates1.html#aa90ec71a0cfb617f277643301b7c9547',1,'astro::practical::types::complex::SelenographicCoordinates1']]],
+  ['subearthlongitude_7',['subEarthLongitude',['../classastro_1_1practical_1_1types_1_1complex_1_1SelenographicCoordinates1.html#a1f05a148e2f68a1b619409679a573bf2',1,'astro::practical::types::complex::SelenographicCoordinates1']]],
+  ['subsolarcolongitude_8',['subSolarColongitude',['../classastro_1_1practical_1_1types_1_1complex_1_1SelenographicCoordinates2.html#af8ce3196357a777f4375b0947b25d898',1,'astro::practical::types::complex::SelenographicCoordinates2']]],
+  ['subsolarlatitude_9',['subSolarLatitude',['../classastro_1_1practical_1_1types_1_1complex_1_1SelenographicCoordinates2.html#ab7accc539077e1d088fc01e3f8d69a40',1,'astro::practical::types::complex::SelenographicCoordinates2']]],
+  ['subsolarlongitude_10',['subSolarLongitude',['../classastro_1_1practical_1_1types_1_1complex_1_1SelenographicCoordinates2.html#a27722f97cdc49667eaf830e5d472ef29',1,'astro::practical::types::complex::SelenographicCoordinates2']]],
+  ['sundia_11',['sunDia',['../classastro_1_1practical_1_1lib_1_1PAMacros.html#ab7cbb01b53baea4cc61ff05ab5b9f158',1,'astro::practical::lib::PAMacros']]],
+  ['sundist_12',['sunDist',['../classastro_1_1practical_1_1lib_1_1PAMacros.html#a25de2bcdd24dfec825e4cb03ab89b8e1',1,'astro::practical::lib::PAMacros']]],
+  ['sunlong_13',['sunLong',['../classastro_1_1practical_1_1lib_1_1PAMacros.html#afbefcefc0dbb382b18b68886b3be0d6f',1,'astro::practical::lib::PAMacros']]]
 ];
