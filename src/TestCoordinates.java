@@ -236,4 +236,12 @@ public class TestCoordinates {
 				.Assert(142.59, heliographicCoordinates.helioLongDeg)
 				.Assert(-19.94, heliographicCoordinates.helioLatDeg);
 	}
+
+	public void testCarringtonRotationNumber() {
+		TestLib testLib = new TestLib();
+
+		int carringtonRotationNumber = paCoordinates.carringtonRotationNumber(27, 1, 1975);
+
+		testLib.setTestName("Carrington Rotation Number").Assert(1624, carringtonRotationNumber);
+	}
 }

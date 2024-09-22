@@ -3,6 +3,7 @@ var classastro_1_1practical_1_1lib_1_1PACoordinates =
     [ "angleBetweenTwoObjects", "classastro_1_1practical_1_1lib_1_1PACoordinates.html#a17d89e91ab74295b2c506bbe656176a4", null ],
     [ "angleToDecimalDegrees", "classastro_1_1practical_1_1lib_1_1PACoordinates.html#aa02ccfbc3e1fe1b58624427acefe4ea2", null ],
     [ "atmosphericRefraction", "classastro_1_1practical_1_1lib_1_1PACoordinates.html#a5100be61f814353c9dfd62000f07bb2b", null ],
+    [ "carringtonRotationNumber", "classastro_1_1practical_1_1lib_1_1PACoordinates.html#a539bfcda499dfda32b24a925c2149ab1", null ],
     [ "correctForAberration", "classastro_1_1practical_1_1lib_1_1PACoordinates.html#a1724d0f6db0c7ecdeb0d17af18c8383e", null ],
     [ "correctForPrecession", "classastro_1_1practical_1_1lib_1_1PACoordinates.html#a0c8d4f7c3ff98cf7869e6eae907cabaf", null ],
     [ "correctionsForGeocentricParallax", "classastro_1_1practical_1_1lib_1_1PACoordinates.html#a00b55043de51e01f6b1544e821f6503a", null ],
