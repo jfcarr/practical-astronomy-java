@@ -32,5 +32,6 @@ public class Main {
 		testCoordinates.testRefraction();
 		testCoordinates.testParallax();
 		testCoordinates.testHeliographicCoordinates();
+		testCoordinates.testCarringtonRotationNumber();
 	}
 }
