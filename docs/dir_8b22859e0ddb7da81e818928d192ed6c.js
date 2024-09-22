@@ -22,6 +22,8 @@ var dir_8b22859e0ddb7da81e818928d192ed6c =
     [ "RightAscension.java", "RightAscension_8java.html", "RightAscension_8java" ],
     [ "RightAscensionDeclination.java", "RightAscensionDeclination_8java.html", "RightAscensionDeclination_8java" ],
     [ "RiseSet.java", "RiseSet_8java.html", "RiseSet_8java" ],
+    [ "SelenographicCoordinates1.java", "SelenographicCoordinates1_8java.html", "SelenographicCoordinates1_8java" ],
+    [ "SelenographicCoordinates2.java", "SelenographicCoordinates2_8java.html", "SelenographicCoordinates2_8java" ],
     [ "Time.java", "Time_8java.html", "Time_8java" ],
     [ "UniversalDateTime.java", "UniversalDateTime_8java.html", "UniversalDateTime_8java" ],
     [ "UniversalTime.java", "UniversalTime_8java.html", "UniversalTime_8java" ]

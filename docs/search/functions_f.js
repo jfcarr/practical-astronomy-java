@@ -5,11 +5,11 @@ var searchData=
   ['testcarringtonrotationnumber_2',['testCarringtonRotationNumber',['../classTestCoordinates.html#a1389bff3519166d47e96aea6daa1df4e',1,'TestCoordinates']]],
   ['testcivildatetodaynumber_3',['testCivilDateToDayNumber',['../classTestDateTime.html#a4e68f30151eaf4850b62e363f42542ef',1,'TestDateTime']]],
   ['testciviltimetofromdecimalhours_4',['testCivilTimeToFromDecimalHours',['../classTestDateTime.html#a2c88e6819c73795d056d58b4c5981fb8',1,'TestDateTime']]],
-  ['testcoordinates_5',['testcoordinates',['../classMain.html#a782c36108b1ec82a5ce456394cafdb50',1,'Main.testCoordinates()'],['../classTestCoordinates.html#a22922264bf821aa17aeebaba0bf55ab1',1,'TestCoordinates.TestCoordinates()']]],
+  ['testcoordinates_5',['testcoordinates',['../classTestCoordinates.html#a22922264bf821aa17aeebaba0bf55ab1',1,'TestCoordinates.TestCoordinates()'],['../classMain.html#a782c36108b1ec82a5ce456394cafdb50',1,'Main.testCoordinates()']]],
   ['testcorrectforaberration_6',['testCorrectForAberration',['../classTestCoordinates.html#a0bc145beb0b8dbccd43eab173cd1ef71',1,'TestCoordinates']]],
   ['testcorrectforprecession_7',['testCorrectForPrecession',['../classTestCoordinates.html#abaa787ed3361bc4bc5240b87cfb9f35f',1,'TestCoordinates']]],
   ['testdateofeaster_8',['testDateOfEaster',['../classTestDateTime.html#aacab4bb177ff69590e9af83912075418',1,'TestDateTime']]],
-  ['testdatetime_9',['testdatetime',['../classMain.html#a6a2b50d4208f7a6dab79fc53c8e8cc53',1,'Main.testDateTime()'],['../classTestDateTime.html#a63f8a134da17151af37b7d655cb50fa7',1,'TestDateTime.TestDateTime()']]],
+  ['testdatetime_9',['testdatetime',['../classTestDateTime.html#a63f8a134da17151af37b7d655cb50fa7',1,'TestDateTime.TestDateTime()'],['../classMain.html#a6a2b50d4208f7a6dab79fc53c8e8cc53',1,'Main.testDateTime()']]],
   ['testeclipticcoordinatetofromequatorialcoordinate_10',['testEclipticCoordinateToFromEquatorialCoordinate',['../classTestCoordinates.html#a273efa91f5deec2908e118bd0d3857b8',1,'TestCoordinates']]],
   ['testequatorialcoordinatestofromhorizoncoordinates_11',['testEquatorialCoordinatesToFromHorizonCoordinates',['../classTestCoordinates.html#aa822bd2d174932ee5cd674d04092b390',1,'TestCoordinates']]],
   ['testequatorialcoordinatetofromgalacticcoordinate_12',['testEquatorialCoordinateToFromGalacticCoordinate',['../classTestCoordinates.html#a1a8ecc8751a4a0980f8c240c6931fe37',1,'TestCoordinates']]],
@@ -22,7 +22,9 @@ var searchData=
   ['testrefraction_19',['testRefraction',['../classTestCoordinates.html#ab9f5ec9bfe3edecde5bb0019b370a668',1,'TestCoordinates']]],
   ['testrightascensiontofromhourangle_20',['testRightAscensionToFromHourAngle',['../classTestCoordinates.html#a832e0bce7e2b3e424745e822a3305e20',1,'TestCoordinates']]],
   ['testrisingandsetting_21',['testRisingAndSetting',['../classTestCoordinates.html#af2a47796d5a269482dffb65a037236d3',1,'TestCoordinates']]],
-  ['testuniversaltimetofromgreenwichsiderealtime_22',['testUniversalTimeToFromGreenwichSiderealTime',['../classTestDateTime.html#a9d2f983281f1b5de36694778e47e28f7',1,'TestDateTime']]],
-  ['time_23',['Time',['../classastro_1_1practical_1_1types_1_1complex_1_1Time.html#a134fdcf88f194bf704d93ef7e07e82aa',1,'astro::practical::types::complex::Time']]],
-  ['trueanomaly_24',['trueAnomaly',['../classastro_1_1practical_1_1lib_1_1PAMacros.html#a75c31010344aaa36374d002051feada7',1,'astro::practical::lib::PAMacros']]]
+  ['testselenographiccoordinates1_22',['testSelenographicCoordinates1',['../classTestCoordinates.html#a1e0176cb437459714515a650bb588faf',1,'TestCoordinates']]],
+  ['testselenographiccoordinates2_23',['testSelenographicCoordinates2',['../classTestCoordinates.html#aac90f6b1d4d7e453f6c0707e5406fd43',1,'TestCoordinates']]],
+  ['testuniversaltimetofromgreenwichsiderealtime_24',['testUniversalTimeToFromGreenwichSiderealTime',['../classTestDateTime.html#a9d2f983281f1b5de36694778e47e28f7',1,'TestDateTime']]],
+  ['time_25',['Time',['../classastro_1_1practical_1_1types_1_1complex_1_1Time.html#a134fdcf88f194bf704d93ef7e07e82aa',1,'astro::practical::types::complex::Time']]],
+  ['trueanomaly_26',['trueAnomaly',['../classastro_1_1practical_1_1lib_1_1PAMacros.html#a75c31010344aaa36374d002051feada7',1,'astro::practical::lib::PAMacros']]]
 ];

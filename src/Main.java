@@ -33,5 +33,7 @@ public class Main {
 		testCoordinates.testParallax();
 		testCoordinates.testHeliographicCoordinates();
 		testCoordinates.testCarringtonRotationNumber();
+		testCoordinates.testSelenographicCoordinates1();
+		testCoordinates.testSelenographicCoordinates2();
 	}
 }

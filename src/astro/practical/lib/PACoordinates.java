@@ -16,6 +16,8 @@ import astro.practical.types.complex.Nutation;
 import astro.practical.types.complex.RightAscension;
 import astro.practical.types.complex.RightAscensionDeclination;
 import astro.practical.types.complex.RiseSet;
+import astro.practical.types.complex.SelenographicCoordinates1;
+import astro.practical.types.complex.SelenographicCoordinates2;
 
 public class PACoordinates {
 	/**
@@ -563,5 +565,89 @@ public class PACoordinates {
 		int crn = 1690 + (int) PAUtil.round((julianDateDays - 2444235.34) / 27.2753, 0);
 
 		return crn;
+	}
+
+	/**
+	 * Calculate selenographic (lunar) coordinates (sub-Earth)
+	 */
+	public SelenographicCoordinates1 selenographicCoordinates1(double gwdateDay, int gwdateMonth, int gwdateYear) {
+		double julianDateDays = PAMacros.civilDateToJulianDate(gwdateDay, gwdateMonth, gwdateYear);
+		double tCenturies = (julianDateDays - 2451545) / 36525;
+		double longAscNodeDeg = 125.044522 - 1934.136261 * tCenturies;
+		double f1 = 93.27191 + 483202.0175 * tCenturies;
+		double f2 = f1 - 360 * Math.floor(f1 / 360);
+		double geocentricMoonLongDeg = PAMacros.moonLong(0, 0, 0, 0, 0, gwdateDay, gwdateMonth, gwdateYear);
+		double geocentricMoonLatRad = Math
+				.toRadians(PAMacros.moonLat(0, 0, 0, 0, 0, gwdateDay, gwdateMonth, gwdateYear));
+		double inclinationRad = Math.toRadians(PAMacros.degreesMinutesSecondsToDecimalDegrees(1, 32, 32.7));
+		double nodeLongRad = Math.toRadians(longAscNodeDeg - geocentricMoonLongDeg);
+		double sinBe = -(Math.cos(inclinationRad)) * Math.sin(geocentricMoonLatRad)
+				+ Math.sin(inclinationRad) * Math.cos(geocentricMoonLatRad) * Math.sin(nodeLongRad);
+		double subEarthLatDeg = PAMacros.wToDegrees(Math.asin(sinBe));
+		double aRad = Math.atan2(
+				(-Math.sin(geocentricMoonLatRad) * Math.sin(inclinationRad)
+						- Math.cos(geocentricMoonLatRad) * Math.cos(inclinationRad) * Math.sin(nodeLongRad)),
+				(Math.cos(geocentricMoonLatRad) * Math.cos(nodeLongRad)));
+		double aDeg = PAMacros.wToDegrees(aRad);
+		double subEarthLongDeg1 = aDeg - f2;
+		double subEarthLongDeg2 = subEarthLongDeg1 - 360 * Math.floor(subEarthLongDeg1 / 360);
+		double subEarthLongDeg3 = (subEarthLongDeg2 > 180) ? subEarthLongDeg2 - 360 : subEarthLongDeg2;
+		double c1Rad = Math.atan(Math.cos(nodeLongRad) * Math.sin(inclinationRad)
+				/ (Math.cos(geocentricMoonLatRad) * Math.cos(inclinationRad)
+						+ Math.sin(geocentricMoonLatRad) * Math.sin(inclinationRad) * Math.sin(nodeLongRad)));
+		double obliquityRad = Math.toRadians(PAMacros.obliq(gwdateDay, gwdateMonth, gwdateYear));
+		double c2Rad = Math.atan(Math.sin(obliquityRad) * Math.cos(Math.toRadians(geocentricMoonLongDeg))
+				/ (Math.sin(obliquityRad) * Math.sin(geocentricMoonLatRad)
+						* Math.sin(Math.toRadians(geocentricMoonLongDeg))
+						- Math.cos(obliquityRad) * Math.cos(geocentricMoonLatRad)));
+		double cDeg = PAMacros.wToDegrees(c1Rad + c2Rad);
+
+		double subEarthLongitude = PAUtil.round(subEarthLongDeg3, 2);
+		double subEarthLatitude = PAUtil.round(subEarthLatDeg, 2);
+		double positionAngleOfPole = PAUtil.round(cDeg, 2);
+
+		return new SelenographicCoordinates1(subEarthLongitude, subEarthLatitude, positionAngleOfPole);
+	}
+
+	/**
+	 * Calculate selenographic (lunar) coordinates (sub-Solar)
+	 */
+	public SelenographicCoordinates2 selenographicCoordinates2(double gwdateDay, int gwdateMonth, int gwdateYear) {
+		double julianDateDays = PAMacros.civilDateToJulianDate(gwdateDay, gwdateMonth, gwdateYear);
+		double tCenturies = (julianDateDays - 2451545) / 36525;
+		double longAscNodeDeg = 125.044522 - 1934.136261 * tCenturies;
+		double f1 = 93.27191 + 483202.0175 * tCenturies;
+		double f2 = f1 - 360 * Math.floor(f1 / 360);
+		double sunGeocentricLongDeg = PAMacros.sunLong(0, 0, 0, 0, 0, gwdateDay, gwdateMonth, gwdateYear);
+		double moonEquHorParallaxArcMin = PAMacros.moonHP(0, 0, 0, 0, 0, gwdateDay, gwdateMonth, gwdateYear) * 60;
+		double sunEarthDistAU = PAMacros.sunDist(0, 0, 0, 0, 0, gwdateDay, gwdateMonth, gwdateYear);
+		double geocentricMoonLatRad = Math
+				.toRadians(PAMacros.moonLat(0, 0, 0, 0, 0, gwdateDay, gwdateMonth, gwdateYear));
+		double geocentricMoonLongDeg = PAMacros.moonLong(0, 0, 0, 0, 0, gwdateDay, gwdateMonth, gwdateYear);
+		double adjustedMoonLongDeg = sunGeocentricLongDeg + 180
+				+ (26.4 * Math.cos(geocentricMoonLatRad)
+						* Math.sin(Math.toRadians(sunGeocentricLongDeg - geocentricMoonLongDeg))
+						/ (moonEquHorParallaxArcMin * sunEarthDistAU));
+		double adjustedMoonLatRad = 0.14666 * geocentricMoonLatRad / (moonEquHorParallaxArcMin * sunEarthDistAU);
+		double inclinationRad = Math.toRadians(PAMacros.degreesMinutesSecondsToDecimalDegrees(1, 32, 32.7));
+		double nodeLongRad = Math.toRadians((longAscNodeDeg - adjustedMoonLongDeg));
+		double sinBs = -Math.cos(inclinationRad) * Math.sin(adjustedMoonLatRad)
+				+ Math.sin(inclinationRad) * Math.cos(adjustedMoonLatRad) * Math.sin(nodeLongRad);
+		double subSolarLatDeg = PAMacros.wToDegrees(Math.asin(sinBs));
+		double aRad = Math.atan2(
+				(-Math.sin(adjustedMoonLatRad) * Math.sin(inclinationRad)
+						- Math.cos(adjustedMoonLatRad) * Math.cos(inclinationRad) * Math.sin(nodeLongRad)),
+				(Math.cos(adjustedMoonLatRad) * Math.cos(nodeLongRad)));
+		double aDeg = PAMacros.wToDegrees(aRad);
+		double subSolarLongDeg1 = aDeg - f2;
+		double subSolarLongDeg2 = subSolarLongDeg1 - 360 * Math.floor(subSolarLongDeg1 / 360);
+		double subSolarLongDeg3 = (subSolarLongDeg2 > 180) ? subSolarLongDeg2 - 360 : subSolarLongDeg2;
+		double subSolarColongDeg = 90 - subSolarLongDeg3;
+
+		double subSolarLongitude = PAUtil.round(subSolarLongDeg3, 2);
+		double subSolarColongitude = PAUtil.round(subSolarColongDeg, 2);
+		double subSolarLatitude = PAUtil.round(subSolarLatDeg, 2);
+
+		return new SelenographicCoordinates2(subSolarLongitude, subSolarColongitude, subSolarLatitude);
 	}
 }
