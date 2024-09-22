@@ -8,6 +8,7 @@ var classTestCoordinates =
     [ "testEclipticCoordinateToFromEquatorialCoordinate", "classTestCoordinates.html#a273efa91f5deec2908e118bd0d3857b8", null ],
     [ "testEquatorialCoordinatesToFromHorizonCoordinates", "classTestCoordinates.html#aa822bd2d174932ee5cd674d04092b390", null ],
     [ "testEquatorialCoordinateToFromGalacticCoordinate", "classTestCoordinates.html#a1a8ecc8751a4a0980f8c240c6931fe37", null ],
+    [ "testHeliographicCoordinates", "classTestCoordinates.html#a565d47d389f981ef2da7ac051a1a7871", null ],
     [ "testMeanObliquityOfTheEcliptic", "classTestCoordinates.html#a92283bda18660ad3be68650a565de3c1", null ],
     [ "testNutationInEclipticLongitudeAndObliquity", "classTestCoordinates.html#a27fc7283d6d2dba9b6b0b39c157e6269", null ],
     [ "testParallax", "classTestCoordinates.html#a720b8ca330a3fa28218a7bac6b070e43", null ],

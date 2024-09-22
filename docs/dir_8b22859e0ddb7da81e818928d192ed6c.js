@@ -13,6 +13,7 @@ var dir_8b22859e0ddb7da81e818928d192ed6c =
     [ "EquatorialCoordinatesRA.java", "EquatorialCoordinatesRA_8java.html", "EquatorialCoordinatesRA_8java" ],
     [ "GalacticCoordinates.java", "GalacticCoordinates_8java.html", "GalacticCoordinates_8java" ],
     [ "GreenwichSiderealTime.java", "GreenwichSiderealTime_8java.html", "GreenwichSiderealTime_8java" ],
+    [ "HeliographicCoordinates.java", "HeliographicCoordinates_8java.html", "HeliographicCoordinates_8java" ],
     [ "HorizonCoordinates.java", "HorizonCoordinates_8java.html", "HorizonCoordinates_8java" ],
     [ "HourAngle.java", "HourAngle_8java.html", "HourAngle_8java" ],
     [ "LocalSiderealTime.java", "LocalSiderealTime_8java.html", "LocalSiderealTime_8java" ],

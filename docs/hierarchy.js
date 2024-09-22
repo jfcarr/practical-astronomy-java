@@ -15,6 +15,7 @@ var hierarchy =
       [ "UniversalDateTime", "classastro_1_1practical_1_1types_1_1complex_1_1UniversalDateTime.html", null ]
     ] ],
     [ "EquatorialCoordinatesHA", "classastro_1_1practical_1_1types_1_1complex_1_1EquatorialCoordinatesHA.html", null ],
+    [ "HeliographicCoordinates", "classastro_1_1practical_1_1types_1_1complex_1_1HeliographicCoordinates.html", null ],
     [ "HorizonCoordinates", "classastro_1_1practical_1_1types_1_1complex_1_1HorizonCoordinates.html", null ],
     [ "Main", "classMain.html", null ],
     [ "Nutation", "classastro_1_1practical_1_1types_1_1complex_1_1Nutation.html", null ],

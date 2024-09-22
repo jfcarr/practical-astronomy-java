@@ -26,6 +26,7 @@ var annotated_dup =
             [ "EquatorialCoordinatesRA", "classastro_1_1practical_1_1types_1_1complex_1_1EquatorialCoordinatesRA.html", "classastro_1_1practical_1_1types_1_1complex_1_1EquatorialCoordinatesRA" ],
             [ "GalacticCoordinates", "classastro_1_1practical_1_1types_1_1complex_1_1GalacticCoordinates.html", "classastro_1_1practical_1_1types_1_1complex_1_1GalacticCoordinates" ],
             [ "GreenwichSiderealTime", "classastro_1_1practical_1_1types_1_1complex_1_1GreenwichSiderealTime.html", "classastro_1_1practical_1_1types_1_1complex_1_1GreenwichSiderealTime" ],
+            [ "HeliographicCoordinates", "classastro_1_1practical_1_1types_1_1complex_1_1HeliographicCoordinates.html", "classastro_1_1practical_1_1types_1_1complex_1_1HeliographicCoordinates" ],
             [ "HorizonCoordinates", "classastro_1_1practical_1_1types_1_1complex_1_1HorizonCoordinates.html", "classastro_1_1practical_1_1types_1_1complex_1_1HorizonCoordinates" ],
             [ "HourAngle", "classastro_1_1practical_1_1types_1_1complex_1_1HourAngle.html", "classastro_1_1practical_1_1types_1_1complex_1_1HourAngle" ],
             [ "LocalSiderealTime", "classastro_1_1practical_1_1types_1_1complex_1_1LocalSiderealTime.html", "classastro_1_1practical_1_1types_1_1complex_1_1LocalSiderealTime" ],
