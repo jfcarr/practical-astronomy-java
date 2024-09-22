@@ -31,5 +31,6 @@ public class Main {
 		testCoordinates.testCorrectForAberration();
 		testCoordinates.testRefraction();
 		testCoordinates.testParallax();
+		testCoordinates.testHeliographicCoordinates();
 	}
 }

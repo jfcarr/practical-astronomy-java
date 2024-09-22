@@ -9,6 +9,7 @@ import astro.practical.types.complex.EclipticCoordinates;
 import astro.practical.types.complex.EquatorialCoordinatesHA;
 import astro.practical.types.complex.EquatorialCoordinatesRA;
 import astro.practical.types.complex.GalacticCoordinates;
+import astro.practical.types.complex.HeliographicCoordinates;
 import astro.practical.types.complex.HorizonCoordinates;
 import astro.practical.types.complex.HourAngle;
 import astro.practical.types.complex.Nutation;
@@ -224,5 +225,15 @@ public class TestCoordinates {
 				.Assert(43.22, correctedCoordinates.rightAscensionSeconds)
 				.Assert(-8, correctedCoordinates.declinationDegrees).Assert(32, correctedCoordinates.declinationMinutes)
 				.Assert(17.4, correctedCoordinates.declinationSeconds);
+	}
+
+	public void testHeliographicCoordinates() {
+		TestLib testLib = new TestLib();
+
+		HeliographicCoordinates heliographicCoordinates = paCoordinates.heliographicCoordinates(220, 10.5, 1, 5, 1988);
+
+		testLib.setTestName("Heliographic Coordinates")
+				.Assert(142.59, heliographicCoordinates.helioLongDeg)
+				.Assert(-19.94, heliographicCoordinates.helioLatDeg);
 	}
 }

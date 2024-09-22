@@ -9,6 +9,7 @@ import astro.practical.types.complex.EclipticCoordinates;
 import astro.practical.types.complex.EquatorialCoordinatesHA;
 import astro.practical.types.complex.EquatorialCoordinatesRA;
 import astro.practical.types.complex.GalacticCoordinates;
+import astro.practical.types.complex.HeliographicCoordinates;
 import astro.practical.types.complex.HorizonCoordinates;
 import astro.practical.types.complex.HourAngle;
 import astro.practical.types.complex.Nutation;
@@ -510,5 +511,46 @@ public class PACoordinates {
 
 		return new RightAscensionDeclination(correctedRAHour, correctedRAMin, correctedRASec, correctedDecDeg,
 				correctedDecMin, correctedDecSec);
+	}
+
+	/**
+	 * Calculate heliographic coordinates for a given Greenwich date, with a given
+	 * heliographic position angle and heliographic displacement in arc minutes.
+	 */
+	public HeliographicCoordinates heliographicCoordinates(double helioPositionAngleDeg, double helioDisplacementArcmin,
+			double gwdateDay, int gwdateMonth, int gwdateYear) {
+		double julianDateDays = PAMacros.civilDateToJulianDate(gwdateDay, gwdateMonth, gwdateYear);
+		double tCenturies = (julianDateDays - 2415020) / 36525;
+		double longAscNodeDeg = PAMacros.degreesMinutesSecondsToDecimalDegrees(74, 22, 0) + (84 * tCenturies / 60);
+		double sunLongDeg = PAMacros.sunLong(0, 0, 0, 0, 0, gwdateDay, gwdateMonth, gwdateYear);
+		double y = Math.sin(Math.toRadians(longAscNodeDeg - sunLongDeg))
+				* Math.cos(Math.toRadians(PAMacros.degreesMinutesSecondsToDecimalDegrees(7, 15, 0)));
+		double x = -Math.cos(Math.toRadians(longAscNodeDeg - sunLongDeg));
+		double aDeg = PAMacros.wToDegrees(Math.atan2(y, x));
+		double mDeg1 = 360 - (360 * (julianDateDays - 2398220) / 25.38);
+		double mDeg2 = mDeg1 - 360 * Math.floor(mDeg1 / 360);
+		double l0Deg1 = mDeg2 + aDeg;
+		double b0Rad = Math.asin(Math.sin(Math.toRadians(sunLongDeg - longAscNodeDeg))
+				* Math.sin(Math.toRadians(PAMacros.degreesMinutesSecondsToDecimalDegrees(7, 15, 0))));
+		double theta1Rad = Math.atan(-Math.cos(Math.toRadians(sunLongDeg))
+				* Math.tan(Math.toRadians(PAMacros.obliq(gwdateDay, gwdateMonth, gwdateYear))));
+		double theta2Rad = Math.atan(-Math.cos(Math.toRadians(longAscNodeDeg - sunLongDeg))
+				* Math.tan(Math.toRadians(PAMacros.degreesMinutesSecondsToDecimalDegrees(7, 15, 0))));
+		double pDeg = PAMacros.wToDegrees(theta1Rad + theta2Rad);
+		double rho1Deg = helioDisplacementArcmin / 60;
+		double rhoRad = Math.asin(2 * rho1Deg / PAMacros.sunDia(0, 0, 0, 0, 0, gwdateDay, gwdateMonth, gwdateYear))
+				- Math.toRadians(rho1Deg);
+		double bRad = Math.asin(Math.sin(b0Rad) * Math.cos(rhoRad)
+				+ Math.cos(b0Rad) * Math.sin(rhoRad) * Math.cos(Math.toRadians(pDeg - helioPositionAngleDeg)));
+		double bDeg = PAMacros.wToDegrees(bRad);
+		double lDeg1 = PAMacros.wToDegrees(
+				Math.asin(Math.sin(rhoRad) * Math.sin(Math.toRadians(pDeg - helioPositionAngleDeg)) / Math.cos(bRad)))
+				+ l0Deg1;
+		double lDeg2 = lDeg1 - 360 * Math.floor(lDeg1 / 360);
+
+		double helioLongDeg = PAUtil.round(lDeg2, 2);
+		double helioLatDeg = PAUtil.round(bDeg, 2);
+
+		return new HeliographicCoordinates(helioLongDeg, helioLatDeg);
 	}
 }
