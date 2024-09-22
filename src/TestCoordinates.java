@@ -16,6 +16,8 @@ import astro.practical.types.complex.Nutation;
 import astro.practical.types.complex.RightAscension;
 import astro.practical.types.complex.RightAscensionDeclination;
 import astro.practical.types.complex.RiseSet;
+import astro.practical.types.complex.SelenographicCoordinates1;
+import astro.practical.types.complex.SelenographicCoordinates2;
 import astro.practical.types.CoordinateType;
 
 public class TestCoordinates {
@@ -243,5 +245,27 @@ public class TestCoordinates {
 		int carringtonRotationNumber = paCoordinates.carringtonRotationNumber(27, 1, 1975);
 
 		testLib.setTestName("Carrington Rotation Number").Assert(1624, carringtonRotationNumber);
+	}
+
+	public void testSelenographicCoordinates1() {
+		TestLib testLib = new TestLib();
+
+		SelenographicCoordinates1 selenographicCoordinates1 = paCoordinates.selenographicCoordinates1(1, 5, 1988);
+
+		testLib.setTestName("Selenographic Coordinates (1)")
+				.Assert(-4.88, selenographicCoordinates1.subEarthLongitude)
+				.Assert(4.04, selenographicCoordinates1.subEarthLatitude)
+				.Assert(19.78, selenographicCoordinates1.positionAngleOfPole);
+	}
+
+	public void testSelenographicCoordinates2() {
+		TestLib testLib = new TestLib();
+
+		SelenographicCoordinates2 selenographicCoordinates2 = paCoordinates.selenographicCoordinates2(1, 5, 1988);
+
+		testLib.setTestName("Selenographic Coordinates (2)")
+				.Assert(6.81, selenographicCoordinates2.subSolarLongitude)
+				.Assert(83.19, selenographicCoordinates2.subSolarColongitude)
+				.Assert(1.19, selenographicCoordinates2.subSolarLatitude);
 	}
 }
