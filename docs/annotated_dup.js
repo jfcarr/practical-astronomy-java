@@ -6,6 +6,7 @@ var annotated_dup =
           [ "PACoordinates", "classastro_1_1practical_1_1lib_1_1PACoordinates.html", "classastro_1_1practical_1_1lib_1_1PACoordinates" ],
           [ "PADateTime", "classastro_1_1practical_1_1lib_1_1PADateTime.html", "classastro_1_1practical_1_1lib_1_1PADateTime" ],
           [ "PAMacros", "classastro_1_1practical_1_1lib_1_1PAMacros.html", null ],
+          [ "PASun", "classastro_1_1practical_1_1lib_1_1PASun.html", "classastro_1_1practical_1_1lib_1_1PASun" ],
           [ "PAUtil", "classastro_1_1practical_1_1lib_1_1PAUtil.html", null ]
         ] ],
         [ "test", "namespaceastro_1_1practical_1_1test.html", [
@@ -32,6 +33,7 @@ var annotated_dup =
             [ "LocalSiderealTime", "classastro_1_1practical_1_1types_1_1complex_1_1LocalSiderealTime.html", "classastro_1_1practical_1_1types_1_1complex_1_1LocalSiderealTime" ],
             [ "Nutation", "classastro_1_1practical_1_1types_1_1complex_1_1Nutation.html", "classastro_1_1practical_1_1types_1_1complex_1_1Nutation" ],
             [ "ParallaxHelper", "classastro_1_1practical_1_1types_1_1complex_1_1ParallaxHelper.html", "classastro_1_1practical_1_1types_1_1complex_1_1ParallaxHelper" ],
+            [ "PositionOfSun", "classastro_1_1practical_1_1types_1_1complex_1_1PositionOfSun.html", "classastro_1_1practical_1_1types_1_1complex_1_1PositionOfSun" ],
             [ "RightAscension", "classastro_1_1practical_1_1types_1_1complex_1_1RightAscension.html", "classastro_1_1practical_1_1types_1_1complex_1_1RightAscension" ],
             [ "RightAscensionDeclination", "classastro_1_1practical_1_1types_1_1complex_1_1RightAscensionDeclination.html", "classastro_1_1practical_1_1types_1_1complex_1_1RightAscensionDeclination" ],
             [ "RiseSet", "classastro_1_1practical_1_1types_1_1complex_1_1RiseSet.html", "classastro_1_1practical_1_1types_1_1complex_1_1RiseSet" ],
@@ -50,5 +52,6 @@ var annotated_dup =
     ] ],
     [ "Main", "classMain.html", null ],
     [ "TestCoordinates", "classTestCoordinates.html", "classTestCoordinates" ],
-    [ "TestDateTime", "classTestDateTime.html", "classTestDateTime" ]
+    [ "TestDateTime", "classTestDateTime.html", "classTestDateTime" ],
+    [ "TestSun", "classTestSun.html", "classTestSun" ]
 ];

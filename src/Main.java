@@ -2,6 +2,7 @@ public class Main {
 	public static void main(String[] args) {
 		testDateTime();
 		testCoordinates();
+		testSun();
 	}
 
 	public static void testDateTime() {
@@ -35,5 +36,12 @@ public class Main {
 		testCoordinates.testCarringtonRotationNumber();
 		testCoordinates.testSelenographicCoordinates1();
 		testCoordinates.testSelenographicCoordinates2();
+	}
+
+	public static void testSun() {
+		TestSun testSun = new TestSun();
+
+		testSun.testApproximatePositionOfSun();
+		testSun.testPrecisePositionOfSun();
 	}
 }

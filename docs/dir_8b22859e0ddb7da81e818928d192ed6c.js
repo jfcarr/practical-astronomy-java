@@ -19,6 +19,7 @@ var dir_8b22859e0ddb7da81e818928d192ed6c =
     [ "LocalSiderealTime.java", "LocalSiderealTime_8java.html", "LocalSiderealTime_8java" ],
     [ "Nutation.java", "Nutation_8java.html", "Nutation_8java" ],
     [ "ParallaxHelper.java", "ParallaxHelper_8java.html", "ParallaxHelper_8java" ],
+    [ "PositionOfSun.java", "PositionOfSun_8java.html", "PositionOfSun_8java" ],
     [ "RightAscension.java", "RightAscension_8java.html", "RightAscension_8java" ],
     [ "RightAscensionDeclination.java", "RightAscensionDeclination_8java.html", "RightAscensionDeclination_8java" ],
     [ "RiseSet.java", "RiseSet_8java.html", "RiseSet_8java" ],
