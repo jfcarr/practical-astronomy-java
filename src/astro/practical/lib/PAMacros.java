@@ -1244,4 +1244,74 @@ public class PAMacros {
 		return w - 360 * Math.floor(w / 360);
 	}
 
+	/**
+	 * Mean ecliptic longitude of the Sun at the epoch
+	 * 
+	 * Original macro name: SunElong
+	 */
+	public static double sunELong(double gd, int gm, int gy) {
+		double t = (civilDateToJulianDate(gd, gm, gy) - 2415020) / 36525;
+		double t2 = t * t;
+		double x = 279.6966778 + 36000.76892 * t + 0.0003025 * t2;
+
+		return x - 360 * Math.floor(x / 360);
+	}
+
+	/**
+	 * Longitude of the Sun at perigee
+	 * 
+	 * Original macro name: SunPeri
+	 */
+	public static double sunPeri(double gd, int gm, int gy) {
+		double t = (civilDateToJulianDate(gd, gm, gy) - 2415020) / 36525;
+		double t2 = t * t;
+		double x = 281.2208444 + 1.719175 * t + 0.000452778 * t2;
+
+		return x - 360 * Math.floor(x / 360);
+	}
+
+	/**
+	 * Eccentricity of the Sun-Earth orbit
+	 * 
+	 * Original macro name: SunEcc
+	 */
+	public static double sunEcc(double gd, int gm, int gy) {
+		double t = (civilDateToJulianDate(gd, gm, gy) - 2415020) / 36525;
+		double t2 = t * t;
+
+		return 0.01675104 - 0.0000418 * t - 0.000000126 * t2;
+	}
+
+	/**
+	 * Ecliptic - Declination (degrees)
+	 * 
+	 * Original macro name: ECDec
+	 */
+	public static double ecDec(double eld, double elm, double els, double bd, double bm, double bs, double gd, int gm,
+			int gy) {
+		double a = Math.toRadians(degreesMinutesSecondsToDecimalDegrees(eld, elm, els));
+		double b = Math.toRadians(degreesMinutesSecondsToDecimalDegrees(bd, bm, bs));
+		double c = Math.toRadians(obliq(gd, gm, gy));
+		double d = Math.sin(b) * Math.cos(c) + Math.cos(b) * Math.sin(c) * Math.sin(a);
+
+		return wToDegrees(Math.asin(d));
+	}
+
+	/**
+	 * Ecliptic - Right Ascension (degrees)
+	 * 
+	 * Original macro name: ECRA
+	 */
+	public static double ecRA(double eld, double elm, double els, double bd, double bm, double bs, double gd, int gm,
+			int gy) {
+		double a = Math.toRadians(degreesMinutesSecondsToDecimalDegrees(eld, elm, els));
+		double b = Math.toRadians(degreesMinutesSecondsToDecimalDegrees(bd, bm, bs));
+		double c = Math.toRadians(obliq(gd, gm, gy));
+		double d = Math.sin(a) * Math.cos(c) - Math.tan(b) * Math.sin(c);
+		double e = Math.cos(a);
+		double f = wToDegrees(Math.atan2(d, e));
+
+		return f - 360 * Math.floor(f / 360);
+	}
+
 }
