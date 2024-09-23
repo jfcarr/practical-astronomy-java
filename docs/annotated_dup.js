@@ -39,6 +39,7 @@ var annotated_dup =
             [ "RiseSet", "classastro_1_1practical_1_1types_1_1complex_1_1RiseSet.html", "classastro_1_1practical_1_1types_1_1complex_1_1RiseSet" ],
             [ "SelenographicCoordinates1", "classastro_1_1practical_1_1types_1_1complex_1_1SelenographicCoordinates1.html", "classastro_1_1practical_1_1types_1_1complex_1_1SelenographicCoordinates1" ],
             [ "SelenographicCoordinates2", "classastro_1_1practical_1_1types_1_1complex_1_1SelenographicCoordinates2.html", "classastro_1_1practical_1_1types_1_1complex_1_1SelenographicCoordinates2" ],
+            [ "SunDistanceAndAngularSize", "classastro_1_1practical_1_1types_1_1complex_1_1SunDistanceAndAngularSize.html", "classastro_1_1practical_1_1types_1_1complex_1_1SunDistanceAndAngularSize" ],
             [ "Time", "classastro_1_1practical_1_1types_1_1complex_1_1Time.html", "classastro_1_1practical_1_1types_1_1complex_1_1Time" ],
             [ "UniversalDateTime", "classastro_1_1practical_1_1types_1_1complex_1_1UniversalDateTime.html", "classastro_1_1practical_1_1types_1_1complex_1_1UniversalDateTime" ],
             [ "UniversalTime", "classastro_1_1practical_1_1types_1_1complex_1_1UniversalTime.html", "classastro_1_1practical_1_1types_1_1complex_1_1UniversalTime" ]

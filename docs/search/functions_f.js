@@ -27,7 +27,8 @@ var searchData=
   ['testselenographiccoordinates1_24',['testSelenographicCoordinates1',['../classTestCoordinates.html#a1e0176cb437459714515a650bb588faf',1,'TestCoordinates']]],
   ['testselenographiccoordinates2_25',['testSelenographicCoordinates2',['../classTestCoordinates.html#aac90f6b1d4d7e453f6c0707e5406fd43',1,'TestCoordinates']]],
   ['testsun_26',['testsun',['../classMain.html#a5cb5b02b05ee182ea516ee034f84253a',1,'Main.testSun()'],['../classTestSun.html#aaf27872bd2507fe67a4004ff39a9e7c9',1,'TestSun.TestSun()']]],
-  ['testuniversaltimetofromgreenwichsiderealtime_27',['testUniversalTimeToFromGreenwichSiderealTime',['../classTestDateTime.html#a9d2f983281f1b5de36694778e47e28f7',1,'TestDateTime']]],
-  ['time_28',['Time',['../classastro_1_1practical_1_1types_1_1complex_1_1Time.html#a134fdcf88f194bf704d93ef7e07e82aa',1,'astro::practical::types::complex::Time']]],
-  ['trueanomaly_29',['trueAnomaly',['../classastro_1_1practical_1_1lib_1_1PAMacros.html#a75c31010344aaa36374d002051feada7',1,'astro::practical::lib::PAMacros']]]
+  ['testsundistanceandangularsize_27',['testSunDistanceAndAngularSize',['../classTestSun.html#a4831ec0f3518d52a56707100eedeafeb',1,'TestSun']]],
+  ['testuniversaltimetofromgreenwichsiderealtime_28',['testUniversalTimeToFromGreenwichSiderealTime',['../classTestDateTime.html#a9d2f983281f1b5de36694778e47e28f7',1,'TestDateTime']]],
+  ['time_29',['Time',['../classastro_1_1practical_1_1types_1_1complex_1_1Time.html#a134fdcf88f194bf704d93ef7e07e82aa',1,'astro::practical::types::complex::Time']]],
+  ['trueanomaly_30',['trueAnomaly',['../classastro_1_1practical_1_1lib_1_1PAMacros.html#a75c31010344aaa36374d002051feada7',1,'astro::practical::lib::PAMacros']]]
 ];

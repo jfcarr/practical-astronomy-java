@@ -35,6 +35,7 @@ var hierarchy =
     [ "RiseSetStatus", "enumastro_1_1practical_1_1types_1_1RiseSetStatus.html", null ],
     [ "SelenographicCoordinates1", "classastro_1_1practical_1_1types_1_1complex_1_1SelenographicCoordinates1.html", null ],
     [ "SelenographicCoordinates2", "classastro_1_1practical_1_1types_1_1complex_1_1SelenographicCoordinates2.html", null ],
+    [ "SunDistanceAndAngularSize", "classastro_1_1practical_1_1types_1_1complex_1_1SunDistanceAndAngularSize.html", null ],
     [ "TestCoordinates", "classTestCoordinates.html", null ],
     [ "TestDateTime", "classTestDateTime.html", null ],
     [ "TestLib", "classastro_1_1practical_1_1test_1_1TestLib.html", null ],
