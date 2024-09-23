@@ -1,0 +1,5 @@
+var classastro_1_1practical_1_1lib_1_1PASun =
+[
+    [ "approximatePositionOfSun", "classastro_1_1practical_1_1lib_1_1PASun.html#ac764cd8516797ac21371b8c12fac25b5", null ],
+    [ "precisePositionOfSun", "classastro_1_1practical_1_1lib_1_1PASun.html#a349bb3a0a5d533a555b490733aa804e9", null ]
+];
