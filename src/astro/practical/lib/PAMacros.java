@@ -1314,4 +1314,31 @@ public class PAMacros {
 		return f - 360 * Math.floor(f / 360);
 	}
 
+	/**
+	 * Calculate Sun's true anomaly, i.e., how much its orbit deviates from a true
+	 * circle to an ellipse.
+	 * 
+	 * Original macro name: SunTrueAnomaly
+	 */
+	public static double sunTrueAnomaly(double lch, double lcm, double lcs, int ds, int zc, double ld, int lm, int ly) {
+		double aa = localCivilTimeGreenwichDay(lch, lcm, lcs, ds, zc, ld, lm, ly);
+		int bb = localCivilTimeGreenwichMonth(lch, lcm, lcs, ds, zc, ld, lm, ly);
+		int cc = localCivilTimeGreenwichYear(lch, lcm, lcs, ds, zc, ld, lm, ly);
+		double ut = localCivilTimeToUniversalTime(lch, lcm, lcs, ds, zc, ld, lm, ly);
+		double dj = civilDateToJulianDate(aa, bb, cc) - 2415020;
+
+		double t = (dj / 36525) + (ut / 876600);
+		double t2 = t * t;
+
+		double a = 99.99736042 * t;
+		double b = 360 * (a - Math.floor(a));
+
+		double m1 = 358.47583 - (0.00015 + 0.0000033 * t) * t2 + b;
+		double ec = 0.01675104 - 0.0000418 * t - 0.000000126 * t2;
+
+		double am = Math.toRadians(m1);
+
+		return wToDegrees(trueAnomaly(am, ec));
+	}
+
 }

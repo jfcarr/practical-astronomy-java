@@ -1,6 +1,7 @@
 package astro.practical.lib;
 
 import astro.practical.types.complex.PositionOfSun;
+import astro.practical.types.complex.SunDistanceAndAngularSize;
 
 public class PASun {
         /**
@@ -77,4 +78,33 @@ public class PASun {
                 return new PositionOfSun(sunRAHour, sunRAMin, sunRASec, sunDecDeg, sunDecMin, sunDecSec);
         }
 
+        /**
+         * Calculate distance to the Sun (in km), and angular size.
+         */
+        public SunDistanceAndAngularSize sunDistanceAndAngularSize(double lctHours, double lctMinutes,
+                        double lctSeconds, double localDay, int localMonth, int localYear, boolean isDaylightSaving,
+                        int zoneCorrection) {
+                int daylightSaving = isDaylightSaving ? 1 : 0;
+
+                double gDay = PAMacros.localCivilTimeGreenwichDay(lctHours, lctMinutes, lctSeconds, daylightSaving,
+                                zoneCorrection, localDay, localMonth, localYear);
+                int gMonth = PAMacros.localCivilTimeGreenwichMonth(lctHours, lctMinutes, lctSeconds, daylightSaving,
+                                zoneCorrection, localDay, localMonth, localYear);
+                int gYear = PAMacros.localCivilTimeGreenwichYear(lctHours, lctMinutes, lctSeconds, daylightSaving,
+                                zoneCorrection, localDay, localMonth, localYear);
+                double trueAnomalyDeg = PAMacros.sunTrueAnomaly(lctHours, lctMinutes, lctSeconds, daylightSaving,
+                                zoneCorrection, localDay, localMonth, localYear);
+                double trueAnomalyRad = Math.toRadians(trueAnomalyDeg);
+                double eccentricity = PAMacros.sunEcc(gDay, gMonth, gYear);
+                double f = (1 + eccentricity * Math.cos(trueAnomalyRad)) / (1 - eccentricity * eccentricity);
+                double rKm = 149598500 / f;
+                double thetaDeg = f * 0.533128;
+
+                double sunDistKm = PAUtil.round(rKm, 0);
+                double sunAngSizeDeg = PAMacros.decimalDegreesDegrees(thetaDeg);
+                double sunAngSizeMin = PAMacros.decimalDegreesMinutes(thetaDeg);
+                double sunAngSizeSec = PAMacros.decimalDegreesSeconds(thetaDeg);
+
+                return new SunDistanceAndAngularSize(sunDistKm, sunAngSizeDeg, sunAngSizeMin, sunAngSizeSec);
+        }
 }
