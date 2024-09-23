@@ -1,6 +1,7 @@
 import astro.practical.lib.PASun;
 import astro.practical.test.TestLib;
 import astro.practical.types.complex.PositionOfSun;
+import astro.practical.types.complex.SunDistanceAndAngularSize;
 
 public class TestSun {
     PASun paSun;
@@ -37,5 +38,18 @@ public class TestSun {
                 .Assert(19, precisePositionOfSun.sunDecDeg)
                 .Assert(12, precisePositionOfSun.sunDecMin)
                 .Assert(49.72, precisePositionOfSun.sunDecSec);
+    }
+
+    public void testSunDistanceAndAngularSize() {
+        TestLib testLib = new TestLib();
+
+        SunDistanceAndAngularSize sunDistanceAndAngularSize = paSun.sunDistanceAndAngularSize(0, 0, 0, 27, 7, 1988,
+                false, 0);
+
+        testLib.setTestName("Sun Distance and Angular Size")
+                .Assert(151920130, sunDistanceAndAngularSize.sunDistKm)
+                .Assert(0, sunDistanceAndAngularSize.sunAngSizeDeg)
+                .Assert(31, sunDistanceAndAngularSize.sunAngSizeMin)
+                .Assert(29.93, sunDistanceAndAngularSize.sunAngSizeSec);
     }
 }

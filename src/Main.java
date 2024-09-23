@@ -43,5 +43,6 @@ public class Main {
 
 		testSun.testApproximatePositionOfSun();
 		testSun.testPrecisePositionOfSun();
+		testSun.testSunDistanceAndAngularSize();
 	}
 }
