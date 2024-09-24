@@ -34,9 +34,10 @@ var searchData=
   ['testsun_31',['testsun',['../classTestSun.html',1,'TestSun'],['../classMain.html#a5cb5b02b05ee182ea516ee034f84253a',1,'Main.testSun()'],['../classTestSun.html#aaf27872bd2507fe67a4004ff39a9e7c9',1,'TestSun.TestSun()']]],
   ['testsun_2ejava_32',['TestSun.java',['../TestSun_8java.html',1,'']]],
   ['testsundistanceandangularsize_33',['testSunDistanceAndAngularSize',['../classTestSun.html#a4831ec0f3518d52a56707100eedeafeb',1,'TestSun']]],
-  ['testuniversaltimetofromgreenwichsiderealtime_34',['testUniversalTimeToFromGreenwichSiderealTime',['../classTestDateTime.html#a9d2f983281f1b5de36694778e47e28f7',1,'TestDateTime']]],
-  ['time_35',['time',['../classastro_1_1practical_1_1types_1_1complex_1_1Time.html',1,'Time'],['../classastro_1_1practical_1_1types_1_1complex_1_1Time.html#a134fdcf88f194bf704d93ef7e07e82aa',1,'astro.practical.types.complex.Time.Time()']]],
-  ['time_2ejava_36',['Time.java',['../Time_8java.html',1,'']]],
-  ['true_37',['TRUE',['../enumastro_1_1practical_1_1types_1_1CoordinateType.html#a62fc847d42be515124a2f1513b5de55d',1,'astro::practical::types::CoordinateType']]],
-  ['trueanomaly_38',['trueAnomaly',['../classastro_1_1practical_1_1lib_1_1PAMacros.html#a75c31010344aaa36374d002051feada7',1,'astro::practical::lib::PAMacros']]]
+  ['testsunriseandsunset_34',['testSunriseAndSunset',['../classTestSun.html#a835ff0f71c7d833cf35e04f86fff83c1',1,'TestSun']]],
+  ['testuniversaltimetofromgreenwichsiderealtime_35',['testUniversalTimeToFromGreenwichSiderealTime',['../classTestDateTime.html#a9d2f983281f1b5de36694778e47e28f7',1,'TestDateTime']]],
+  ['time_36',['time',['../classastro_1_1practical_1_1types_1_1complex_1_1Time.html',1,'Time'],['../classastro_1_1practical_1_1types_1_1complex_1_1Time.html#a134fdcf88f194bf704d93ef7e07e82aa',1,'astro.practical.types.complex.Time.Time()']]],
+  ['time_2ejava_37',['Time.java',['../Time_8java.html',1,'']]],
+  ['true_38',['TRUE',['../enumastro_1_1practical_1_1types_1_1CoordinateType.html#a62fc847d42be515124a2f1513b5de55d',1,'astro::practical::types::CoordinateType']]],
+  ['trueanomaly_39',['trueAnomaly',['../classastro_1_1practical_1_1lib_1_1PAMacros.html#a75c31010344aaa36374d002051feada7',1,'astro::practical::lib::PAMacros']]]
 ];
