@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['warning_0',['WARNING',['../enumastro_1_1practical_1_1types_1_1PAWarningFlag.html#a1dfc73ab73898d3f4f348d462a5d126a',1,'astro::practical::types::PAWarningFlag']]],
-  ['warningflag_1',['warningFlag',['../classastro_1_1practical_1_1types_1_1complex_1_1UniversalTime.html#ae9ef7eeb80a39bb1ddc5f79ce8fa93d9',1,'astro::practical::types::complex::UniversalTime']]]
+  ['utrisehour_0',['utRiseHour',['../classastro_1_1practical_1_1types_1_1complex_1_1RiseSet.html#a3f50138c545ca70fc7eaec187beffa8a',1,'astro::practical::types::complex::RiseSet']]],
+  ['utrisemin_1',['utRiseMin',['../classastro_1_1practical_1_1types_1_1complex_1_1RiseSet.html#ae7221c963c7e7354f382a0284bd6706d',1,'astro::practical::types::complex::RiseSet']]],
+  ['utsethour_2',['utSetHour',['../classastro_1_1practical_1_1types_1_1complex_1_1RiseSet.html#ae125909bbbedd8c47e17f350d438ea3f',1,'astro::practical::types::complex::RiseSet']]],
+  ['utsetmin_3',['utSetMin',['../classastro_1_1practical_1_1types_1_1complex_1_1RiseSet.html#afa268c51f3c02f0f9850a6f7c75b61d7',1,'astro::practical::types::complex::RiseSet']]]
 ];

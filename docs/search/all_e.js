@@ -12,8 +12,12 @@ var searchData=
   ['rightascensiontohourangle_9',['rightascensiontohourangle',['../classastro_1_1practical_1_1lib_1_1PACoordinates.html#a2e30d9722eb33997e46295b723b4bdd9',1,'astro.practical.lib.PACoordinates.rightAscensionToHourAngle()'],['../classastro_1_1practical_1_1lib_1_1PAMacros.html#aa8af7767bf041707efd8f447a17a0a13',1,'astro.practical.lib.PAMacros.rightAscensionToHourAngle()']]],
   ['riseset_10',['riseset',['../classastro_1_1practical_1_1types_1_1complex_1_1RiseSet.html',1,'RiseSet'],['../classastro_1_1practical_1_1types_1_1complex_1_1RiseSet.html#a3609df0ac44ee5e1b7c21ef092bcd5c8',1,'astro.practical.types.complex.RiseSet.RiseSet()']]],
   ['riseset_2ejava_11',['RiseSet.java',['../RiseSet_8java.html',1,'']]],
-  ['risesetstatus_12',['risesetstatus',['../enumastro_1_1practical_1_1types_1_1RiseSetStatus.html',1,'RiseSetStatus'],['../classastro_1_1practical_1_1types_1_1complex_1_1RiseSet.html#a31e2309841cf47a16e3856c2eb75faf9',1,'astro.practical.types.complex.RiseSet.riseSetStatus']]],
-  ['risesetstatus_2ejava_13',['RiseSetStatus.java',['../RiseSetStatus_8java.html',1,'']]],
-  ['risingandsetting_14',['risingAndSetting',['../classastro_1_1practical_1_1lib_1_1PACoordinates.html#a973b93d7a9737cdd4c84415b605d60f0',1,'astro::practical::lib::PACoordinates']]],
-  ['round_15',['round',['../classastro_1_1practical_1_1lib_1_1PAUtil.html#a3af69cfbf5990d739a9ffc3cc489de89',1,'astro::practical::lib::PAUtil']]]
+  ['risesetazimuthrise_12',['riseSetAzimuthRise',['../classastro_1_1practical_1_1lib_1_1PAMacros.html#a5755b678d593e1dd6af76b26e4ca5f92',1,'astro::practical::lib::PAMacros']]],
+  ['risesetazimuthset_13',['riseSetAzimuthSet',['../classastro_1_1practical_1_1lib_1_1PAMacros.html#a42a4da6d5f1fad159a84417b893321a0',1,'astro::practical::lib::PAMacros']]],
+  ['risesetlocalsiderealtimerise_14',['riseSetLocalSiderealTimeRise',['../classastro_1_1practical_1_1lib_1_1PAMacros.html#ae8b6388d3fd7a685c3b48d8ba371a0a4',1,'astro::practical::lib::PAMacros']]],
+  ['risesetlocalsiderealtimeset_15',['riseSetLocalSiderealTimeSet',['../classastro_1_1practical_1_1lib_1_1PAMacros.html#a69ccb6c121bb918a732ba3945f76dafe',1,'astro::practical::lib::PAMacros']]],
+  ['risesetstatus_16',['risesetstatus',['../enumastro_1_1practical_1_1types_1_1RiseSetStatus.html',1,'RiseSetStatus'],['../classastro_1_1practical_1_1types_1_1complex_1_1RiseSet.html#a31e2309841cf47a16e3856c2eb75faf9',1,'astro.practical.types.complex.RiseSet.riseSetStatus']]],
+  ['risesetstatus_2ejava_17',['RiseSetStatus.java',['../RiseSetStatus_8java.html',1,'']]],
+  ['risingandsetting_18',['risingAndSetting',['../classastro_1_1practical_1_1lib_1_1PACoordinates.html#a973b93d7a9737cdd4c84415b605d60f0',1,'astro::practical::lib::PACoordinates']]],
+  ['round_19',['round',['../classastro_1_1practical_1_1lib_1_1PAUtil.html#a3af69cfbf5990d739a9ffc3cc489de89',1,'astro::practical::lib::PAUtil']]]
 ];

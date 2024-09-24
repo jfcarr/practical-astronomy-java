@@ -1,7 +1,9 @@
 package astro.practical.lib;
 
+import astro.practical.types.RiseSetStatus;
 import astro.practical.types.complex.PositionOfSun;
 import astro.practical.types.complex.SunDistanceAndAngularSize;
+import astro.practical.types.complex.SunriseAndSunset;
 
 public class PASun {
         /**
@@ -106,5 +108,56 @@ public class PASun {
                 double sunAngSizeSec = PAMacros.decimalDegreesSeconds(thetaDeg);
 
                 return new SunDistanceAndAngularSize(sunDistKm, sunAngSizeDeg, sunAngSizeMin, sunAngSizeSec);
+        }
+
+        /**
+         * Calculate local sunrise and sunset.
+         */
+        public SunriseAndSunset sunriseAndSunset(double localDay, int localMonth, int localYear,
+                        boolean isDaylightSaving, int zoneCorrection, double geographicalLongDeg,
+                        double geographicalLatDeg) {
+                int daylightSaving = isDaylightSaving ? 1 : 0;
+
+                double localSunriseHours = PAMacros.sunriseLCT(localDay, localMonth, localYear, daylightSaving,
+                                zoneCorrection, geographicalLongDeg, geographicalLatDeg);
+                double localSunsetHours = PAMacros.sunsetLCT(localDay, localMonth, localYear, daylightSaving,
+                                zoneCorrection, geographicalLongDeg, geographicalLatDeg);
+
+                RiseSetStatus sunRiseSetStatus = PAMacros.eSunRS(localDay, localMonth, localYear, daylightSaving,
+                                zoneCorrection, geographicalLongDeg, geographicalLatDeg);
+
+                double adjustedSunriseHours = localSunriseHours + 0.008333;
+                double adjustedSunsetHours = localSunsetHours + 0.008333;
+
+                double azimuthOfSunriseDeg1 = PAMacros.sunriseAZ(localDay, localMonth, localYear, daylightSaving,
+                                zoneCorrection, geographicalLongDeg, geographicalLatDeg);
+                double azimuthOfSunsetDeg1 = PAMacros.sunsetAZ(localDay, localMonth, localYear, daylightSaving,
+                                zoneCorrection, geographicalLongDeg, geographicalLatDeg);
+
+                int localSunriseHour = sunRiseSetStatus == RiseSetStatus.OK
+                                ? PAMacros.decimalHoursHour(adjustedSunriseHours)
+                                : 0;
+                int localSunriseMinute = sunRiseSetStatus == RiseSetStatus.OK
+                                ? PAMacros.decimalHoursMinute(adjustedSunriseHours)
+                                : 0;
+
+                int localSunsetHour = sunRiseSetStatus == RiseSetStatus.OK
+                                ? PAMacros.decimalHoursHour(adjustedSunsetHours)
+                                : 0;
+                int localSunsetMinute = sunRiseSetStatus == RiseSetStatus.OK
+                                ? PAMacros.decimalHoursMinute(adjustedSunsetHours)
+                                : 0;
+
+                double azimuthOfSunriseDeg = sunRiseSetStatus == RiseSetStatus.OK
+                                ? PAUtil.round(azimuthOfSunriseDeg1, 2)
+                                : 0;
+                double azimuthOfSunsetDeg = sunRiseSetStatus == RiseSetStatus.OK
+                                ? PAUtil.round(azimuthOfSunsetDeg1, 2)
+                                : 0;
+
+                RiseSetStatus status = sunRiseSetStatus;
+
+                return new SunriseAndSunset(localSunriseHour, localSunriseMinute, localSunsetHour, localSunsetMinute,
+                                azimuthOfSunriseDeg, azimuthOfSunsetDeg, status);
         }
 }
