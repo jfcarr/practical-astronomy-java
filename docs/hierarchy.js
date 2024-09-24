@@ -15,6 +15,7 @@ var hierarchy =
       [ "CivilDateTime", "classastro_1_1practical_1_1types_1_1complex_1_1CivilDateTime.html", null ],
       [ "UniversalDateTime", "classastro_1_1practical_1_1types_1_1complex_1_1UniversalDateTime.html", null ]
     ] ],
+    [ "EquationOfTime", "classastro_1_1practical_1_1types_1_1complex_1_1EquationOfTime.html", null ],
     [ "EquatorialCoordinatesHA", "classastro_1_1practical_1_1types_1_1complex_1_1EquatorialCoordinatesHA.html", null ],
     [ "ESunRSL3710", "classastro_1_1practical_1_1types_1_1complex_1_1ESunRSL3710.html", null ],
     [ "ETwilightL3710", "classastro_1_1practical_1_1types_1_1complex_1_1ETwilightL3710.html", null ],

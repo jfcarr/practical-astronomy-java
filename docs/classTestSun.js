@@ -2,6 +2,7 @@ var classTestSun =
 [
     [ "TestSun", "classTestSun.html#aaf27872bd2507fe67a4004ff39a9e7c9", null ],
     [ "testApproximatePositionOfSun", "classTestSun.html#ad7452043e606e711c88aaccbac3b750f", null ],
+    [ "testEquationOfTime", "classTestSun.html#a667326f978ebe50970eb2432295bd7db", null ],
     [ "testMorningAndEveningTwilight", "classTestSun.html#abc6b577b5eb6ef9854857dbf9b3a547d", null ],
     [ "testPrecisePositionOfSun", "classTestSun.html#a11a464ebffe393887f5b444594732c63", null ],
     [ "testSunDistanceAndAngularSize", "classTestSun.html#a4831ec0f3518d52a56707100eedeafeb", null ],

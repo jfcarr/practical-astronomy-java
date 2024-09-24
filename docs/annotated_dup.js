@@ -23,6 +23,7 @@ var annotated_dup =
             [ "Date", "classastro_1_1practical_1_1types_1_1complex_1_1Date.html", "classastro_1_1practical_1_1types_1_1complex_1_1Date" ],
             [ "DateTime", "classastro_1_1practical_1_1types_1_1complex_1_1DateTime.html", "classastro_1_1practical_1_1types_1_1complex_1_1DateTime" ],
             [ "EclipticCoordinates", "classastro_1_1practical_1_1types_1_1complex_1_1EclipticCoordinates.html", "classastro_1_1practical_1_1types_1_1complex_1_1EclipticCoordinates" ],
+            [ "EquationOfTime", "classastro_1_1practical_1_1types_1_1complex_1_1EquationOfTime.html", "classastro_1_1practical_1_1types_1_1complex_1_1EquationOfTime" ],
             [ "EquatorialCoordinatesHA", "classastro_1_1practical_1_1types_1_1complex_1_1EquatorialCoordinatesHA.html", "classastro_1_1practical_1_1types_1_1complex_1_1EquatorialCoordinatesHA" ],
             [ "EquatorialCoordinatesRA", "classastro_1_1practical_1_1types_1_1complex_1_1EquatorialCoordinatesRA.html", "classastro_1_1practical_1_1types_1_1complex_1_1EquatorialCoordinatesRA" ],
             [ "ESunRSL3710", "classastro_1_1practical_1_1types_1_1complex_1_1ESunRSL3710.html", "classastro_1_1practical_1_1types_1_1complex_1_1ESunRSL3710" ],
