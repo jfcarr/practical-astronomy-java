@@ -3,6 +3,7 @@ import astro.practical.test.TestLib;
 import astro.practical.types.RiseSetStatus;
 import astro.practical.types.TwilightStatus;
 import astro.practical.types.TwilightType;
+import astro.practical.types.complex.EquationOfTime;
 import astro.practical.types.complex.MorningAndEveningTwilight;
 import astro.practical.types.complex.PositionOfSun;
 import astro.practical.types.complex.SunDistanceAndAngularSize;
@@ -86,5 +87,15 @@ public class TestSun {
                                 .Assert(20, morningAndEveningTwilight.pmTwilightEndsHour)
                                 .Assert(37, morningAndEveningTwilight.pmTwilightEndsMin)
                                 .Assert(TwilightStatus.OK, morningAndEveningTwilight.status);
+        }
+
+        public void testEquationOfTime() {
+                TestLib testLib = new TestLib();
+
+                EquationOfTime equationOfTime = paSun.equationOfTime(27, 7, 2010);
+
+                testLib.setTestName("Equation of Time")
+                                .Assert(6, equationOfTime.equationOfTimeMin)
+                                .Assert(31.52, equationOfTime.equationOfTimeSec);
         }
 }
