@@ -99,7 +99,7 @@ $(document).ready(function(){initNavTree('TestDateTime_8java_source.html',''); i
 <div class="contents">
 <a href="TestDateTime_8java.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">import</span> astro.practical.lib.PAUtil;</div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">import</span> astro.practical.test.TestLib;</div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">import</span> astro.practical.types.PAWarningFlag;</div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">import</span> astro.practical.types.WarningFlag;</div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">import</span> astro.practical.types.complex.CivilDate;</div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">import</span> astro.practical.types.complex.CivilDateTime;</div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">import</span> astro.practical.types.complex.CivilTime;</div>
@@ -194,7 +194,7 @@ $(document).ready(function(){initNavTree('TestDateTime_8java_source.html',''); i
 <div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>        UniversalTime uT = paDateTime.<a class="code hl_function" href="classastro_1_1practical_1_1lib_1_1PADateTime.html#ad793ce500a7f4869310fb8508db88302">greenwichSiderealTimeToUniversalTime</a>(4, 40, 5.23, 22, 4, 1980);</div>
 <div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
 <div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>        testLib.setTestName(<span class="stringliteral">&quot;Convert Greenwich Sidereal Time to Universal Time&quot;</span>).Assert(14.0, uT.hours)</div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>                .Assert(36.0, uT.minutes).Assert(51.67, uT.seconds).Assert(PAWarningFlag.OK, uT.warningFlag);</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>                .Assert(36.0, uT.minutes).Assert(51.67, uT.seconds).Assert(WarningFlag.OK, uT.warningFlag);</div>
 <div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    }</div>
 </div>
 <div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span> </div>

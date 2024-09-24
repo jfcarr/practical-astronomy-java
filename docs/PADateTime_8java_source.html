@@ -99,7 +99,7 @@ $(document).ready(function(){initNavTree('PADateTime_8java_source.html',''); ini
 <div class="contents">
 <a href="PADateTime_8java.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">package </span>astro.practical.lib;</div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">import</span> astro.practical.types.PAWarningFlag;</div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">import</span> astro.practical.types.WarningFlag;</div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">import</span> astro.practical.types.complex.CivilDate;</div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">import</span> astro.practical.types.complex.CivilDateTime;</div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">import</span> astro.practical.types.complex.CivilTime;</div>
@@ -248,7 +248,7 @@ $(document).ready(function(){initNavTree('PADateTime_8java_source.html',''); ini
 <div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>        <span class="keywordtype">double</span> utMinutes = <a class="code hl_class" href="classastro_1_1practical_1_1lib_1_1PAMacros.html">PAMacros</a>.<a class="code hl_function" href="classastro_1_1practical_1_1lib_1_1PAMacros.html#a0aed9826ed1121bd8a04ab4ef6159629">decimalHoursMinute</a>(ut);</div>
 <div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>        <span class="keywordtype">double</span> utSeconds = <a class="code hl_class" href="classastro_1_1practical_1_1lib_1_1PAMacros.html">PAMacros</a>.<a class="code hl_function" href="classastro_1_1practical_1_1lib_1_1PAMacros.html#a822966ff672529c3209cda571e21ebee">decimalHoursSecond</a>(ut);</div>
 <div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span> </div>
-<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>        PAWarningFlag warningFlag = (ut &lt; 0.065574) ? PAWarningFlag.WARNING : PAWarningFlag.OK;</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>        WarningFlag warningFlag = (ut &lt; 0.065574) ? WarningFlag.WARNING : WarningFlag.OK;</div>
 <div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span> </div>
 <div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> UniversalTime(utHours, utMinutes, utSeconds, warningFlag);</div>
 <div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>    }</div>

@@ -100,7 +100,7 @@ $(document).ready(function(){initNavTree('TestCoordinates_8java_source.html','')
 <a href="TestCoordinates_8java.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">import</span> astro.practical.lib.PACoordinates;</div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">import</span> astro.practical.lib.PAUtil;</div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">import</span> astro.practical.test.TestLib;</div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">import</span> astro.practical.types.PAAngleMeasure;</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">import</span> astro.practical.types.AngleMeasure;</div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">import</span> astro.practical.types.RiseSetStatus;</div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">import</span> astro.practical.types.complex.Aberration;</div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">import</span> astro.practical.types.complex.Angle;</div>
@@ -259,7 +259,7 @@ $(document).ready(function(){initNavTree('TestCoordinates_8java_source.html','')
 <div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>        TestLib testLib = <span class="keyword">new</span> TestLib();</div>
 <div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span> </div>
 <div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>        Angle angle = paCoordinates.angleBetweenTwoObjects(5, 13, 31.7, -8, 13, 30, 6, 44, 13.4, -16, 41, 11,</div>
-<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>                PAAngleMeasure.Hours);</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>                AngleMeasure.HOURS);</div>
 <div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span> </div>
 <div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>        testLib.setTestName(</div>
 <div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>                <span class="stringliteral">&quot;Angle for RA (1) 5h 13m 31.7s and Declination (1) -8d 13m 30s and RA (2) 6h 44m 13.4s and Declination (2) -16d 41m 11s and measurement in hours&quot;</span>)</div>

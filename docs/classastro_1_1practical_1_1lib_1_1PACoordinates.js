@@ -1,6 +1,6 @@
 var classastro_1_1practical_1_1lib_1_1PACoordinates =
 [
-    [ "angleBetweenTwoObjects", "classastro_1_1practical_1_1lib_1_1PACoordinates.html#a17d89e91ab74295b2c506bbe656176a4", null ],
+    [ "angleBetweenTwoObjects", "classastro_1_1practical_1_1lib_1_1PACoordinates.html#a7009b6cda9ceb094ab4cb63ac9e00816", null ],
     [ "angleToDecimalDegrees", "classastro_1_1practical_1_1lib_1_1PACoordinates.html#aa02ccfbc3e1fe1b58624427acefe4ea2", null ],
     [ "atmosphericRefraction", "classastro_1_1practical_1_1lib_1_1PACoordinates.html#a5100be61f814353c9dfd62000f07bb2b", null ],
     [ "carringtonRotationNumber", "classastro_1_1practical_1_1lib_1_1PACoordinates.html#a539bfcda499dfda32b24a925c2149ab1", null ],

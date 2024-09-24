@@ -2,7 +2,7 @@ var searchData=
 [
   ['carringtonrotationnumber_0',['carringtonRotationNumber',['../classastro_1_1practical_1_1lib_1_1PACoordinates.html#a539bfcda499dfda32b24a925c2149ab1',1,'astro::practical::lib::PACoordinates']]],
   ['circumpolar_1',['CIRCUMPOLAR',['../enumastro_1_1practical_1_1types_1_1RiseSetStatus.html#ae3dfc7fd0187724721f9bc13732e01e1',1,'astro::practical::types::RiseSetStatus']]],
-  ['civil_2',['Civil',['../enumastro_1_1practical_1_1types_1_1TwilightType.html#aa6075a050b14073c952a2a9d1596ab39',1,'astro::practical::types::TwilightType']]],
+  ['civil_2',['CIVIL',['../enumastro_1_1practical_1_1types_1_1TwilightType.html#ae5cfe177623ffdefd964356c22a4947f',1,'astro::practical::types::TwilightType']]],
   ['civildate_3',['civildate',['../classastro_1_1practical_1_1types_1_1complex_1_1CivilDate.html',1,'CivilDate'],['../classastro_1_1practical_1_1types_1_1complex_1_1CivilDate.html#a524ebd187a2f9eb64a0d9761851bfcde',1,'astro.practical.types.complex.CivilDate.CivilDate()']]],
   ['civildate_2ejava_4',['CivilDate.java',['../CivilDate_8java.html',1,'']]],
   ['civildatetime_5',['civildatetime',['../classastro_1_1practical_1_1types_1_1complex_1_1CivilDateTime.html',1,'CivilDateTime'],['../classastro_1_1practical_1_1types_1_1complex_1_1CivilDateTime.html#a08dafe7d62a70a38e333f9a49ff1c132',1,'astro.practical.types.complex.CivilDateTime.CivilDateTime()']]],

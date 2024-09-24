@@ -13,7 +13,7 @@ var searchData=
   ['apparentecllongdeg_10',['apparentEclLongDeg',['../classastro_1_1practical_1_1types_1_1complex_1_1Aberration.html#a45e774ddcd98bc96b28a7cff5b9ece64',1,'astro::practical::types::complex::Aberration']]],
   ['apparentecllongmin_11',['apparentEclLongMin',['../classastro_1_1practical_1_1types_1_1complex_1_1Aberration.html#a6662827953364f39864d9df78f5bec4d',1,'astro::practical::types::complex::Aberration']]],
   ['apparentecllongsec_12',['apparentEclLongSec',['../classastro_1_1practical_1_1types_1_1complex_1_1Aberration.html#a1ff58661f3f6d28fcfd2a17a4c151e37',1,'astro::practical::types::complex::Aberration']]],
-  ['astronomical_13',['Astronomical',['../enumastro_1_1practical_1_1types_1_1TwilightType.html#a916b3777cf0f89ce916a6945af66d928',1,'astro::practical::types::TwilightType']]],
+  ['astronomical_13',['ASTRONOMICAL',['../enumastro_1_1practical_1_1types_1_1TwilightType.html#a85e53b2a1d1d13880b5a4fc91047968c',1,'astro::practical::types::TwilightType']]],
   ['azimuthdegrees_14',['azimuthDegrees',['../classastro_1_1practical_1_1types_1_1complex_1_1HorizonCoordinates.html#a5c67fdf7f8ad0c316418bb037d339b14',1,'astro::practical::types::complex::HorizonCoordinates']]],
   ['azimuthminutes_15',['azimuthMinutes',['../classastro_1_1practical_1_1types_1_1complex_1_1HorizonCoordinates.html#a7367ee8fee72c52b987583bd45676daf',1,'astro::practical::types::complex::HorizonCoordinates']]],
   ['azimuthofsunrisedeg_16',['azimuthOfSunriseDeg',['../classastro_1_1practical_1_1types_1_1complex_1_1SunriseAndSunset.html#a526a616ff9a48d800848a92a4cb0617a',1,'astro::practical::types::complex::SunriseAndSunset']]],

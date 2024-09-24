@@ -2,6 +2,7 @@ var hierarchy =
 [
     [ "Aberration", "classastro_1_1practical_1_1types_1_1complex_1_1Aberration.html", null ],
     [ "Angle", "classastro_1_1practical_1_1types_1_1complex_1_1Angle.html", null ],
+    [ "AngleMeasure", "enumastro_1_1practical_1_1types_1_1AngleMeasure.html", null ],
     [ "CoordinatesLongLat", "classastro_1_1practical_1_1types_1_1complex_1_1CoordinatesLongLat.html", [
       [ "EclipticCoordinates", "classastro_1_1practical_1_1types_1_1complex_1_1EclipticCoordinates.html", null ],
       [ "GalacticCoordinates", "classastro_1_1practical_1_1types_1_1complex_1_1GalacticCoordinates.html", null ]
@@ -22,14 +23,12 @@ var hierarchy =
     [ "Main", "classMain.html", null ],
     [ "MorningAndEveningTwilight", "classastro_1_1practical_1_1types_1_1complex_1_1MorningAndEveningTwilight.html", null ],
     [ "Nutation", "classastro_1_1practical_1_1types_1_1complex_1_1Nutation.html", null ],
-    [ "PAAngleMeasure", "enumastro_1_1practical_1_1types_1_1PAAngleMeasure.html", null ],
     [ "PACoordinates", "classastro_1_1practical_1_1lib_1_1PACoordinates.html", null ],
     [ "PADateTime", "classastro_1_1practical_1_1lib_1_1PADateTime.html", null ],
     [ "PAMacros", "classastro_1_1practical_1_1lib_1_1PAMacros.html", null ],
     [ "ParallaxHelper", "classastro_1_1practical_1_1types_1_1complex_1_1ParallaxHelper.html", null ],
     [ "PASun", "classastro_1_1practical_1_1lib_1_1PASun.html", null ],
     [ "PAUtil", "classastro_1_1practical_1_1lib_1_1PAUtil.html", null ],
-    [ "PAWarningFlag", "enumastro_1_1practical_1_1types_1_1PAWarningFlag.html", null ],
     [ "PositionOfSun", "classastro_1_1practical_1_1types_1_1complex_1_1PositionOfSun.html", null ],
     [ "RightAscensionDeclination", "classastro_1_1practical_1_1types_1_1complex_1_1RightAscensionDeclination.html", [
       [ "EquatorialCoordinatesRA", "classastro_1_1practical_1_1types_1_1complex_1_1EquatorialCoordinatesRA.html", null ]
@@ -59,5 +58,6 @@ var hierarchy =
     [ "TwilightAMLCTL3710", "classastro_1_1practical_1_1types_1_1complex_1_1TwilightAMLCTL3710.html", null ],
     [ "TwilightPMLCTL3710", "classastro_1_1practical_1_1types_1_1complex_1_1TwilightPMLCTL3710.html", null ],
     [ "TwilightStatus", "enumastro_1_1practical_1_1types_1_1TwilightStatus.html", null ],
-    [ "TwilightType", "enumastro_1_1practical_1_1types_1_1TwilightType.html", null ]
+    [ "TwilightType", "enumastro_1_1practical_1_1types_1_1TwilightType.html", null ],
+    [ "WarningFlag", "enumastro_1_1practical_1_1types_1_1WarningFlag.html", null ]
 ];

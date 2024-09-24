@@ -54,12 +54,12 @@ var annotated_dup =
             [ "UniversalDateTime", "classastro_1_1practical_1_1types_1_1complex_1_1UniversalDateTime.html", "classastro_1_1practical_1_1types_1_1complex_1_1UniversalDateTime" ],
             [ "UniversalTime", "classastro_1_1practical_1_1types_1_1complex_1_1UniversalTime.html", "classastro_1_1practical_1_1types_1_1complex_1_1UniversalTime" ]
           ] ],
+          [ "AngleMeasure", "enumastro_1_1practical_1_1types_1_1AngleMeasure.html", "enumastro_1_1practical_1_1types_1_1AngleMeasure" ],
           [ "CoordinateType", "enumastro_1_1practical_1_1types_1_1CoordinateType.html", "enumastro_1_1practical_1_1types_1_1CoordinateType" ],
-          [ "PAAngleMeasure", "enumastro_1_1practical_1_1types_1_1PAAngleMeasure.html", "enumastro_1_1practical_1_1types_1_1PAAngleMeasure" ],
-          [ "PAWarningFlag", "enumastro_1_1practical_1_1types_1_1PAWarningFlag.html", "enumastro_1_1practical_1_1types_1_1PAWarningFlag" ],
           [ "RiseSetStatus", "enumastro_1_1practical_1_1types_1_1RiseSetStatus.html", "enumastro_1_1practical_1_1types_1_1RiseSetStatus" ],
           [ "TwilightStatus", "enumastro_1_1practical_1_1types_1_1TwilightStatus.html", "enumastro_1_1practical_1_1types_1_1TwilightStatus" ],
-          [ "TwilightType", "enumastro_1_1practical_1_1types_1_1TwilightType.html", "enumastro_1_1practical_1_1types_1_1TwilightType" ]
+          [ "TwilightType", "enumastro_1_1practical_1_1types_1_1TwilightType.html", "enumastro_1_1practical_1_1types_1_1TwilightType" ],
+          [ "WarningFlag", "enumastro_1_1practical_1_1types_1_1WarningFlag.html", "enumastro_1_1practical_1_1types_1_1WarningFlag" ]
         ] ]
       ] ]
     ] ],
