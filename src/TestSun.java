@@ -1,6 +1,9 @@
 import astro.practical.lib.PASun;
 import astro.practical.test.TestLib;
 import astro.practical.types.RiseSetStatus;
+import astro.practical.types.TwilightStatus;
+import astro.practical.types.TwilightType;
+import astro.practical.types.complex.MorningAndEveningTwilight;
 import astro.practical.types.complex.PositionOfSun;
 import astro.practical.types.complex.SunDistanceAndAngularSize;
 import astro.practical.types.complex.SunriseAndSunset;
@@ -69,5 +72,19 @@ public class TestSun {
                                 .Assert(94.83, sunriseAndSunset.azimuthOfSunriseDeg)
                                 .Assert(265.43, sunriseAndSunset.azimuthOfSunsetDeg)
                                 .Assert(RiseSetStatus.OK, sunriseAndSunset.status);
+        }
+
+        public void testMorningAndEveningTwilight() {
+                TestLib testLib = new TestLib();
+
+                MorningAndEveningTwilight morningAndEveningTwilight = paSun.morningAndEveningTwilight(7, 9, 1979, false,
+                                0, 0, 52, TwilightType.Astronomical);
+
+                testLib.setTestName("Morning and Evening Twilight")
+                                .Assert(3, morningAndEveningTwilight.amTwilightBeginsHour)
+                                .Assert(17, morningAndEveningTwilight.amTwilightBeginsMin)
+                                .Assert(20, morningAndEveningTwilight.pmTwilightEndsHour)
+                                .Assert(37, morningAndEveningTwilight.pmTwilightEndsMin)
+                                .Assert(TwilightStatus.OK, morningAndEveningTwilight.status);
         }
 }

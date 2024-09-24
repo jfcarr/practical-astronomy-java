@@ -3,6 +3,7 @@ package astro.practical.test;
 import astro.practical.lib.PAUtil;
 import astro.practical.types.PAWarningFlag;
 import astro.practical.types.RiseSetStatus;
+import astro.practical.types.TwilightStatus;
 
 public class TestLib {
 	public String testName = "No test name specified";
@@ -76,4 +77,14 @@ public class TestLib {
 
 		return this;
 	}
+
+	/**
+	 * Assert that two TwilightStatus values are equal.
+	 */
+	public TestLib Assert(TwilightStatus expectedValue, TwilightStatus actualValue) {
+		LogMessage((expectedValue == actualValue), expectedValue, actualValue);
+
+		return this;
+	}
+
 }

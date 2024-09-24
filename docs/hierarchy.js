@@ -16,9 +16,11 @@ var hierarchy =
     ] ],
     [ "EquatorialCoordinatesHA", "classastro_1_1practical_1_1types_1_1complex_1_1EquatorialCoordinatesHA.html", null ],
     [ "ESunRSL3710", "classastro_1_1practical_1_1types_1_1complex_1_1ESunRSL3710.html", null ],
+    [ "ETwilightL3710", "classastro_1_1practical_1_1types_1_1complex_1_1ETwilightL3710.html", null ],
     [ "HeliographicCoordinates", "classastro_1_1practical_1_1types_1_1complex_1_1HeliographicCoordinates.html", null ],
     [ "HorizonCoordinates", "classastro_1_1practical_1_1types_1_1complex_1_1HorizonCoordinates.html", null ],
     [ "Main", "classMain.html", null ],
+    [ "MorningAndEveningTwilight", "classastro_1_1practical_1_1types_1_1complex_1_1MorningAndEveningTwilight.html", null ],
     [ "Nutation", "classastro_1_1practical_1_1types_1_1complex_1_1Nutation.html", null ],
     [ "PAAngleMeasure", "enumastro_1_1practical_1_1types_1_1PAAngleMeasure.html", null ],
     [ "PACoordinates", "classastro_1_1practical_1_1lib_1_1PACoordinates.html", null ],
@@ -53,5 +55,9 @@ var hierarchy =
       [ "LocalSiderealTime", "classastro_1_1practical_1_1types_1_1complex_1_1LocalSiderealTime.html", null ],
       [ "RightAscension", "classastro_1_1practical_1_1types_1_1complex_1_1RightAscension.html", null ],
       [ "UniversalTime", "classastro_1_1practical_1_1types_1_1complex_1_1UniversalTime.html", null ]
-    ] ]
+    ] ],
+    [ "TwilightAMLCTL3710", "classastro_1_1practical_1_1types_1_1complex_1_1TwilightAMLCTL3710.html", null ],
+    [ "TwilightPMLCTL3710", "classastro_1_1practical_1_1types_1_1complex_1_1TwilightPMLCTL3710.html", null ],
+    [ "TwilightStatus", "enumastro_1_1practical_1_1types_1_1TwilightStatus.html", null ],
+    [ "TwilightType", "enumastro_1_1practical_1_1types_1_1TwilightType.html", null ]
 ];

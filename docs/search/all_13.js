@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['x_0',['x',['../classastro_1_1practical_1_1types_1_1complex_1_1ESunRSL3710.html#af88b946fb90d5f08b5fb740c70e98c10',1,'astro.practical.types.complex.ESunRSL3710.x'],['../classastro_1_1practical_1_1types_1_1complex_1_1SunriseAZL3710.html#af88b946fb90d5f08b5fb740c70e98c10',1,'astro.practical.types.complex.SunriseAZL3710.x'],['../classastro_1_1practical_1_1types_1_1complex_1_1SunriseLCTL3710.html#af88b946fb90d5f08b5fb740c70e98c10',1,'astro.practical.types.complex.SunriseLCTL3710.x'],['../classastro_1_1practical_1_1types_1_1complex_1_1SunsetAZL3710.html#af88b946fb90d5f08b5fb740c70e98c10',1,'astro.practical.types.complex.SunsetAZL3710.x'],['../classastro_1_1practical_1_1types_1_1complex_1_1SunsetLCTL3710.html#af88b946fb90d5f08b5fb740c70e98c10',1,'astro.practical.types.complex.SunsetLCTL3710.x']]]
+  ['warning_0',['WARNING',['../enumastro_1_1practical_1_1types_1_1PAWarningFlag.html#a1dfc73ab73898d3f4f348d462a5d126a',1,'astro::practical::types::PAWarningFlag']]],
+  ['warningflag_1',['warningFlag',['../classastro_1_1practical_1_1types_1_1complex_1_1UniversalTime.html#ae9ef7eeb80a39bb1ddc5f79ce8fa93d9',1,'astro::practical::types::complex::UniversalTime']]],
+  ['wtodegrees_2',['wToDegrees',['../classastro_1_1practical_1_1lib_1_1PAMacros.html#ac12e68b817953f8259a230e069e20c0d',1,'astro::practical::lib::PAMacros']]]
 ];

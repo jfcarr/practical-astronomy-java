@@ -26,12 +26,14 @@ var annotated_dup =
             [ "EquatorialCoordinatesHA", "classastro_1_1practical_1_1types_1_1complex_1_1EquatorialCoordinatesHA.html", "classastro_1_1practical_1_1types_1_1complex_1_1EquatorialCoordinatesHA" ],
             [ "EquatorialCoordinatesRA", "classastro_1_1practical_1_1types_1_1complex_1_1EquatorialCoordinatesRA.html", "classastro_1_1practical_1_1types_1_1complex_1_1EquatorialCoordinatesRA" ],
             [ "ESunRSL3710", "classastro_1_1practical_1_1types_1_1complex_1_1ESunRSL3710.html", "classastro_1_1practical_1_1types_1_1complex_1_1ESunRSL3710" ],
+            [ "ETwilightL3710", "classastro_1_1practical_1_1types_1_1complex_1_1ETwilightL3710.html", "classastro_1_1practical_1_1types_1_1complex_1_1ETwilightL3710" ],
             [ "GalacticCoordinates", "classastro_1_1practical_1_1types_1_1complex_1_1GalacticCoordinates.html", "classastro_1_1practical_1_1types_1_1complex_1_1GalacticCoordinates" ],
             [ "GreenwichSiderealTime", "classastro_1_1practical_1_1types_1_1complex_1_1GreenwichSiderealTime.html", "classastro_1_1practical_1_1types_1_1complex_1_1GreenwichSiderealTime" ],
             [ "HeliographicCoordinates", "classastro_1_1practical_1_1types_1_1complex_1_1HeliographicCoordinates.html", "classastro_1_1practical_1_1types_1_1complex_1_1HeliographicCoordinates" ],
             [ "HorizonCoordinates", "classastro_1_1practical_1_1types_1_1complex_1_1HorizonCoordinates.html", "classastro_1_1practical_1_1types_1_1complex_1_1HorizonCoordinates" ],
             [ "HourAngle", "classastro_1_1practical_1_1types_1_1complex_1_1HourAngle.html", "classastro_1_1practical_1_1types_1_1complex_1_1HourAngle" ],
             [ "LocalSiderealTime", "classastro_1_1practical_1_1types_1_1complex_1_1LocalSiderealTime.html", "classastro_1_1practical_1_1types_1_1complex_1_1LocalSiderealTime" ],
+            [ "MorningAndEveningTwilight", "classastro_1_1practical_1_1types_1_1complex_1_1MorningAndEveningTwilight.html", "classastro_1_1practical_1_1types_1_1complex_1_1MorningAndEveningTwilight" ],
             [ "Nutation", "classastro_1_1practical_1_1types_1_1complex_1_1Nutation.html", "classastro_1_1practical_1_1types_1_1complex_1_1Nutation" ],
             [ "ParallaxHelper", "classastro_1_1practical_1_1types_1_1complex_1_1ParallaxHelper.html", "classastro_1_1practical_1_1types_1_1complex_1_1ParallaxHelper" ],
             [ "PositionOfSun", "classastro_1_1practical_1_1types_1_1complex_1_1PositionOfSun.html", "classastro_1_1practical_1_1types_1_1complex_1_1PositionOfSun" ],
@@ -47,13 +49,17 @@ var annotated_dup =
             [ "SunsetAZL3710", "classastro_1_1practical_1_1types_1_1complex_1_1SunsetAZL3710.html", "classastro_1_1practical_1_1types_1_1complex_1_1SunsetAZL3710" ],
             [ "SunsetLCTL3710", "classastro_1_1practical_1_1types_1_1complex_1_1SunsetLCTL3710.html", "classastro_1_1practical_1_1types_1_1complex_1_1SunsetLCTL3710" ],
             [ "Time", "classastro_1_1practical_1_1types_1_1complex_1_1Time.html", "classastro_1_1practical_1_1types_1_1complex_1_1Time" ],
+            [ "TwilightAMLCTL3710", "classastro_1_1practical_1_1types_1_1complex_1_1TwilightAMLCTL3710.html", "classastro_1_1practical_1_1types_1_1complex_1_1TwilightAMLCTL3710" ],
+            [ "TwilightPMLCTL3710", "classastro_1_1practical_1_1types_1_1complex_1_1TwilightPMLCTL3710.html", "classastro_1_1practical_1_1types_1_1complex_1_1TwilightPMLCTL3710" ],
             [ "UniversalDateTime", "classastro_1_1practical_1_1types_1_1complex_1_1UniversalDateTime.html", "classastro_1_1practical_1_1types_1_1complex_1_1UniversalDateTime" ],
             [ "UniversalTime", "classastro_1_1practical_1_1types_1_1complex_1_1UniversalTime.html", "classastro_1_1practical_1_1types_1_1complex_1_1UniversalTime" ]
           ] ],
           [ "CoordinateType", "enumastro_1_1practical_1_1types_1_1CoordinateType.html", "enumastro_1_1practical_1_1types_1_1CoordinateType" ],
           [ "PAAngleMeasure", "enumastro_1_1practical_1_1types_1_1PAAngleMeasure.html", "enumastro_1_1practical_1_1types_1_1PAAngleMeasure" ],
           [ "PAWarningFlag", "enumastro_1_1practical_1_1types_1_1PAWarningFlag.html", "enumastro_1_1practical_1_1types_1_1PAWarningFlag" ],
-          [ "RiseSetStatus", "enumastro_1_1practical_1_1types_1_1RiseSetStatus.html", "enumastro_1_1practical_1_1types_1_1RiseSetStatus" ]
+          [ "RiseSetStatus", "enumastro_1_1practical_1_1types_1_1RiseSetStatus.html", "enumastro_1_1practical_1_1types_1_1RiseSetStatus" ],
+          [ "TwilightStatus", "enumastro_1_1practical_1_1types_1_1TwilightStatus.html", "enumastro_1_1practical_1_1types_1_1TwilightStatus" ],
+          [ "TwilightType", "enumastro_1_1practical_1_1types_1_1TwilightType.html", "enumastro_1_1practical_1_1types_1_1TwilightType" ]
         ] ]
       ] ]
     ] ],

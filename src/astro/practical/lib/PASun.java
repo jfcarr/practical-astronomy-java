@@ -1,6 +1,9 @@
 package astro.practical.lib;
 
 import astro.practical.types.RiseSetStatus;
+import astro.practical.types.TwilightStatus;
+import astro.practical.types.TwilightType;
+import astro.practical.types.complex.MorningAndEveningTwilight;
 import astro.practical.types.complex.PositionOfSun;
 import astro.practical.types.complex.SunDistanceAndAngularSize;
 import astro.practical.types.complex.SunriseAndSunset;
@@ -159,5 +162,45 @@ public class PASun {
 
                 return new SunriseAndSunset(localSunriseHour, localSunriseMinute, localSunsetHour, localSunsetMinute,
                                 azimuthOfSunriseDeg, azimuthOfSunsetDeg, status);
+        }
+
+        /**
+         * Calculate times of morning and evening twilight.
+         */
+        public MorningAndEveningTwilight morningAndEveningTwilight(double localDay, int localMonth, int localYear,
+                        boolean isDaylightSaving, int zoneCorrection, double geographicalLongDeg,
+                        double geographicalLatDeg, TwilightType twilightType) {
+                int daylightSaving = isDaylightSaving ? 1 : 0;
+
+                double startOfAMTwilightHours = PAMacros.twilightAMLCT(localDay, localMonth, localYear, daylightSaving,
+                                zoneCorrection, geographicalLongDeg, geographicalLatDeg, twilightType);
+
+                double endOfPMTwilightHours = PAMacros.twilightPMLCT(localDay, localMonth, localYear, daylightSaving,
+                                zoneCorrection, geographicalLongDeg, geographicalLatDeg, twilightType);
+
+                TwilightStatus twilightStatus = PAMacros.eTwilight(localDay, localMonth, localYear, daylightSaving,
+                                zoneCorrection, geographicalLongDeg, geographicalLatDeg, twilightType);
+
+                double adjustedAMStartTime = startOfAMTwilightHours + 0.008333;
+                double adjustedPMStartTime = endOfPMTwilightHours + 0.008333;
+
+                double amTwilightBeginsHour = twilightStatus == TwilightStatus.OK
+                                ? PAMacros.decimalHoursHour(adjustedAMStartTime)
+                                : -99;
+                double amTwilightBeginsMin = twilightStatus == TwilightStatus.OK
+                                ? PAMacros.decimalHoursMinute(adjustedAMStartTime)
+                                : -99;
+
+                double pmTwilightEndsHour = twilightStatus == TwilightStatus.OK
+                                ? PAMacros.decimalHoursHour(adjustedPMStartTime)
+                                : -99;
+                double pmTwilightEndsMin = twilightStatus == TwilightStatus.OK
+                                ? PAMacros.decimalHoursMinute(adjustedPMStartTime)
+                                : -99;
+
+                TwilightStatus status = twilightStatus;
+
+                return new MorningAndEveningTwilight(amTwilightBeginsHour, amTwilightBeginsMin, pmTwilightEndsHour,
+                                pmTwilightEndsMin, status);
         }
 }

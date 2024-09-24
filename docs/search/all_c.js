@@ -13,7 +13,7 @@ var searchData=
   ['parallaxdec_5fl2870_10',['parallaxDec_L2870',['../classastro_1_1practical_1_1lib_1_1PAMacros.html#a9de622a77b9e27ba50aa9f3edefe6faf',1,'astro::practical::lib::PAMacros']]],
   ['parallaxha_11',['parallaxHA',['../classastro_1_1practical_1_1lib_1_1PAMacros.html#aa739e42c3616c95b164bb517b888b4c0',1,'astro::practical::lib::PAMacros']]],
   ['parallaxha_5fl2870_12',['parallaxHA_L2870',['../classastro_1_1practical_1_1lib_1_1PAMacros.html#a39a384a2246444eeff831e9dd9316914',1,'astro::practical::lib::PAMacros']]],
-  ['parallaxhelper_13',['parallaxhelper',['../classastro_1_1practical_1_1types_1_1complex_1_1ParallaxHelper.html#af79837c04d7d5a6e18c8eebf49e940d4',1,'astro.practical.types.complex.ParallaxHelper.ParallaxHelper()'],['../classastro_1_1practical_1_1types_1_1complex_1_1ParallaxHelper.html',1,'ParallaxHelper']]],
+  ['parallaxhelper_13',['parallaxhelper',['../classastro_1_1practical_1_1types_1_1complex_1_1ParallaxHelper.html',1,'ParallaxHelper'],['../classastro_1_1practical_1_1types_1_1complex_1_1ParallaxHelper.html#af79837c04d7d5a6e18c8eebf49e940d4',1,'astro.practical.types.complex.ParallaxHelper.ParallaxHelper()']]],
   ['parallaxhelper_2ejava_14',['ParallaxHelper.java',['../ParallaxHelper_8java.html',1,'']]],
   ['pasun_15',['PASun',['../classastro_1_1practical_1_1lib_1_1PASun.html',1,'astro::practical::lib']]],
   ['pasun_2ejava_16',['PASun.java',['../PASun_8java.html',1,'']]],
@@ -21,8 +21,10 @@ var searchData=
   ['pautil_2ejava_18',['PAUtil.java',['../PAUtil_8java.html',1,'']]],
   ['pawarningflag_19',['PAWarningFlag',['../enumastro_1_1practical_1_1types_1_1PAWarningFlag.html',1,'astro::practical::types']]],
   ['pawarningflag_2ejava_20',['PAWarningFlag.java',['../PAWarningFlag_8java.html',1,'']]],
-  ['positionangleofpole_21',['positionAngleOfPole',['../classastro_1_1practical_1_1types_1_1complex_1_1SelenographicCoordinates1.html#a31604cc375b75df1301da06356544bb5',1,'astro::practical::types::complex::SelenographicCoordinates1']]],
-  ['positionofsun_22',['positionofsun',['../classastro_1_1practical_1_1types_1_1complex_1_1PositionOfSun.html',1,'PositionOfSun'],['../classastro_1_1practical_1_1types_1_1complex_1_1PositionOfSun.html#ac8d2ccb14339e6d794b1e77d2600eba1',1,'astro.practical.types.complex.PositionOfSun.PositionOfSun()']]],
-  ['positionofsun_2ejava_23',['PositionOfSun.java',['../PositionOfSun_8java.html',1,'']]],
-  ['precisepositionofsun_24',['precisePositionOfSun',['../classastro_1_1practical_1_1lib_1_1PASun.html#a349bb3a0a5d533a555b490733aa804e9',1,'astro::practical::lib::PASun']]]
+  ['pmtwilightendshour_21',['pmTwilightEndsHour',['../classastro_1_1practical_1_1types_1_1complex_1_1MorningAndEveningTwilight.html#a0afe158455e1f615bdc44a243979df61',1,'astro::practical::types::complex::MorningAndEveningTwilight']]],
+  ['pmtwilightendsmin_22',['pmTwilightEndsMin',['../classastro_1_1practical_1_1types_1_1complex_1_1MorningAndEveningTwilight.html#a86cf24c029c4f27c7aced83ab964552d',1,'astro::practical::types::complex::MorningAndEveningTwilight']]],
+  ['positionangleofpole_23',['positionAngleOfPole',['../classastro_1_1practical_1_1types_1_1complex_1_1SelenographicCoordinates1.html#a31604cc375b75df1301da06356544bb5',1,'astro::practical::types::complex::SelenographicCoordinates1']]],
+  ['positionofsun_24',['positionofsun',['../classastro_1_1practical_1_1types_1_1complex_1_1PositionOfSun.html',1,'PositionOfSun'],['../classastro_1_1practical_1_1types_1_1complex_1_1PositionOfSun.html#ac8d2ccb14339e6d794b1e77d2600eba1',1,'astro.practical.types.complex.PositionOfSun.PositionOfSun()']]],
+  ['positionofsun_2ejava_25',['PositionOfSun.java',['../PositionOfSun_8java.html',1,'']]],
+  ['precisepositionofsun_26',['precisePositionOfSun',['../classastro_1_1practical_1_1lib_1_1PASun.html#a349bb3a0a5d533a555b490733aa804e9',1,'astro::practical::lib::PASun']]]
 ];
