@@ -5,6 +5,7 @@ var classastro_1_1practical_1_1test_1_1TestLib =
     [ "Assert", "classastro_1_1practical_1_1test_1_1TestLib.html#a0111352b0defadfe5d9d8eefb9d39a13", null ],
     [ "Assert", "classastro_1_1practical_1_1test_1_1TestLib.html#a6e640989ecfb6958f5d98cacc89039e1", null ],
     [ "Assert", "classastro_1_1practical_1_1test_1_1TestLib.html#af06601e93036648e7f3bf3d61ed4d7bd", null ],
+    [ "Assert", "classastro_1_1practical_1_1test_1_1TestLib.html#aec6b0b70f8d2675d011a79eeb1762e5a", null ],
     [ "setTestName", "classastro_1_1practical_1_1test_1_1TestLib.html#a880fbfff6e664fe95451b7716811f9b2", null ],
     [ "testName", "classastro_1_1practical_1_1test_1_1TestLib.html#a8c99aebd19403c704eb314d28bab10dd", null ]
 ];
