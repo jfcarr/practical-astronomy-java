@@ -1,5 +1,6 @@
 package astro.practical.lib;
 
+import astro.practical.types.AngleMeasure;
 import astro.practical.types.RiseSetStatus;
 import astro.practical.types.TwilightStatus;
 import astro.practical.types.TwilightType;
@@ -223,4 +224,18 @@ public class PASun {
                 return new EquationOfTime(equationOfTimeMin, equationOfTimeSec);
         }
 
+        /**
+         * Calculate solar elongation for a celestial body.
+         */
+        public double solarElongation(double raHour, double raMin, double raSec, double decDeg, double decMin,
+                        double decSec, double gwdateDay, int gwdateMonth, int gwdateYear) {
+                double sunLongitudeDeg = PAMacros.sunLong(0, 0, 0, 0, 0, gwdateDay, gwdateMonth, gwdateYear);
+                double sunRAHours = PAMacros.decimalDegreesToDegreeHours(
+                                PAMacros.ecRA(sunLongitudeDeg, 0, 0, 0, 0, 0, gwdateDay, gwdateMonth, gwdateYear));
+                double sunDecDeg = PAMacros.ecDec(sunLongitudeDeg, 0, 0, 0, 0, 0, gwdateDay, gwdateMonth, gwdateYear);
+                double solarElongationDeg = PAMacros.angle(sunRAHours, 0, 0, sunDecDeg, 0, 0, raHour, raMin, raSec,
+                                decDeg, decMin, decSec, AngleMeasure.HOURS);
+
+                return PAUtil.round(solarElongationDeg, 2);
+        }
 }

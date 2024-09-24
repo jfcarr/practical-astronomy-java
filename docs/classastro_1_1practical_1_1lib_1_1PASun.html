@@ -111,10 +111,12 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a9a0bab5e1ca305f492bddd38947ba04c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac45d47b68addb88e7eb1fb1170803024" id="r_ac45d47b68addb88e7eb1fb1170803024"><td class="memItemLeft" align="right" valign="top">EquationOfTime&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classastro_1_1practical_1_1lib_1_1PASun.html#ac45d47b68addb88e7eb1fb1170803024">equationOfTime</a> (double gwdateDay, int gwdateMonth, int gwdateYear)</td></tr>
 <tr class="separator:ac45d47b68addb88e7eb1fb1170803024"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45d600ee376cc8ab7150aee19b923405" id="r_a45d600ee376cc8ab7150aee19b923405"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classastro_1_1practical_1_1lib_1_1PASun.html#a45d600ee376cc8ab7150aee19b923405">solarElongation</a> (double raHour, double raMin, double raSec, double decDeg, double decMin, double decSec, double gwdateDay, int gwdateMonth, int gwdateYear)</td></tr>
+<tr class="separator:a45d600ee376cc8ab7150aee19b923405"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="PASun_8java_source.html#l00012">12</a> of file <a class="el" href="PASun_8java_source.html">PASun.java</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PASun_8java_source.html#l00013">13</a> of file <a class="el" href="PASun_8java_source.html">PASun.java</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="ac764cd8516797ac21371b8c12fac25b5" name="ac764cd8516797ac21371b8c12fac25b5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac764cd8516797ac21371b8c12fac25b5">&#9670;&#160;</a></span>approximatePositionOfSun()</h2>
@@ -179,7 +181,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Calculate approximate position of the sun for a local date and time. </p>
 
-<p class="definition">Definition at line <a class="el" href="PASun_8java_source.html#l00016">16</a> of file <a class="el" href="PASun_8java_source.html">PASun.java</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PASun_8java_source.html#l00017">17</a> of file <a class="el" href="PASun_8java_source.html">PASun.java</a>.</p>
 
 </div>
 </div>
@@ -216,7 +218,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Calculate the equation of time. (The difference between the real Sun time and the mean Sun time.) </p>
 
-<p class="definition">Definition at line <a class="el" href="PASun_8java_source.html#l00212">212</a> of file <a class="el" href="PASun_8java_source.html">PASun.java</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PASun_8java_source.html#l00213">213</a> of file <a class="el" href="PASun_8java_source.html">PASun.java</a>.</p>
 
 </div>
 </div>
@@ -283,7 +285,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Calculate times of morning and evening twilight. </p>
 
-<p class="definition">Definition at line <a class="el" href="PASun_8java_source.html#l00171">171</a> of file <a class="el" href="PASun_8java_source.html">PASun.java</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PASun_8java_source.html#l00172">172</a> of file <a class="el" href="PASun_8java_source.html">PASun.java</a>.</p>
 
 </div>
 </div>
@@ -351,7 +353,80 @@ Public Member Functions</h2></td></tr>
 
 <p>Calculate precise position of the sun for a local date and time. </p>
 
-<p class="definition">Definition at line <a class="el" href="PASun_8java_source.html#l00061">61</a> of file <a class="el" href="PASun_8java_source.html">PASun.java</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PASun_8java_source.html#l00062">62</a> of file <a class="el" href="PASun_8java_source.html">PASun.java</a>.</p>
+
+</div>
+</div>
+<a id="a45d600ee376cc8ab7150aee19b923405" name="a45d600ee376cc8ab7150aee19b923405"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a45d600ee376cc8ab7150aee19b923405">&#9670;&#160;</a></span>solarElongation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double solarElongation </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>raHour</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>raMin</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>raSec</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>decDeg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>decMin</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>decSec</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>gwdateDay</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>gwdateMonth</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>gwdateYear</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Calculate solar elongation for a celestial body. </p>
+
+<p class="definition">Definition at line <a class="el" href="PASun_8java_source.html#l00230">230</a> of file <a class="el" href="PASun_8java_source.html">PASun.java</a>.</p>
 
 </div>
 </div>
@@ -418,7 +493,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Calculate distance to the Sun (in km), and angular size. </p>
 
-<p class="definition">Definition at line <a class="el" href="PASun_8java_source.html#l00090">90</a> of file <a class="el" href="PASun_8java_source.html">PASun.java</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PASun_8java_source.html#l00091">91</a> of file <a class="el" href="PASun_8java_source.html">PASun.java</a>.</p>
 
 </div>
 </div>
@@ -479,7 +554,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Calculate local sunrise and sunset. </p>
 
-<p class="definition">Definition at line <a class="el" href="PASun_8java_source.html#l00120">120</a> of file <a class="el" href="PASun_8java_source.html">PASun.java</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PASun_8java_source.html#l00121">121</a> of file <a class="el" href="PASun_8java_source.html">PASun.java</a>.</p>
 
 </div>
 </div>

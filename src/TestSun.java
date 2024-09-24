@@ -98,4 +98,13 @@ public class TestSun {
                                 .Assert(6, equationOfTime.equationOfTimeMin)
                                 .Assert(31.52, equationOfTime.equationOfTimeSec);
         }
+
+        public void testSolarElongation() {
+                TestLib testLib = new TestLib();
+
+                double solarElongation = paSun.solarElongation(10, 6, 45, 11, 57, 27, 27.8333333, 7, 2010);
+
+                testLib.setTestName("Solar Elongation")
+                                .Assert(24.78, solarElongation);
+        }
 }

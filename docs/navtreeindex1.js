@@ -1,5 +1,7 @@
 var NAVTREEINDEX1 =
 {
+"classastro_1_1practical_1_1types_1_1complex_1_1ETwilightL3710.html":[1,0,0,0,2,0,13],
+"classastro_1_1practical_1_1types_1_1complex_1_1ETwilightL3710.html#a1031d0e0a97a340abfe0a6ab9e831045":[1,0,0,0,2,0,13,1],
 "classastro_1_1practical_1_1types_1_1complex_1_1ETwilightL3710.html#a7c5c962413e7b54fde1f44db08451677":[1,0,0,0,2,0,13,2],
 "classastro_1_1practical_1_1types_1_1complex_1_1ETwilightL3710.html#ab927965981178aa1fba979a37168db2a":[1,0,0,0,2,0,13,5],
 "classastro_1_1practical_1_1types_1_1complex_1_1ETwilightL3710.html#abba48ee6c85b21b15345759638718a83":[1,0,0,0,2,0,13,0],

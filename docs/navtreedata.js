@@ -47,7 +47,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "Aberration_8java.html",
-"classastro_1_1practical_1_1types_1_1complex_1_1ETwilightL3710.html#a7c5c962413e7b54fde1f44db08451677"
+"classastro_1_1practical_1_1types_1_1complex_1_1ETwilightL3710.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
