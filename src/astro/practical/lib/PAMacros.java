@@ -3,12 +3,17 @@ package astro.practical.lib;
 import astro.practical.types.CoordinateType;
 import astro.practical.types.PAWarningFlag;
 import astro.practical.types.RiseSetStatus;
+import astro.practical.types.TwilightStatus;
+import astro.practical.types.TwilightType;
 import astro.practical.types.complex.ESunRSL3710;
+import astro.practical.types.complex.ETwilightL3710;
 import astro.practical.types.complex.ParallaxHelper;
 import astro.practical.types.complex.SunriseAZL3710;
 import astro.practical.types.complex.SunriseLCTL3710;
 import astro.practical.types.complex.SunsetAZL3710;
 import astro.practical.types.complex.SunsetLCTL3710;
+import astro.practical.types.complex.TwilightAMLCTL3710;
+import astro.practical.types.complex.TwilightPMLCTL3710;
 
 public class PAMacros {
 
@@ -1780,4 +1785,165 @@ public class PAMacros {
 		return returnValue;
 	}
 
+	/**
+	 * Calculate morning twilight start, in local time.
+	 * 
+	 * Original macro name: TwilightAMLCT
+	 */
+	public static double twilightAMLCT(double ld, int lm, int ly, int ds, int zc, double gl, double gp,
+			TwilightType tt) {
+		double di = (double) tt.value;
+
+		double gd = localCivilTimeGreenwichDay(12, 0, 0, ds, zc, ld, lm, ly);
+		int gm = localCivilTimeGreenwichMonth(12, 0, 0, ds, zc, ld, lm, ly);
+		int gy = localCivilTimeGreenwichYear(12, 0, 0, ds, zc, ld, lm, ly);
+		double sr = sunLong(12, 0, 0, ds, zc, ld, lm, ly);
+
+		TwilightAMLCTL3710 result1 = twilightAMLCTL3710(gd, gm, gy, sr, di, gp);
+
+		if (result1.s != RiseSetStatus.OK)
+			return -99.0;
+
+		double x = localSiderealTimeToGreenwichSiderealTime(result1.la, 0, 0, gl);
+		double ut = greenwichSiderealTimeToUniversalTime(x, 0, 0, gd, gm, gy);
+
+		if (eGstUt(x, 0, 0, gd, gm, gy) != PAWarningFlag.OK)
+			return -99.0;
+
+		sr = sunLong(ut, 0, 0, 0, 0, gd, gm, gy);
+
+		TwilightAMLCTL3710 result2 = twilightAMLCTL3710(gd, gm, gy, sr, di, gp);
+
+		if (result2.s != RiseSetStatus.OK)
+			return -99.0;
+
+		x = localSiderealTimeToGreenwichSiderealTime(result2.la, 0, 0, gl);
+		ut = greenwichSiderealTimeToUniversalTime(x, 0, 0, gd, gm, gy);
+
+		double xx = universalTimeToLocalCivilTime(ut, 0, 0, ds, zc, gd, gm, gy);
+
+		return xx;
+	}
+
+	/**
+	 * Helper function for twilight_am_lct()
+	 */
+	public static TwilightAMLCTL3710 twilightAMLCTL3710(double gd, int gm, int gy, double sr, double di, double gp) {
+		double a = sr + nutatLong(gd, gm, gy) - 0.005694;
+		double x = ecRA(a, 0, 0, 0, 0, 0, gd, gm, gy);
+		double y = ecDec(a, 0, 0, 0, 0, 0, gd, gm, gy);
+		double la = riseSetLocalSiderealTimeRise(decimalDegreesToDegreeHours(x), 0, 0, y, 0, 0, di, gp);
+		RiseSetStatus s = eRS(decimalDegreesToDegreeHours(x), 0, 0, y, 0, 0, di, gp);
+
+		return new TwilightAMLCTL3710(a, x, y, la, s);
+	}
+
+	/**
+	 * Calculate evening twilight end, in local time.
+	 * 
+	 * Original macro name: TwilightPMLCT
+	 */
+	public static double twilightPMLCT(double ld, int lm, int ly, int ds, int zc, double gl, double gp,
+			TwilightType tt) {
+		double di = (double) tt.value;
+
+		double gd = localCivilTimeGreenwichDay(12, 0, 0, ds, zc, ld, lm, ly);
+		int gm = localCivilTimeGreenwichMonth(12, 0, 0, ds, zc, ld, lm, ly);
+		int gy = localCivilTimeGreenwichYear(12, 0, 0, ds, zc, ld, lm, ly);
+		double sr = sunLong(12, 0, 0, ds, zc, ld, lm, ly);
+
+		TwilightPMLCTL3710 result1 = twilightPMLCTL3710(gd, gm, gy, sr, di, gp);
+
+		if (result1.s != RiseSetStatus.OK)
+			return 0.0;
+
+		double x = localSiderealTimeToGreenwichSiderealTime(result1.la, 0, 0, gl);
+		double ut = greenwichSiderealTimeToUniversalTime(x, 0, 0, gd, gm, gy);
+
+		if (eGstUt(x, 0, 0, gd, gm, gy) != PAWarningFlag.OK)
+			return 0.0;
+
+		sr = sunLong(ut, 0, 0, 0, 0, gd, gm, gy);
+
+		TwilightPMLCTL3710 result2 = twilightPMLCTL3710(gd, gm, gy, sr, di, gp);
+
+		if (result2.s != RiseSetStatus.OK)
+			return 0.0;
+
+		x = localSiderealTimeToGreenwichSiderealTime(result2.la, 0, 0, gl);
+		ut = greenwichSiderealTimeToUniversalTime(x, 0, 0, gd, gm, gy);
+
+		return universalTimeToLocalCivilTime(ut, 0, 0, ds, zc, gd, gm, gy);
+	}
+
+	/**
+	 * Helper function for twilight_pm_lct()
+	 */
+	public static TwilightPMLCTL3710 twilightPMLCTL3710(double gd, int gm, int gy, double sr, double di, double gp) {
+		double a = sr + nutatLong(gd, gm, gy) - 0.005694;
+		double x = ecRA(a, 0, 0, 0, 0, 0, gd, gm, gy);
+		double y = ecDec(a, 0, 0, 0, 0, 0, gd, gm, gy);
+		double la = riseSetLocalSiderealTimeSet(decimalDegreesToDegreeHours(x), 0, 0, y, 0, 0, di, gp);
+		RiseSetStatus s = eRS(decimalDegreesToDegreeHours(x), 0, 0, y, 0, 0, di, gp);
+
+		return new TwilightPMLCTL3710(a, x, y, la, s);
+	}
+
+	/**
+	 * Twilight calculation status.
+	 *
+	 * Original macro name: eTwilight
+	 */
+	public static TwilightStatus eTwilight(double ld, int lm, int ly, int ds, int zc, double gl, double gp,
+			TwilightType tt) {
+		double di = (double) tt.value;
+
+		double gd = localCivilTimeGreenwichDay(12, 0, 0, ds, zc, ld, lm, ly);
+		int gm = localCivilTimeGreenwichMonth(12, 0, 0, ds, zc, ld, lm, ly);
+		int gy = localCivilTimeGreenwichYear(12, 0, 0, ds, zc, ld, lm, ly);
+		double sr = sunLong(12, 0, 0, ds, zc, ld, lm, ly);
+
+		ETwilightL3710 result1 = eTwilightL3710(gd, gm, gy, sr, di, gp);
+
+		if (result1.s != TwilightStatus.OK)
+			return result1.s;
+
+		double x = localSiderealTimeToGreenwichSiderealTime(result1.la, 0, 0, gl);
+		double ut = greenwichSiderealTimeToUniversalTime(x, 0, 0, gd, gm, gy);
+		sr = sunLong(ut, 0, 0, 0, 0, gd, gm, gy);
+
+		ETwilightL3710 result2 = eTwilightL3710(gd, gm, gy, sr, di, gp);
+
+		if (result2.s != TwilightStatus.OK)
+			return result2.s;
+
+		x = localSiderealTimeToGreenwichSiderealTime(result2.la, 0, 0, gl);
+
+		if (eGstUt(x, 0, 0, gd, gm, gy) != PAWarningFlag.OK) {
+			result2.s = TwilightStatus.GST_TO_UT_CONVERSION_WARNING;
+
+			return result2.s;
+		}
+
+		return result2.s;
+	}
+
+	/**
+	 * Helper function for e_twilight()
+	 */
+	public static ETwilightL3710 eTwilightL3710(double gd, int gm, int gy, double sr, double di, double gp) {
+		double a = sr + nutatLong(gd, gm, gy) - 0.005694;
+		double x = ecRA(a, 0, 0, 0, 0, 0, gd, gm, gy);
+		double y = ecDec(a, 0, 0, 0, 0, 0, gd, gm, gy);
+		double la = riseSetLocalSiderealTimeRise(decimalDegreesToDegreeHours(x), 0, 0, y, 0, 0, di, gp);
+		RiseSetStatus s = eRS(decimalDegreesToDegreeHours(x), 0, 0, y, 0, 0, di, gp);
+
+		TwilightStatus ts = TwilightStatus.OK;
+		if (s == RiseSetStatus.CIRCUMPOLAR)
+			ts = TwilightStatus.LASTS_ALL_NIGHT;
+		if (s == RiseSetStatus.NEVERRISES)
+			ts = TwilightStatus.SUN_TOO_FAR_BELOW_HORIZON;
+
+		return new ETwilightL3710(a, x, y, la, ts);
+	}
 }

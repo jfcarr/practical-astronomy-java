@@ -45,5 +45,6 @@ public class Main {
 		testSun.testPrecisePositionOfSun();
 		testSun.testSunDistanceAndAngularSize();
 		testSun.testSunriseAndSunset();
+		testSun.testMorningAndEveningTwilight();
 	}
 }
