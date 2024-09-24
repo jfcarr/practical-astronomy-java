@@ -1,5 +1,6 @@
 package astro.practical.lib;
 
+import astro.practical.types.AngleMeasure;
 import astro.practical.types.CoordinateType;
 import astro.practical.types.WarningFlag;
 import astro.practical.types.RiseSetStatus;
@@ -1951,5 +1952,27 @@ public class PAMacros {
 			ts = TwilightStatus.SUN_TOO_FAR_BELOW_HORIZON;
 
 		return new ETwilightL3710(a, x, y, la, ts);
+	}
+
+	/**
+	 * Calculate the angle between two celestial objects
+	 */
+	public static double angle(double xx1, double xm1, double xs1, double dd1, double dm1, double ds1, double xx2,
+			double xm2, double xs2, double dd2, double dm2, double ds2, AngleMeasure s) {
+		double a = (s == AngleMeasure.HOURS)
+				? degreeHoursToDecimalDegrees(hmsToDH(xx1, xm1, xs1))
+				: degreesMinutesSecondsToDecimalDegrees(xx1, xm1, xs1);
+		double b = Math.toRadians(a);
+		double c = degreesMinutesSecondsToDecimalDegrees(dd1, dm1, ds1);
+		double d = Math.toRadians(c);
+		double e = (s == AngleMeasure.HOURS)
+				? degreeHoursToDecimalDegrees(hmsToDH(xx2, xm2, xs2))
+				: degreesMinutesSecondsToDecimalDegrees(xx2, xm2, xs2);
+		double f = Math.toRadians(e);
+		double g = degreesMinutesSecondsToDecimalDegrees(dd2, dm2, ds2);
+		double h = Math.toRadians(g);
+		double i = Math.acos(Math.sin(d) * Math.sin(h) + Math.cos(d) * Math.cos(h) * Math.cos(b - f));
+
+		return wToDegrees(i);
 	}
 }

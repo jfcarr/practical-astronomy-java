@@ -47,5 +47,6 @@ public class Main {
 		testSun.testSunriseAndSunset();
 		testSun.testMorningAndEveningTwilight();
 		testSun.testEquationOfTime();
+		testSun.testSolarElongation();
 	}
 }
