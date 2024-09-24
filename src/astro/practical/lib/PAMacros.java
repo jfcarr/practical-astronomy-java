@@ -1045,6 +1045,7 @@ public class PAMacros {
 		a = 1236.853095 * t;
 		b = 360 * (a - Math.floor(a));
 		double d1 = Math.toRadians(350.74 - 0.00144 * t2 + b);
+		@SuppressWarnings("unused")
 		double e1 = Math.toRadians(231.19 + 20.2 * t);
 		a = 183.1353208 * t;
 		b = 360 * (a - Math.floor(a));
@@ -1182,6 +1183,7 @@ public class PAMacros {
 		m5 = 360 * (m5 - Math.floor(m5));
 		m6 = 360 * (m6 - Math.floor(m6));
 
+		@SuppressWarnings("unused")
 		double ml = 270.434164 + m1 - (0.001133 - 0.0000019 * t) * t2;
 		double ms = 358.475833 + m2 - (0.00015 + 0.0000033 * t) * t2;
 		double md = 296.104608 + m3 + (0.009192 + 0.0000144 * t) * t2;
@@ -1278,6 +1280,7 @@ public class PAMacros {
 		m5 = 360 * (m5 - Math.floor(m5));
 		m6 = 360 * (m6 - Math.floor(m6));
 
+		@SuppressWarnings("unused")
 		double ml = 270.434164 + m1 - (0.001133 - 0.0000019 * t) * t2;
 		double ms = 358.475833 + m2 - (0.00015 + 0.0000033 * t) * t2;
 		double md = 296.104608 + m3 + (0.009192 + 0.0000144 * t) * t2;
@@ -1733,6 +1736,7 @@ public class PAMacros {
 	 */
 	public static double riseSetAzimuthRise(double rah, double ram, double ras, double dd, double dm, double ds,
 			double vd, double g) {
+		@SuppressWarnings("unused")
 		double a = hmsToDH(rah, ram, ras);
 		double c = Math.toRadians(degreesMinutesSecondsToDecimalDegrees(dd, dm, ds));
 		double d = Math.toRadians(vd);
@@ -1751,6 +1755,7 @@ public class PAMacros {
 	 */
 	public static double riseSetAzimuthSet(double rah, double ram, double ras, double dd, double dm, double ds,
 			double vd, double g) {
+		@SuppressWarnings("unused")
 		double a = hmsToDH(rah, ram, ras);
 		double c = Math.toRadians(degreesMinutesSecondsToDecimalDegrees(dd, dm, ds));
 		double d = Math.toRadians(vd);
@@ -1769,6 +1774,7 @@ public class PAMacros {
 	 */
 	public static RiseSetStatus eRS(double rah, double ram, double ras, double dd, double dm, double ds, double vd,
 			double g) {
+		@SuppressWarnings("unused")
 		double a = hmsToDH(rah, ram, ras);
 		double c = degreesMinutesSecondsToDecimalDegrees(dd, dm, ds);
 		c = Math.toRadians(c);
