@@ -1,9 +1,9 @@
 package astro.practical.types;
 
 public enum TwilightType {
-    Civil(6),
-    Nautical(12),
-    Astronomical(18);
+    CIVIL(6),
+    NAUTICAL(12),
+    ASTRONOMICAL(18);
 
     public final int value;
 

@@ -78,7 +78,7 @@ public class TestSun {
                 TestLib testLib = new TestLib();
 
                 MorningAndEveningTwilight morningAndEveningTwilight = paSun.morningAndEveningTwilight(7, 9, 1979, false,
-                                0, 0, 52, TwilightType.Astronomical);
+                                0, 0, 52, TwilightType.ASTRONOMICAL);
 
                 testLib.setTestName("Morning and Evening Twilight")
                                 .Assert(3, morningAndEveningTwilight.amTwilightBeginsHour)
