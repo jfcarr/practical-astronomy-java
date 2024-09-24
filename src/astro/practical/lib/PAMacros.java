@@ -1,7 +1,7 @@
 package astro.practical.lib;
 
 import astro.practical.types.CoordinateType;
-import astro.practical.types.PAWarningFlag;
+import astro.practical.types.WarningFlag;
 import astro.practical.types.RiseSetStatus;
 import astro.practical.types.TwilightStatus;
 import astro.practical.types.TwilightType;
@@ -648,7 +648,7 @@ public class PAMacros {
 	 * 
 	 * Original macro name: eGSTUT
 	 */
-	public static PAWarningFlag eGstUt(double gsh, double gsm, double gss, double gd, int gm, int gy) {
+	public static WarningFlag eGstUt(double gsh, double gsm, double gss, double gd, int gm, int gy) {
 		double a = civilDateToJulianDate(gd, gm, gy);
 		double b = a - 2451545;
 		double c = b / 36525;
@@ -658,7 +658,7 @@ public class PAMacros {
 		double g = f - e;
 		double h = g - (24 * Math.floor(g / 24));
 
-		return ((h * 0.9972695663) < (4.0 / 60.0)) ? PAWarningFlag.WARNING : PAWarningFlag.OK;
+		return ((h * 0.9972695663) < (4.0 / 60.0)) ? WarningFlag.WARNING : WarningFlag.OK;
 	}
 
 	/**
@@ -1465,7 +1465,7 @@ public class PAMacros {
 			double x = localSiderealTimeToGreenwichSiderealTime(result1.la, 0, 0, gl);
 			double ut = greenwichSiderealTimeToUniversalTime(x, 0, 0, gd, gm, gy);
 
-			if (eGstUt(x, 0, 0, gd, gm, gy) != PAWarningFlag.OK) {
+			if (eGstUt(x, 0, 0, gd, gm, gy) != WarningFlag.OK) {
 				xx = -99.0;
 			} else {
 				sr = sunLong(ut, 0, 0, 0, 0, gd, gm, gy);
@@ -1516,7 +1516,7 @@ public class PAMacros {
 			double x = localSiderealTimeToGreenwichSiderealTime(result1.la, 0, 0, gl);
 			double ut = greenwichSiderealTimeToUniversalTime(x, 0, 0, gd, gm, gy);
 
-			if (eGstUt(x, 0, 0, gd, gm, gy) != PAWarningFlag.OK) {
+			if (eGstUt(x, 0, 0, gd, gm, gy) != WarningFlag.OK) {
 				xx = -99.0;
 			} else {
 				sr = sunLong(ut, 0, 0, 0, 0, gd, gm, gy);
@@ -1571,7 +1571,7 @@ public class PAMacros {
 			} else {
 				x = localSiderealTimeToGreenwichSiderealTime(result2.la, 0, 0, gl);
 
-				if (eGstUt(x, 0, 0, gd, gm, gy) != PAWarningFlag.OK) {
+				if (eGstUt(x, 0, 0, gd, gm, gy) != WarningFlag.OK) {
 					RiseSetStatus s = RiseSetStatus.GST_UT_CONVERSION_WARNING;
 
 					return s;
@@ -1616,7 +1616,7 @@ public class PAMacros {
 		double x = localSiderealTimeToGreenwichSiderealTime(result1.la, 0, 0, gl);
 		double ut = greenwichSiderealTimeToUniversalTime(x, 0, 0, gd, gm, gy);
 
-		if (eGstUt(x, 0, 0, gd, gm, gy) != PAWarningFlag.OK) {
+		if (eGstUt(x, 0, 0, gd, gm, gy) != WarningFlag.OK) {
 			return -99.0;
 		}
 
@@ -1664,7 +1664,7 @@ public class PAMacros {
 		double x = localSiderealTimeToGreenwichSiderealTime(result1.la, 0, 0, gl);
 		double ut = greenwichSiderealTimeToUniversalTime(x, 0, 0, gd, gm, gy);
 
-		if (eGstUt(x, 0, 0, gd, gm, gy) != PAWarningFlag.OK) {
+		if (eGstUt(x, 0, 0, gd, gm, gy) != WarningFlag.OK) {
 			return -99.0;
 		}
 
@@ -1813,7 +1813,7 @@ public class PAMacros {
 		double x = localSiderealTimeToGreenwichSiderealTime(result1.la, 0, 0, gl);
 		double ut = greenwichSiderealTimeToUniversalTime(x, 0, 0, gd, gm, gy);
 
-		if (eGstUt(x, 0, 0, gd, gm, gy) != PAWarningFlag.OK)
+		if (eGstUt(x, 0, 0, gd, gm, gy) != WarningFlag.OK)
 			return -99.0;
 
 		sr = sunLong(ut, 0, 0, 0, 0, gd, gm, gy);
@@ -1866,7 +1866,7 @@ public class PAMacros {
 		double x = localSiderealTimeToGreenwichSiderealTime(result1.la, 0, 0, gl);
 		double ut = greenwichSiderealTimeToUniversalTime(x, 0, 0, gd, gm, gy);
 
-		if (eGstUt(x, 0, 0, gd, gm, gy) != PAWarningFlag.OK)
+		if (eGstUt(x, 0, 0, gd, gm, gy) != WarningFlag.OK)
 			return 0.0;
 
 		sr = sunLong(ut, 0, 0, 0, 0, gd, gm, gy);
@@ -1925,7 +1925,7 @@ public class PAMacros {
 
 		x = localSiderealTimeToGreenwichSiderealTime(result2.la, 0, 0, gl);
 
-		if (eGstUt(x, 0, 0, gd, gm, gy) != PAWarningFlag.OK) {
+		if (eGstUt(x, 0, 0, gd, gm, gy) != WarningFlag.OK) {
 			result2.s = TwilightStatus.GST_TO_UT_CONVERSION_WARNING;
 
 			return result2.s;

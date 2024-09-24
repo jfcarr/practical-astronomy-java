@@ -1,6 +1,6 @@
 package astro.practical.lib;
 
-import astro.practical.types.PAWarningFlag;
+import astro.practical.types.WarningFlag;
 import astro.practical.types.complex.CivilDate;
 import astro.practical.types.complex.CivilDateTime;
 import astro.practical.types.complex.CivilTime;
@@ -160,7 +160,7 @@ public class PADateTime {
 		double utMinutes = PAMacros.decimalHoursMinute(ut);
 		double utSeconds = PAMacros.decimalHoursSecond(ut);
 
-		PAWarningFlag warningFlag = (ut < 0.065574) ? PAWarningFlag.WARNING : PAWarningFlag.OK;
+		WarningFlag warningFlag = (ut < 0.065574) ? WarningFlag.WARNING : WarningFlag.OK;
 
 		return new UniversalTime(utHours, utMinutes, utSeconds, warningFlag);
 	}

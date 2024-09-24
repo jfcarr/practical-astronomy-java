@@ -1,6 +1,6 @@
 import astro.practical.lib.PAUtil;
 import astro.practical.test.TestLib;
-import astro.practical.types.PAWarningFlag;
+import astro.practical.types.WarningFlag;
 import astro.practical.types.complex.CivilDate;
 import astro.practical.types.complex.CivilDateTime;
 import astro.practical.types.complex.CivilTime;
@@ -98,7 +98,7 @@ public class TestDateTime {
 		UniversalTime uT = paDateTime.greenwichSiderealTimeToUniversalTime(4, 40, 5.23, 22, 4, 1980);
 
 		testLib.setTestName("Convert Greenwich Sidereal Time to Universal Time").Assert(14.0, uT.hours)
-				.Assert(36.0, uT.minutes).Assert(51.67, uT.seconds).Assert(PAWarningFlag.OK, uT.warningFlag);
+				.Assert(36.0, uT.minutes).Assert(51.67, uT.seconds).Assert(WarningFlag.OK, uT.warningFlag);
 	}
 
 	/**
