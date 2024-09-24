@@ -350,7 +350,7 @@ public class PACoordinates {
 
 		RiseSetStatus riseSetStatus = RiseSetStatus.OK;
 		if (cosH > 1)
-			riseSetStatus = RiseSetStatus.NEVERRISES;
+			riseSetStatus = RiseSetStatus.NEVER_RISES;
 		if (cosH < -1)
 			riseSetStatus = RiseSetStatus.CIRCUMPOLAR;
 

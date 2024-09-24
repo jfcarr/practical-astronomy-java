@@ -1784,7 +1784,7 @@ public class PAMacros {
 
 		RiseSetStatus returnValue = RiseSetStatus.OK;
 		if (f >= 1)
-			returnValue = RiseSetStatus.NEVERRISES;
+			returnValue = RiseSetStatus.NEVER_RISES;
 		if (f <= -1)
 			returnValue = RiseSetStatus.CIRCUMPOLAR;
 
@@ -1947,7 +1947,7 @@ public class PAMacros {
 		TwilightStatus ts = TwilightStatus.OK;
 		if (s == RiseSetStatus.CIRCUMPOLAR)
 			ts = TwilightStatus.LASTS_ALL_NIGHT;
-		if (s == RiseSetStatus.NEVERRISES)
+		if (s == RiseSetStatus.NEVER_RISES)
 			ts = TwilightStatus.SUN_TOO_FAR_BELOW_HORIZON;
 
 		return new ETwilightL3710(a, x, y, la, ts);
