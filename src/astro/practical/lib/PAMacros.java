@@ -1,7 +1,14 @@
 package astro.practical.lib;
 
 import astro.practical.types.CoordinateType;
+import astro.practical.types.PAWarningFlag;
+import astro.practical.types.RiseSetStatus;
+import astro.practical.types.complex.ESunRSL3710;
 import astro.practical.types.complex.ParallaxHelper;
+import astro.practical.types.complex.SunriseAZL3710;
+import astro.practical.types.complex.SunriseLCTL3710;
+import astro.practical.types.complex.SunsetAZL3710;
+import astro.practical.types.complex.SunsetLCTL3710;
 
 public class PAMacros {
 
@@ -217,6 +224,23 @@ public class PAMacros {
 		double b = a - daylightSaving - zoneCorrection;
 		double c = localDay + (b / 24);
 		double d = civilDateToJulianDate(c, localMonth, localYear);
+		double e = julianDateDay(d);
+		double e1 = Math.floor(e);
+
+		return 24 * (e - e1);
+	}
+
+	/**
+	 * Convert Universal Time to Local Civil Time
+	 * 
+	 * Original macro name: UTLct
+	 */
+	public static double universalTimeToLocalCivilTime(double uHours, double uMinutes, double uSeconds,
+			int daylightSaving, int zoneCorrection, double greenwichDay, int greenwichMonth, int greenwichYear) {
+		double a = hmsToDH(uHours, uMinutes, uSeconds);
+		double b = a + zoneCorrection;
+		double c = b + daylightSaving;
+		double d = civilDateToJulianDate(greenwichDay, greenwichMonth, greenwichYear) + (c / 24);
 		double e = julianDateDay(d);
 		double e1 = Math.floor(e);
 
@@ -480,6 +504,59 @@ public class PAMacros {
 	}
 
 	/**
+	 * Nutation amount to be added in ecliptic longitude, in degrees.
+	 * 
+	 * Original macro name: NutatLong
+	 */
+	public static double nutatLong(double gd, int gm, int gy) {
+		double dj = civilDateToJulianDate(gd, gm, gy) - 2415020;
+		double t = dj / 36525;
+		double t2 = t * t;
+
+		double a = 100.0021358 * t;
+		double b = 360 * (a - Math.floor(a));
+
+		double l1 = 279.6967 + 0.000303 * t2 + b;
+		double l2 = 2 * Math.toRadians(l1);
+
+		a = 1336.855231 * t;
+		b = 360 * (a - Math.floor(a));
+
+		double d1 = 270.4342 - 0.001133 * t2 + b;
+		double d2 = 2 * Math.toRadians(d1);
+
+		a = 99.99736056 * t;
+		b = 360 * (a - Math.floor(a));
+
+		double m1 = 358.4758 - 0.00015 * t2 + b;
+		m1 = Math.toRadians(m1);
+
+		a = 1325.552359 * t;
+		b = 360 * (a - Math.floor(a));
+
+		double m2 = 296.1046 + 0.009192 * t2 + b;
+		m2 = Math.toRadians(m2);
+
+		a = 5.372616667 * t;
+		b = 360 * (a - Math.floor(a));
+
+		double n1 = 259.1833 + 0.002078 * t2 - b;
+		n1 = Math.toRadians(n1);
+
+		double n2 = 2.0 * n1;
+
+		double dp = (-17.2327 - 0.01737 * t) * Math.sin(n1);
+		dp += (-1.2729 - 0.00013 * t) * Math.sin(l2) + 0.2088 * Math.sin(n2);
+		dp -= 0.2037 * Math.sin(d2) + (0.1261 - 0.00031 * t) * Math.sin(m1);
+		dp += 0.0675 * Math.sin(m2) - (0.0497 - 0.00012 * t) * Math.sin(l2 + m1);
+		dp -= 0.0342 * Math.sin(d2 - n1) - 0.0261 * Math.sin(d2 + m2);
+		dp += 0.0214 * Math.sin(l2 - m1) - 0.0149 * Math.sin(l2 - d2 + m2);
+		dp += 0.0124 * Math.sin(l2 - n1) + 0.0114 * Math.sin(d2 - m2);
+
+		return dp / 3600;
+	}
+
+	/**
 	 * Nutation of Obliquity
 	 * 
 	 * Original macro name: NutatObl
@@ -559,6 +636,24 @@ public class PAMacros {
 		double h = g - (24 * Math.floor(g / 24));
 
 		return h * 0.9972695663;
+	}
+
+	/**
+	 * Status of conversion of Greenwich Sidereal Time to Universal Time.
+	 * 
+	 * Original macro name: eGSTUT
+	 */
+	public static PAWarningFlag eGstUt(double gsh, double gsm, double gss, double gd, int gm, int gy) {
+		double a = civilDateToJulianDate(gd, gm, gy);
+		double b = a - 2451545;
+		double c = b / 36525;
+		double d = 6.697374558 + (2400.051336 * c) + (0.000025862 * c * c);
+		double e = d - (24 * Math.floor(d / 24));
+		double f = hmsToDH(gsh, gsm, gss);
+		double g = f - e;
+		double h = g - (24 * Math.floor(g / 24));
+
+		return ((h * 0.9972695663) < (4.0 / 60.0)) ? PAWarningFlag.WARNING : PAWarningFlag.OK;
 	}
 
 	/**
@@ -1339,6 +1434,350 @@ public class PAMacros {
 		double am = Math.toRadians(m1);
 
 		return wToDegrees(trueAnomaly(am, ec));
+	}
+
+	/**
+	 * Calculate local civil time of sunrise.
+	 * 
+	 * Original macro name: SunriseLCT
+	 */
+	public static double sunriseLCT(double ld, int lm, int ly, int ds, int zc, double gl, double gp) {
+		double di = 0.8333333;
+		double gd = localCivilTimeGreenwichDay(12, 0, 0, ds, zc, ld, lm, ly);
+		int gm = localCivilTimeGreenwichMonth(12, 0, 0, ds, zc, ld, lm, ly);
+		int gy = localCivilTimeGreenwichYear(12, 0, 0, ds, zc, ld, lm, ly);
+		double sr = sunLong(12, 0, 0, ds, zc, ld, lm, ly);
+
+		SunriseLCTL3710 result1 = sunriseLCTL3710(gd, gm, gy, sr, di, gp);
+
+		double xx;
+		if (result1.s != RiseSetStatus.OK) {
+			xx = -99.0;
+		} else {
+			double x = localSiderealTimeToGreenwichSiderealTime(result1.la, 0, 0, gl);
+			double ut = greenwichSiderealTimeToUniversalTime(x, 0, 0, gd, gm, gy);
+
+			if (eGstUt(x, 0, 0, gd, gm, gy) != PAWarningFlag.OK) {
+				xx = -99.0;
+			} else {
+				sr = sunLong(ut, 0, 0, 0, 0, gd, gm, gy);
+				SunriseLCTL3710 result2 = sunriseLCTL3710(gd, gm, gy, sr, di, gp);
+
+				if (result2.s != RiseSetStatus.OK) {
+					xx = -99.0;
+				} else {
+					x = localSiderealTimeToGreenwichSiderealTime(result2.la, 0, 0, gl);
+					ut = greenwichSiderealTimeToUniversalTime(x, 0, 0, gd, gm, gy);
+					xx = universalTimeToLocalCivilTime(ut, 0, 0, ds, zc, gd, gm, gy);
+				}
+			}
+		}
+
+		return xx;
+	}
+
+	/**
+	 * Helper function for sunrise_lct()
+	 */
+	public static SunriseLCTL3710 sunriseLCTL3710(double gd, int gm, int gy, double sr, double di, double gp) {
+		double a = sr + nutatLong(gd, gm, gy) - 0.005694;
+		double x = ecRA(a, 0, 0, 0, 0, 0, gd, gm, gy);
+		double y = ecDec(a, 0, 0, 0, 0, 0, gd, gm, gy);
+		double la = riseSetLocalSiderealTimeRise(decimalDegreesToDegreeHours(x), 0, 0, y, 0, 0, di, gp);
+		RiseSetStatus s = eRS(decimalDegreesToDegreeHours(x), 0.0, 0.0, y, 0.0, 0.0, di, gp);
+
+		return new SunriseLCTL3710(a, x, y, la, s);
+	}
+
+	/// Calculate local civil time of sunset.
+	///
+	/// Original macro name: SunsetLCT
+	public static double sunsetLCT(double ld, int lm, int ly, int ds, int zc, double gl, double gp) {
+		double di = 0.8333333;
+		double gd = localCivilTimeGreenwichDay(12, 0, 0, ds, zc, ld, lm, ly);
+		int gm = localCivilTimeGreenwichMonth(12, 0, 0, ds, zc, ld, lm, ly);
+		int gy = localCivilTimeGreenwichYear(12, 0, 0, ds, zc, ld, lm, ly);
+		double sr = sunLong(12, 0, 0, ds, zc, ld, lm, ly);
+
+		SunsetLCTL3710 result1 = sunsetLCTL3710(gd, gm, gy, sr, di, gp);
+
+		double xx;
+		if (result1.s != RiseSetStatus.OK) {
+			xx = -99.0;
+		} else {
+			double x = localSiderealTimeToGreenwichSiderealTime(result1.la, 0, 0, gl);
+			double ut = greenwichSiderealTimeToUniversalTime(x, 0, 0, gd, gm, gy);
+
+			if (eGstUt(x, 0, 0, gd, gm, gy) != PAWarningFlag.OK) {
+				xx = -99.0;
+			} else {
+				sr = sunLong(ut, 0, 0, 0, 0, gd, gm, gy);
+				SunsetLCTL3710 result2 = sunsetLCTL3710(gd, gm, gy, sr, di, gp);
+
+				if (result2.s != RiseSetStatus.OK) {
+					xx = -99;
+				} else {
+					x = localSiderealTimeToGreenwichSiderealTime(result2.la, 0, 0, gl);
+					ut = greenwichSiderealTimeToUniversalTime(x, 0, 0, gd, gm, gy);
+					xx = universalTimeToLocalCivilTime(ut, 0, 0, ds, zc, gd, gm, gy);
+				}
+			}
+		}
+		return xx;
+	}
+
+	/**
+	 * Helper function for sunsetLCT().
+	 */
+	public static SunsetLCTL3710 sunsetLCTL3710(double gd, int gm, int gy, double sr, double di, double gp) {
+		double a = sr + nutatLong(gd, gm, gy) - 0.005694;
+		double x = ecRA(a, 0.0, 0.0, 0.0, 0.0, 0.0, gd, gm, gy);
+		double y = ecDec(a, 0.0, 0.0, 0.0, 0.0, 0.0, gd, gm, gy);
+		double la = riseSetLocalSiderealTimeSet(decimalDegreesToDegreeHours(x), 0, 0, y, 0, 0, di, gp);
+		RiseSetStatus s = eRS(decimalDegreesToDegreeHours(x), 0, 0, y, 0, 0, di, gp);
+
+		return new SunsetLCTL3710(a, x, y, la, s);
+	}
+
+	/// Sunrise/Sunset calculation status.
+	///
+	/// Original macro name: eSunRS
+	public static RiseSetStatus eSunRS(double ld, int lm, int ly, int ds, int zc, double gl, double gp) {
+		double di = 0.8333333;
+		double gd = localCivilTimeGreenwichDay(12, 0, 0, ds, zc, ld, lm, ly);
+		int gm = localCivilTimeGreenwichMonth(12, 0, 0, ds, zc, ld, lm, ly);
+		int gy = localCivilTimeGreenwichYear(12, 0, 0, ds, zc, ld, lm, ly);
+		double sr = sunLong(12, 0, 0, ds, zc, ld, lm, ly);
+
+		ESunRSL3710 result1 = eSunRSL3710(gd, gm, gy, sr, di, gp);
+
+		if (result1.s != RiseSetStatus.OK) {
+			return result1.s;
+		} else {
+			double x = localSiderealTimeToGreenwichSiderealTime(result1.la, 0, 0, gl);
+			double ut = greenwichSiderealTimeToUniversalTime(x, 0, 0, gd, gm, gy);
+			sr = sunLong(ut, 0, 0, 0, 0, gd, gm, gy);
+			ESunRSL3710 result2 = eSunRSL3710(gd, gm, gy, sr, di, gp);
+			if (result2.s != RiseSetStatus.OK) {
+				return result2.s;
+			} else {
+				x = localSiderealTimeToGreenwichSiderealTime(result2.la, 0, 0, gl);
+
+				if (eGstUt(x, 0, 0, gd, gm, gy) != PAWarningFlag.OK) {
+					RiseSetStatus s = RiseSetStatus.GST_UT_CONVERSION_WARNING;
+
+					return s;
+				}
+
+				return result2.s;
+			}
+		}
+	}
+
+	/**
+	 * Helper function for e_sun_rs()
+	 */
+	public static ESunRSL3710 eSunRSL3710(double gd, int gm, int gy, double sr, double di, double gp) {
+		double a = sr + nutatLong(gd, gm, gy) - 0.005694;
+		double x = ecRA(a, 0, 0, 0, 0, 0, gd, gm, gy);
+		double y = ecDec(a, 0, 0, 0, 0, 0, gd, gm, gy);
+		double la = riseSetLocalSiderealTimeRise(decimalDegreesToDegreeHours(x), 0, 0, y, 0, 0, di, gp);
+		RiseSetStatus s = eRS(decimalDegreesToDegreeHours(x), 0, 0, y, 0, 0, di, gp);
+
+		return new ESunRSL3710(a, x, y, la, s);
+	}
+
+	/**
+	 * Calculate azimuth of sunrise.
+	 * 
+	 * Original macro name: SunriseAz
+	 */
+	public static double sunriseAZ(double ld, int lm, int ly, int ds, int zc, double gl, double gp) {
+		double di = 0.8333333;
+		double gd = localCivilTimeGreenwichDay(12, 0, 0, ds, zc, ld, lm, ly);
+		int gm = localCivilTimeGreenwichMonth(12, 0, 0, ds, zc, ld, lm, ly);
+		int gy = localCivilTimeGreenwichYear(12, 0, 0, ds, zc, ld, lm, ly);
+		double sr = sunLong(12, 0, 0, ds, zc, ld, lm, ly);
+
+		SunriseAZL3710 result1 = sunriseAZL3710(gd, gm, gy, sr, di, gp);
+
+		if (result1.s != RiseSetStatus.OK) {
+			return -99.0;
+		}
+
+		double x = localSiderealTimeToGreenwichSiderealTime(result1.la, 0, 0, gl);
+		double ut = greenwichSiderealTimeToUniversalTime(x, 0, 0, gd, gm, gy);
+
+		if (eGstUt(x, 0, 0, gd, gm, gy) != PAWarningFlag.OK) {
+			return -99.0;
+		}
+
+		sr = sunLong(ut, 0, 0, 0, 0, gd, gm, gy);
+		SunriseAZL3710 result2 = sunriseAZL3710(gd, gm, gy, sr, di, gp);
+
+		if (result2.s != RiseSetStatus.OK) {
+			return -99.0;
+		}
+
+		return riseSetAzimuthRise(decimalDegreesToDegreeHours(x), 0, 0, result2.y, 0.0, 0.0, di, gp);
+	}
+
+	/**
+	 * Helper function for sunrise_az()
+	 */
+	public static SunriseAZL3710 sunriseAZL3710(double gd, int gm, int gy, double sr, double di, double gp) {
+		double a = sr + nutatLong(gd, gm, gy) - 0.005694;
+		double x = ecRA(a, 0, 0, 0, 0, 0, gd, gm, gy);
+		double y = ecDec(a, 0, 0, 0, 0, 0, gd, gm, gy);
+		double la = riseSetLocalSiderealTimeRise(decimalDegreesToDegreeHours(x), 0, 0, y, 0, 0, di, gp);
+		RiseSetStatus s = eRS(decimalDegreesToDegreeHours(x), 0, 0, y, 0, 0, di, gp);
+
+		return new SunriseAZL3710(a, x, y, la, s);
+	}
+
+	/**
+	 * Calculate azimuth of sunset.
+	 * 
+	 * Original macro name: SunsetAz
+	 */
+	public static double sunsetAZ(double ld, int lm, int ly, int ds, int zc, double gl, double gp) {
+		double di = 0.8333333;
+		double gd = localCivilTimeGreenwichDay(12, 0, 0, ds, zc, ld, lm, ly);
+		int gm = localCivilTimeGreenwichMonth(12, 0, 0, ds, zc, ld, lm, ly);
+		int gy = localCivilTimeGreenwichYear(12, 0, 0, ds, zc, ld, lm, ly);
+		double sr = sunLong(12, 0, 0, ds, zc, ld, lm, ly);
+
+		SunsetAZL3710 result1 = sunsetAZL3710(gd, gm, gy, sr, di, gp);
+
+		if (result1.s != RiseSetStatus.OK) {
+			return -99.0;
+		}
+
+		double x = localSiderealTimeToGreenwichSiderealTime(result1.la, 0, 0, gl);
+		double ut = greenwichSiderealTimeToUniversalTime(x, 0, 0, gd, gm, gy);
+
+		if (eGstUt(x, 0, 0, gd, gm, gy) != PAWarningFlag.OK) {
+			return -99.0;
+		}
+
+		sr = sunLong(ut, 0, 0, 0, 0, gd, gm, gy);
+
+		SunsetAZL3710 result2 = sunsetAZL3710(gd, gm, gy, sr, di, gp);
+
+		if (result2.s != RiseSetStatus.OK) {
+			return -99.0;
+		}
+		return riseSetAzimuthSet(decimalDegreesToDegreeHours(x), 0, 0, result2.y, 0, 0, di, gp);
+	}
+
+	/**
+	 * Helper function for sunset_az()
+	 */
+	public static SunsetAZL3710 sunsetAZL3710(double gd, int gm, int gy, double sr, double di, double gp) {
+		double a = sr + nutatLong(gd, gm, gy) - 0.005694;
+		double x = ecRA(a, 0, 0, 0, 0, 0, gd, gm, gy);
+		double y = ecDec(a, 0, 0, 0, 0, 0, gd, gm, gy);
+		double la = riseSetLocalSiderealTimeSet(decimalDegreesToDegreeHours(x), 0, 0, y, 0, 0, di, gp);
+		RiseSetStatus s = eRS(decimalDegreesToDegreeHours(x), 0, 0, y, 0, 0, di, gp);
+
+		return new SunsetAZL3710(a, x, y, la, s);
+	}
+
+	/**
+	 * Local sidereal time of rise, in hours.
+	 * 
+	 * Original macro name: RSLSTR
+	 */
+	public static double riseSetLocalSiderealTimeRise(double rah, double ram, double ras, double dd, double dm,
+			double ds, double vd, double g) {
+		double a = hmsToDH(rah, ram, ras);
+		double b = Math.toRadians(degreeHoursToDecimalDegrees(a));
+		double c = Math.toRadians(degreesMinutesSecondsToDecimalDegrees(dd, dm, ds));
+		double d = Math.toRadians(vd);
+		double e = Math.toRadians(g);
+		double f = -(Math.sin(d) + Math.sin(e) * Math.sin(c)) / (Math.cos(e) * Math.cos(c));
+		double h = (Math.abs(f) < 1) ? Math.acos(f) : 0;
+		double i = decimalDegreesToDegreeHours(wToDegrees(b - h));
+
+		return i - 24 * Math.floor(i / 24);
+	}
+
+	/**
+	 * Local sidereal time of setting, in hours.
+	 * 
+	 * Original macro name: RSLSTS
+	 */
+	public static double riseSetLocalSiderealTimeSet(double rah, double ram, double ras, double dd, double dm,
+			double ds, double vd, double g) {
+		double a = hmsToDH(rah, ram, ras);
+		double b = Math.toRadians(degreeHoursToDecimalDegrees(a));
+		double c = Math.toRadians(degreesMinutesSecondsToDecimalDegrees(dd, dm, ds));
+		double d = Math.toRadians(vd);
+		double e = Math.toRadians(g);
+		double f = -(Math.sin(d) + Math.sin(e) * Math.sin(c)) / (Math.cos(e) * Math.cos(c));
+		double h = (Math.abs(f) < 1) ? Math.acos(f) : 0;
+		double i = decimalDegreesToDegreeHours(wToDegrees(b + h));
+
+		return i - 24 * Math.floor(i / 24);
+	}
+
+	/**
+	 * Azimuth of rising, in degrees.
+	 * 
+	 * Original macro name: RSAZR
+	 */
+	public static double riseSetAzimuthRise(double rah, double ram, double ras, double dd, double dm, double ds,
+			double vd, double g) {
+		double a = hmsToDH(rah, ram, ras);
+		double c = Math.toRadians(degreesMinutesSecondsToDecimalDegrees(dd, dm, ds));
+		double d = Math.toRadians(vd);
+		double e = Math.toRadians(g);
+		double f = (Math.sin(c) + Math.sin(d) * Math.sin(e)) / (Math.cos(d) * Math.cos(e));
+		double h = eRS(rah, ram, ras, dd, dm, ds, vd, g) == RiseSetStatus.OK ? Math.acos(f) : 0;
+		double i = wToDegrees(h);
+
+		return i - 360 * Math.floor(i / 360);
+	}
+
+	/**
+	 * Azimuth of setting, in degrees.
+	 * 
+	 * Original macro name: RSAZS
+	 */
+	public static double riseSetAzimuthSet(double rah, double ram, double ras, double dd, double dm, double ds,
+			double vd, double g) {
+		double a = hmsToDH(rah, ram, ras);
+		double c = Math.toRadians(degreesMinutesSecondsToDecimalDegrees(dd, dm, ds));
+		double d = Math.toRadians(vd);
+		double e = Math.toRadians(g);
+		double f = (Math.sin(c) + Math.sin(d) * Math.sin(e)) / (Math.cos(d) * Math.cos(e));
+		double h = eRS(rah, ram, ras, dd, dm, ds, vd, g) == RiseSetStatus.OK ? Math.acos(f) : 0;
+		double i = 360 - wToDegrees(h);
+
+		return i - 360 * Math.floor(i / 360);
+	}
+
+	/**
+	 * Rise/Set status
+	 * 
+	 * Original macro name: eRS
+	 */
+	public static RiseSetStatus eRS(double rah, double ram, double ras, double dd, double dm, double ds, double vd,
+			double g) {
+		double a = hmsToDH(rah, ram, ras);
+		double c = degreesMinutesSecondsToDecimalDegrees(dd, dm, ds);
+		c = Math.toRadians(c);
+		double d = Math.toRadians(vd);
+		double e = Math.toRadians(g);
+		double f = -(Math.sin(d) + Math.sin(e) * Math.sin(c)) / (Math.cos(e) * Math.cos(c));
+
+		RiseSetStatus returnValue = RiseSetStatus.OK;
+		if (f >= 1)
+			returnValue = RiseSetStatus.NEVERRISES;
+		if (f <= -1)
+			returnValue = RiseSetStatus.CIRCUMPOLAR;
+
+		return returnValue;
 	}
 
 }
