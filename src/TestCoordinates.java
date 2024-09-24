@@ -1,7 +1,7 @@
 import astro.practical.lib.PACoordinates;
 import astro.practical.lib.PAUtil;
 import astro.practical.test.TestLib;
-import astro.practical.types.PAAngleMeasure;
+import astro.practical.types.AngleMeasure;
 import astro.practical.types.RiseSetStatus;
 import astro.practical.types.complex.Aberration;
 import astro.practical.types.complex.Angle;
@@ -144,7 +144,7 @@ public class TestCoordinates {
 		TestLib testLib = new TestLib();
 
 		Angle angle = paCoordinates.angleBetweenTwoObjects(5, 13, 31.7, -8, 13, 30, 6, 44, 13.4, -16, 41, 11,
-				PAAngleMeasure.Hours);
+				AngleMeasure.HOURS);
 
 		testLib.setTestName(
 				"Angle for RA (1) 5h 13m 31.7s and Declination (1) -8d 13m 30s and RA (2) 6h 44m 13.4s and Declination (2) -16d 41m 11s and measurement in hours")

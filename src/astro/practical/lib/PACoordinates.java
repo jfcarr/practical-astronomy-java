@@ -1,7 +1,7 @@
 package astro.practical.lib;
 
 import astro.practical.types.CoordinateType;
-import astro.practical.types.PAAngleMeasure;
+import astro.practical.types.AngleMeasure;
 import astro.practical.types.RiseSetStatus;
 import astro.practical.types.complex.Aberration;
 import astro.practical.types.complex.Angle;
@@ -285,11 +285,11 @@ public class PACoordinates {
 	 */
 	public Angle angleBetweenTwoObjects(double raLong1HourDeg, double raLong1Min, double raLong1Sec, double decLat1Deg,
 			double decLat1Min, double decLat1Sec, double raLong2HourDeg, double raLong2Min, double raLong2Sec,
-			double decLat2Deg, double decLat2Min, double decLat2Sec, PAAngleMeasure hourOrDegree) {
-		double raLong1Decimal = (hourOrDegree == PAAngleMeasure.Hours)
+			double decLat2Deg, double decLat2Min, double decLat2Sec, AngleMeasure hourOrDegree) {
+		double raLong1Decimal = (hourOrDegree == AngleMeasure.HOURS)
 				? PAMacros.hmsToDH(raLong1HourDeg, raLong1Min, raLong1Sec)
 				: PAMacros.degreesMinutesSecondsToDecimalDegrees(raLong1HourDeg, raLong1Min, raLong1Sec);
-		double raLong1Deg = (hourOrDegree == PAAngleMeasure.Hours)
+		double raLong1Deg = (hourOrDegree == AngleMeasure.HOURS)
 				? PAMacros.degreeHoursToDecimalDegrees(raLong1Decimal)
 				: raLong1Decimal;
 
@@ -297,10 +297,10 @@ public class PACoordinates {
 		double decLat1Deg1 = PAMacros.degreesMinutesSecondsToDecimalDegrees(decLat1Deg, decLat1Min, decLat1Sec);
 		double decLat1Rad = Math.toRadians(decLat1Deg1);
 
-		double raLong2Decimal = (hourOrDegree == PAAngleMeasure.Hours)
+		double raLong2Decimal = (hourOrDegree == AngleMeasure.HOURS)
 				? PAMacros.hmsToDH(raLong2HourDeg, raLong2Min, raLong2Sec)
 				: PAMacros.degreesMinutesSecondsToDecimalDegrees(raLong2HourDeg, raLong2Min, raLong2Sec);
-		double raLong2Deg = (hourOrDegree == PAAngleMeasure.Hours)
+		double raLong2Deg = (hourOrDegree == AngleMeasure.HOURS)
 				? PAMacros.degreeHoursToDecimalDegrees(raLong2Decimal)
 				: raLong2Decimal;
 		double raLong2Rad = Math.toRadians(raLong2Deg);
