@@ -34,7 +34,7 @@ var NAVTREE =
       [ "Class Hierarchy", "hierarchy.html", "hierarchy" ],
       [ "Class Members", "functions.html", [
         [ "All", "functions.html", "functions_dup" ],
-        [ "Functions", "functions_func.html", null ],
+        [ "Functions", "functions_func.html", "functions_func" ],
         [ "Variables", "functions_vars.html", null ]
       ] ]
     ] ],
@@ -47,7 +47,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "Aberration_8java.html",
-"classastro_1_1practical_1_1types_1_1complex_1_1ETwilightL3710.html#af88b946fb90d5f08b5fb740c70e98c10"
+"classastro_1_1practical_1_1types_1_1complex_1_1ETwilightL3710.html#a7c5c962413e7b54fde1f44db08451677"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

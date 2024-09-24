@@ -3,6 +3,7 @@ package astro.practical.lib;
 import astro.practical.types.RiseSetStatus;
 import astro.practical.types.TwilightStatus;
 import astro.practical.types.TwilightType;
+import astro.practical.types.complex.EquationOfTime;
 import astro.practical.types.complex.MorningAndEveningTwilight;
 import astro.practical.types.complex.PositionOfSun;
 import astro.practical.types.complex.SunDistanceAndAngularSize;
@@ -203,4 +204,23 @@ public class PASun {
                 return new MorningAndEveningTwilight(amTwilightBeginsHour, amTwilightBeginsMin, pmTwilightEndsHour,
                                 pmTwilightEndsMin, status);
         }
+
+        /**
+         * Calculate the equation of time. (The difference between the real Sun time and
+         * the mean Sun time.)
+         */
+        public EquationOfTime equationOfTime(double gwdateDay, int gwdateMonth, int gwdateYear) {
+                double sunLongitudeDeg = PAMacros.sunLong(12, 0, 0, 0, 0, gwdateDay, gwdateMonth, gwdateYear);
+                double sunRAHours = PAMacros.decimalDegreesToDegreeHours(
+                                PAMacros.ecRA(sunLongitudeDeg, 0, 0, 0, 0, 0, gwdateDay, gwdateMonth, gwdateYear));
+                double equivalentUTHours = PAMacros.greenwichSiderealTimeToUniversalTime(sunRAHours, 0, 0, gwdateDay,
+                                gwdateMonth, gwdateYear);
+                double equationOfTimeHours = equivalentUTHours - 12;
+
+                int equationOfTimeMin = PAMacros.decimalHoursMinute(equationOfTimeHours);
+                double equationOfTimeSec = PAMacros.decimalHoursSecond(equationOfTimeHours);
+
+                return new EquationOfTime(equationOfTimeMin, equationOfTimeSec);
+        }
+
 }

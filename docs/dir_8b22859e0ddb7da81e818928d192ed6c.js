@@ -9,6 +9,7 @@ var dir_8b22859e0ddb7da81e818928d192ed6c =
     [ "Date.java", "Date_8java.html", "Date_8java" ],
     [ "DateTime.java", "DateTime_8java.html", "DateTime_8java" ],
     [ "EclipticCoordinates.java", "EclipticCoordinates_8java.html", "EclipticCoordinates_8java" ],
+    [ "EquationOfTime.java", "EquationOfTime_8java.html", "EquationOfTime_8java" ],
     [ "EquatorialCoordinatesHA.java", "EquatorialCoordinatesHA_8java.html", "EquatorialCoordinatesHA_8java" ],
     [ "EquatorialCoordinatesRA.java", "EquatorialCoordinatesRA_8java.html", "EquatorialCoordinatesRA_8java" ],
     [ "ESunRSL3710.java", "ESunRSL3710_8java.html", "ESunRSL3710_8java" ],

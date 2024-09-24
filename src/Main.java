@@ -46,5 +46,6 @@ public class Main {
 		testSun.testSunDistanceAndAngularSize();
 		testSun.testSunriseAndSunset();
 		testSun.testMorningAndEveningTwilight();
+		testSun.testEquationOfTime();
 	}
 }
