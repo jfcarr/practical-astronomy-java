@@ -1,15 +1,15 @@
 package astro.practical.types.complex;
 
-import astro.practical.types.TwilightStatus;
+import astro.practical.types.RiseSetStatus;
 
-public class ETwilightL3710 {
+public class L3710 {
     public double a;
     public double x;
     public double y;
     public double la;
-    public TwilightStatus s;
+    public RiseSetStatus s;
 
-    public ETwilightL3710(double a, double x, double y, double la, TwilightStatus s) {
+    public L3710(double a, double x, double y, double la, RiseSetStatus s) {
         this.a = a;
         this.x = x;
         this.y = y;

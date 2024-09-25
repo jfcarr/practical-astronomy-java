@@ -6,15 +6,9 @@ import astro.practical.types.WarningFlag;
 import astro.practical.types.RiseSetStatus;
 import astro.practical.types.TwilightStatus;
 import astro.practical.types.TwilightType;
-import astro.practical.types.complex.ESunRSL3710;
-import astro.practical.types.complex.ETwilightL3710;
+import astro.practical.types.complex.L3710Twilight;
 import astro.practical.types.complex.ParallaxHelper;
-import astro.practical.types.complex.SunriseAZL3710;
-import astro.practical.types.complex.SunriseLCTL3710;
-import astro.practical.types.complex.SunsetAZL3710;
-import astro.practical.types.complex.SunsetLCTL3710;
-import astro.practical.types.complex.TwilightAMLCTL3710;
-import astro.practical.types.complex.TwilightPMLCTL3710;
+import astro.practical.types.complex.L3710;
 
 public class PAMacros {
 
@@ -1457,7 +1451,7 @@ public class PAMacros {
 		int gy = localCivilTimeGreenwichYear(12, 0, 0, ds, zc, ld, lm, ly);
 		double sr = sunLong(12, 0, 0, ds, zc, ld, lm, ly);
 
-		SunriseLCTL3710 result1 = sunriseLCTL3710(gd, gm, gy, sr, di, gp);
+		L3710 result1 = sunriseLCTL3710(gd, gm, gy, sr, di, gp);
 
 		double xx;
 		if (result1.s != RiseSetStatus.OK) {
@@ -1470,7 +1464,7 @@ public class PAMacros {
 				xx = -99.0;
 			} else {
 				sr = sunLong(ut, 0, 0, 0, 0, gd, gm, gy);
-				SunriseLCTL3710 result2 = sunriseLCTL3710(gd, gm, gy, sr, di, gp);
+				L3710 result2 = sunriseLCTL3710(gd, gm, gy, sr, di, gp);
 
 				if (result2.s != RiseSetStatus.OK) {
 					xx = -99.0;
@@ -1488,14 +1482,14 @@ public class PAMacros {
 	/**
 	 * Helper function for sunrise_lct()
 	 */
-	public static SunriseLCTL3710 sunriseLCTL3710(double gd, int gm, int gy, double sr, double di, double gp) {
+	public static L3710 sunriseLCTL3710(double gd, int gm, int gy, double sr, double di, double gp) {
 		double a = sr + nutatLong(gd, gm, gy) - 0.005694;
 		double x = ecRA(a, 0, 0, 0, 0, 0, gd, gm, gy);
 		double y = ecDec(a, 0, 0, 0, 0, 0, gd, gm, gy);
 		double la = riseSetLocalSiderealTimeRise(decimalDegreesToDegreeHours(x), 0, 0, y, 0, 0, di, gp);
 		RiseSetStatus s = eRS(decimalDegreesToDegreeHours(x), 0.0, 0.0, y, 0.0, 0.0, di, gp);
 
-		return new SunriseLCTL3710(a, x, y, la, s);
+		return new L3710(a, x, y, la, s);
 	}
 
 	/// Calculate local civil time of sunset.
@@ -1508,7 +1502,7 @@ public class PAMacros {
 		int gy = localCivilTimeGreenwichYear(12, 0, 0, ds, zc, ld, lm, ly);
 		double sr = sunLong(12, 0, 0, ds, zc, ld, lm, ly);
 
-		SunsetLCTL3710 result1 = sunsetLCTL3710(gd, gm, gy, sr, di, gp);
+		L3710 result1 = sunsetLCTL3710(gd, gm, gy, sr, di, gp);
 
 		double xx;
 		if (result1.s != RiseSetStatus.OK) {
@@ -1521,7 +1515,7 @@ public class PAMacros {
 				xx = -99.0;
 			} else {
 				sr = sunLong(ut, 0, 0, 0, 0, gd, gm, gy);
-				SunsetLCTL3710 result2 = sunsetLCTL3710(gd, gm, gy, sr, di, gp);
+				L3710 result2 = sunsetLCTL3710(gd, gm, gy, sr, di, gp);
 
 				if (result2.s != RiseSetStatus.OK) {
 					xx = -99;
@@ -1538,14 +1532,14 @@ public class PAMacros {
 	/**
 	 * Helper function for sunsetLCT().
 	 */
-	public static SunsetLCTL3710 sunsetLCTL3710(double gd, int gm, int gy, double sr, double di, double gp) {
+	public static L3710 sunsetLCTL3710(double gd, int gm, int gy, double sr, double di, double gp) {
 		double a = sr + nutatLong(gd, gm, gy) - 0.005694;
 		double x = ecRA(a, 0.0, 0.0, 0.0, 0.0, 0.0, gd, gm, gy);
 		double y = ecDec(a, 0.0, 0.0, 0.0, 0.0, 0.0, gd, gm, gy);
 		double la = riseSetLocalSiderealTimeSet(decimalDegreesToDegreeHours(x), 0, 0, y, 0, 0, di, gp);
 		RiseSetStatus s = eRS(decimalDegreesToDegreeHours(x), 0, 0, y, 0, 0, di, gp);
 
-		return new SunsetLCTL3710(a, x, y, la, s);
+		return new L3710(a, x, y, la, s);
 	}
 
 	/// Sunrise/Sunset calculation status.
@@ -1558,7 +1552,7 @@ public class PAMacros {
 		int gy = localCivilTimeGreenwichYear(12, 0, 0, ds, zc, ld, lm, ly);
 		double sr = sunLong(12, 0, 0, ds, zc, ld, lm, ly);
 
-		ESunRSL3710 result1 = eSunRSL3710(gd, gm, gy, sr, di, gp);
+		L3710 result1 = eSunRSL3710(gd, gm, gy, sr, di, gp);
 
 		if (result1.s != RiseSetStatus.OK) {
 			return result1.s;
@@ -1566,7 +1560,7 @@ public class PAMacros {
 			double x = localSiderealTimeToGreenwichSiderealTime(result1.la, 0, 0, gl);
 			double ut = greenwichSiderealTimeToUniversalTime(x, 0, 0, gd, gm, gy);
 			sr = sunLong(ut, 0, 0, 0, 0, gd, gm, gy);
-			ESunRSL3710 result2 = eSunRSL3710(gd, gm, gy, sr, di, gp);
+			L3710 result2 = eSunRSL3710(gd, gm, gy, sr, di, gp);
 			if (result2.s != RiseSetStatus.OK) {
 				return result2.s;
 			} else {
@@ -1586,14 +1580,14 @@ public class PAMacros {
 	/**
 	 * Helper function for e_sun_rs()
 	 */
-	public static ESunRSL3710 eSunRSL3710(double gd, int gm, int gy, double sr, double di, double gp) {
+	public static L3710 eSunRSL3710(double gd, int gm, int gy, double sr, double di, double gp) {
 		double a = sr + nutatLong(gd, gm, gy) - 0.005694;
 		double x = ecRA(a, 0, 0, 0, 0, 0, gd, gm, gy);
 		double y = ecDec(a, 0, 0, 0, 0, 0, gd, gm, gy);
 		double la = riseSetLocalSiderealTimeRise(decimalDegreesToDegreeHours(x), 0, 0, y, 0, 0, di, gp);
 		RiseSetStatus s = eRS(decimalDegreesToDegreeHours(x), 0, 0, y, 0, 0, di, gp);
 
-		return new ESunRSL3710(a, x, y, la, s);
+		return new L3710(a, x, y, la, s);
 	}
 
 	/**
@@ -1608,7 +1602,7 @@ public class PAMacros {
 		int gy = localCivilTimeGreenwichYear(12, 0, 0, ds, zc, ld, lm, ly);
 		double sr = sunLong(12, 0, 0, ds, zc, ld, lm, ly);
 
-		SunriseAZL3710 result1 = sunriseAZL3710(gd, gm, gy, sr, di, gp);
+		L3710 result1 = sunriseAZL3710(gd, gm, gy, sr, di, gp);
 
 		if (result1.s != RiseSetStatus.OK) {
 			return -99.0;
@@ -1622,7 +1616,7 @@ public class PAMacros {
 		}
 
 		sr = sunLong(ut, 0, 0, 0, 0, gd, gm, gy);
-		SunriseAZL3710 result2 = sunriseAZL3710(gd, gm, gy, sr, di, gp);
+		L3710 result2 = sunriseAZL3710(gd, gm, gy, sr, di, gp);
 
 		if (result2.s != RiseSetStatus.OK) {
 			return -99.0;
@@ -1634,14 +1628,14 @@ public class PAMacros {
 	/**
 	 * Helper function for sunrise_az()
 	 */
-	public static SunriseAZL3710 sunriseAZL3710(double gd, int gm, int gy, double sr, double di, double gp) {
+	public static L3710 sunriseAZL3710(double gd, int gm, int gy, double sr, double di, double gp) {
 		double a = sr + nutatLong(gd, gm, gy) - 0.005694;
 		double x = ecRA(a, 0, 0, 0, 0, 0, gd, gm, gy);
 		double y = ecDec(a, 0, 0, 0, 0, 0, gd, gm, gy);
 		double la = riseSetLocalSiderealTimeRise(decimalDegreesToDegreeHours(x), 0, 0, y, 0, 0, di, gp);
 		RiseSetStatus s = eRS(decimalDegreesToDegreeHours(x), 0, 0, y, 0, 0, di, gp);
 
-		return new SunriseAZL3710(a, x, y, la, s);
+		return new L3710(a, x, y, la, s);
 	}
 
 	/**
@@ -1656,7 +1650,7 @@ public class PAMacros {
 		int gy = localCivilTimeGreenwichYear(12, 0, 0, ds, zc, ld, lm, ly);
 		double sr = sunLong(12, 0, 0, ds, zc, ld, lm, ly);
 
-		SunsetAZL3710 result1 = sunsetAZL3710(gd, gm, gy, sr, di, gp);
+		L3710 result1 = sunsetAZL3710(gd, gm, gy, sr, di, gp);
 
 		if (result1.s != RiseSetStatus.OK) {
 			return -99.0;
@@ -1671,7 +1665,7 @@ public class PAMacros {
 
 		sr = sunLong(ut, 0, 0, 0, 0, gd, gm, gy);
 
-		SunsetAZL3710 result2 = sunsetAZL3710(gd, gm, gy, sr, di, gp);
+		L3710 result2 = sunsetAZL3710(gd, gm, gy, sr, di, gp);
 
 		if (result2.s != RiseSetStatus.OK) {
 			return -99.0;
@@ -1682,14 +1676,14 @@ public class PAMacros {
 	/**
 	 * Helper function for sunset_az()
 	 */
-	public static SunsetAZL3710 sunsetAZL3710(double gd, int gm, int gy, double sr, double di, double gp) {
+	public static L3710 sunsetAZL3710(double gd, int gm, int gy, double sr, double di, double gp) {
 		double a = sr + nutatLong(gd, gm, gy) - 0.005694;
 		double x = ecRA(a, 0, 0, 0, 0, 0, gd, gm, gy);
 		double y = ecDec(a, 0, 0, 0, 0, 0, gd, gm, gy);
 		double la = riseSetLocalSiderealTimeSet(decimalDegreesToDegreeHours(x), 0, 0, y, 0, 0, di, gp);
 		RiseSetStatus s = eRS(decimalDegreesToDegreeHours(x), 0, 0, y, 0, 0, di, gp);
 
-		return new SunsetAZL3710(a, x, y, la, s);
+		return new L3710(a, x, y, la, s);
 	}
 
 	/**
@@ -1806,7 +1800,7 @@ public class PAMacros {
 		int gy = localCivilTimeGreenwichYear(12, 0, 0, ds, zc, ld, lm, ly);
 		double sr = sunLong(12, 0, 0, ds, zc, ld, lm, ly);
 
-		TwilightAMLCTL3710 result1 = twilightAMLCTL3710(gd, gm, gy, sr, di, gp);
+		L3710 result1 = twilightAMLCTL3710(gd, gm, gy, sr, di, gp);
 
 		if (result1.s != RiseSetStatus.OK)
 			return -99.0;
@@ -1819,7 +1813,7 @@ public class PAMacros {
 
 		sr = sunLong(ut, 0, 0, 0, 0, gd, gm, gy);
 
-		TwilightAMLCTL3710 result2 = twilightAMLCTL3710(gd, gm, gy, sr, di, gp);
+		L3710 result2 = twilightAMLCTL3710(gd, gm, gy, sr, di, gp);
 
 		if (result2.s != RiseSetStatus.OK)
 			return -99.0;
@@ -1835,14 +1829,14 @@ public class PAMacros {
 	/**
 	 * Helper function for twilight_am_lct()
 	 */
-	public static TwilightAMLCTL3710 twilightAMLCTL3710(double gd, int gm, int gy, double sr, double di, double gp) {
+	public static L3710 twilightAMLCTL3710(double gd, int gm, int gy, double sr, double di, double gp) {
 		double a = sr + nutatLong(gd, gm, gy) - 0.005694;
 		double x = ecRA(a, 0, 0, 0, 0, 0, gd, gm, gy);
 		double y = ecDec(a, 0, 0, 0, 0, 0, gd, gm, gy);
 		double la = riseSetLocalSiderealTimeRise(decimalDegreesToDegreeHours(x), 0, 0, y, 0, 0, di, gp);
 		RiseSetStatus s = eRS(decimalDegreesToDegreeHours(x), 0, 0, y, 0, 0, di, gp);
 
-		return new TwilightAMLCTL3710(a, x, y, la, s);
+		return new L3710(a, x, y, la, s);
 	}
 
 	/**
@@ -1859,7 +1853,7 @@ public class PAMacros {
 		int gy = localCivilTimeGreenwichYear(12, 0, 0, ds, zc, ld, lm, ly);
 		double sr = sunLong(12, 0, 0, ds, zc, ld, lm, ly);
 
-		TwilightPMLCTL3710 result1 = twilightPMLCTL3710(gd, gm, gy, sr, di, gp);
+		L3710 result1 = twilightPMLCTL3710(gd, gm, gy, sr, di, gp);
 
 		if (result1.s != RiseSetStatus.OK)
 			return 0.0;
@@ -1872,7 +1866,7 @@ public class PAMacros {
 
 		sr = sunLong(ut, 0, 0, 0, 0, gd, gm, gy);
 
-		TwilightPMLCTL3710 result2 = twilightPMLCTL3710(gd, gm, gy, sr, di, gp);
+		L3710 result2 = twilightPMLCTL3710(gd, gm, gy, sr, di, gp);
 
 		if (result2.s != RiseSetStatus.OK)
 			return 0.0;
@@ -1886,14 +1880,14 @@ public class PAMacros {
 	/**
 	 * Helper function for twilight_pm_lct()
 	 */
-	public static TwilightPMLCTL3710 twilightPMLCTL3710(double gd, int gm, int gy, double sr, double di, double gp) {
+	public static L3710 twilightPMLCTL3710(double gd, int gm, int gy, double sr, double di, double gp) {
 		double a = sr + nutatLong(gd, gm, gy) - 0.005694;
 		double x = ecRA(a, 0, 0, 0, 0, 0, gd, gm, gy);
 		double y = ecDec(a, 0, 0, 0, 0, 0, gd, gm, gy);
 		double la = riseSetLocalSiderealTimeSet(decimalDegreesToDegreeHours(x), 0, 0, y, 0, 0, di, gp);
 		RiseSetStatus s = eRS(decimalDegreesToDegreeHours(x), 0, 0, y, 0, 0, di, gp);
 
-		return new TwilightPMLCTL3710(a, x, y, la, s);
+		return new L3710(a, x, y, la, s);
 	}
 
 	/**
@@ -1910,7 +1904,7 @@ public class PAMacros {
 		int gy = localCivilTimeGreenwichYear(12, 0, 0, ds, zc, ld, lm, ly);
 		double sr = sunLong(12, 0, 0, ds, zc, ld, lm, ly);
 
-		ETwilightL3710 result1 = eTwilightL3710(gd, gm, gy, sr, di, gp);
+		L3710Twilight result1 = eTwilightL3710(gd, gm, gy, sr, di, gp);
 
 		if (result1.s != TwilightStatus.OK)
 			return result1.s;
@@ -1919,7 +1913,7 @@ public class PAMacros {
 		double ut = greenwichSiderealTimeToUniversalTime(x, 0, 0, gd, gm, gy);
 		sr = sunLong(ut, 0, 0, 0, 0, gd, gm, gy);
 
-		ETwilightL3710 result2 = eTwilightL3710(gd, gm, gy, sr, di, gp);
+		L3710Twilight result2 = eTwilightL3710(gd, gm, gy, sr, di, gp);
 
 		if (result2.s != TwilightStatus.OK)
 			return result2.s;
@@ -1938,7 +1932,7 @@ public class PAMacros {
 	/**
 	 * Helper function for e_twilight()
 	 */
-	public static ETwilightL3710 eTwilightL3710(double gd, int gm, int gy, double sr, double di, double gp) {
+	public static L3710Twilight eTwilightL3710(double gd, int gm, int gy, double sr, double di, double gp) {
 		double a = sr + nutatLong(gd, gm, gy) - 0.005694;
 		double x = ecRA(a, 0, 0, 0, 0, 0, gd, gm, gy);
 		double y = ecDec(a, 0, 0, 0, 0, 0, gd, gm, gy);
@@ -1951,7 +1945,7 @@ public class PAMacros {
 		if (s == RiseSetStatus.NEVER_RISES)
 			ts = TwilightStatus.SUN_TOO_FAR_BELOW_HORIZON;
 
-		return new ETwilightL3710(a, x, y, la, ts);
+		return new L3710Twilight(a, x, y, la, ts);
 	}
 
 	/**
