@@ -16,7 +16,7 @@ var searchData=
   ['equatorialcoordinatetogalacticcoordinate_13',['equatorialCoordinateToGalacticCoordinate',['../classastro_1_1practical_1_1lib_1_1PACoordinates.html#a9ce8c95b60c9886960a5ca4fd26b525b',1,'astro::practical::lib::PACoordinates']]],
   ['ers_14',['eRS',['../classastro_1_1practical_1_1lib_1_1PAMacros.html#a40c2ad08786c28cd80f8afc21429bcd8',1,'astro::practical::lib::PAMacros']]],
   ['esunrs_15',['eSunRS',['../classastro_1_1practical_1_1lib_1_1PAMacros.html#af52ab4812d1b2f451f2b8476e38055a1',1,'astro::practical::lib::PAMacros']]],
-  ['esunrsl3710_16',['esunrsl3710',['../classastro_1_1practical_1_1types_1_1complex_1_1ESunRSL3710.html#a227b9c2e4607f1917cd782b65ce61969',1,'astro.practical.types.complex.ESunRSL3710.ESunRSL3710()'],['../classastro_1_1practical_1_1lib_1_1PAMacros.html#a8cdd09b91962377da8414baba2bf26e9',1,'astro.practical.lib.PAMacros.eSunRSL3710(double gd, int gm, int gy, double sr, double di, double gp)']]],
+  ['esunrsl3710_16',['eSunRSL3710',['../classastro_1_1practical_1_1lib_1_1PAMacros.html#a8d487f370219ae27e75e88edb748c2bb',1,'astro::practical::lib::PAMacros']]],
   ['etwilight_17',['eTwilight',['../classastro_1_1practical_1_1lib_1_1PAMacros.html#ac02a6da42e96f9e92b9ab410d821c429',1,'astro::practical::lib::PAMacros']]],
-  ['etwilightl3710_18',['etwilightl3710',['../classastro_1_1practical_1_1lib_1_1PAMacros.html#a33eb5356d90302abee7dce507e25731a',1,'astro.practical.lib.PAMacros.eTwilightL3710()'],['../classastro_1_1practical_1_1types_1_1complex_1_1ETwilightL3710.html#abba48ee6c85b21b15345759638718a83',1,'astro.practical.types.complex.ETwilightL3710.ETwilightL3710()']]]
+  ['etwilightl3710_18',['eTwilightL3710',['../classastro_1_1practical_1_1lib_1_1PAMacros.html#ab7e3f94ceee8a327d7f4a02359b1a4a5',1,'astro::practical::lib::PAMacros']]]
 ];

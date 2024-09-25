@@ -6,7 +6,7 @@ var searchData=
   ['testcarringtonrotationnumber_3',['testCarringtonRotationNumber',['../classTestCoordinates.html#a1389bff3519166d47e96aea6daa1df4e',1,'TestCoordinates']]],
   ['testcivildatetodaynumber_4',['testCivilDateToDayNumber',['../classTestDateTime.html#a4e68f30151eaf4850b62e363f42542ef',1,'TestDateTime']]],
   ['testciviltimetofromdecimalhours_5',['testCivilTimeToFromDecimalHours',['../classTestDateTime.html#a2c88e6819c73795d056d58b4c5981fb8',1,'TestDateTime']]],
-  ['testcoordinates_6',['testcoordinates',['../classTestCoordinates.html#a22922264bf821aa17aeebaba0bf55ab1',1,'TestCoordinates.TestCoordinates()'],['../classMain.html#a782c36108b1ec82a5ce456394cafdb50',1,'Main.testCoordinates()']]],
+  ['testcoordinates_6',['testcoordinates',['../classMain.html#a782c36108b1ec82a5ce456394cafdb50',1,'Main.testCoordinates()'],['../classTestCoordinates.html#a22922264bf821aa17aeebaba0bf55ab1',1,'TestCoordinates.TestCoordinates()']]],
   ['testcorrectforaberration_7',['testCorrectForAberration',['../classTestCoordinates.html#a0bc145beb0b8dbccd43eab173cd1ef71',1,'TestCoordinates']]],
   ['testcorrectforprecession_8',['testCorrectForPrecession',['../classTestCoordinates.html#abaa787ed3361bc4bc5240b87cfb9f35f',1,'TestCoordinates']]],
   ['testdateofeaster_9',['testDateOfEaster',['../classTestDateTime.html#aacab4bb177ff69590e9af83912075418',1,'TestDateTime']]],
@@ -36,7 +36,7 @@ var searchData=
   ['time_33',['Time',['../classastro_1_1practical_1_1types_1_1complex_1_1Time.html#a134fdcf88f194bf704d93ef7e07e82aa',1,'astro::practical::types::complex::Time']]],
   ['trueanomaly_34',['trueAnomaly',['../classastro_1_1practical_1_1lib_1_1PAMacros.html#a75c31010344aaa36374d002051feada7',1,'astro::practical::lib::PAMacros']]],
   ['twilightamlct_35',['twilightAMLCT',['../classastro_1_1practical_1_1lib_1_1PAMacros.html#a021742ae21a2a11c99e77ad8ff641480',1,'astro::practical::lib::PAMacros']]],
-  ['twilightamlctl3710_36',['twilightamlctl3710',['../classastro_1_1practical_1_1types_1_1complex_1_1TwilightAMLCTL3710.html#a95c5e50aae8650c86ef96e3cfd366905',1,'astro.practical.types.complex.TwilightAMLCTL3710.TwilightAMLCTL3710()'],['../classastro_1_1practical_1_1lib_1_1PAMacros.html#a00a03c8d5d6e1f9729af02bd34d51ef7',1,'astro.practical.lib.PAMacros.twilightAMLCTL3710(double gd, int gm, int gy, double sr, double di, double gp)']]],
+  ['twilightamlctl3710_36',['twilightAMLCTL3710',['../classastro_1_1practical_1_1lib_1_1PAMacros.html#ade6000e387904117977d1e31fd570591',1,'astro::practical::lib::PAMacros']]],
   ['twilightpmlct_37',['twilightPMLCT',['../classastro_1_1practical_1_1lib_1_1PAMacros.html#ae5e6b1f59acccf37d6f6d9473c1cfeed',1,'astro::practical::lib::PAMacros']]],
-  ['twilightpmlctl3710_38',['twilightpmlctl3710',['../classastro_1_1practical_1_1types_1_1complex_1_1TwilightPMLCTL3710.html#afaeb40f78bd8938ce6e5751afd22398c',1,'astro.practical.types.complex.TwilightPMLCTL3710.TwilightPMLCTL3710()'],['../classastro_1_1practical_1_1lib_1_1PAMacros.html#a543e1b311f395422d90d2cefc102a3f6',1,'astro.practical.lib.PAMacros.twilightPMLCTL3710()']]]
+  ['twilightpmlctl3710_38',['twilightPMLCTL3710',['../classastro_1_1practical_1_1lib_1_1PAMacros.html#aee887ce4a829cfab75445fd772d074c3',1,'astro::practical::lib::PAMacros']]]
 ];
