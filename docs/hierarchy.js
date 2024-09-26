@@ -1,61 +1,61 @@
 var hierarchy =
 [
-    [ "Aberration", "classastro_1_1practical_1_1types_1_1complex_1_1Aberration.html", null ],
-    [ "Angle", "classastro_1_1practical_1_1types_1_1complex_1_1Angle.html", null ],
+    [ "Aberration", "classastro_1_1practical_1_1models_1_1Aberration.html", null ],
+    [ "Angle", "classastro_1_1practical_1_1models_1_1Angle.html", null ],
     [ "AngleMeasure", "enumastro_1_1practical_1_1types_1_1AngleMeasure.html", null ],
-    [ "CoordinatesLongLat", "classastro_1_1practical_1_1types_1_1complex_1_1CoordinatesLongLat.html", [
-      [ "EclipticCoordinates", "classastro_1_1practical_1_1types_1_1complex_1_1EclipticCoordinates.html", null ],
-      [ "GalacticCoordinates", "classastro_1_1practical_1_1types_1_1complex_1_1GalacticCoordinates.html", null ]
+    [ "CoordinatesLongLat", "classastro_1_1practical_1_1models_1_1CoordinatesLongLat.html", [
+      [ "EclipticCoordinates", "classastro_1_1practical_1_1models_1_1EclipticCoordinates.html", null ],
+      [ "GalacticCoordinates", "classastro_1_1practical_1_1models_1_1GalacticCoordinates.html", null ]
     ] ],
     [ "CoordinateType", "enumastro_1_1practical_1_1types_1_1CoordinateType.html", null ],
-    [ "Date", "classastro_1_1practical_1_1types_1_1complex_1_1Date.html", [
-      [ "CivilDate", "classastro_1_1practical_1_1types_1_1complex_1_1CivilDate.html", null ]
+    [ "Date", "classastro_1_1practical_1_1models_1_1Date.html", [
+      [ "CivilDate", "classastro_1_1practical_1_1models_1_1CivilDate.html", null ]
     ] ],
-    [ "DateTime", "classastro_1_1practical_1_1types_1_1complex_1_1DateTime.html", [
-      [ "CivilDateTime", "classastro_1_1practical_1_1types_1_1complex_1_1CivilDateTime.html", null ],
-      [ "UniversalDateTime", "classastro_1_1practical_1_1types_1_1complex_1_1UniversalDateTime.html", null ]
+    [ "DateTime", "classastro_1_1practical_1_1models_1_1DateTime.html", [
+      [ "CivilDateTime", "classastro_1_1practical_1_1models_1_1CivilDateTime.html", null ],
+      [ "UniversalDateTime", "classastro_1_1practical_1_1models_1_1UniversalDateTime.html", null ]
     ] ],
-    [ "EquationOfTime", "classastro_1_1practical_1_1types_1_1complex_1_1EquationOfTime.html", null ],
-    [ "EquatorialCoordinatesHA", "classastro_1_1practical_1_1types_1_1complex_1_1EquatorialCoordinatesHA.html", null ],
-    [ "HeliographicCoordinates", "classastro_1_1practical_1_1types_1_1complex_1_1HeliographicCoordinates.html", null ],
-    [ "HorizonCoordinates", "classastro_1_1practical_1_1types_1_1complex_1_1HorizonCoordinates.html", null ],
-    [ "L3710", "classastro_1_1practical_1_1types_1_1complex_1_1L3710.html", null ],
-    [ "L3710Twilight", "classastro_1_1practical_1_1types_1_1complex_1_1L3710Twilight.html", null ],
+    [ "EquationOfTime", "classastro_1_1practical_1_1models_1_1EquationOfTime.html", null ],
+    [ "EquatorialCoordinatesHA", "classastro_1_1practical_1_1models_1_1EquatorialCoordinatesHA.html", null ],
+    [ "HeliographicCoordinates", "classastro_1_1practical_1_1models_1_1HeliographicCoordinates.html", null ],
+    [ "HorizonCoordinates", "classastro_1_1practical_1_1models_1_1HorizonCoordinates.html", null ],
+    [ "L3710", "classastro_1_1practical_1_1models_1_1L3710.html", null ],
+    [ "L3710Twilight", "classastro_1_1practical_1_1models_1_1L3710Twilight.html", null ],
     [ "Main", "classMain.html", null ],
-    [ "MorningAndEveningTwilight", "classastro_1_1practical_1_1types_1_1complex_1_1MorningAndEveningTwilight.html", null ],
-    [ "Nutation", "classastro_1_1practical_1_1types_1_1complex_1_1Nutation.html", null ],
+    [ "MorningAndEveningTwilight", "classastro_1_1practical_1_1models_1_1MorningAndEveningTwilight.html", null ],
+    [ "Nutation", "classastro_1_1practical_1_1models_1_1Nutation.html", null ],
     [ "PACoordinates", "classastro_1_1practical_1_1lib_1_1PACoordinates.html", null ],
     [ "PADateTime", "classastro_1_1practical_1_1lib_1_1PADateTime.html", null ],
     [ "PAMacros", "classastro_1_1practical_1_1lib_1_1PAMacros.html", null ],
     [ "PAPlanet", "classastro_1_1practical_1_1lib_1_1PAPlanet.html", null ],
-    [ "ParallaxHelper", "classastro_1_1practical_1_1types_1_1complex_1_1ParallaxHelper.html", null ],
+    [ "ParallaxHelper", "classastro_1_1practical_1_1models_1_1ParallaxHelper.html", null ],
     [ "PASun", "classastro_1_1practical_1_1lib_1_1PASun.html", null ],
     [ "PAUtil", "classastro_1_1practical_1_1lib_1_1PAUtil.html", null ],
     [ "PlanetData", "classastro_1_1practical_1_1models_1_1data_1_1PlanetData.html", null ],
     [ "PlanetInfo", "classastro_1_1practical_1_1data_1_1PlanetInfo.html", null ],
-    [ "PlanetPosition", "classastro_1_1practical_1_1types_1_1complex_1_1PlanetPosition.html", null ],
-    [ "PositionOfSun", "classastro_1_1practical_1_1types_1_1complex_1_1PositionOfSun.html", null ],
-    [ "RightAscensionDeclination", "classastro_1_1practical_1_1types_1_1complex_1_1RightAscensionDeclination.html", [
-      [ "EquatorialCoordinatesRA", "classastro_1_1practical_1_1types_1_1complex_1_1EquatorialCoordinatesRA.html", null ]
+    [ "PlanetPosition", "classastro_1_1practical_1_1models_1_1PlanetPosition.html", null ],
+    [ "PositionOfSun", "classastro_1_1practical_1_1models_1_1PositionOfSun.html", null ],
+    [ "RightAscensionDeclination", "classastro_1_1practical_1_1models_1_1RightAscensionDeclination.html", [
+      [ "EquatorialCoordinatesRA", "classastro_1_1practical_1_1models_1_1EquatorialCoordinatesRA.html", null ]
     ] ],
-    [ "RiseSet", "classastro_1_1practical_1_1types_1_1complex_1_1RiseSet.html", null ],
+    [ "RiseSet", "classastro_1_1practical_1_1models_1_1RiseSet.html", null ],
     [ "RiseSetStatus", "enumastro_1_1practical_1_1types_1_1RiseSetStatus.html", null ],
-    [ "SelenographicCoordinates1", "classastro_1_1practical_1_1types_1_1complex_1_1SelenographicCoordinates1.html", null ],
-    [ "SelenographicCoordinates2", "classastro_1_1practical_1_1types_1_1complex_1_1SelenographicCoordinates2.html", null ],
-    [ "SunDistanceAndAngularSize", "classastro_1_1practical_1_1types_1_1complex_1_1SunDistanceAndAngularSize.html", null ],
-    [ "SunriseAndSunset", "classastro_1_1practical_1_1types_1_1complex_1_1SunriseAndSunset.html", null ],
+    [ "SelenographicCoordinates1", "classastro_1_1practical_1_1models_1_1SelenographicCoordinates1.html", null ],
+    [ "SelenographicCoordinates2", "classastro_1_1practical_1_1models_1_1SelenographicCoordinates2.html", null ],
+    [ "SunDistanceAndAngularSize", "classastro_1_1practical_1_1models_1_1SunDistanceAndAngularSize.html", null ],
+    [ "SunriseAndSunset", "classastro_1_1practical_1_1models_1_1SunriseAndSunset.html", null ],
     [ "TestCoordinates", "classTestCoordinates.html", null ],
     [ "TestDateTime", "classTestDateTime.html", null ],
     [ "TestLib", "classastro_1_1practical_1_1test_1_1TestLib.html", null ],
     [ "TestPlanet", "classTestPlanet.html", null ],
     [ "TestSun", "classTestSun.html", null ],
-    [ "Time", "classastro_1_1practical_1_1types_1_1complex_1_1Time.html", [
-      [ "CivilTime", "classastro_1_1practical_1_1types_1_1complex_1_1CivilTime.html", null ],
-      [ "GreenwichSiderealTime", "classastro_1_1practical_1_1types_1_1complex_1_1GreenwichSiderealTime.html", null ],
-      [ "HourAngle", "classastro_1_1practical_1_1types_1_1complex_1_1HourAngle.html", null ],
-      [ "LocalSiderealTime", "classastro_1_1practical_1_1types_1_1complex_1_1LocalSiderealTime.html", null ],
-      [ "RightAscension", "classastro_1_1practical_1_1types_1_1complex_1_1RightAscension.html", null ],
-      [ "UniversalTime", "classastro_1_1practical_1_1types_1_1complex_1_1UniversalTime.html", null ]
+    [ "Time", "classastro_1_1practical_1_1models_1_1Time.html", [
+      [ "CivilTime", "classastro_1_1practical_1_1models_1_1CivilTime.html", null ],
+      [ "GreenwichSiderealTime", "classastro_1_1practical_1_1models_1_1GreenwichSiderealTime.html", null ],
+      [ "HourAngle", "classastro_1_1practical_1_1models_1_1HourAngle.html", null ],
+      [ "LocalSiderealTime", "classastro_1_1practical_1_1models_1_1LocalSiderealTime.html", null ],
+      [ "RightAscension", "classastro_1_1practical_1_1models_1_1RightAscension.html", null ],
+      [ "UniversalTime", "classastro_1_1practical_1_1models_1_1UniversalTime.html", null ]
     ] ],
     [ "TwilightStatus", "enumastro_1_1practical_1_1types_1_1TwilightStatus.html", null ],
     [ "TwilightType", "enumastro_1_1practical_1_1types_1_1TwilightType.html", null ],

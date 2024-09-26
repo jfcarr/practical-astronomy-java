@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['date_0',['Date',['../classastro_1_1practical_1_1types_1_1complex_1_1Date.html#a85b969ba94dd6940c727fe8f91590a68',1,'astro::practical::types::complex::Date']]],
-  ['datetime_1',['DateTime',['../classastro_1_1practical_1_1types_1_1complex_1_1DateTime.html#a9312e3bbcc80dc8c52a89bf74eba3493',1,'astro::practical::types::complex::DateTime']]],
+  ['date_0',['Date',['../classastro_1_1practical_1_1models_1_1Date.html#a85b969ba94dd6940c727fe8f91590a68',1,'astro::practical::models::Date']]],
+  ['datetime_1',['DateTime',['../classastro_1_1practical_1_1models_1_1DateTime.html#a9312e3bbcc80dc8c52a89bf74eba3493',1,'astro::practical::models::DateTime']]],
   ['decimaldegreesdegrees_2',['decimalDegreesDegrees',['../classastro_1_1practical_1_1lib_1_1PAMacros.html#ab78ff0f9ed8803437d341aba37ae72f5',1,'astro::practical::lib::PAMacros']]],
   ['decimaldegreesminutes_3',['decimalDegreesMinutes',['../classastro_1_1practical_1_1lib_1_1PAMacros.html#ab5082700e793463508aed2b4f4bccb5f',1,'astro::practical::lib::PAMacros']]],
   ['decimaldegreesseconds_4',['decimalDegreesSeconds',['../classastro_1_1practical_1_1lib_1_1PAMacros.html#ad11f9008e32f59f1d16c23ef098ab02d',1,'astro::practical::lib::PAMacros']]],
