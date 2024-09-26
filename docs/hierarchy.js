@@ -27,9 +27,13 @@ var hierarchy =
     [ "PACoordinates", "classastro_1_1practical_1_1lib_1_1PACoordinates.html", null ],
     [ "PADateTime", "classastro_1_1practical_1_1lib_1_1PADateTime.html", null ],
     [ "PAMacros", "classastro_1_1practical_1_1lib_1_1PAMacros.html", null ],
+    [ "PAPlanet", "classastro_1_1practical_1_1lib_1_1PAPlanet.html", null ],
     [ "ParallaxHelper", "classastro_1_1practical_1_1types_1_1complex_1_1ParallaxHelper.html", null ],
     [ "PASun", "classastro_1_1practical_1_1lib_1_1PASun.html", null ],
     [ "PAUtil", "classastro_1_1practical_1_1lib_1_1PAUtil.html", null ],
+    [ "PlanetData", "classastro_1_1practical_1_1models_1_1data_1_1PlanetData.html", null ],
+    [ "PlanetInfo", "classastro_1_1practical_1_1data_1_1PlanetInfo.html", null ],
+    [ "PlanetPosition", "classastro_1_1practical_1_1types_1_1complex_1_1PlanetPosition.html", null ],
     [ "PositionOfSun", "classastro_1_1practical_1_1types_1_1complex_1_1PositionOfSun.html", null ],
     [ "RightAscensionDeclination", "classastro_1_1practical_1_1types_1_1complex_1_1RightAscensionDeclination.html", [
       [ "EquatorialCoordinatesRA", "classastro_1_1practical_1_1types_1_1complex_1_1EquatorialCoordinatesRA.html", null ]
@@ -43,6 +47,7 @@ var hierarchy =
     [ "TestCoordinates", "classTestCoordinates.html", null ],
     [ "TestDateTime", "classTestDateTime.html", null ],
     [ "TestLib", "classastro_1_1practical_1_1test_1_1TestLib.html", null ],
+    [ "TestPlanet", "classTestPlanet.html", null ],
     [ "TestSun", "classTestSun.html", null ],
     [ "Time", "classastro_1_1practical_1_1types_1_1complex_1_1Time.html", [
       [ "CivilTime", "classastro_1_1practical_1_1types_1_1complex_1_1CivilTime.html", null ],

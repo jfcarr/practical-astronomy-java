@@ -3,6 +3,7 @@ public class Main {
 		testDateTime();
 		testCoordinates();
 		testSun();
+		testPlanet();
 	}
 
 	public static void testDateTime() {
@@ -48,5 +49,11 @@ public class Main {
 		testSun.testMorningAndEveningTwilight();
 		testSun.testEquationOfTime();
 		testSun.testSolarElongation();
+	}
+
+	public static void testPlanet() {
+		TestPlanet testPlanet = new TestPlanet();
+
+		testPlanet.testApproximatePositionOfPlanet();
 	}
 }

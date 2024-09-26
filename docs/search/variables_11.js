@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['warning_0',['WARNING',['../enumastro_1_1practical_1_1types_1_1WarningFlag.html#a1dfc73ab73898d3f4f348d462a5d126a',1,'astro::practical::types::WarningFlag']]],
-  ['warningflag_1',['warningFlag',['../classastro_1_1practical_1_1types_1_1complex_1_1UniversalTime.html#a83a7887d0ba3363d42077e14ad835018',1,'astro::practical::types::complex::UniversalTime']]]
+  ['v0_5fvisualmagnitude_0',['v0_VisualMagnitude',['../classastro_1_1practical_1_1models_1_1data_1_1PlanetData.html#a7d2352f012e0065cec1a33a569dbf90a',1,'astro::practical::models::data::PlanetData']]],
+  ['value_1',['value',['../enumastro_1_1practical_1_1types_1_1TwilightType.html#a899c1b74df7f8fda2fcd2c85d9185da8',1,'astro::practical::types::TwilightType']]]
 ];
