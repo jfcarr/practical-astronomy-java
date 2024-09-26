@@ -18,4 +18,3 @@ clean:
 	-rm -f astro/practical/models/data/*.class
 	-rm -f astro/practical/test/*.class
 	-rm -f astro/practical/types/*.class
-	-rm -f astro/practical/types/complex/*.class

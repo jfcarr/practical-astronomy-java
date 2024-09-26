@@ -1,13 +1,13 @@
 package astro.practical.lib;
 
+import astro.practical.models.CivilDate;
+import astro.practical.models.CivilDateTime;
+import astro.practical.models.CivilTime;
+import astro.practical.models.GreenwichSiderealTime;
+import astro.practical.models.LocalSiderealTime;
+import astro.practical.models.UniversalDateTime;
+import astro.practical.models.UniversalTime;
 import astro.practical.types.WarningFlag;
-import astro.practical.types.complex.CivilDate;
-import astro.practical.types.complex.CivilDateTime;
-import astro.practical.types.complex.CivilTime;
-import astro.practical.types.complex.GreenwichSiderealTime;
-import astro.practical.types.complex.LocalSiderealTime;
-import astro.practical.types.complex.UniversalDateTime;
-import astro.practical.types.complex.UniversalTime;
 
 /**
  * Date and Time Calculations

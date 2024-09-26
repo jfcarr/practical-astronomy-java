@@ -1,13 +1,13 @@
 import astro.practical.lib.PASun;
+import astro.practical.models.EquationOfTime;
+import astro.practical.models.MorningAndEveningTwilight;
+import astro.practical.models.PositionOfSun;
+import astro.practical.models.SunDistanceAndAngularSize;
+import astro.practical.models.SunriseAndSunset;
 import astro.practical.test.TestLib;
 import astro.practical.types.RiseSetStatus;
 import astro.practical.types.TwilightStatus;
 import astro.practical.types.TwilightType;
-import astro.practical.types.complex.EquationOfTime;
-import astro.practical.types.complex.MorningAndEveningTwilight;
-import astro.practical.types.complex.PositionOfSun;
-import astro.practical.types.complex.SunDistanceAndAngularSize;
-import astro.practical.types.complex.SunriseAndSunset;
 
 public class TestSun {
         PASun paSun;

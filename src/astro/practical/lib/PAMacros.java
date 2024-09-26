@@ -1,14 +1,14 @@
 package astro.practical.lib;
 
+import astro.practical.models.L3710;
+import astro.practical.models.L3710Twilight;
+import astro.practical.models.ParallaxHelper;
 import astro.practical.types.AngleMeasure;
 import astro.practical.types.CoordinateType;
 import astro.practical.types.WarningFlag;
 import astro.practical.types.RiseSetStatus;
 import astro.practical.types.TwilightStatus;
 import astro.practical.types.TwilightType;
-import astro.practical.types.complex.L3710Twilight;
-import astro.practical.types.complex.ParallaxHelper;
-import astro.practical.types.complex.L3710;
 
 public class PAMacros {
 

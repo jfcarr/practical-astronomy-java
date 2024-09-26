@@ -1,6 +1,6 @@
 import astro.practical.lib.PAPlanet;
+import astro.practical.models.PlanetPosition;
 import astro.practical.test.TestLib;
-import astro.practical.types.complex.PlanetPosition;
 
 public class TestPlanet {
     PAPlanet paPlanet;
