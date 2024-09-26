@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['x_0',['x',['../classastro_1_1practical_1_1types_1_1complex_1_1L3710.html#af88b946fb90d5f08b5fb740c70e98c10',1,'astro.practical.types.complex.L3710.x'],['../classastro_1_1practical_1_1types_1_1complex_1_1L3710Twilight.html#af88b946fb90d5f08b5fb740c70e98c10',1,'astro.practical.types.complex.L3710Twilight.x']]]
+  ['warning_0',['WARNING',['../enumastro_1_1practical_1_1types_1_1WarningFlag.html#a1dfc73ab73898d3f4f348d462a5d126a',1,'astro::practical::types::WarningFlag']]],
+  ['warningflag_1',['warningFlag',['../classastro_1_1practical_1_1types_1_1complex_1_1UniversalTime.html#a83a7887d0ba3363d42077e14ad835018',1,'astro::practical::types::complex::UniversalTime']]]
 ];

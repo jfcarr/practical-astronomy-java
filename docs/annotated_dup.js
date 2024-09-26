@@ -2,12 +2,21 @@ var annotated_dup =
 [
     [ "astro", null, [
       [ "practical", null, [
+        [ "data", "namespaceastro_1_1practical_1_1data.html", [
+          [ "PlanetInfo", "classastro_1_1practical_1_1data_1_1PlanetInfo.html", "classastro_1_1practical_1_1data_1_1PlanetInfo" ]
+        ] ],
         [ "lib", "namespaceastro_1_1practical_1_1lib.html", [
           [ "PACoordinates", "classastro_1_1practical_1_1lib_1_1PACoordinates.html", "classastro_1_1practical_1_1lib_1_1PACoordinates" ],
           [ "PADateTime", "classastro_1_1practical_1_1lib_1_1PADateTime.html", "classastro_1_1practical_1_1lib_1_1PADateTime" ],
           [ "PAMacros", "classastro_1_1practical_1_1lib_1_1PAMacros.html", null ],
+          [ "PAPlanet", "classastro_1_1practical_1_1lib_1_1PAPlanet.html", "classastro_1_1practical_1_1lib_1_1PAPlanet" ],
           [ "PASun", "classastro_1_1practical_1_1lib_1_1PASun.html", "classastro_1_1practical_1_1lib_1_1PASun" ],
           [ "PAUtil", "classastro_1_1practical_1_1lib_1_1PAUtil.html", null ]
+        ] ],
+        [ "models", null, [
+          [ "data", "namespaceastro_1_1practical_1_1models_1_1data.html", [
+            [ "PlanetData", "classastro_1_1practical_1_1models_1_1data_1_1PlanetData.html", "classastro_1_1practical_1_1models_1_1data_1_1PlanetData" ]
+          ] ]
         ] ],
         [ "test", "namespaceastro_1_1practical_1_1test.html", [
           [ "TestLib", "classastro_1_1practical_1_1test_1_1TestLib.html", "classastro_1_1practical_1_1test_1_1TestLib" ]
@@ -37,6 +46,7 @@ var annotated_dup =
             [ "MorningAndEveningTwilight", "classastro_1_1practical_1_1types_1_1complex_1_1MorningAndEveningTwilight.html", "classastro_1_1practical_1_1types_1_1complex_1_1MorningAndEveningTwilight" ],
             [ "Nutation", "classastro_1_1practical_1_1types_1_1complex_1_1Nutation.html", "classastro_1_1practical_1_1types_1_1complex_1_1Nutation" ],
             [ "ParallaxHelper", "classastro_1_1practical_1_1types_1_1complex_1_1ParallaxHelper.html", "classastro_1_1practical_1_1types_1_1complex_1_1ParallaxHelper" ],
+            [ "PlanetPosition", "classastro_1_1practical_1_1types_1_1complex_1_1PlanetPosition.html", "classastro_1_1practical_1_1types_1_1complex_1_1PlanetPosition" ],
             [ "PositionOfSun", "classastro_1_1practical_1_1types_1_1complex_1_1PositionOfSun.html", "classastro_1_1practical_1_1types_1_1complex_1_1PositionOfSun" ],
             [ "RightAscension", "classastro_1_1practical_1_1types_1_1complex_1_1RightAscension.html", "classastro_1_1practical_1_1types_1_1complex_1_1RightAscension" ],
             [ "RightAscensionDeclination", "classastro_1_1practical_1_1types_1_1complex_1_1RightAscensionDeclination.html", "classastro_1_1practical_1_1types_1_1complex_1_1RightAscensionDeclination" ],
@@ -61,5 +71,6 @@ var annotated_dup =
     [ "Main", "classMain.html", null ],
     [ "TestCoordinates", "classTestCoordinates.html", "classTestCoordinates" ],
     [ "TestDateTime", "classTestDateTime.html", "classTestDateTime" ],
+    [ "TestPlanet", "classTestPlanet.html", "classTestPlanet" ],
     [ "TestSun", "classTestSun.html", "classTestSun" ]
 ];

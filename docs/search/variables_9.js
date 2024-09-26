@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['obliquitydegrees_0',['obliquityDegrees',['../classastro_1_1practical_1_1types_1_1complex_1_1Nutation.html#a3af64624e839f19acedf1b4fb5c8fd16',1,'astro::practical::types::complex::Nutation']]],
-  ['ok_1',['ok',['../enumastro_1_1practical_1_1types_1_1RiseSetStatus.html#a509f04652b5e1b2d2b9e6bc121a87e50',1,'astro.practical.types.RiseSetStatus.OK'],['../enumastro_1_1practical_1_1types_1_1TwilightStatus.html#a509f04652b5e1b2d2b9e6bc121a87e50',1,'astro.practical.types.TwilightStatus.OK'],['../enumastro_1_1practical_1_1types_1_1WarningFlag.html#a509f04652b5e1b2d2b9e6bc121a87e50',1,'astro.practical.types.WarningFlag.OK']]]
+  ['name_0',['Name',['../classastro_1_1practical_1_1models_1_1data_1_1PlanetData.html#a934fa09ba291a97f43720640e4d83f25',1,'astro::practical::models::data::PlanetData']]],
+  ['nautical_1',['NAUTICAL',['../enumastro_1_1practical_1_1types_1_1TwilightType.html#a8bdc2d00ce42536b2c97a75d818fbbdd',1,'astro::practical::types::TwilightType']]],
+  ['never_5frises_2',['NEVER_RISES',['../enumastro_1_1practical_1_1types_1_1RiseSetStatus.html#a5637b321e97da22f4c42d6aa170c18d7',1,'astro::practical::types::RiseSetStatus']]],
+  ['node_5flongitudeascendingnode_3',['node_LongitudeAscendingNode',['../classastro_1_1practical_1_1models_1_1data_1_1PlanetData.html#a931ac73757066655564d11e87be0993c',1,'astro::practical::models::data::PlanetData']]]
 ];

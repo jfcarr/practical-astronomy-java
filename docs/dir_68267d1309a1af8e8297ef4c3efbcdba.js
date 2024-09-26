@@ -4,5 +4,6 @@ var dir_68267d1309a1af8e8297ef4c3efbcdba =
     [ "Main.java", "Main_8java.html", "Main_8java" ],
     [ "TestCoordinates.java", "TestCoordinates_8java.html", "TestCoordinates_8java" ],
     [ "TestDateTime.java", "TestDateTime_8java.html", "TestDateTime_8java" ],
+    [ "TestPlanet.java", "TestPlanet_8java.html", "TestPlanet_8java" ],
     [ "TestSun.java", "TestSun_8java.html", "TestSun_8java" ]
 ];

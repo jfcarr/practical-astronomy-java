@@ -20,7 +20,8 @@ var searchData=
   ['localsunriseminute_17',['localSunriseMinute',['../classastro_1_1practical_1_1types_1_1complex_1_1SunriseAndSunset.html#a7c035dae0cb9db036d3b9c40785bfd80',1,'astro::practical::types::complex::SunriseAndSunset']]],
   ['localsunsethour_18',['localSunsetHour',['../classastro_1_1practical_1_1types_1_1complex_1_1SunriseAndSunset.html#ae157aefa99bf122023f2cb01d33d45bd',1,'astro::practical::types::complex::SunriseAndSunset']]],
   ['localsunsetminute_19',['localSunsetMinute',['../classastro_1_1practical_1_1types_1_1complex_1_1SunriseAndSunset.html#a87111fdf6e18eb98a5be9d5db5405c68',1,'astro::practical::types::complex::SunriseAndSunset']]],
-  ['longitudedegrees_20',['longitudeDegrees',['../classastro_1_1practical_1_1types_1_1complex_1_1CoordinatesLongLat.html#a623d9e58238c87f269f583b6463e9a32',1,'astro::practical::types::complex::CoordinatesLongLat']]],
-  ['longitudeminutes_21',['longitudeMinutes',['../classastro_1_1practical_1_1types_1_1complex_1_1CoordinatesLongLat.html#ac48dc8a6362bfb343783cf025b5294c5',1,'astro::practical::types::complex::CoordinatesLongLat']]],
-  ['longitudeseconds_22',['longitudeSeconds',['../classastro_1_1practical_1_1types_1_1complex_1_1CoordinatesLongLat.html#ab24bcd7c469aebd058463fd3546a0e00',1,'astro::practical::types::complex::CoordinatesLongLat']]]
+  ['long_5flongitudeepoch_20',['long_LongitudeEpoch',['../classastro_1_1practical_1_1models_1_1data_1_1PlanetData.html#a8059043964722078c933563278826c45',1,'astro::practical::models::data::PlanetData']]],
+  ['longitudedegrees_21',['longitudeDegrees',['../classastro_1_1practical_1_1types_1_1complex_1_1CoordinatesLongLat.html#a623d9e58238c87f269f583b6463e9a32',1,'astro::practical::types::complex::CoordinatesLongLat']]],
+  ['longitudeminutes_22',['longitudeMinutes',['../classastro_1_1practical_1_1types_1_1complex_1_1CoordinatesLongLat.html#ac48dc8a6362bfb343783cf025b5294c5',1,'astro::practical::types::complex::CoordinatesLongLat']]],
+  ['longitudeseconds_23',['longitudeSeconds',['../classastro_1_1practical_1_1types_1_1complex_1_1CoordinatesLongLat.html#ab24bcd7c469aebd058463fd3546a0e00',1,'astro::practical::types::complex::CoordinatesLongLat']]]
 ];
