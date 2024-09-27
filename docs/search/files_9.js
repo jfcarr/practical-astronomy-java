@@ -7,8 +7,14 @@ var searchData=
   ['parallaxhelper_2ejava_4',['ParallaxHelper.java',['../ParallaxHelper_8java.html',1,'']]],
   ['pasun_2ejava_5',['PASun.java',['../PASun_8java.html',1,'']]],
   ['pautil_2ejava_6',['PAUtil.java',['../PAUtil_8java.html',1,'']]],
-  ['planetdata_2ejava_7',['PlanetData.java',['../PlanetData_8java.html',1,'']]],
-  ['planetinfo_2ejava_8',['PlanetInfo.java',['../PlanetInfo_8java.html',1,'']]],
-  ['planetposition_2ejava_9',['PlanetPosition.java',['../PlanetPosition_8java.html',1,'']]],
-  ['positionofsun_2ejava_10',['PositionOfSun.java',['../PositionOfSun_8java.html',1,'']]]
+  ['planetcoordinates_2ejava_7',['PlanetCoordinates.java',['../PlanetCoordinates_8java.html',1,'']]],
+  ['planetdata_2ejava_8',['PlanetData.java',['../PlanetData_8java.html',1,'']]],
+  ['planetdataprecise_2ejava_9',['PlanetDataPrecise.java',['../PlanetDataPrecise_8java.html',1,'']]],
+  ['planetinfo_2ejava_10',['PlanetInfo.java',['../PlanetInfo_8java.html',1,'']]],
+  ['planetlongl4685_2ejava_11',['PlanetLongL4685.java',['../PlanetLongL4685_8java.html',1,'']]],
+  ['planetlongl4735_2ejava_12',['PlanetLongL4735.java',['../PlanetLongL4735_8java.html',1,'']]],
+  ['planetlongl4810_2ejava_13',['PlanetLongL4810.java',['../PlanetLongL4810_8java.html',1,'']]],
+  ['planetlongl4945_2ejava_14',['PlanetLongL4945.java',['../PlanetLongL4945_8java.html',1,'']]],
+  ['planetposition_2ejava_15',['PlanetPosition.java',['../PlanetPosition_8java.html',1,'']]],
+  ['positionofsun_2ejava_16',['PositionOfSun.java',['../PositionOfSun_8java.html',1,'']]]
 ];

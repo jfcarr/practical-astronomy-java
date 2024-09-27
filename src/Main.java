@@ -55,5 +55,6 @@ public class Main {
 		TestPlanet testPlanet = new TestPlanet();
 
 		testPlanet.testApproximatePositionOfPlanet();
+		testPlanet.testPrecisePositionOfPlanet();
 	}
 }

@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['a_0',['a',['../classastro_1_1practical_1_1models_1_1L3710Twilight.html#a1031d0e0a97a340abfe0a6ab9e831045',1,'astro.practical.models.L3710Twilight.a'],['../classastro_1_1practical_1_1models_1_1L3710.html#a1031d0e0a97a340abfe0a6ab9e831045',1,'astro.practical.models.L3710.a']]],
+  ['a_0',['a',['../classastro_1_1practical_1_1models_1_1L3710Twilight.html#a1031d0e0a97a340abfe0a6ab9e831045',1,'astro.practical.models.L3710Twilight.a'],['../classastro_1_1practical_1_1models_1_1PlanetLongL4810.html#a1031d0e0a97a340abfe0a6ab9e831045',1,'astro.practical.models.PlanetLongL4810.a'],['../classastro_1_1practical_1_1models_1_1L3710.html#a1031d0e0a97a340abfe0a6ab9e831045',1,'astro.practical.models.L3710.a']]],
   ['altitudedegrees_1',['altitudeDegrees',['../classastro_1_1practical_1_1models_1_1HorizonCoordinates.html#a71140c42a94c47a1481676b1d3ac0125',1,'astro::practical::models::HorizonCoordinates']]],
   ['altitudeminutes_2',['altitudeMinutes',['../classastro_1_1practical_1_1models_1_1HorizonCoordinates.html#a11ac0292a93039d8c909f5f57417273b',1,'astro::practical::models::HorizonCoordinates']]],
   ['altitudeseconds_3',['altitudeSeconds',['../classastro_1_1practical_1_1models_1_1HorizonCoordinates.html#a99cbe98fc470c862dcd36270762b61b6',1,'astro::practical::models::HorizonCoordinates']]],
@@ -13,13 +13,14 @@ var searchData=
   ['apparentecllongdeg_10',['apparentEclLongDeg',['../classastro_1_1practical_1_1models_1_1Aberration.html#a45e774ddcd98bc96b28a7cff5b9ece64',1,'astro::practical::models::Aberration']]],
   ['apparentecllongmin_11',['apparentEclLongMin',['../classastro_1_1practical_1_1models_1_1Aberration.html#a6662827953364f39864d9df78f5bec4d',1,'astro::practical::models::Aberration']]],
   ['apparentecllongsec_12',['apparentEclLongSec',['../classastro_1_1practical_1_1models_1_1Aberration.html#a1ff58661f3f6d28fcfd2a17a4c151e37',1,'astro::practical::models::Aberration']]],
-  ['astronomical_13',['ASTRONOMICAL',['../enumastro_1_1practical_1_1types_1_1TwilightType.html#a85e53b2a1d1d13880b5a4fc91047968c',1,'astro::practical::types::TwilightType']]],
-  ['axis_5faxisorbit_14',['axis_AxisOrbit',['../classastro_1_1practical_1_1models_1_1data_1_1PlanetData.html#a0ba8a02d2e5ab801b3be6ed2b81f1029',1,'astro::practical::models::data::PlanetData']]],
-  ['azimuthdegrees_15',['azimuthDegrees',['../classastro_1_1practical_1_1models_1_1HorizonCoordinates.html#a5c67fdf7f8ad0c316418bb037d339b14',1,'astro::practical::models::HorizonCoordinates']]],
-  ['azimuthminutes_16',['azimuthMinutes',['../classastro_1_1practical_1_1models_1_1HorizonCoordinates.html#a7367ee8fee72c52b987583bd45676daf',1,'astro::practical::models::HorizonCoordinates']]],
-  ['azimuthofsunrisedeg_17',['azimuthOfSunriseDeg',['../classastro_1_1practical_1_1models_1_1SunriseAndSunset.html#a526a616ff9a48d800848a92a4cb0617a',1,'astro::practical::models::SunriseAndSunset']]],
-  ['azimuthofsunsetdeg_18',['azimuthOfSunsetDeg',['../classastro_1_1practical_1_1models_1_1SunriseAndSunset.html#aa4cc97d6e4d2d0f3798a4bbd8c164960',1,'astro::practical::models::SunriseAndSunset']]],
-  ['azimuthseconds_19',['azimuthSeconds',['../classastro_1_1practical_1_1models_1_1HorizonCoordinates.html#a603a97414cf495512a9ce79370db67e2',1,'astro::practical::models::HorizonCoordinates']]],
-  ['azrise_20',['azRise',['../classastro_1_1practical_1_1models_1_1RiseSet.html#a45bc5ba8bc432ff10c026c0218982523',1,'astro::practical::models::RiseSet']]],
-  ['azset_21',['azSet',['../classastro_1_1practical_1_1models_1_1RiseSet.html#a4e21a5f135bcfd5c21b0a21537f8e97c',1,'astro::practical::models::RiseSet']]]
+  ['apvalue_13',['APValue',['../classastro_1_1practical_1_1models_1_1data_1_1PlanetDataPrecise.html#a469e566c382ba40cde162556d96830f5',1,'astro::practical::models::data::PlanetDataPrecise']]],
+  ['astronomical_14',['ASTRONOMICAL',['../enumastro_1_1practical_1_1types_1_1TwilightType.html#a85e53b2a1d1d13880b5a4fc91047968c',1,'astro::practical::types::TwilightType']]],
+  ['axis_5faxisorbit_15',['axis_AxisOrbit',['../classastro_1_1practical_1_1models_1_1data_1_1PlanetData.html#a0ba8a02d2e5ab801b3be6ed2b81f1029',1,'astro::practical::models::data::PlanetData']]],
+  ['azimuthdegrees_16',['azimuthDegrees',['../classastro_1_1practical_1_1models_1_1HorizonCoordinates.html#a5c67fdf7f8ad0c316418bb037d339b14',1,'astro::practical::models::HorizonCoordinates']]],
+  ['azimuthminutes_17',['azimuthMinutes',['../classastro_1_1practical_1_1models_1_1HorizonCoordinates.html#a7367ee8fee72c52b987583bd45676daf',1,'astro::practical::models::HorizonCoordinates']]],
+  ['azimuthofsunrisedeg_18',['azimuthOfSunriseDeg',['../classastro_1_1practical_1_1models_1_1SunriseAndSunset.html#a526a616ff9a48d800848a92a4cb0617a',1,'astro::practical::models::SunriseAndSunset']]],
+  ['azimuthofsunsetdeg_19',['azimuthOfSunsetDeg',['../classastro_1_1practical_1_1models_1_1SunriseAndSunset.html#aa4cc97d6e4d2d0f3798a4bbd8c164960',1,'astro::practical::models::SunriseAndSunset']]],
+  ['azimuthseconds_20',['azimuthSeconds',['../classastro_1_1practical_1_1models_1_1HorizonCoordinates.html#a603a97414cf495512a9ce79370db67e2',1,'astro::practical::models::HorizonCoordinates']]],
+  ['azrise_21',['azRise',['../classastro_1_1practical_1_1models_1_1RiseSet.html#a45bc5ba8bc432ff10c026c0218982523',1,'astro::practical::models::RiseSet']]],
+  ['azset_22',['azSet',['../classastro_1_1practical_1_1models_1_1RiseSet.html#a4e21a5f135bcfd5c21b0a21537f8e97c',1,'astro::practical::models::RiseSet']]]
 ];

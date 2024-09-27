@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['heliographiccoordinates_0',['heliographiccoordinates',['../classastro_1_1practical_1_1models_1_1HeliographicCoordinates.html',1,'HeliographicCoordinates'],['../classastro_1_1practical_1_1models_1_1HeliographicCoordinates.html#a786950f2010648b13251f12d9f726223',1,'astro.practical.models.HeliographicCoordinates.HeliographicCoordinates()'],['../classastro_1_1practical_1_1lib_1_1PACoordinates.html#af76ca300ff74c945fd2d5d2462dfaa40',1,'astro.practical.lib.PACoordinates.heliographicCoordinates()']]],
+  ['heliographiccoordinates_0',['heliographiccoordinates',['../classastro_1_1practical_1_1models_1_1HeliographicCoordinates.html',1,'HeliographicCoordinates'],['../classastro_1_1practical_1_1lib_1_1PACoordinates.html#af76ca300ff74c945fd2d5d2462dfaa40',1,'astro.practical.lib.PACoordinates.heliographicCoordinates()'],['../classastro_1_1practical_1_1models_1_1HeliographicCoordinates.html#a786950f2010648b13251f12d9f726223',1,'astro.practical.models.HeliographicCoordinates.HeliographicCoordinates()']]],
   ['heliographiccoordinates_2ejava_1',['HeliographicCoordinates.java',['../HeliographicCoordinates_8java.html',1,'']]],
   ['heliolatdeg_2',['helioLatDeg',['../classastro_1_1practical_1_1models_1_1HeliographicCoordinates.html#a4489a454b8161825207054f17143bfc2',1,'astro::practical::models::HeliographicCoordinates']]],
   ['heliolongdeg_3',['helioLongDeg',['../classastro_1_1practical_1_1models_1_1HeliographicCoordinates.html#a1c4049381d6d5d607c6c4e0622db799f',1,'astro::practical::models::HeliographicCoordinates']]],

@@ -109,42 +109,44 @@ $(document).ready(function(){initNavTree('PlanetInfo_8java_source.html',''); ini
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
 <div class="foldopen" id="foldopen00010" data-start="{" data-end="}">
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="classastro_1_1practical_1_1data_1_1PlanetInfo.html#a2f28fd6431d9bad0ef423768238b5968">   10</a></span>        <span class="keyword">public</span> <a class="code hl_function" href="classastro_1_1practical_1_1data_1_1PlanetInfo.html#a2f28fd6431d9bad0ef423768238b5968">PlanetInfo</a>() {</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>                planetData = <span class="keyword">new</span> ArrayList&lt;&gt;();</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>                planetData.add(<span class="keyword">new</span> PlanetData(<span class="stringliteral">&quot;Mercury&quot;</span>, 0.24085, 75.5671, 77.612, 0.205627, 0.387098, 7.0051, 48.449,</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>                                6.74, -0.42));</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>                planetData.add(<span class="keyword">new</span> PlanetData(<span class="stringliteral">&quot;Venus&quot;</span>, 0.615207, 272.30044, 131.54, 0.006812, 0.723329, 3.3947, 76.769,</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>                                16.92, -4.4));</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>                planetData.add(<span class="keyword">new</span> PlanetData(<span class="stringliteral">&quot;Earth&quot;</span>, 0.999996, 99.556772, 103.2055, 0.016671, 0.999985, -99.0, -99.0,</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>                                -99.0, -99.0));</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>                planetData.add(<span class="keyword">new</span> PlanetData(<span class="stringliteral">&quot;Mars&quot;</span>, 1.880765, 109.09646, 336.217, 0.093348, 1.523689, 1.8497, 49.632,</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>                                9.36, -1.52));</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>                planetData.add(<span class="keyword">new</span> PlanetData(<span class="stringliteral">&quot;Jupiter&quot;</span>, 11.857911, 337.917132, 14.6633, 0.048907, 5.20278, 1.3035,</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>                                100.595, 196.74, -9.4));</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>                planetData.add(<span class="keyword">new</span> PlanetData(<span class="stringliteral">&quot;Saturn&quot;</span>, 29.310579, 172.398316, 89.567, 0.053853, 9.51134, 2.4873,</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>                                113.752, 165.6, -8.88));</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>                planetData.add(<span class="keyword">new</span> PlanetData(<span class="stringliteral">&quot;Uranus&quot;</span>, 84.039492, 356.135400, 172.884833, 0.046321, 19.21814, 0.773059,</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>                                73.926961, 65.8, -7.19));</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>                planetData.add(<span class="keyword">new</span> PlanetData(<span class="stringliteral">&quot;Neptune&quot;</span>, 165.845392, 326.895127, 23.07, 0.010483, 30.1985, 1.7673,</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>                                131.879, 62.2, -6.87));</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        }</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>                planetData = <span class="keyword">new</span> ArrayList&lt;&gt;() {</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>                        {</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>                                add(<span class="keyword">new</span> PlanetData(<span class="stringliteral">&quot;Mercury&quot;</span>, 0.24085, 75.5671, 77.612, 0.205627, 0.387098, 7.0051,</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>                                                48.449, 6.74, -0.42));</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>                                add(<span class="keyword">new</span> PlanetData(<span class="stringliteral">&quot;Venus&quot;</span>, 0.615207, 272.30044, 131.54, 0.006812, 0.723329, 3.3947,</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>                                                76.769, 16.92, -4.4));</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>                                add(<span class="keyword">new</span> PlanetData(<span class="stringliteral">&quot;Earth&quot;</span>, 0.999996, 99.556772, 103.2055, 0.016671, 0.999985, -99.0,</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>                                                -99.0, -99.0, -99.0));</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>                                add(<span class="keyword">new</span> PlanetData(<span class="stringliteral">&quot;Mars&quot;</span>, 1.880765, 109.09646, 336.217, 0.093348, 1.523689, 1.8497,</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>                                                49.632, 9.36, -1.52));</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>                                add(<span class="keyword">new</span> PlanetData(<span class="stringliteral">&quot;Jupiter&quot;</span>, 11.857911, 337.917132, 14.6633, 0.048907, 5.20278, 1.3035,</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>                                                100.595, 196.74, -9.4));</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>                                add(<span class="keyword">new</span> PlanetData(<span class="stringliteral">&quot;Saturn&quot;</span>, 29.310579, 172.398316, 89.567, 0.053853, 9.51134, 2.4873,</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>                                                113.752, 165.6, -8.88));</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>                                add(<span class="keyword">new</span> PlanetData(<span class="stringliteral">&quot;Uranus&quot;</span>, 84.039492, 356.135400, 172.884833, 0.046321, 19.21814,</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>                                                0.773059, 73.926961, 65.8, -7.19));</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>                                add(<span class="keyword">new</span> PlanetData(<span class="stringliteral">&quot;Neptune&quot;</span>, 165.845392, 326.895127, 23.07, 0.010483, 30.1985, 1.7673,</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>                                                131.879, 62.2, -6.87));</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>                        }</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>                };</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        }</div>
 </div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
-<div class="foldopen" id="foldopen00031" data-start="{" data-end="}">
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="classastro_1_1practical_1_1data_1_1PlanetInfo.html#a55f6e30328c9d4c6acd537b46b6ab203">   31</a></span>        <span class="keyword">public</span> PlanetData <a class="code hl_function" href="classastro_1_1practical_1_1data_1_1PlanetInfo.html#a55f6e30328c9d4c6acd537b46b6ab203">getPlanetInfo</a>(String name) {</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>                PlanetData planetInfo = planetData.stream()</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>                                .filter(p -&gt; p.Name == name)</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>                                .findFirst()</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>                                .orElse(<span class="keyword">new</span> PlanetData(<span class="stringliteral">&quot;NotFound&quot;</span>, 0, 0, 0, 0, 0, 0, 0, 0, 0));</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>                <span class="keywordflow">return</span> planetInfo;</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        }</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="foldopen" id="foldopen00033" data-start="{" data-end="}">
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="classastro_1_1practical_1_1data_1_1PlanetInfo.html#a55f6e30328c9d4c6acd537b46b6ab203">   33</a></span>        <span class="keyword">public</span> PlanetData <a class="code hl_function" href="classastro_1_1practical_1_1data_1_1PlanetInfo.html#a55f6e30328c9d4c6acd537b46b6ab203">getPlanetInfo</a>(String name) {</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>                PlanetData planetInfo = planetData.stream()</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>                                .filter(p -&gt; p.Name == name)</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>                                .findFirst()</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>                                .orElse(<span class="keyword">new</span> PlanetData(<span class="stringliteral">&quot;NotFound&quot;</span>, 0, 0, 0, 0, 0, 0, 0, 0, 0));</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>                <span class="keywordflow">return</span> planetInfo;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        }</div>
 </div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>}</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>}</div>
 </div>
 <div class="ttc" id="aclassastro_1_1practical_1_1data_1_1PlanetInfo_html"><div class="ttname"><a href="classastro_1_1practical_1_1data_1_1PlanetInfo.html">astro.practical.data.PlanetInfo</a></div><div class="ttdef"><b>Definition</b> <a href="PlanetInfo_8java_source.html#l00007">PlanetInfo.java:7</a></div></div>
 <div class="ttc" id="aclassastro_1_1practical_1_1data_1_1PlanetInfo_html_a2f28fd6431d9bad0ef423768238b5968"><div class="ttname"><a href="classastro_1_1practical_1_1data_1_1PlanetInfo.html#a2f28fd6431d9bad0ef423768238b5968">astro.practical.data.PlanetInfo.PlanetInfo</a></div><div class="ttdeci">PlanetInfo()</div><div class="ttdef"><b>Definition</b> <a href="PlanetInfo_8java_source.html#l00010">PlanetInfo.java:10</a></div></div>
-<div class="ttc" id="aclassastro_1_1practical_1_1data_1_1PlanetInfo_html_a55f6e30328c9d4c6acd537b46b6ab203"><div class="ttname"><a href="classastro_1_1practical_1_1data_1_1PlanetInfo.html#a55f6e30328c9d4c6acd537b46b6ab203">astro.practical.data.PlanetInfo.getPlanetInfo</a></div><div class="ttdeci">PlanetData getPlanetInfo(String name)</div><div class="ttdef"><b>Definition</b> <a href="PlanetInfo_8java_source.html#l00031">PlanetInfo.java:31</a></div></div>
+<div class="ttc" id="aclassastro_1_1practical_1_1data_1_1PlanetInfo_html_a55f6e30328c9d4c6acd537b46b6ab203"><div class="ttname"><a href="classastro_1_1practical_1_1data_1_1PlanetInfo.html#a55f6e30328c9d4c6acd537b46b6ab203">astro.practical.data.PlanetInfo.getPlanetInfo</a></div><div class="ttdeci">PlanetData getPlanetInfo(String name)</div><div class="ttdef"><b>Definition</b> <a href="PlanetInfo_8java_source.html#l00033">PlanetInfo.java:33</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

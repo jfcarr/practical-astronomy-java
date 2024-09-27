@@ -1,6 +1,7 @@
 package astro.practical.lib;
 
 import astro.practical.data.PlanetInfo;
+import astro.practical.models.PlanetCoordinates;
 import astro.practical.models.PlanetPosition;
 import astro.practical.models.data.PlanetData;
 
@@ -78,6 +79,35 @@ public class PAPlanet {
                 double planetDecDeg = PAMacros.decimalDegreesDegrees(decDeg);
                 double planetDecMin = PAMacros.decimalDegreesMinutes(decDeg);
                 double planetDecSec = PAMacros.decimalDegreesSeconds(decDeg);
+
+                return new PlanetPosition(planetRAHour, planetRAMin, planetRASec, planetDecDeg, planetDecMin,
+                                planetDecSec);
+        }
+
+        /**
+         * Calculate precise position of a planet.
+         */
+        public PlanetPosition precisePositionOfPlanet(double lctHour, double lctMin, double lctSec,
+                        boolean isDaylightSaving, int zoneCorrectionHours, double localDateDay, int localDateMonth,
+                        int localDateYear, String planetName) {
+                int daylightSaving = isDaylightSaving ? 1 : 0;
+
+                PlanetCoordinates coordinateResults = PAMacros.planetCoordinates(lctHour, lctMin, lctSec,
+                                daylightSaving, zoneCorrectionHours, localDateDay, localDateMonth, localDateYear,
+                                planetName);
+
+                double planetRAHours = PAMacros.decimalDegreesToDegreeHours(
+                                PAMacros.ecRA(coordinateResults.planetLongitude, 0, 0, coordinateResults.planetLatitude,
+                                                0, 0, localDateDay, localDateMonth, localDateYear));
+                double planetDecDeg1 = PAMacros.ecDec(coordinateResults.planetLongitude, 0, 0,
+                                coordinateResults.planetLatitude, 0, 0, localDateDay, localDateMonth, localDateYear);
+
+                int planetRAHour = PAMacros.decimalHoursHour(planetRAHours);
+                int planetRAMin = PAMacros.decimalHoursMinute(planetRAHours);
+                double planetRASec = PAMacros.decimalHoursSecond(planetRAHours);
+                double planetDecDeg = PAMacros.decimalDegreesDegrees(planetDecDeg1);
+                double planetDecMin = PAMacros.decimalDegreesMinutes(planetDecDeg1);
+                double planetDecSec = PAMacros.decimalDegreesSeconds(planetDecDeg1);
 
                 return new PlanetPosition(planetRAHour, planetRAMin, planetRASec, planetDecDeg, planetDecMin,
                                 planetDecSec);
