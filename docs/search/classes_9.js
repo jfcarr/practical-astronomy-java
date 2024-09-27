@@ -7,8 +7,14 @@ var searchData=
   ['parallaxhelper_4',['ParallaxHelper',['../classastro_1_1practical_1_1models_1_1ParallaxHelper.html',1,'astro::practical::models']]],
   ['pasun_5',['PASun',['../classastro_1_1practical_1_1lib_1_1PASun.html',1,'astro::practical::lib']]],
   ['pautil_6',['PAUtil',['../classastro_1_1practical_1_1lib_1_1PAUtil.html',1,'astro::practical::lib']]],
-  ['planetdata_7',['PlanetData',['../classastro_1_1practical_1_1models_1_1data_1_1PlanetData.html',1,'astro::practical::models::data']]],
-  ['planetinfo_8',['PlanetInfo',['../classastro_1_1practical_1_1data_1_1PlanetInfo.html',1,'astro::practical::data']]],
-  ['planetposition_9',['PlanetPosition',['../classastro_1_1practical_1_1models_1_1PlanetPosition.html',1,'astro::practical::models']]],
-  ['positionofsun_10',['PositionOfSun',['../classastro_1_1practical_1_1models_1_1PositionOfSun.html',1,'astro::practical::models']]]
+  ['planetcoordinates_7',['PlanetCoordinates',['../classastro_1_1practical_1_1models_1_1PlanetCoordinates.html',1,'astro::practical::models']]],
+  ['planetdata_8',['PlanetData',['../classastro_1_1practical_1_1models_1_1data_1_1PlanetData.html',1,'astro::practical::models::data']]],
+  ['planetdataprecise_9',['PlanetDataPrecise',['../classastro_1_1practical_1_1models_1_1data_1_1PlanetDataPrecise.html',1,'astro::practical::models::data']]],
+  ['planetinfo_10',['PlanetInfo',['../classastro_1_1practical_1_1data_1_1PlanetInfo.html',1,'astro::practical::data']]],
+  ['planetlongl4685_11',['PlanetLongL4685',['../classastro_1_1practical_1_1models_1_1PlanetLongL4685.html',1,'astro::practical::models']]],
+  ['planetlongl4735_12',['PlanetLongL4735',['../classastro_1_1practical_1_1models_1_1PlanetLongL4735.html',1,'astro::practical::models']]],
+  ['planetlongl4810_13',['PlanetLongL4810',['../classastro_1_1practical_1_1models_1_1PlanetLongL4810.html',1,'astro::practical::models']]],
+  ['planetlongl4945_14',['PlanetLongL4945',['../classastro_1_1practical_1_1models_1_1PlanetLongL4945.html',1,'astro::practical::models']]],
+  ['planetposition_15',['PlanetPosition',['../classastro_1_1practical_1_1models_1_1PlanetPosition.html',1,'astro::practical::models']]],
+  ['positionofsun_16',['PositionOfSun',['../classastro_1_1practical_1_1models_1_1PositionOfSun.html',1,'astro::practical::models']]]
 ];
