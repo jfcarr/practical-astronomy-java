@@ -1,8 +1,19 @@
 package astro.practical.lib;
 
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
 import astro.practical.models.L3710;
 import astro.practical.models.L3710Twilight;
 import astro.practical.models.ParallaxHelper;
+import astro.practical.models.PlanetCoordinates;
+import astro.practical.models.PlanetLongL4685;
+import astro.practical.models.PlanetLongL4735;
+import astro.practical.models.PlanetLongL4810;
+import astro.practical.models.PlanetLongL4945;
+import astro.practical.models.data.PlanetDataPrecise;
 import astro.practical.types.AngleMeasure;
 import astro.practical.types.CoordinateType;
 import astro.practical.types.WarningFlag;
@@ -1440,6 +1451,27 @@ public class PAMacros {
 	}
 
 	/**
+	 * Calculate the Sun's mean anomaly.
+	 * 
+	 * Original macro name: SunMeanAnomaly
+	 */
+	public static double sunMeanAnomaly(double lch, double lcm, double lcs, int ds, int zc, double ld, int lm, int ly) {
+		double aa = localCivilTimeGreenwichDay(lch, lcm, lcs, ds, zc, ld, lm, ly);
+		int bb = localCivilTimeGreenwichMonth(lch, lcm, lcs, ds, zc, ld, lm, ly);
+		int cc = localCivilTimeGreenwichYear(lch, lcm, lcs, ds, zc, ld, lm, ly);
+		double ut = localCivilTimeToUniversalTime(lch, lcm, lcs, ds, zc, ld, lm, ly);
+		double dj = civilDateToJulianDate(aa, bb, cc) - 2415020;
+		double t = (dj / 36525) + (ut / 876600);
+		double t2 = t * t;
+		double a = 100.0021359 * t;
+		double b = 360 * (a - Math.floor(a));
+		double m1 = 358.47583 - (0.00015 + 0.0000033 * t) * t2 + b;
+		double am = unwind(Math.toRadians(m1));
+
+		return am;
+	}
+
+	/**
 	 * Calculate local civil time of sunrise.
 	 * 
 	 * Original macro name: SunriseLCT
@@ -1968,5 +2000,966 @@ public class PAMacros {
 		double i = Math.acos(Math.sin(d) * Math.sin(h) + Math.cos(d) * Math.cos(h) * Math.cos(b - f));
 
 		return wToDegrees(i);
+	}
+
+	/**
+	 * Calculate several planetary properties.
+	 *
+	 * Original macro names: PlanetLong, PlanetLat, PlanetDist, PlanetHLong1,
+	 * PlanetHLong2, PlanetHLat, PlanetRVect
+	 */
+	public static PlanetCoordinates planetCoordinates(double lh, double lm, double ls, int ds, int zc, double dy,
+			int mn, int yr, String s) {
+		double a11 = 178.179078;
+		double a12 = 415.2057519;
+		double a13 = 0.0003011;
+		double a14 = 0.0;
+		double a21 = 75.899697;
+		double a22 = 1.5554889;
+		double a23 = 0.0002947;
+		double a24 = 0.0;
+		double a31 = 0.20561421;
+		double a32 = 0.00002046;
+		double a33 = -0.00000003;
+		double a34 = 0.0;
+		double a41 = 7.002881;
+		double a42 = 0.0018608;
+		double a43 = -0.0000183;
+		double a44 = 0.0;
+		double a51 = 47.145944;
+		double a52 = 1.1852083;
+		double a53 = 0.0001739;
+		double a54 = 0.0;
+		double a61 = 0.3870986;
+		double a62 = 6.74;
+		double a63 = -0.42;
+
+		double b11 = 342.767053;
+		double b12 = 162.5533664;
+		double b13 = 0.0003097;
+		double b14 = 0.0;
+		double b21 = 130.163833;
+		double b22 = 1.4080361;
+		double b23 = -0.0009764;
+		double b24 = 0.0;
+		double b31 = 0.00682069;
+		double b32 = -0.00004774;
+		double b33 = 0.000000091;
+		double b34 = 0.0;
+		double b41 = 3.393631;
+		double b42 = 0.0010058;
+		double b43 = -0.000001;
+		double b44 = 0.0;
+		double b51 = 75.779647;
+		double b52 = 0.89985;
+		double b53 = 0.00041;
+		double b54 = 0.0;
+		double b61 = 0.7233316;
+		double b62 = 16.92;
+		double b63 = -4.4;
+
+		double c11 = 293.737334;
+		double c12 = 53.17137642;
+		double c13 = 0.0003107;
+		double c14 = 0.0;
+		double c21 = 334.218203;
+		double c22 = 1.8407584;
+		double c23 = 0.0001299;
+		double c24 = -0.00000119;
+		double c31 = 0.0933129;
+		double c32 = 0.000092064;
+		double c33 = -0.000000077;
+		double c34 = 0.0;
+		double c41 = 1.850333;
+		double c42 = -0.000675;
+		double c43 = 0.0000126;
+		double c44 = 0.0;
+		double c51 = 48.786442;
+		double c52 = 0.7709917;
+		double c53 = -0.0000014;
+		double c54 = -0.00000533;
+		double c61 = 1.5236883;
+		double c62 = 9.36;
+		double c63 = -1.52;
+
+		double d11 = 238.049257;
+		double d12 = 8.434172183;
+		double d13 = 0.0003347;
+		double d14 = -0.00000165;
+		double d21 = 12.720972;
+		double d22 = 1.6099617;
+		double d23 = 0.00105627;
+		double d24 = -0.00000343;
+		double d31 = 0.04833475;
+		double d32 = 0.00016418;
+		double d33 = -0.0000004676;
+		double d34 = -0.0000000017;
+		double d41 = 1.308736;
+		double d42 = -0.0056961;
+		double d43 = 0.0000039;
+		double d44 = 0.0;
+		double d51 = 99.443414;
+		double d52 = 1.01053;
+		double d53 = 0.00035222;
+		double d54 = -0.00000851;
+		double d61 = 5.202561;
+		double d62 = 196.74;
+		double d63 = -9.4;
+
+		double e11 = 266.564377;
+		double e12 = 3.398638567;
+		double e13 = 0.0003245;
+		double e14 = -0.0000058;
+		double e21 = 91.098214;
+		double e22 = 1.9584158;
+		double e23 = 0.00082636;
+		double e24 = 0.00000461;
+		double e31 = 0.05589232;
+		double e32 = -0.0003455;
+		double e33 = -0.000000728;
+		double e34 = 0.00000000074;
+		double e41 = 2.492519;
+		double e42 = -0.0039189;
+		double e43 = -0.00001549;
+		double e44 = 0.00000004;
+		double e51 = 112.790414;
+		double e52 = 0.8731951;
+		double e53 = -0.00015218;
+		double e54 = -0.00000531;
+		double e61 = 9.554747;
+		double e62 = 165.6;
+		double e63 = -8.88;
+
+		double f11 = 244.19747;
+		double f12 = 1.194065406;
+		double f13 = 0.000316;
+		double f14 = -0.0000006;
+		double f21 = 171.548692;
+		double f22 = 1.4844328;
+		double f23 = 0.0002372;
+		double f24 = -0.00000061;
+		double f31 = 0.0463444;
+		double f32a = -0.00002658;
+		double f33 = 0.000000077;
+		double f34 = 0.0;
+		double f41 = 0.772464;
+		double f42 = 0.0006253;
+		double f43 = 0.0000395;
+		double f44 = 0.0;
+		double f51 = 73.477111;
+		double f52 = 0.4986678;
+		double f53 = 0.0013117;
+		double f54 = 0.0;
+		double f61 = 19.21814;
+		double f62 = 65.8;
+		double f63 = -7.19;
+
+		double g11 = 84.457994;
+		double g12 = 0.6107942056;
+		double g13 = 0.0003205;
+		double g14 = -0.0000006;
+		double g21 = 46.727364;
+		double g22 = 1.4245744;
+		double g23 = 0.00039082;
+		double g24 = -0.000000605;
+		double g31 = 0.00899704;
+		double g32 = 0.00000633;
+		double g33 = -0.000000002;
+		double g34 = 0.0;
+		double g41 = 1.779242;
+		double g42 = -0.0095436;
+		double g43 = -0.0000091;
+		double g44 = 0.0;
+		double g51 = 130.681389;
+		double g52 = 1.098935;
+		double g53 = 0.00024987;
+		double g54 = -0.000004718;
+		double g61 = 30.10957;
+		double g62 = 62.2;
+		double g63 = -6.87;
+
+		List<PlanetDataPrecise> planetData = new ArrayList<>();
+
+		planetData.add(new PlanetDataPrecise("", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0));
+
+		int ip = 0;
+		double b = localCivilTimeToUniversalTime(lh, lm, ls, ds, zc, dy, mn, yr);
+		double gd = localCivilTimeGreenwichDay(lh, lm, ls, ds, zc, dy, mn, yr);
+		int gm = localCivilTimeGreenwichMonth(lh, lm, ls, ds, zc, dy, mn, yr);
+		int gy = localCivilTimeGreenwichYear(lh, lm, ls, ds, zc, dy, mn, yr);
+		double a = civilDateToJulianDate(gd, gm, gy);
+		double t = ((a - 2415020.0) / 36525.0) + (b / 876600.0);
+
+		double a0 = a11;
+		double a1 = a12;
+		double a2 = a13;
+		double a3 = a14;
+		double b0 = a21;
+		double b1 = a22;
+		double b2 = a23;
+		double b3 = a24;
+		double c0 = a31;
+		double c1 = a32;
+		double c2 = a33;
+		double c3 = a34;
+		double d0 = a41;
+		double d1 = a42;
+		double d2 = a43;
+		double d3 = a44;
+		double e0 = a51;
+		double e1 = a52;
+		double e2 = a53;
+		double e3 = a54;
+		double f = a61;
+		double g = a62;
+		double h = a63;
+		double aa = a1 * t;
+		b = 360.0 * (aa - Math.floor(aa));
+		double c = a0 + b + (a3 * t + a2) * t * t;
+
+		planetData.add(
+				new PlanetDataPrecise(
+						"Mercury",
+						c - 360.0 * Math.floor(c / 360.0),
+						(a1 * 0.009856263) + (a2 + a3) / 36525.0,
+						((b3 * t + b2) * t + b1) * t + b0,
+						((c3 * t + c2) * t + c1) * t + c0,
+						((d3 * t + d2) * t + d1) * t + d0,
+						((e3 * t + e2) * t + e1) * t + e0,
+						f,
+						g,
+						h,
+						0));
+
+		a0 = b11;
+		a1 = b12;
+		a2 = b13;
+		a3 = b14;
+		b0 = b21;
+		b1 = b22;
+		b2 = b23;
+		b3 = b24;
+		c0 = b31;
+		c1 = b32;
+		c2 = b33;
+		c3 = b34;
+		d0 = b41;
+		d1 = b42;
+		d2 = b43;
+		d3 = b44;
+		e0 = b51;
+		e1 = b52;
+		e2 = b53;
+		e3 = b54;
+		f = b61;
+		g = b62;
+		h = b63;
+		aa = a1 * t;
+		b = 360.0 * (aa - Math.floor(aa));
+		c = a0 + b + (a3 * t + a2) * t * t;
+
+		planetData.add(
+				new PlanetDataPrecise(
+						"Venus",
+						c - 360.0 * Math.floor(c / 360.0),
+						(a1 * 0.009856263) + (a2 + a3) / 36525.0,
+						((b3 * t + b2) * t + b1) * t + b0,
+						((c3 * t + c2) * t + c1) * t + c0,
+						((d3 * t + d2) * t + d1) * t + d0,
+						((e3 * t + e2) * t + e1) * t + e0,
+						f,
+						g,
+						h,
+						0));
+
+		a0 = c11;
+		a1 = c12;
+		a2 = c13;
+		a3 = c14;
+		b0 = c21;
+		b1 = c22;
+		b2 = c23;
+		b3 = c24;
+		c0 = c31;
+		c1 = c32;
+		c2 = c33;
+		c3 = c34;
+		d0 = c41;
+		d1 = c42;
+		d2 = c43;
+		d3 = c44;
+		e0 = c51;
+		e1 = c52;
+		e2 = c53;
+		e3 = c54;
+		f = c61;
+		g = c62;
+		h = c63;
+
+		aa = a1 * t;
+		b = 360.0 * (aa - Math.floor(aa));
+		c = a0 + b + (a3 * t + a2) * t * t;
+
+		planetData.add(
+				new PlanetDataPrecise(
+						"Mars",
+						c - 360.0 * Math.floor(c / 360.0),
+						(a1 * 0.009856263) + (a2 + a3) / 36525.0,
+						((b3 * t + b2) * t + b1) * t + b0,
+						((c3 * t + c2) * t + c1) * t + c0,
+						((d3 * t + d2) * t + d1) * t + d0,
+						((e3 * t + e2) * t + e1) * t + e0,
+						f,
+						g,
+						h,
+						0));
+
+		a0 = d11;
+		a1 = d12;
+		a2 = d13;
+		a3 = d14;
+		b0 = d21;
+		b1 = d22;
+		b2 = d23;
+		b3 = d24;
+		c0 = d31;
+		c1 = d32;
+		c2 = d33;
+		c3 = d34;
+		d0 = d41;
+		d1 = d42;
+		d2 = d43;
+		d3 = d44;
+		e0 = d51;
+		e1 = d52;
+		e2 = d53;
+		e3 = d54;
+		f = d61;
+		g = d62;
+		h = d63;
+
+		aa = a1 * t;
+		b = 360.0 * (aa - Math.floor(aa));
+		c = a0 + b + (a3 * t + a2) * t * t;
+
+		planetData.add(
+				new PlanetDataPrecise(
+						"Jupiter",
+						c - 360.0 * Math.floor(c / 360.0),
+						(a1 * 0.009856263) + (a2 + a3) / 36525.0,
+						((b3 * t + b2) * t + b1) * t + b0,
+						((c3 * t + c2) * t + c1) * t + c0,
+						((d3 * t + d2) * t + d1) * t + d0,
+						((e3 * t + e2) * t + e1) * t + e0,
+						f,
+						g,
+						h,
+						0));
+
+		a0 = e11;
+		a1 = e12;
+		a2 = e13;
+		a3 = e14;
+		b0 = e21;
+		b1 = e22;
+		b2 = e23;
+		b3 = e24;
+		c0 = e31;
+		c1 = e32;
+		c2 = e33;
+		c3 = e34;
+		d0 = e41;
+		d1 = e42;
+		d2 = e43;
+		d3 = e44;
+		e0 = e51;
+		e1 = e52;
+		e2 = e53;
+		e3 = e54;
+		f = e61;
+		g = e62;
+		h = e63;
+
+		aa = a1 * t;
+		b = 360.0 * (aa - Math.floor(aa));
+		c = a0 + b + (a3 * t + a2) * t * t;
+
+		planetData.add(
+				new PlanetDataPrecise(
+						"Saturn",
+						c - 360.0 * Math.floor(c / 360.0),
+						(a1 * 0.009856263) + (a2 + a3) / 36525.0,
+						((b3 * t + b2) * t + b1) * t + b0,
+						((c3 * t + c2) * t + c1) * t + c0,
+						((d3 * t + d2) * t + d1) * t + d0,
+						((e3 * t + e2) * t + e1) * t + e0,
+						f,
+						g,
+						h,
+						0));
+
+		a0 = f11;
+		a1 = f12;
+		a2 = f13;
+		a3 = f14;
+		b0 = f21;
+		b1 = f22;
+		b2 = f23;
+		b3 = f24;
+		c0 = f31;
+		c1 = f32a;
+		c2 = f33;
+		c3 = f34;
+		d0 = f41;
+		d1 = f42;
+		d2 = f43;
+		d3 = f44;
+		e0 = f51;
+		e1 = f52;
+		e2 = f53;
+		e3 = f54;
+		f = f61;
+		g = f62;
+		h = f63;
+
+		aa = a1 * t;
+		b = 360.0 * (aa - Math.floor(aa));
+		c = a0 + b + (a3 * t + a2) * t * t;
+
+		planetData.add(
+				new PlanetDataPrecise(
+						"Uranus",
+						c - 360.0 * Math.floor(c / 360.0),
+						(a1 * 0.009856263) + (a2 + a3) / 36525.0,
+						((b3 * t + b2) * t + b1) * t + b0,
+						((c3 * t + c2) * t + c1) * t + c0,
+						((d3 * t + d2) * t + d1) * t + d0,
+						((e3 * t + e2) * t + e1) * t + e0,
+						f,
+						g,
+						h,
+						0));
+
+		a0 = g11;
+		a1 = g12;
+		a2 = g13;
+		a3 = g14;
+		b0 = g21;
+		b1 = g22;
+		b2 = g23;
+		b3 = g24;
+		c0 = g31;
+		c1 = g32;
+		c2 = g33;
+		c3 = g34;
+		d0 = g41;
+		d1 = g42;
+		d2 = g43;
+		d3 = g44;
+		e0 = g51;
+		e1 = g52;
+		e2 = g53;
+		e3 = g54;
+		f = g61;
+		g = g62;
+		h = g63;
+
+		aa = a1 * t;
+		b = 360.0 * (aa - Math.floor(aa));
+		c = a0 + b + (a3 * t + a2) * t * t;
+
+		planetData.add(
+				new PlanetDataPrecise(
+						"Neptune",
+						c - 360.0 * Math.floor(c / 360.0),
+						(a1 * 0.009856263) + (a2 + a3) / 36525.0,
+						((b3 * t + b2) * t + b1) * t + b0,
+						((c3 * t + c2) * t + c1) * t + c0,
+						((d3 * t + d2) * t + d1) * t + d0,
+						((e3 * t + e2) * t + e1) * t + e0,
+						f,
+						g,
+						h,
+						0));
+
+		PlanetDataPrecise checkPlanet = planetData.stream()
+				.filter(p -> p.Name == s)
+				.findFirst()
+				.orElse(new PlanetDataPrecise("NotFound", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0));
+
+		if (checkPlanet.Name == "NotFound")
+			return (new PlanetCoordinates(wToDegrees(unwind(0)), wToDegrees(unwind(0)), wToDegrees(unwind(0)),
+					wToDegrees(unwind(0)), wToDegrees(unwind(0)), wToDegrees(unwind(0)), wToDegrees(unwind(0))));
+
+		double li = 0.0;
+		double ms = sunMeanAnomaly(lh, lm, ls, ds, zc, dy, mn, yr);
+		double sr = Math.toRadians(sunLong(lh, lm, ls, ds, zc, dy, mn, yr));
+		double re = sunDist(lh, lm, ls, ds, zc, dy, mn, yr);
+		double lg = sr + Math.PI;
+
+		double l0 = 0.0;
+		double s0 = 0.0;
+		double p0 = 0.0;
+		double vo = 0.0;
+		double lp1 = 0.0;
+		double ll = 0.0;
+		double rd = 0.0;
+		double pd = 0.0;
+		double sp = 0.0;
+		double ci = 0.0;
+
+		for (int k = 1; k <= 3; k++) {
+			for (PlanetDataPrecise planetDataPrecise : planetData) {
+				planetDataPrecise.APValue = Math
+						.toRadians(planetDataPrecise.Value1 - planetDataPrecise.Value3 - li * planetDataPrecise.Value2);
+			}
+
+			double qa = 0.0;
+			double qb = 0.0;
+			double qc = 0.0;
+			double qd = 0.0;
+			double qe = 0.0;
+			double qf = 0.0;
+			double qg = 0.0;
+
+			if (s == "Mercury") {
+				PlanetLongL4685 planetLongL4685 = planetLongL4685(planetData);
+
+				qa = planetLongL4685.qa;
+				qb = planetLongL4685.qb;
+			}
+
+			if (s == "Venus") {
+				PlanetLongL4735 planetLongL4735 = planetLongL4735(planetData, ms, t);
+
+				qa = planetLongL4735.qa;
+				qb = planetLongL4735.qb;
+				qc = planetLongL4735.qc;
+				qe = planetLongL4735.qe;
+			}
+
+			if (s == "Mars") {
+				PlanetLongL4810 returnValue = planetLongL4810(planetData, ms);
+
+				qc = returnValue.qc;
+				qe = returnValue.qe;
+				qa = returnValue.qa;
+				qb = returnValue.qb;
+			}
+
+			PlanetDataPrecise matchPlanet = planetData.stream()
+					.filter(p -> p.Name == s)
+					.findFirst()
+					.orElse(new PlanetDataPrecise("NotFound", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0));
+
+			Set<String> planetSet = new HashSet<>(Set.of("Jupiter", "Saturn", "Uranus", "Neptune"));
+			if (planetSet.contains(s)) {
+				PlanetLongL4945 returnValue = planetLongL4945(t, matchPlanet);
+
+				qa = returnValue.qa;
+				qb = returnValue.qb;
+				qc = returnValue.qc;
+				qd = returnValue.qd;
+				qe = returnValue.qe;
+				qf = returnValue.qf;
+				qg = returnValue.qg;
+			}
+
+			double ec = matchPlanet.Value4 + qd;
+			double am = matchPlanet.APValue + qe;
+			double at = trueAnomaly(am, ec);
+			double pvv = (matchPlanet.Value7 + qf) * (1.0 - ec * ec) / (1.0 + ec * Math.cos(at));
+			double lp = wToDegrees(at) + matchPlanet.Value3 + wToDegrees(qc - qe);
+			lp = Math.toRadians(lp);
+			double om = Math.toRadians(matchPlanet.Value6);
+			double lo = lp - om;
+			double so = Math.sin(lo);
+			double co = Math.cos(lo);
+			double inn = Math.toRadians(matchPlanet.Value5);
+			pvv += qb;
+			sp = so * Math.sin(inn);
+			double y = so * Math.cos(inn);
+			double ps = Math.asin(sp) + qg;
+			sp = Math.sin(ps);
+			pd = Math.atan2(y, co) + om + Math.toRadians(qa);
+			pd = unwind(pd);
+			ci = Math.cos(ps);
+			rd = pvv * ci;
+			ll = pd - lg;
+			double rh = re * re + pvv * pvv - 2.0 * re * pvv * ci * Math.cos(ll);
+			rh = Math.sqrt(rh);
+			li = rh * 0.005775518;
+
+			if (k == 1) {
+				l0 = pd;
+				s0 = ps;
+				p0 = pvv;
+				vo = rh;
+				lp1 = lp;
+			}
+		}
+
+		double l1 = Math.sin(ll);
+		double l2 = Math.cos(ll);
+
+		double ep = (ip < 3)
+				? Math.atan(-1.0 * rd * l1 / (re - rd * l2)) + lg + Math.PI
+				: Math.atan(re * l1 / (rd - re * l2)) + pd;
+		ep = unwind(ep);
+
+		double bp = Math.atan(rd * sp * Math.sin(ep - pd) / (ci * re * l1));
+
+		double planetLongitude = wToDegrees(unwind(ep));
+		double planetLatitude = wToDegrees(unwind(bp));
+		double planetDistanceAU = vo;
+		double planetHLong1 = wToDegrees(lp1);
+		double planetHLong2 = wToDegrees(l0);
+		double planetHLat = wToDegrees(s0);
+		double planetRVect = p0;
+
+		return new PlanetCoordinates(planetLongitude, planetLatitude, planetDistanceAU, planetHLong1, planetHLong2,
+				planetHLat, planetRVect);
+	}
+
+	/**
+	 * Helper function for planet_long_lat()
+	 */
+	public static PlanetLongL4685 planetLongL4685(List<PlanetDataPrecise> pl) {
+		double qa = 0.00204 * Math.cos(5.0 * pl.get(2).APValue - 2.0 * pl.get(1).APValue + 0.21328);
+		qa += 0.00103 * Math.cos(2.0 * pl.get(2).APValue - pl.get(1).APValue - 2.8046);
+		qa += 0.00091 * Math.cos(2.0 * pl.get(4).APValue - pl.get(1).APValue - 0.64582);
+		qa += 0.00078 * Math.cos(5.0 * pl.get(2).APValue - 3.0 * pl.get(1).APValue + 0.17692);
+
+		double qb = 0.000007525 * Math.cos(2.0 * pl.get(4).APValue - pl.get(1).APValue + 0.925251);
+		qb += 0.000006802 * Math.cos(5.0 * pl.get(2).APValue - 3.0 * pl.get(1).APValue - 4.53642);
+		qb += 0.000005457 * Math.cos(2.0 * pl.get(2).APValue - 2.0 * pl.get(1).APValue - 1.24246);
+		qb += 0.000003569 * Math.cos(5.0 * pl.get(2).APValue - pl.get(1).APValue - 1.35699);
+
+		return new PlanetLongL4685(qa, qb);
+	}
+
+	/**
+	 * Helper function for planet_long_lat()
+	 */
+	public static PlanetLongL4735 planetLongL4735(List<PlanetDataPrecise> pl, double ms, double t) {
+		double qc = 0.00077 * Math.sin(4.1406 + t * 2.6227);
+		qc = Math.toRadians(qc);
+		double qe = qc;
+
+		double qa = 0.00313 * Math.cos(2.0 * ms - 2.0 * pl.get(2).APValue - 2.587);
+		qa += 0.00198 * Math.cos(3.0 * ms - 3.0 * pl.get(2).APValue + 0.044768);
+		qa += 0.00136 * Math.cos(ms - pl.get(2).APValue - 2.0788);
+		qa += 0.00096 * Math.cos(3.0 * ms - 2.0 * pl.get(2).APValue - 2.3721);
+		qa += 0.00082 * Math.cos(pl.get(4).APValue - pl.get(2).APValue - 3.6318);
+
+		double qb = 0.000022501 * Math.cos(2.0 * ms - 2.0 * pl.get(2).APValue - 1.01592);
+		qb += 0.000019045 * Math.cos(3.0 * ms - 3.0 * pl.get(2).APValue + 1.61577);
+		qb += 0.000006887 * Math.cos(pl.get(4).APValue - pl.get(2).APValue - 2.06106);
+		qb += 0.000005172 * Math.cos(ms - pl.get(2).APValue - 0.508065);
+		qb += 0.00000362 * Math.cos(5.0 * ms - 4.0 * pl.get(2).APValue - 1.81877);
+		qb += 0.000003283 * Math.cos(4.0 * ms - 4.0 * pl.get(2).APValue + 1.10851);
+		qb += 0.000003074 * Math.cos(2.0 * pl.get(4).APValue - 2.0 * pl.get(2).APValue - 0.962846);
+
+		return new PlanetLongL4735(qa, qb, qc, qe);
+	}
+
+	/**
+	 * Helper function for planet_long_lat()
+	 */
+	public static PlanetLongL4810 planetLongL4810(List<PlanetDataPrecise> pl, double ms) {
+		double a = 3.0 * pl.get(4).APValue - 8.0 * pl.get(3).APValue + 4.0 * ms;
+		double sa = Math.sin(a);
+		double ca = Math.cos(a);
+		double qc = -(0.01133 * sa + 0.00933 * ca);
+		qc = Math.toRadians(qc);
+		double qe = qc;
+
+		double qa = 0.00705 * Math.cos(pl.get(4).APValue - pl.get(3).APValue - 0.85448);
+		qa += 0.00607 * Math.cos(2.0 * pl.get(4).APValue - pl.get(3).APValue - 3.2873);
+		qa += 0.00445 * Math.cos(2.0 * pl.get(4).APValue - 2.0 * pl.get(3).APValue - 3.3492);
+		qa += 0.00388 * Math.cos(ms - 2.0 * pl.get(3).APValue + 0.35771);
+		qa += 0.00238 * Math.cos(ms - pl.get(3).APValue + 0.61256);
+		qa += 0.00204 * Math.cos(2.0 * ms - 3.0 * pl.get(3).APValue + 2.7688);
+		qa += 0.00177 * Math.cos(3.0 * pl.get(3).APValue - pl.get(2).APValue - 1.0053);
+		qa += 0.00136 * Math.cos(2.0 * ms - 4.0 * pl.get(3).APValue + 2.6894);
+		qa += 0.00104 * Math.cos(pl.get(4).APValue + 0.30749);
+
+		double qb = 0.000053227 * Math.cos(pl.get(4).APValue - pl.get(3).APValue + 0.717864);
+		qb += 0.000050989 * Math.cos(2.0 * pl.get(4).APValue - 2.0 * pl.get(3).APValue - 1.77997);
+		qb += 0.000038278 * Math.cos(2.0 * pl.get(4).APValue - pl.get(3).APValue - 1.71617);
+		qb += 0.000015996 * Math.cos(ms - pl.get(3).APValue - 0.969618);
+		qb += 0.000014764 * Math.cos(2.0 * ms - 3.0 * pl.get(3).APValue + 1.19768);
+		qb += 0.000008966 * Math.cos(pl.get(4).APValue - 2.0 * pl.get(3).APValue + 0.761225);
+		qb += 0.000007914 * Math.cos(3.0 * pl.get(4).APValue - 2.0 * pl.get(3).APValue - 2.43887);
+		qb += 0.000007004 * Math.cos(2.0 * pl.get(4).APValue - 3.0 * pl.get(3).APValue - 1.79573);
+		qb += 0.00000662 * Math.cos(ms - 2.0 * pl.get(3).APValue + 1.97575);
+		qb += 0.00000493 * Math.cos(3.0 * pl.get(4).APValue - 3.0 * pl.get(3).APValue - 1.33069);
+		qb += 0.000004693 * Math.cos(3.0 * ms - 5.0 * pl.get(3).APValue + 3.32665);
+		qb += 0.000004571 * Math.cos(2.0 * ms - 4.0 * pl.get(3).APValue + 4.27086);
+		qb += 0.000004409 * Math.cos(3.0 * pl.get(4).APValue - pl.get(3).APValue - 2.02158);
+
+		return new PlanetLongL4810(a, sa, ca, qc, qe, qa, qb);
+	}
+
+	/**
+	 * Helper function for planet_long_lat()
+	 */
+	public static PlanetLongL4945 planetLongL4945(double t, PlanetDataPrecise planet) {
+		double qa = 0.0;
+		double qb = 0.0;
+		double qc = 0.0;
+		double qd = 0.0;
+		double qe = 0.0;
+		double qf = 0.0;
+		double qg = 0.0;
+		double vk = 0.0;
+		double ja = 0.0;
+		double jb = 0.0;
+		double jc = 0.0;
+
+		double j1 = t / 5.0 + 0.1;
+		double j2 = unwind(4.14473 + 52.9691 * t);
+		double j3 = unwind(4.641118 + 21.32991 * t);
+		double j4 = unwind(4.250177 + 7.478172 * t);
+		double j5 = 5.0 * j3 - 2.0 * j2;
+		double j6 = 2.0 * j2 - 6.0 * j3 + 3.0 * j4;
+
+		Set<String> planetSet1 = new HashSet<>(Set.of("Mercury", "Venus", "Mars"));
+		if (planetSet1.contains(planet.Name))
+			return new PlanetLongL4945(qa, qb, qc, qd, qe, qf, qg);
+
+		Set<String> planetSet2 = new HashSet<>(Set.of("Jupiter", "Saturn"));
+		if (planetSet2.contains(planet.Name)) {
+			double j7 = j3 - j2;
+			double u1 = Math.sin(j3);
+			double u2 = Math.cos(j3);
+			double u3 = Math.sin(2.0 * j3);
+			double u4 = Math.cos(2.0 * j3);
+			double u5 = Math.sin(j5);
+			double u6 = Math.cos(j5);
+			double u7 = Math.sin(2.0 * j5);
+			double u8a = Math.sin(j6);
+			double u9 = Math.sin(j7);
+			double ua = Math.cos(j7);
+			double ub = Math.sin(2.0 * j7);
+			double uc = Math.cos(2.0 * j7);
+			double ud = Math.sin(3.0 * j7);
+			double ue = Math.cos(3.0 * j7);
+			double uf = Math.sin(4.0 * j7);
+			double ug = Math.cos(4.0 * j7);
+			double vh = Math.cos(5.0 * j7);
+
+			if (planet.Name == "Saturn") {
+				double ui = Math.sin(3.0 * j3);
+				double uj = Math.cos(3.0 * j3);
+				double uk = Math.sin(4.0 * j3);
+				double ul = Math.cos(4.0 * j3);
+				double vi = Math.cos(2.0 * j5);
+				double un = Math.sin(5.0 * j7);
+				double j8 = j4 - j3;
+				double uo = Math.sin(2.0 * j8);
+				double up = Math.cos(2.0 * j8);
+				double uq = Math.sin(3.0 * j8);
+				double ur = Math.cos(3.0 * j8);
+
+				qc = 0.007581 * u7 - 0.007986 * u8a - 0.148811 * u9;
+				qc -= (0.814181 - (0.01815 - 0.016714 * j1) * j1) * u5;
+				qc -= (0.010497 - (0.160906 - 0.0041 * j1) * j1) * u6;
+				qc = qc - 0.015208 * ud - 0.006339 * uf - 0.006244 * u1;
+				qc = qc - 0.0165 * ub * u1 - 0.040786 * ub;
+				qc = qc + (0.008931 + 0.002728 * j1) * u9 * u1 - 0.005775 * ud * u1;
+				qc = qc + (0.081344 + 0.003206 * j1) * ua * u1 + 0.015019 * uc * u1;
+				qc = qc + (0.085581 + 0.002494 * j1) * u9 * u2 + 0.014394 * uc * u2;
+				qc = qc + (0.025328 - 0.003117 * j1) * ua * u2 + 0.006319 * ue * u2;
+				qc = qc + 0.006369 * u9 * u3 + 0.009156 * ub * u3 + 0.007525 * uq * u3;
+				qc = qc - 0.005236 * ua * u4 - 0.007736 * uc * u4 - 0.007528 * ur * u4;
+				qc = Math.toRadians(qc);
+
+				qd = (-7927.0 + (2548.0 + 91.0 * j1) * j1) * u5;
+				qd = qd + (13381.0 + (1226.0 - 253.0 * j1) * j1) * u6 + (248.0 - 121.0 * j1) * u7;
+				qd = qd - (305.0 + 91.0 * j1) * vi + 412.0 * ub + 12415.0 * u1;
+				qd = qd + (390.0 - 617.0 * j1) * u9 * u1 + (165.0 - 204.0 * j1) * ub * u1;
+				qd = qd + 26599.0 * ua * u1 - 4687.0 * uc * u1 - 1870.0 * ue * u1 - 821.0 * ug * u1;
+				qd = qd - 377.0 * vh * u1 + 497.0 * up * u1 + (163.0 - 611.0 * j1) * u2;
+				qd = qd - 12696.0 * u9 * u2 - 4200.0 * ub * u2 - 1503.0 * ud * u2 - 619.0 * uf * u2;
+				qd = qd - 268.0 * un * u2 - (282.0 + 1306.0 * j1) * ua * u2;
+				qd = qd + (-86.0 + 230.0 * j1) * uc * u2 + 461.0 * uo * u2 - 350.0 * u3;
+				qd = qd + (2211.0 - 286.0 * j1) * u9 * u3 - 2208.0 * ub * u3 - 568.0 * ud * u3;
+				qd = qd - 346.0 * uf * u3 - (2780.0 + 222.0 * j1) * ua * u3;
+				qd = qd + (2022.0 + 263.0 * j1) * uc * u3 + 248.0 * ue * u3 + 242.0 * uq * u3;
+				qd = qd + 467.0 * ur * u3 - 490.0 * u4 - (2842.0 + 279.0 * j1) * u9 * u4;
+				qd = qd + (128.0 + 226.0 * j1) * ub * u4 + 224.0 * ud * u4;
+				qd = qd + (-1594.0 + 282.0 * j1) * ua * u4 + (2162.0 - 207.0 * j1) * uc * u4;
+				qd = qd + 561.0 * ue * u4 + 343.0 * ug * u4 + 469.0 * uq * u4 - 242.0 * ur * u4;
+				qd = qd - 205.0 * u9 * ui + 262.0 * ud * ui + 208.0 * ua * uj - 271.0 * ue * uj;
+				qd = qd - 382.0 * ue * uk - 376.0 * ud * ul;
+				qd *= 0.0000001;
+
+				vk = (0.077108 + (0.007186 - 0.001533 * j1) * j1) * u5;
+				vk -= 0.007075 * u9;
+				vk += (0.045803 - (0.014766 + 0.000536 * j1) * j1) * u6;
+				vk = vk - 0.072586 * u2 - 0.075825 * u9 * u1 - 0.024839 * ub * u1;
+				vk = vk - 0.008631 * ud * u1 - 0.150383 * ua * u2;
+				vk = vk + 0.026897 * uc * u2 + 0.010053 * ue * u2;
+				vk = vk - (0.013597 + 0.001719 * j1) * u9 * u3 + 0.011981 * ub * u4;
+				vk -= (0.007742 - 0.001517 * j1) * ua * u3;
+				vk += (0.013586 - 0.001375 * j1) * uc * u3;
+				vk -= (0.013667 - 0.001239 * j1) * u9 * u4;
+				vk += (0.014861 + 0.001136 * j1) * ua * u4;
+				vk -= (0.013064 + 0.001628 * j1) * uc * u4;
+				qe = qc - (Math.toRadians(vk) / planet.Value4);
+
+				qf = 572.0 * u5 - 1590.0 * ub * u2 + 2933.0 * u6 - 647.0 * ud * u2;
+				qf = qf + 33629.0 * ua - 344.0 * uf * u2 - 3081.0 * uc + 2885.0 * ua * u2;
+				qf = qf - 1423.0 * ue + (2172.0 + 102.0 * j1) * uc * u2 - 671.0 * ug;
+				qf = qf + 296.0 * ue * u2 - 320.0 * vh - 267.0 * ub * u3 + 1098.0 * u1;
+				qf = qf - 778.0 * ua * u3 - 2812.0 * u9 * u1 + 495.0 * uc * u3 + 688.0 * ub * u1;
+				qf = qf + 250.0 * ue * u3 - 393.0 * ud * u1 - 856.0 * u9 * u4 - 228.0 * uf * u1;
+				qf = qf + 441.0 * ub * u4 + 2138.0 * ua * u1 + 296.0 * uc * u4 - 999.0 * uc * u1;
+				qf = qf + 211.0 * ue * u4 - 642.0 * ue * u1 - 427.0 * u9 * ui - 325.0 * ug * u1;
+				qf = qf + 398.0 * ud * ui - 890.0 * u2 + 344.0 * ua * uj + 2206.0 * u9 * u2;
+				qf -= 427.0 * ue * uj;
+				qf *= 0.000001;
+
+				qg = 0.000747 * ua * u1 + 0.001069 * ua * u2 + 0.002108 * ub * u3;
+				qg = qg + 0.001261 * uc * u3 + 0.001236 * ub * u4 - 0.002075 * uc * u4;
+				qg = Math.toRadians(qg);
+
+				return new PlanetLongL4945(qa, qb, qc, qd, qe, qf, qg);
+			}
+
+			qc = (0.331364 - (0.010281 + 0.004692 * j1) * j1) * u5;
+			qc += (0.003228 - (0.064436 - 0.002075 * j1) * j1) * u6;
+			qc -= (0.003083 + (0.000275 - 0.000489 * j1) * j1) * u7;
+			qc = qc + 0.002472 * u8a + 0.013619 * u9 + 0.018472 * ub;
+			qc = qc + 0.006717 * ud + 0.002775 * uf + 0.006417 * ub * u1;
+			qc = qc + (0.007275 - 0.001253 * j1) * u9 * u1 + 0.002439 * ud * u1;
+			qc = qc - (0.035681 + 0.001208 * j1) * u9 * u2 - 0.003767 * uc * u1;
+			qc = qc - (0.033839 + 0.001125 * j1) * ua * u1 - 0.004261 * ub * u2;
+			qc = qc + (0.001161 * j1 - 0.006333) * ua * u2 + 0.002178 * u2;
+			qc = qc - 0.006675 * uc * u2 - 0.002664 * ue * u2 - 0.002572 * u9 * u3;
+			qc = qc - 0.003567 * ub * u3 + 0.002094 * ua * u4 + 0.003342 * uc * u4;
+			qc = Math.toRadians(qc);
+
+			qd = (3606.0 + (130.0 - 43.0 * j1) * j1) * u5 + (1289.0 - 580.0 * j1) * u6;
+			qd = qd - 6764.0 * u9 * u1 - 1110.0 * ub * u1 - 224.0 * ud * u1 - 204.0 * u1;
+			qd = qd + (1284.0 + 116.0 * j1) * ua * u1 + 188.0 * uc * u1;
+			qd = qd + (1460.0 + 130.0 * j1) * u9 * u2 + 224.0 * ub * u2 - 817.0 * u2;
+			qd = qd + 6074.0 * u2 * ua + 992.0 * uc * u2 + 508.0 * ue * u2 + 230.0 * ug * u2;
+			qd = qd + 108.0 * vh * u2 - (956.0 + 73.0 * j1) * u9 * u3 + 448.0 * ub * u3;
+			qd = qd + 137.0 * ud * u3 + (108.0 * j1 - 997.0) * ua * u3 + 480.0 * uc * u3;
+			qd = qd + 148.0 * ue * u3 + (99.0 * j1 - 956.0) * u9 * u4 + 490.0 * ub * u4;
+			qd = qd + 158.0 * ud * u4 + 179.0 * u4 + (1024.0 + 75.0 * j1) * ua * u4;
+			qd = qd - 437.0 * uc * u4 - 132.0 * ue * u4;
+			qd *= 0.0000001;
+
+			vk = (0.007192 - 0.003147 * j1) * u5 - 0.004344 * u1;
+			vk += (j1 * (0.000197 * j1 - 0.000675) - 0.020428) * u6;
+			vk = vk + 0.034036 * ua * u1 + (0.007269 + 0.000672 * j1) * u9 * u1;
+			vk = vk + 0.005614 * uc * u1 + 0.002964 * ue * u1 + 0.037761 * u9 * u2;
+			vk = vk + 0.006158 * ub * u2 - 0.006603 * ua * u2 - 0.005356 * u9 * u3;
+			vk = vk + 0.002722 * ub * u3 + 0.004483 * ua * u3;
+			vk = vk - 0.002642 * uc * u3 + 0.004403 * u9 * u4;
+			vk = vk - 0.002536 * ub * u4 + 0.005547 * ua * u4 - 0.002689 * uc * u4;
+			qe = qc - (Math.toRadians(vk) / planet.Value4);
+
+			qf = 205.0 * ua - 263.0 * u6 + 693.0 * uc + 312.0 * ue + 147.0 * ug + 299.0 * u9 * u1;
+			qf = qf + 181.0 * uc * u1 + 204.0 * ub * u2 + 111.0 * ud * u2 - 337.0 * ua * u2;
+			qf -= 111.0 * uc * u2;
+			qf *= 0.000001;
+
+			return new PlanetLongL4945(qa, qb, qc, qd, qe, qf, qg);
+		}
+
+		Set<String> planetSet3 = new HashSet<>(Set.of("Uranus", "Neptune"));
+		if (planetSet3.contains(planet.Name)) {
+			double j8 = unwind(1.46205 + 3.81337 * t);
+			double j9 = 2.0 * j8 - j4;
+			double vj = Math.sin(j9);
+			double uu = Math.sin(j9);
+			double uv = Math.sin(2.0 * j9);
+			double uw = Math.cos(2.0 * j9);
+
+			if (planet.Name == "Neptune") {
+				ja = j8 - j2;
+				jb = j8 - j3;
+				jc = j8 - j4;
+				qc = (0.001089 * j1 - 0.589833) * vj;
+				qc = qc + (0.004658 * j1 - 0.056094) * uu - 0.024286 * uv;
+				qc = Math.toRadians(qc);
+
+				vk = 0.024039 * vj - 0.025303 * uu + 0.006206 * uv;
+				vk -= 0.005992 * uw;
+				qe = qc - (Math.toRadians(vk) / planet.Value4);
+
+				qd = 4389.0 * vj + 1129.0 * uv + 4262.0 * uu + 1089.0 * uw;
+				qd *= 0.0000001;
+
+				qf = 8189.0 * uu - 817.0 * vj + 781.0 * uw;
+				qf *= 0.000001;
+
+				double vd = Math.sin(2.0 * jc);
+				double ve = Math.cos(2.0 * jc);
+				double vf = Math.sin(j8);
+				double vg = Math.cos(j8);
+				qa = -0.009556 * Math.sin(ja) - 0.005178 * Math.sin(jb);
+				qa = qa + 0.002572 * vd - 0.002972 * ve * vf - 0.002833 * vd * vg;
+
+				qg = 0.000336 * ve * vf + 0.000364 * vd * vg;
+				qg = Math.toRadians(qg);
+
+				qb = -40596.0 + 4992.0 * Math.cos(ja) + 2744.0 * Math.cos(jb);
+				qb = qb + 2044.0 * Math.cos(jc) + 1051.0 * ve;
+				qb *= 0.000001;
+
+				return new PlanetLongL4945(qa, qb, qc, qd, qe, qf, qg);
+			}
+
+			ja = j4 - j2;
+			jb = j4 - j3;
+			jc = j8 - j4;
+			qc = (0.864319 - 0.001583 * j1) * vj;
+			qc = qc + (0.082222 - 0.006833 * j1) * uu + 0.036017 * uv;
+			qc = qc - 0.003019 * uw + 0.008122 * Math.sin(j6);
+			qc = Math.toRadians(qc);
+
+			vk = 0.120303 * vj + 0.006197 * uv;
+			vk += (0.019472 - 0.000947 * j1) * uu;
+			qe = qc - (Math.toRadians(vk) / planet.Value4);
+
+			qd = (163.0 * j1 - 3349.0) * vj + 20981.0 * uu + 1311.0 * uw;
+			qd *= 0.0000001;
+
+			qf = -0.003825 * uu;
+
+			qa = (-0.038581 + (0.002031 - 0.00191 * j1) * j1) * Math.cos(j4 + jb);
+			qa += (0.010122 - 0.000988 * j1) * Math.sin(j4 + jb);
+			double a = (0.034964 - (0.001038 - 0.000868 * j1) * j1) * Math.cos(2.0 * j4 + jb);
+			qa = a + qa + 0.005594 * Math.sin(j4 + 3.0 * jc) - 0.014808 * Math.sin(ja);
+			qa = qa - 0.005794 * Math.sin(jb) + 0.002347 * Math.cos(jb);
+			qa = qa + 0.009872 * Math.sin(jc) + 0.008803 * Math.sin(2.0 * jc);
+			qa -= 0.004308 * Math.sin(3.0 * jc);
+
+			double ux = Math.sin(jb);
+			double uy = Math.cos(jb);
+			double uz = Math.sin(j4);
+			double va = Math.cos(j4);
+			double vb = Math.sin(2.0 * j4);
+			double vc = Math.cos(2.0 * j4);
+			qg = (0.000458 * ux - 0.000642 * uy - 0.000517 * Math.cos(4.0 * jc)) * uz;
+			qg -= (0.000347 * ux + 0.000853 * uy + 0.000517 * Math.sin(4.0 * jb)) * va;
+			qg += 0.000403 * (Math.cos(2.0 * jc) * vb + Math.sin(2.0 * jc) * vc);
+			qg = Math.toRadians(qg);
+
+			qb = -25948.0 + 4985.0 * Math.cos(ja) - 1230.0 * va + 3354.0 * uy;
+			qb = qb + 904.0 * Math.cos(2.0 * jc) + 894.0 * (Math.cos(jc) - Math.cos(3.0 * jc));
+			qb += (5795.0 * va - 1165.0 * uz + 1388.0 * vc) * ux;
+			qb += (1351.0 * va + 5702.0 * uz + 1388.0 * vb) * uy;
+			qb *= 0.000001;
+
+			return new PlanetLongL4945(qa, qb, qc, qd, qe, qf, qg);
+		}
+
+		return new PlanetLongL4945(qa, qb, qc, qd, qe, qf, qg);
 	}
 }
