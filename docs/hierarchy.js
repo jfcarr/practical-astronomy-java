@@ -3,6 +3,8 @@ var hierarchy =
     [ "Aberration", "classastro_1_1practical_1_1models_1_1Aberration.html", null ],
     [ "Angle", "classastro_1_1practical_1_1models_1_1Angle.html", null ],
     [ "AngleMeasure", "enumastro_1_1practical_1_1types_1_1AngleMeasure.html", null ],
+    [ "CometDataElliptical", "classastro_1_1practical_1_1models_1_1data_1_1CometDataElliptical.html", null ],
+    [ "CometInfoElliptical", "classastro_1_1practical_1_1data_1_1CometInfoElliptical.html", null ],
     [ "CoordinatesLongLat", "classastro_1_1practical_1_1models_1_1CoordinatesLongLat.html", [
       [ "EclipticCoordinates", "classastro_1_1practical_1_1models_1_1EclipticCoordinates.html", null ],
       [ "GalacticCoordinates", "classastro_1_1practical_1_1models_1_1GalacticCoordinates.html", null ]
@@ -24,6 +26,7 @@ var hierarchy =
     [ "Main", "classMain.html", null ],
     [ "MorningAndEveningTwilight", "classastro_1_1practical_1_1models_1_1MorningAndEveningTwilight.html", null ],
     [ "Nutation", "classastro_1_1practical_1_1models_1_1Nutation.html", null ],
+    [ "PAComet", "classastro_1_1practical_1_1lib_1_1PAComet.html", null ],
     [ "PACoordinates", "classastro_1_1practical_1_1lib_1_1PACoordinates.html", null ],
     [ "PADateTime", "classastro_1_1practical_1_1lib_1_1PADateTime.html", null ],
     [ "PAMacros", "classastro_1_1practical_1_1lib_1_1PAMacros.html", null ],
@@ -40,6 +43,7 @@ var hierarchy =
     [ "PlanetLongL4810", "classastro_1_1practical_1_1models_1_1PlanetLongL4810.html", null ],
     [ "PlanetLongL4945", "classastro_1_1practical_1_1models_1_1PlanetLongL4945.html", null ],
     [ "PlanetPosition", "classastro_1_1practical_1_1models_1_1PlanetPosition.html", null ],
+    [ "PositionOfEllipticalComet", "classastro_1_1practical_1_1models_1_1PositionOfEllipticalComet.html", null ],
     [ "PositionOfSun", "classastro_1_1practical_1_1models_1_1PositionOfSun.html", null ],
     [ "RightAscensionDeclination", "classastro_1_1practical_1_1models_1_1RightAscensionDeclination.html", [
       [ "EquatorialCoordinatesRA", "classastro_1_1practical_1_1models_1_1EquatorialCoordinatesRA.html", null ]
@@ -50,6 +54,7 @@ var hierarchy =
     [ "SelenographicCoordinates2", "classastro_1_1practical_1_1models_1_1SelenographicCoordinates2.html", null ],
     [ "SunDistanceAndAngularSize", "classastro_1_1practical_1_1models_1_1SunDistanceAndAngularSize.html", null ],
     [ "SunriseAndSunset", "classastro_1_1practical_1_1models_1_1SunriseAndSunset.html", null ],
+    [ "TestComet", "classTestComet.html", null ],
     [ "TestCoordinates", "classTestCoordinates.html", null ],
     [ "TestDateTime", "classTestDateTime.html", null ],
     [ "TestLib", "classastro_1_1practical_1_1test_1_1TestLib.html", null ],

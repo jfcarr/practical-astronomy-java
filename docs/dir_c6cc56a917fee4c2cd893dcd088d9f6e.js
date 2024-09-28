@@ -30,6 +30,7 @@ var dir_c6cc56a917fee4c2cd893dcd088d9f6e =
     [ "PlanetLongL4810.java", "PlanetLongL4810_8java.html", "PlanetLongL4810_8java" ],
     [ "PlanetLongL4945.java", "PlanetLongL4945_8java.html", "PlanetLongL4945_8java" ],
     [ "PlanetPosition.java", "PlanetPosition_8java.html", "PlanetPosition_8java" ],
+    [ "PositionOfEllipticalComet.java", "PositionOfEllipticalComet_8java.html", "PositionOfEllipticalComet_8java" ],
     [ "PositionOfSun.java", "PositionOfSun_8java.html", "PositionOfSun_8java" ],
     [ "RightAscension.java", "RightAscension_8java.html", "RightAscension_8java" ],
     [ "RightAscensionDeclination.java", "RightAscensionDeclination_8java.html", "RightAscensionDeclination_8java" ],
