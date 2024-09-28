@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['main_2ejava_0',['Main.java',['../Main_8java.html',1,'']]],
-  ['morningandeveningtwilight_2ejava_1',['MorningAndEveningTwilight.java',['../MorningAndEveningTwilight_8java.html',1,'']]]
+  ['l3710_2ejava_0',['L3710.java',['../L3710_8java.html',1,'']]],
+  ['l3710twilight_2ejava_1',['L3710Twilight.java',['../L3710Twilight_8java.html',1,'']]],
+  ['localsiderealtime_2ejava_2',['LocalSiderealTime.java',['../LocalSiderealTime_8java.html',1,'']]]
 ];

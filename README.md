@@ -56,7 +56,7 @@ If you're interested in this topic, please buy the book! It provides far more de
 
 ### Binary Stars
 
-- [ ] Calculate -> Binary star orbit data
+- [x] Calculate -> Binary star orbit data
 
 ### The Moon
 

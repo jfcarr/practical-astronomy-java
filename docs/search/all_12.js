@@ -1,16 +1,15 @@
 var searchData=
 [
-  ['v0_5fvisualmagnitude_0',['v0_VisualMagnitude',['../classastro_1_1practical_1_1models_1_1data_1_1PlanetData.html#a7d2352f012e0065cec1a33a569dbf90a',1,'astro::practical::models::data::PlanetData']]],
-  ['value_1',['value',['../enumastro_1_1practical_1_1types_1_1TwilightType.html#a899c1b74df7f8fda2fcd2c85d9185da8',1,'astro::practical::types::TwilightType']]],
-  ['value1_2',['Value1',['../classastro_1_1practical_1_1models_1_1data_1_1PlanetDataPrecise.html#a155e8c8fc681ab5558e3d4455f8c0dc5',1,'astro::practical::models::data::PlanetDataPrecise']]],
-  ['value2_3',['Value2',['../classastro_1_1practical_1_1models_1_1data_1_1PlanetDataPrecise.html#a45b71f25bc6d4e9d40c6754b802226fd',1,'astro::practical::models::data::PlanetDataPrecise']]],
-  ['value3_4',['Value3',['../classastro_1_1practical_1_1models_1_1data_1_1PlanetDataPrecise.html#a2d4b6358bb0c39fda9b6573777fdbbe5',1,'astro::practical::models::data::PlanetDataPrecise']]],
-  ['value4_5',['Value4',['../classastro_1_1practical_1_1models_1_1data_1_1PlanetDataPrecise.html#afca485901e363e010bc7e81855114420',1,'astro::practical::models::data::PlanetDataPrecise']]],
-  ['value5_6',['Value5',['../classastro_1_1practical_1_1models_1_1data_1_1PlanetDataPrecise.html#aaa348863e5530567af0eb2b689918477',1,'astro::practical::models::data::PlanetDataPrecise']]],
-  ['value6_7',['Value6',['../classastro_1_1practical_1_1models_1_1data_1_1PlanetDataPrecise.html#ac062a0f403e66a9585b7a96250554e54',1,'astro::practical::models::data::PlanetDataPrecise']]],
-  ['value7_8',['Value7',['../classastro_1_1practical_1_1models_1_1data_1_1PlanetDataPrecise.html#acfa6eeb19477324c1fb676a300ea13d8',1,'astro::practical::models::data::PlanetDataPrecise']]],
-  ['value8_9',['Value8',['../classastro_1_1practical_1_1models_1_1data_1_1PlanetDataPrecise.html#adc3d659ef572f0d26cc90c85b9c7677e',1,'astro::practical::models::data::PlanetDataPrecise']]],
-  ['value9_10',['Value9',['../classastro_1_1practical_1_1models_1_1data_1_1PlanetDataPrecise.html#aa8fa22bbd052cd09c7fc36a5adfb6f87',1,'astro::practical::models::data::PlanetDataPrecise']]],
-  ['visualaspectsofaplanet_11',['visualaspectsofaplanet',['../classastro_1_1practical_1_1models_1_1VisualAspectsOfAPlanet.html',1,'VisualAspectsOfAPlanet'],['../classastro_1_1practical_1_1lib_1_1PAPlanet.html#abf4ab711327cbf7f32ff92b48fabe040',1,'astro.practical.lib.PAPlanet.visualAspectsOfAPlanet()'],['../classastro_1_1practical_1_1models_1_1VisualAspectsOfAPlanet.html#a28b429513d546b0bd40c6357b4807111',1,'astro.practical.models.VisualAspectsOfAPlanet.VisualAspectsOfAPlanet()']]],
-  ['visualaspectsofaplanet_2ejava_12',['VisualAspectsOfAPlanet.java',['../VisualAspectsOfAPlanet_8java.html',1,'']]]
+  ['universaldatetime_0',['universaldatetime',['../classastro_1_1practical_1_1models_1_1UniversalDateTime.html#a53001cb4a485bc8608981f228a6e988d',1,'astro.practical.models.UniversalDateTime.UniversalDateTime()'],['../classastro_1_1practical_1_1models_1_1UniversalDateTime.html',1,'UniversalDateTime']]],
+  ['universaldatetime_2ejava_1',['UniversalDateTime.java',['../UniversalDateTime_8java.html',1,'']]],
+  ['universaltime_2',['universaltime',['../classastro_1_1practical_1_1models_1_1UniversalTime.html',1,'UniversalTime'],['../classastro_1_1practical_1_1models_1_1UniversalTime.html#a8fcc5ebc7072b144ac61942f18ea4266',1,'astro.practical.models.UniversalTime.UniversalTime(double hours, double minutes, double seconds)'],['../classastro_1_1practical_1_1models_1_1UniversalTime.html#a1c8c74e058acd1cf58014645c1ea5c16',1,'astro.practical.models.UniversalTime.UniversalTime(double hours, double minutes, double seconds, WarningFlag paWarningFlag)']]],
+  ['universaltime_2ejava_3',['UniversalTime.java',['../UniversalTime_8java.html',1,'']]],
+  ['universaltimetogreenwichsiderealtime_4',['universaltimetogreenwichsiderealtime',['../classastro_1_1practical_1_1lib_1_1PAMacros.html#ac123adc4d79b223c58a601e64fb4134d',1,'astro.practical.lib.PAMacros.universalTimeToGreenwichSiderealTime()'],['../classastro_1_1practical_1_1lib_1_1PADateTime.html#a5ec2adf3adc6c1814cc724c3d220e2bb',1,'astro.practical.lib.PADateTime.universalTimeToGreenwichSiderealTime(double utHours, double utMinutes, double utSeconds, double gwDay, int gwMonth, int gwYear)']]],
+  ['universaltimetolocalciviltime_5',['universaltimetolocalciviltime',['../classastro_1_1practical_1_1lib_1_1PADateTime.html#a33a6e28efb029e6fda435283c9c0d907',1,'astro.practical.lib.PADateTime.universalTimeToLocalCivilTime()'],['../classastro_1_1practical_1_1lib_1_1PAMacros.html#a46552149a8ed49147149bbeabaaac98e',1,'astro.practical.lib.PAMacros.universalTimeToLocalCivilTime(double uHours, double uMinutes, double uSeconds, int daylightSaving, int zoneCorrection, double greenwichDay, int greenwichMonth, int greenwichYear)']]],
+  ['unwind_6',['unwind',['../classastro_1_1practical_1_1lib_1_1PAMacros.html#adef474241909afe549c393eac1a0f86a',1,'astro::practical::lib::PAMacros']]],
+  ['unwinddeg_7',['unwindDeg',['../classastro_1_1practical_1_1lib_1_1PAMacros.html#add99a0e675bb4b0d05b6712f824ddea9',1,'astro::practical::lib::PAMacros']]],
+  ['utrisehour_8',['utRiseHour',['../classastro_1_1practical_1_1models_1_1RiseSet.html#a3f50138c545ca70fc7eaec187beffa8a',1,'astro::practical::models::RiseSet']]],
+  ['utrisemin_9',['utRiseMin',['../classastro_1_1practical_1_1models_1_1RiseSet.html#ae7221c963c7e7354f382a0284bd6706d',1,'astro::practical::models::RiseSet']]],
+  ['utsethour_10',['utSetHour',['../classastro_1_1practical_1_1models_1_1RiseSet.html#ae125909bbbedd8c47e17f350d438ea3f',1,'astro::practical::models::RiseSet']]],
+  ['utsetmin_11',['utSetMin',['../classastro_1_1practical_1_1models_1_1RiseSet.html#afa268c51f3c02f0f9850a6f7c75b61d7',1,'astro::practical::models::RiseSet']]]
 ];

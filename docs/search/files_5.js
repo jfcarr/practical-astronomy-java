@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['heliographiccoordinates_2ejava_0',['HeliographicCoordinates.java',['../HeliographicCoordinates_8java.html',1,'']]],
-  ['horizoncoordinates_2ejava_1',['HorizonCoordinates.java',['../HorizonCoordinates_8java.html',1,'']]],
-  ['hourangle_2ejava_2',['HourAngle.java',['../HourAngle_8java.html',1,'']]]
+  ['galacticcoordinates_2ejava_0',['GalacticCoordinates.java',['../GalacticCoordinates_8java.html',1,'']]],
+  ['greenwichsiderealtime_2ejava_1',['GreenwichSiderealTime.java',['../GreenwichSiderealTime_8java.html',1,'']]]
 ];

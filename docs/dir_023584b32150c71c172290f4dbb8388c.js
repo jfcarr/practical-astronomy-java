@@ -1,5 +1,6 @@
 var dir_023584b32150c71c172290f4dbb8388c =
 [
+    [ "PABinary.java", "PABinary_8java.html", "PABinary_8java" ],
     [ "PAComet.java", "PAComet_8java.html", "PAComet_8java" ],
     [ "PACoordinates.java", "PACoordinates_8java.html", "PACoordinates_8java" ],
     [ "PADateTime.java", "PADateTime_8java.html", "PADateTime_8java" ],

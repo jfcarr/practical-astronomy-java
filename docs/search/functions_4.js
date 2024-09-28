@@ -1,11 +1,22 @@
 var searchData=
 [
-  ['galacticcoordinates_0',['GalacticCoordinates',['../classastro_1_1practical_1_1models_1_1GalacticCoordinates.html#acff3ffcb6af81470a7d869d31b000f18',1,'astro::practical::models::GalacticCoordinates']]],
-  ['galacticcoordinatetoequatorialcoordinate_1',['galacticCoordinateToEquatorialCoordinate',['../classastro_1_1practical_1_1lib_1_1PACoordinates.html#a6785fb42d9eb4fde7c79b213d9a541ca',1,'astro::practical::lib::PACoordinates']]],
-  ['getcometinfo_2',['getcometinfo',['../classastro_1_1practical_1_1data_1_1CometInfoElliptical.html#a1c3ac31b4bd92bdbec6b942b5dee1b2f',1,'astro.practical.data.CometInfoElliptical.getCometInfo()'],['../classastro_1_1practical_1_1data_1_1CometInfoParabolic.html#a11651c12a12dcd0acdbe9a45e82d4d0e',1,'astro.practical.data.CometInfoParabolic.getCometInfo()']]],
-  ['getdateofeaster_3',['getDateOfEaster',['../classastro_1_1practical_1_1lib_1_1PADateTime.html#a5091e5f746edf8d9d3b330d0ac66a91f',1,'astro::practical::lib::PADateTime']]],
-  ['getplanetinfo_4',['getPlanetInfo',['../classastro_1_1practical_1_1data_1_1PlanetInfo.html#a55f6e30328c9d4c6acd537b46b6ab203',1,'astro::practical::data::PlanetInfo']]],
-  ['greenwichsiderealtime_5',['GreenwichSiderealTime',['../classastro_1_1practical_1_1models_1_1GreenwichSiderealTime.html#ace708f8d778f72857a61f5909974413f',1,'astro::practical::models::GreenwichSiderealTime']]],
-  ['greenwichsiderealtimetolocalsiderealtime_6',['greenwichsiderealtimetolocalsiderealtime',['../classastro_1_1practical_1_1lib_1_1PADateTime.html#ab2eceb5e09df3ecec388d90e51109213',1,'astro.practical.lib.PADateTime.greenwichSiderealTimeToLocalSiderealTime()'],['../classastro_1_1practical_1_1lib_1_1PAMacros.html#a4763befafc3c500153a874ad5e7dad77',1,'astro.practical.lib.PAMacros.greenwichSiderealTimeToLocalSiderealTime()']]],
-  ['greenwichsiderealtimetouniversaltime_7',['greenwichsiderealtimetouniversaltime',['../classastro_1_1practical_1_1lib_1_1PADateTime.html#ad793ce500a7f4869310fb8508db88302',1,'astro.practical.lib.PADateTime.greenwichSiderealTimeToUniversalTime()'],['../classastro_1_1practical_1_1lib_1_1PAMacros.html#aacce7a24cd53ee927a7369788de8fef3',1,'astro.practical.lib.PAMacros.greenwichSiderealTimeToUniversalTime()']]]
+  ['eccentricanomaly_0',['eccentricAnomaly',['../classastro_1_1practical_1_1lib_1_1PAMacros.html#ac3ede3095cc3d90ea009d19e36fc6ebd',1,'astro::practical::lib::PAMacros']]],
+  ['ecdec_1',['ecDec',['../classastro_1_1practical_1_1lib_1_1PAMacros.html#a08baf97d7f7015da4febb72ad8997b72',1,'astro::practical::lib::PAMacros']]],
+  ['eclipticcoordinates_2',['EclipticCoordinates',['../classastro_1_1practical_1_1models_1_1EclipticCoordinates.html#a324a19db48f4fcedbad0b387d54063ac',1,'astro::practical::models::EclipticCoordinates']]],
+  ['eclipticcoordinatetoequatorialcoordinate_3',['eclipticCoordinateToEquatorialCoordinate',['../classastro_1_1practical_1_1lib_1_1PACoordinates.html#a5f54a5273355f679f6cde74ad6bc9e14',1,'astro::practical::lib::PACoordinates']]],
+  ['ecra_4',['ecRA',['../classastro_1_1practical_1_1lib_1_1PAMacros.html#a37b6a4830e85846f656abc22bdcd1674',1,'astro::practical::lib::PAMacros']]],
+  ['egstut_5',['eGstUt',['../classastro_1_1practical_1_1lib_1_1PAMacros.html#a00a8724996e5f7b910be4bb08d29f6bb',1,'astro::practical::lib::PAMacros']]],
+  ['equationoftime_6',['equationoftime',['../classastro_1_1practical_1_1lib_1_1PASun.html#ac45d47b68addb88e7eb1fb1170803024',1,'astro.practical.lib.PASun.equationOfTime()'],['../classastro_1_1practical_1_1models_1_1EquationOfTime.html#ad94a0e12a454a1b1d556d90d6da90e5c',1,'astro.practical.models.EquationOfTime.EquationOfTime()']]],
+  ['equatorialcoordinatesha_7',['EquatorialCoordinatesHA',['../classastro_1_1practical_1_1models_1_1EquatorialCoordinatesHA.html#a1618c60390d1e8fcc5d8e5de93f5e1be',1,'astro::practical::models::EquatorialCoordinatesHA']]],
+  ['equatorialcoordinatesra_8',['EquatorialCoordinatesRA',['../classastro_1_1practical_1_1models_1_1EquatorialCoordinatesRA.html#aef1809c36135dcc5a1f5eebc63e894d8',1,'astro::practical::models::EquatorialCoordinatesRA']]],
+  ['equatorialcoordinatestoaltitude_9',['equatorialCoordinatesToAltitude',['../classastro_1_1practical_1_1lib_1_1PAMacros.html#ac57606bf4329f2bf10bf409eee9f252f',1,'astro::practical::lib::PAMacros']]],
+  ['equatorialcoordinatestoazimuth_10',['equatorialCoordinatesToAzimuth',['../classastro_1_1practical_1_1lib_1_1PAMacros.html#a51b2aa70f6bbad7d1755eb2dd425c3ad',1,'astro::practical::lib::PAMacros']]],
+  ['equatorialcoordinatestohorizoncoordinates_11',['equatorialCoordinatesToHorizonCoordinates',['../classastro_1_1practical_1_1lib_1_1PACoordinates.html#a68eea4feff65e3f0931a2c474e727b28',1,'astro::practical::lib::PACoordinates']]],
+  ['equatorialcoordinatetoeclipticcoordinate_12',['equatorialCoordinateToEclipticCoordinate',['../classastro_1_1practical_1_1lib_1_1PACoordinates.html#a29cf00ad87a16c7196445b5437fcc957',1,'astro::practical::lib::PACoordinates']]],
+  ['equatorialcoordinatetogalacticcoordinate_13',['equatorialCoordinateToGalacticCoordinate',['../classastro_1_1practical_1_1lib_1_1PACoordinates.html#a9ce8c95b60c9886960a5ca4fd26b525b',1,'astro::practical::lib::PACoordinates']]],
+  ['ers_14',['eRS',['../classastro_1_1practical_1_1lib_1_1PAMacros.html#a40c2ad08786c28cd80f8afc21429bcd8',1,'astro::practical::lib::PAMacros']]],
+  ['esunrs_15',['eSunRS',['../classastro_1_1practical_1_1lib_1_1PAMacros.html#af52ab4812d1b2f451f2b8476e38055a1',1,'astro::practical::lib::PAMacros']]],
+  ['esunrsl3710_16',['eSunRSL3710',['../classastro_1_1practical_1_1lib_1_1PAMacros.html#a8d487f370219ae27e75e88edb748c2bb',1,'astro::practical::lib::PAMacros']]],
+  ['etwilight_17',['eTwilight',['../classastro_1_1practical_1_1lib_1_1PAMacros.html#ac02a6da42e96f9e92b9ab410d821c429',1,'astro::practical::lib::PAMacros']]],
+  ['etwilightl3710_18',['eTwilightL3710',['../classastro_1_1practical_1_1lib_1_1PAMacros.html#ab7e3f94ceee8a327d7f4a02359b1a4a5',1,'astro::practical::lib::PAMacros']]]
 ];

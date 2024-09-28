@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['selenographiccoordinates1_2ejava_0',['SelenographicCoordinates1.java',['../SelenographicCoordinates1_8java.html',1,'']]],
-  ['selenographiccoordinates2_2ejava_1',['SelenographicCoordinates2.java',['../SelenographicCoordinates2_8java.html',1,'']]],
-  ['sundistanceandangularsize_2ejava_2',['SunDistanceAndAngularSize.java',['../SunDistanceAndAngularSize_8java.html',1,'']]],
-  ['sunriseandsunset_2ejava_3',['SunriseAndSunset.java',['../SunriseAndSunset_8java.html',1,'']]]
+  ['rightascension_2ejava_0',['RightAscension.java',['../RightAscension_8java.html',1,'']]],
+  ['rightascensiondeclination_2ejava_1',['RightAscensionDeclination.java',['../RightAscensionDeclination_8java.html',1,'']]],
+  ['riseset_2ejava_2',['RiseSet.java',['../RiseSet_8java.html',1,'']]],
+  ['risesetstatus_2ejava_3',['RiseSetStatus.java',['../RiseSetStatus_8java.html',1,'']]]
 ];

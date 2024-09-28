@@ -18,13 +18,14 @@ var searchData=
   ['apvalue_15',['APValue',['../classastro_1_1practical_1_1models_1_1data_1_1PlanetDataPrecise.html#a469e566c382ba40cde162556d96830f5',1,'astro::practical::models::data::PlanetDataPrecise']]],
   ['argperi_16',['ArgPeri',['../classastro_1_1practical_1_1models_1_1data_1_1CometDataParabolic.html#a72e1b5793d2fa975cb4df0fb88ec70f6',1,'astro::practical::models::data::CometDataParabolic']]],
   ['astronomical_17',['ASTRONOMICAL',['../enumastro_1_1practical_1_1types_1_1TwilightType.html#a85e53b2a1d1d13880b5a4fc91047968c',1,'astro::practical::types::TwilightType']]],
-  ['axis_5faxisorbit_18',['axis_AxisOrbit',['../classastro_1_1practical_1_1models_1_1data_1_1PlanetData.html#a0ba8a02d2e5ab801b3be6ed2b81f1029',1,'astro::practical::models::data::PlanetData']]],
-  ['axis_5fsemimajoraxisoforbit_19',['axis_SemiMajorAxisOfOrbit',['../classastro_1_1practical_1_1models_1_1data_1_1CometDataElliptical.html#a36e54f33aead0a87affd6565b43ae863',1,'astro::practical::models::data::CometDataElliptical']]],
-  ['azimuthdegrees_20',['azimuthDegrees',['../classastro_1_1practical_1_1models_1_1HorizonCoordinates.html#a5c67fdf7f8ad0c316418bb037d339b14',1,'astro::practical::models::HorizonCoordinates']]],
-  ['azimuthminutes_21',['azimuthMinutes',['../classastro_1_1practical_1_1models_1_1HorizonCoordinates.html#a7367ee8fee72c52b987583bd45676daf',1,'astro::practical::models::HorizonCoordinates']]],
-  ['azimuthofsunrisedeg_22',['azimuthOfSunriseDeg',['../classastro_1_1practical_1_1models_1_1SunriseAndSunset.html#a526a616ff9a48d800848a92a4cb0617a',1,'astro::practical::models::SunriseAndSunset']]],
-  ['azimuthofsunsetdeg_23',['azimuthOfSunsetDeg',['../classastro_1_1practical_1_1models_1_1SunriseAndSunset.html#aa4cc97d6e4d2d0f3798a4bbd8c164960',1,'astro::practical::models::SunriseAndSunset']]],
-  ['azimuthseconds_24',['azimuthSeconds',['../classastro_1_1practical_1_1models_1_1HorizonCoordinates.html#a603a97414cf495512a9ce79370db67e2',1,'astro::practical::models::HorizonCoordinates']]],
-  ['azrise_25',['azRise',['../classastro_1_1practical_1_1models_1_1RiseSet.html#a45bc5ba8bc432ff10c026c0218982523',1,'astro::practical::models::RiseSet']]],
-  ['azset_26',['azSet',['../classastro_1_1practical_1_1models_1_1RiseSet.html#a4e21a5f135bcfd5c21b0a21537f8e97c',1,'astro::practical::models::RiseSet']]]
+  ['axis_18',['Axis',['../classastro_1_1practical_1_1models_1_1data_1_1BinaryData.html#ab72f2ad0fb165792cd58500175495a7d',1,'astro::practical::models::data::BinaryData']]],
+  ['axis_5faxisorbit_19',['axis_AxisOrbit',['../classastro_1_1practical_1_1models_1_1data_1_1PlanetData.html#a0ba8a02d2e5ab801b3be6ed2b81f1029',1,'astro::practical::models::data::PlanetData']]],
+  ['axis_5fsemimajoraxisoforbit_20',['axis_SemiMajorAxisOfOrbit',['../classastro_1_1practical_1_1models_1_1data_1_1CometDataElliptical.html#a36e54f33aead0a87affd6565b43ae863',1,'astro::practical::models::data::CometDataElliptical']]],
+  ['azimuthdegrees_21',['azimuthDegrees',['../classastro_1_1practical_1_1models_1_1HorizonCoordinates.html#a5c67fdf7f8ad0c316418bb037d339b14',1,'astro::practical::models::HorizonCoordinates']]],
+  ['azimuthminutes_22',['azimuthMinutes',['../classastro_1_1practical_1_1models_1_1HorizonCoordinates.html#a7367ee8fee72c52b987583bd45676daf',1,'astro::practical::models::HorizonCoordinates']]],
+  ['azimuthofsunrisedeg_23',['azimuthOfSunriseDeg',['../classastro_1_1practical_1_1models_1_1SunriseAndSunset.html#a526a616ff9a48d800848a92a4cb0617a',1,'astro::practical::models::SunriseAndSunset']]],
+  ['azimuthofsunsetdeg_24',['azimuthOfSunsetDeg',['../classastro_1_1practical_1_1models_1_1SunriseAndSunset.html#aa4cc97d6e4d2d0f3798a4bbd8c164960',1,'astro::practical::models::SunriseAndSunset']]],
+  ['azimuthseconds_25',['azimuthSeconds',['../classastro_1_1practical_1_1models_1_1HorizonCoordinates.html#a603a97414cf495512a9ce79370db67e2',1,'astro::practical::models::HorizonCoordinates']]],
+  ['azrise_26',['azRise',['../classastro_1_1practical_1_1models_1_1RiseSet.html#a45bc5ba8bc432ff10c026c0218982523',1,'astro::practical::models::RiseSet']]],
+  ['azset_27',['azSet',['../classastro_1_1practical_1_1models_1_1RiseSet.html#a4e21a5f135bcfd5c21b0a21537f8e97c',1,'astro::practical::models::RiseSet']]]
 ];

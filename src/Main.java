@@ -5,6 +5,7 @@ public class Main {
 		testSun();
 		testPlanet();
 		testComet();
+		testBinary();
 	}
 
 	public static void testDateTime() {
@@ -65,5 +66,11 @@ public class Main {
 
 		testComet.testPositionOfEllipticalComet();
 		testComet.testPositionOfParabolicComet();
+	}
+
+	public static void testBinary() {
+		TestBinary testBinary = new TestBinary();
+
+		testBinary.testBinaryStarOrbit();
 	}
 }

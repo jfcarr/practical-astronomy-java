@@ -15,5 +15,6 @@ var searchData=
   ['long_5flongitudeepoch_12',['long_LongitudeEpoch',['../classastro_1_1practical_1_1models_1_1data_1_1PlanetData.html#a8059043964722078c933563278826c45',1,'astro::practical::models::data::PlanetData']]],
   ['longitudedegrees_13',['longitudeDegrees',['../classastro_1_1practical_1_1models_1_1CoordinatesLongLat.html#a623d9e58238c87f269f583b6463e9a32',1,'astro::practical::models::CoordinatesLongLat']]],
   ['longitudeminutes_14',['longitudeMinutes',['../classastro_1_1practical_1_1models_1_1CoordinatesLongLat.html#ac48dc8a6362bfb343783cf025b5294c5',1,'astro::practical::models::CoordinatesLongLat']]],
-  ['longitudeseconds_15',['longitudeSeconds',['../classastro_1_1practical_1_1models_1_1CoordinatesLongLat.html#ab24bcd7c469aebd058463fd3546a0e00',1,'astro::practical::models::CoordinatesLongLat']]]
+  ['longitudeseconds_15',['longitudeSeconds',['../classastro_1_1practical_1_1models_1_1CoordinatesLongLat.html#ab24bcd7c469aebd058463fd3546a0e00',1,'astro::practical::models::CoordinatesLongLat']]],
+  ['longperi_16',['LongPeri',['../classastro_1_1practical_1_1models_1_1data_1_1BinaryData.html#a537106fc6e9831691745c9133aed21ee',1,'astro::practical::models::data::BinaryData']]]
 ];
