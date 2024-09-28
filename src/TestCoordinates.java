@@ -22,14 +22,14 @@ import astro.practical.types.CoordinateType;
 
 public class TestCoordinates {
 	PACoordinates paCoordinates;
+	TestLib testLib;
 
 	public TestCoordinates() {
 		paCoordinates = new PACoordinates();
+		testLib = new TestLib();
 	}
 
 	public void testAngleToFromDecimalDegrees() {
-		TestLib testLib = new TestLib();
-
 		double decimalDegrees = paCoordinates.angleToDecimalDegrees(182, 31, 27);
 
 		testLib.setTestName("Decimal Degrees for 182d 31m 27s").Assert(182.524167, PAUtil.round(decimalDegrees, 6));
@@ -41,8 +41,6 @@ public class TestCoordinates {
 	}
 
 	public void testRightAscensionToFromHourAngle() {
-		TestLib testLib = new TestLib();
-
 		HourAngle hourAngle = paCoordinates.rightAscensionToHourAngle(18, 32, 21, 14, 36, 51.67, false, -4, 22, 4, 1980,
 				-64);
 
@@ -59,8 +57,6 @@ public class TestCoordinates {
 	}
 
 	public void testEquatorialCoordinatesToFromHorizonCoordinates() {
-		TestLib testLib = new TestLib();
-
 		HorizonCoordinates horizonCoordinates = paCoordinates.equatorialCoordinatesToHorizonCoordinates(5, 51, 44, 23,
 				13, 10, 52);
 
@@ -82,8 +78,6 @@ public class TestCoordinates {
 	}
 
 	public void testMeanObliquityOfTheEcliptic() {
-		TestLib testLib = new TestLib();
-
 		double meanObliquityOfTheEcliptic = PAUtil.round(paCoordinates.meanObliquityOfTheEcliptic(6, 7, 2009), 8);
 
 		testLib.setTestName("Mean Obliquity of the Ecliptic for 7/6/2009").Assert(23.43805531,
@@ -91,8 +85,6 @@ public class TestCoordinates {
 	}
 
 	public void testEclipticCoordinateToFromEquatorialCoordinate() {
-		TestLib testLib = new TestLib();
-
 		EquatorialCoordinatesRA equatorialCoordinatesRA = paCoordinates.eclipticCoordinateToEquatorialCoordinate(139,
 				41, 10, 4, 52, 31, 6, 7, 2009);
 
@@ -116,8 +108,6 @@ public class TestCoordinates {
 	}
 
 	public void testEquatorialCoordinateToFromGalacticCoordinate() {
-		TestLib testLib = new TestLib();
-
 		GalacticCoordinates galacticCoordinates = paCoordinates.equatorialCoordinateToGalacticCoordinate(10, 21, 0, 10,
 				3, 11);
 
@@ -141,8 +131,6 @@ public class TestCoordinates {
 	}
 
 	public void testAngleBetweenTwoObjects() {
-		TestLib testLib = new TestLib();
-
 		Angle angle = paCoordinates.angleBetweenTwoObjects(5, 13, 31.7, -8, 13, 30, 6, 44, 13.4, -16, 41, 11,
 				AngleMeasure.HOURS);
 
@@ -152,8 +140,6 @@ public class TestCoordinates {
 	}
 
 	public void testRisingAndSetting() {
-		TestLib testLib = new TestLib();
-
 		RiseSet riseSet = paCoordinates.risingAndSetting(23, 39, 20, 21, 42, 0, 24, 8, 2010, 64, 30, 0.5667);
 
 		testLib.setTestName(
@@ -164,8 +150,6 @@ public class TestCoordinates {
 	}
 
 	public void testCorrectForPrecession() {
-		TestLib testLib = new TestLib();
-
 		RightAscensionDeclination rightAscensionDeclination = paCoordinates.correctForPrecession(9, 10, 43, 14, 23, 25,
 				0.923, 1, 1950, 1, 6, 1979);
 
@@ -180,8 +164,6 @@ public class TestCoordinates {
 	}
 
 	public void testNutationInEclipticLongitudeAndObliquity() {
-		TestLib testLib = new TestLib();
-
 		Nutation nutation = paCoordinates.nutationInEclipticLongitudeAndObliquity(1, 9, 1988);
 
 		testLib.setTestName("Nutation in Ecliptic Longitude and Obliquity for Greenwich Date 9/1/1988")
@@ -190,8 +172,6 @@ public class TestCoordinates {
 	}
 
 	public void testCorrectForAberration() {
-		TestLib testLib = new TestLib();
-
 		Aberration aberration = paCoordinates.correctForAberration(0, 0, 0, 8, 9, 1988, 352, 37, 10.1, -1, 32, 56.4);
 
 		testLib.setTestName(
@@ -202,8 +182,6 @@ public class TestCoordinates {
 	}
 
 	public void testRefraction() {
-		TestLib testLib = new TestLib();
-
 		RightAscensionDeclination correctedCoordinates = paCoordinates.atmosphericRefraction(23, 14, 0, 40, 10, 0,
 				CoordinateType.TRUE, 0.17, 51.2036110, 0, 0, 23, 3, 1987, 1, 1, 24, 1012, 21.7);
 
@@ -216,8 +194,6 @@ public class TestCoordinates {
 	}
 
 	public void testParallax() {
-		TestLib testLib = new TestLib();
-
 		RightAscensionDeclination correctedCoordinates = paCoordinates.correctionsForGeocentricParallax(22, 35, 19, -7,
 				41, 13, CoordinateType.TRUE, 1.019167, -100, 50, 60, 0, -6, 26, 2, 1979, 10, 45, 0);
 
@@ -230,8 +206,6 @@ public class TestCoordinates {
 	}
 
 	public void testHeliographicCoordinates() {
-		TestLib testLib = new TestLib();
-
 		HeliographicCoordinates heliographicCoordinates = paCoordinates.heliographicCoordinates(220, 10.5, 1, 5, 1988);
 
 		testLib.setTestName("Heliographic Coordinates")
@@ -240,16 +214,12 @@ public class TestCoordinates {
 	}
 
 	public void testCarringtonRotationNumber() {
-		TestLib testLib = new TestLib();
-
 		int carringtonRotationNumber = paCoordinates.carringtonRotationNumber(27, 1, 1975);
 
 		testLib.setTestName("Carrington Rotation Number").Assert(1624, carringtonRotationNumber);
 	}
 
 	public void testSelenographicCoordinates1() {
-		TestLib testLib = new TestLib();
-
 		SelenographicCoordinates1 selenographicCoordinates1 = paCoordinates.selenographicCoordinates1(1, 5, 1988);
 
 		testLib.setTestName("Selenographic Coordinates (1)")
@@ -259,8 +229,6 @@ public class TestCoordinates {
 	}
 
 	public void testSelenographicCoordinates2() {
-		TestLib testLib = new TestLib();
-
 		SelenographicCoordinates2 selenographicCoordinates2 = paCoordinates.selenographicCoordinates2(1, 5, 1988);
 
 		testLib.setTestName("Selenographic Coordinates (2)")

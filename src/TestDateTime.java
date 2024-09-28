@@ -1,3 +1,4 @@
+import astro.practical.lib.PADateTime;
 import astro.practical.lib.PAUtil;
 import astro.practical.models.CivilDate;
 import astro.practical.models.CivilDateTime;
@@ -10,10 +11,12 @@ import astro.practical.test.TestLib;
 import astro.practical.types.WarningFlag;
 
 public class TestDateTime {
-	astro.practical.lib.PADateTime paDateTime;
+	PADateTime paDateTime;
+	TestLib testLib;
 
 	public TestDateTime() {
 		paDateTime = new astro.practical.lib.PADateTime();
+		testLib = new TestLib();
 	}
 
 	/**
@@ -21,8 +24,6 @@ public class TestDateTime {
 	 */
 	public void testDateOfEaster() {
 		CivilDate dateOfEaster;
-
-		TestLib testLib = new TestLib();
 
 		dateOfEaster = paDateTime.getDateOfEaster(2003);
 
@@ -44,8 +45,6 @@ public class TestDateTime {
 	 * Test Civil Date to Day Number.
 	 */
 	public void testCivilDateToDayNumber() {
-		TestLib testLib = new TestLib();
-
 		testLib.setTestName("Day Number for 1/1/2000").Assert(1, paDateTime.civilDateToDayNumber(1, 1, 2000));
 		testLib.setTestName("Day Number for 3/1/2000").Assert(61, paDateTime.civilDateToDayNumber(3, 1, 2000));
 		testLib.setTestName("Day Number for 6/1/2003").Assert(152, paDateTime.civilDateToDayNumber(6, 1, 2003));
@@ -56,8 +55,6 @@ public class TestDateTime {
 	 * Test Civil Time to/from Decimal Hours.
 	 */
 	public void testCivilTimeToFromDecimalHours() {
-		TestLib testLib = new TestLib();
-
 		testLib.setTestName("Convert Civil Time to Decimal Hours").Assert(18.52416667,
 				PAUtil.round(paDateTime.civilTimeToDecimalHours((double) 18, (double) 31, (double) 27), 8));
 
@@ -71,8 +68,6 @@ public class TestDateTime {
 	 * Test Local Civil Time to/from Universal Time.
 	 */
 	public void testLocalCivilTimeToFromUniversalTime() {
-		TestLib testLib = new TestLib();
-
 		UniversalDateTime uDT = paDateTime.localCivilTimeToUniversalTime(3, 37, 0, true, 4, 1, 7, 2013);
 
 		testLib.setTestName("Convert Local Civil Time to Universal Time").Assert(22, uDT.hours).Assert(37, uDT.minutes)
@@ -88,8 +83,6 @@ public class TestDateTime {
 	 * Test Universal Time to/from Greenwich Sidereal Time.
 	 */
 	public void testUniversalTimeToFromGreenwichSiderealTime() {
-		TestLib testLib = new TestLib();
-
 		GreenwichSiderealTime gST = paDateTime.universalTimeToGreenwichSiderealTime(14, 36, 51.67, 22, 4, 1980);
 
 		testLib.setTestName("Convert Universal Time to Greenwich Sidereal Time").Assert(4.0, gST.hours)
@@ -105,8 +98,6 @@ public class TestDateTime {
 	 * Test Greenwich Sidereal Time to/from Local Sidereal Time.
 	 */
 	public void testGreenwichSiderealTimeToFromLocalSiderealTime() {
-		TestLib testLib = new TestLib();
-
 		LocalSiderealTime lST = paDateTime.greenwichSiderealTimeToLocalSiderealTime(4, 40, 5.23, -64);
 
 		testLib.setTestName("Convert Greenwich Sidereal Time to Local Sidereal Time").Assert(0.0, lST.hours)

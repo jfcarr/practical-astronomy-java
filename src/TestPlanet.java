@@ -5,14 +5,14 @@ import astro.practical.test.TestLib;
 
 public class TestPlanet {
     PAPlanet paPlanet;
+    TestLib testLib;
 
     public TestPlanet() {
         paPlanet = new PAPlanet();
+        testLib = new TestLib();
     }
 
     public void testApproximatePositionOfPlanet() {
-        TestLib testLib = new TestLib();
-
         PlanetPosition planetPosition = paPlanet.approximatePositionOfPlanet(0, 0, 0, false, 0, 22, 11, 2003,
                 "Jupiter");
 
@@ -26,8 +26,6 @@ public class TestPlanet {
     }
 
     public void testPrecisePositionOfPlanet() {
-        TestLib testLib = new TestLib();
-
         PlanetPosition planetPosition = paPlanet.precisePositionOfPlanet(0, 0, 0, false, 0, 22, 11, 2003, "Jupiter");
 
         testLib.setTestName("Precise Position of Planet")
@@ -40,8 +38,6 @@ public class TestPlanet {
     }
 
     public void testVisualAspectsOfAPlanet() {
-        TestLib testLib = new TestLib();
-
         VisualAspectsOfAPlanet visualAspectsOfAPlanet = paPlanet.visualAspectsOfAPlanet(0, 0, 0, false, 0, 22, 11, 2003,
                 "Jupiter");
 

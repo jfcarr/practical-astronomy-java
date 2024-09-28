@@ -11,14 +11,14 @@ import astro.practical.types.TwilightType;
 
 public class TestSun {
         PASun paSun;
+        TestLib testLib;
 
         public TestSun() {
                 paSun = new PASun();
+                testLib = new TestLib();
         }
 
         public void testApproximatePositionOfSun() {
-                TestLib testLib = new TestLib();
-
                 PositionOfSun approximatePositionOfSun = paSun.approximatePositionOfSun(0, 0, 0, 27, 7, 2003, false,
                                 0);
 
@@ -32,8 +32,6 @@ public class TestSun {
         }
 
         public void testPrecisePositionOfSun() {
-                TestLib testLib = new TestLib();
-
                 PositionOfSun precisePositionOfSun = paSun.precisePositionOfSun(0, 0, 0, 27, 7, 1988, false,
                                 0);
 
@@ -47,8 +45,6 @@ public class TestSun {
         }
 
         public void testSunDistanceAndAngularSize() {
-                TestLib testLib = new TestLib();
-
                 SunDistanceAndAngularSize sunDistanceAndAngularSize = paSun.sunDistanceAndAngularSize(0, 0, 0, 27, 7,
                                 1988,
                                 false, 0);
@@ -61,8 +57,6 @@ public class TestSun {
         }
 
         public void testSunriseAndSunset() {
-                TestLib testLib = new TestLib();
-
                 SunriseAndSunset sunriseAndSunset = paSun.sunriseAndSunset(10, 3, 1986, false, -5, -71.05, 42.37);
 
                 testLib.setTestName("Sunrise and Sunset")
@@ -76,8 +70,6 @@ public class TestSun {
         }
 
         public void testMorningAndEveningTwilight() {
-                TestLib testLib = new TestLib();
-
                 MorningAndEveningTwilight morningAndEveningTwilight = paSun.morningAndEveningTwilight(7, 9, 1979, false,
                                 0, 0, 52, TwilightType.ASTRONOMICAL);
 
@@ -90,8 +82,6 @@ public class TestSun {
         }
 
         public void testEquationOfTime() {
-                TestLib testLib = new TestLib();
-
                 EquationOfTime equationOfTime = paSun.equationOfTime(27, 7, 2010);
 
                 testLib.setTestName("Equation of Time")
@@ -100,8 +90,6 @@ public class TestSun {
         }
 
         public void testSolarElongation() {
-                TestLib testLib = new TestLib();
-
                 double solarElongation = paSun.solarElongation(10, 6, 45, 11, 57, 27, 27.8333333, 7, 2010);
 
                 testLib.setTestName("Solar Elongation")
