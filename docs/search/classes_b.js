@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['selenographiccoordinates1_0',['SelenographicCoordinates1',['../classastro_1_1practical_1_1models_1_1SelenographicCoordinates1.html',1,'astro::practical::models']]],
-  ['selenographiccoordinates2_1',['SelenographicCoordinates2',['../classastro_1_1practical_1_1models_1_1SelenographicCoordinates2.html',1,'astro::practical::models']]],
-  ['sundistanceandangularsize_2',['SunDistanceAndAngularSize',['../classastro_1_1practical_1_1models_1_1SunDistanceAndAngularSize.html',1,'astro::practical::models']]],
-  ['sunriseandsunset_3',['SunriseAndSunset',['../classastro_1_1practical_1_1models_1_1SunriseAndSunset.html',1,'astro::practical::models']]]
+  ['rightascension_0',['RightAscension',['../classastro_1_1practical_1_1models_1_1RightAscension.html',1,'astro::practical::models']]],
+  ['rightascensiondeclination_1',['RightAscensionDeclination',['../classastro_1_1practical_1_1models_1_1RightAscensionDeclination.html',1,'astro::practical::models']]],
+  ['riseset_2',['RiseSet',['../classastro_1_1practical_1_1models_1_1RiseSet.html',1,'astro::practical::models']]],
+  ['risesetstatus_3',['RiseSetStatus',['../enumastro_1_1practical_1_1types_1_1RiseSetStatus.html',1,'astro::practical::types']]]
 ];

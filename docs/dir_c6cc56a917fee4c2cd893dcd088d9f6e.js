@@ -3,6 +3,7 @@ var dir_c6cc56a917fee4c2cd893dcd088d9f6e =
     [ "data", "dir_080ac3248f06b2b5c89140f3717c2308.html", "dir_080ac3248f06b2b5c89140f3717c2308" ],
     [ "Aberration.java", "Aberration_8java.html", "Aberration_8java" ],
     [ "Angle.java", "Angle_8java.html", "Angle_8java" ],
+    [ "BinaryStarOrbit.java", "BinaryStarOrbit_8java.html", "BinaryStarOrbit_8java" ],
     [ "CivilDate.java", "CivilDate_8java.html", "CivilDate_8java" ],
     [ "CivilDateTime.java", "CivilDateTime_8java.html", "CivilDateTime_8java" ],
     [ "CivilTime.java", "CivilTime_8java.html", "CivilTime_8java" ],

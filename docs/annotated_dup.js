@@ -3,11 +3,13 @@ var annotated_dup =
     [ "astro", null, [
       [ "practical", null, [
         [ "data", "namespaceastro_1_1practical_1_1data.html", [
+          [ "BinaryInfo", "classastro_1_1practical_1_1data_1_1BinaryInfo.html", "classastro_1_1practical_1_1data_1_1BinaryInfo" ],
           [ "CometInfoElliptical", "classastro_1_1practical_1_1data_1_1CometInfoElliptical.html", "classastro_1_1practical_1_1data_1_1CometInfoElliptical" ],
           [ "CometInfoParabolic", "classastro_1_1practical_1_1data_1_1CometInfoParabolic.html", "classastro_1_1practical_1_1data_1_1CometInfoParabolic" ],
           [ "PlanetInfo", "classastro_1_1practical_1_1data_1_1PlanetInfo.html", "classastro_1_1practical_1_1data_1_1PlanetInfo" ]
         ] ],
         [ "lib", "namespaceastro_1_1practical_1_1lib.html", [
+          [ "PABinary", "classastro_1_1practical_1_1lib_1_1PABinary.html", "classastro_1_1practical_1_1lib_1_1PABinary" ],
           [ "PAComet", "classastro_1_1practical_1_1lib_1_1PAComet.html", "classastro_1_1practical_1_1lib_1_1PAComet" ],
           [ "PACoordinates", "classastro_1_1practical_1_1lib_1_1PACoordinates.html", "classastro_1_1practical_1_1lib_1_1PACoordinates" ],
           [ "PADateTime", "classastro_1_1practical_1_1lib_1_1PADateTime.html", "classastro_1_1practical_1_1lib_1_1PADateTime" ],
@@ -18,6 +20,7 @@ var annotated_dup =
         ] ],
         [ "models", "namespaceastro_1_1practical_1_1models.html", [
           [ "data", "namespaceastro_1_1practical_1_1models_1_1data.html", [
+            [ "BinaryData", "classastro_1_1practical_1_1models_1_1data_1_1BinaryData.html", "classastro_1_1practical_1_1models_1_1data_1_1BinaryData" ],
             [ "CometDataElliptical", "classastro_1_1practical_1_1models_1_1data_1_1CometDataElliptical.html", "classastro_1_1practical_1_1models_1_1data_1_1CometDataElliptical" ],
             [ "CometDataParabolic", "classastro_1_1practical_1_1models_1_1data_1_1CometDataParabolic.html", "classastro_1_1practical_1_1models_1_1data_1_1CometDataParabolic" ],
             [ "PlanetData", "classastro_1_1practical_1_1models_1_1data_1_1PlanetData.html", "classastro_1_1practical_1_1models_1_1data_1_1PlanetData" ],
@@ -25,6 +28,7 @@ var annotated_dup =
           ] ],
           [ "Aberration", "classastro_1_1practical_1_1models_1_1Aberration.html", "classastro_1_1practical_1_1models_1_1Aberration" ],
           [ "Angle", "classastro_1_1practical_1_1models_1_1Angle.html", "classastro_1_1practical_1_1models_1_1Angle" ],
+          [ "BinaryStarOrbit", "classastro_1_1practical_1_1models_1_1BinaryStarOrbit.html", "classastro_1_1practical_1_1models_1_1BinaryStarOrbit" ],
           [ "CivilDate", "classastro_1_1practical_1_1models_1_1CivilDate.html", "classastro_1_1practical_1_1models_1_1CivilDate" ],
           [ "CivilDateTime", "classastro_1_1practical_1_1models_1_1CivilDateTime.html", "classastro_1_1practical_1_1models_1_1CivilDateTime" ],
           [ "CivilTime", "classastro_1_1practical_1_1models_1_1CivilTime.html", "classastro_1_1practical_1_1models_1_1CivilTime" ],
@@ -82,6 +86,7 @@ var annotated_dup =
       ] ]
     ] ],
     [ "Main", "classMain.html", null ],
+    [ "TestBinary", "classTestBinary.html", "classTestBinary" ],
     [ "TestComet", "classTestComet.html", "classTestComet" ],
     [ "TestCoordinates", "classTestCoordinates.html", "classTestCoordinates" ],
     [ "TestDateTime", "classTestDateTime.html", "classTestDateTime" ],

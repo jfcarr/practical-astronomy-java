@@ -1,7 +1,25 @@
 var searchData=
 [
-  ['rightascension_0',['RightAscension',['../classastro_1_1practical_1_1models_1_1RightAscension.html',1,'astro::practical::models']]],
-  ['rightascensiondeclination_1',['RightAscensionDeclination',['../classastro_1_1practical_1_1models_1_1RightAscensionDeclination.html',1,'astro::practical::models']]],
-  ['riseset_2',['RiseSet',['../classastro_1_1practical_1_1models_1_1RiseSet.html',1,'astro::practical::models']]],
-  ['risesetstatus_3',['RiseSetStatus',['../enumastro_1_1practical_1_1types_1_1RiseSetStatus.html',1,'astro::practical::types']]]
+  ['pabinary_0',['PABinary',['../classastro_1_1practical_1_1lib_1_1PABinary.html',1,'astro::practical::lib']]],
+  ['pacomet_1',['PAComet',['../classastro_1_1practical_1_1lib_1_1PAComet.html',1,'astro::practical::lib']]],
+  ['pacoordinates_2',['PACoordinates',['../classastro_1_1practical_1_1lib_1_1PACoordinates.html',1,'astro::practical::lib']]],
+  ['padatetime_3',['PADateTime',['../classastro_1_1practical_1_1lib_1_1PADateTime.html',1,'astro::practical::lib']]],
+  ['pamacros_4',['PAMacros',['../classastro_1_1practical_1_1lib_1_1PAMacros.html',1,'astro::practical::lib']]],
+  ['paplanet_5',['PAPlanet',['../classastro_1_1practical_1_1lib_1_1PAPlanet.html',1,'astro::practical::lib']]],
+  ['parallaxhelper_6',['ParallaxHelper',['../classastro_1_1practical_1_1models_1_1ParallaxHelper.html',1,'astro::practical::models']]],
+  ['pasun_7',['PASun',['../classastro_1_1practical_1_1lib_1_1PASun.html',1,'astro::practical::lib']]],
+  ['pautil_8',['PAUtil',['../classastro_1_1practical_1_1lib_1_1PAUtil.html',1,'astro::practical::lib']]],
+  ['pcometlonglatdist_9',['PCometLongLatDist',['../classastro_1_1practical_1_1models_1_1PCometLongLatDist.html',1,'astro::practical::models']]],
+  ['planetcoordinates_10',['PlanetCoordinates',['../classastro_1_1practical_1_1models_1_1PlanetCoordinates.html',1,'astro::practical::models']]],
+  ['planetdata_11',['PlanetData',['../classastro_1_1practical_1_1models_1_1data_1_1PlanetData.html',1,'astro::practical::models::data']]],
+  ['planetdataprecise_12',['PlanetDataPrecise',['../classastro_1_1practical_1_1models_1_1data_1_1PlanetDataPrecise.html',1,'astro::practical::models::data']]],
+  ['planetinfo_13',['PlanetInfo',['../classastro_1_1practical_1_1data_1_1PlanetInfo.html',1,'astro::practical::data']]],
+  ['planetlongl4685_14',['PlanetLongL4685',['../classastro_1_1practical_1_1models_1_1PlanetLongL4685.html',1,'astro::practical::models']]],
+  ['planetlongl4735_15',['PlanetLongL4735',['../classastro_1_1practical_1_1models_1_1PlanetLongL4735.html',1,'astro::practical::models']]],
+  ['planetlongl4810_16',['PlanetLongL4810',['../classastro_1_1practical_1_1models_1_1PlanetLongL4810.html',1,'astro::practical::models']]],
+  ['planetlongl4945_17',['PlanetLongL4945',['../classastro_1_1practical_1_1models_1_1PlanetLongL4945.html',1,'astro::practical::models']]],
+  ['planetposition_18',['PlanetPosition',['../classastro_1_1practical_1_1models_1_1PlanetPosition.html',1,'astro::practical::models']]],
+  ['positionofellipticalcomet_19',['PositionOfEllipticalComet',['../classastro_1_1practical_1_1models_1_1PositionOfEllipticalComet.html',1,'astro::practical::models']]],
+  ['positionofparaboliccomet_20',['PositionOfParabolicComet',['../classastro_1_1practical_1_1models_1_1PositionOfParabolicComet.html',1,'astro::practical::models']]],
+  ['positionofsun_21',['PositionOfSun',['../classastro_1_1practical_1_1models_1_1PositionOfSun.html',1,'astro::practical::models']]]
 ];

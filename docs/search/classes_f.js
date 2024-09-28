@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['warningflag_0',['WarningFlag',['../enumastro_1_1practical_1_1types_1_1WarningFlag.html',1,'astro::practical::types']]]
+  ['visualaspectsofaplanet_0',['VisualAspectsOfAPlanet',['../classastro_1_1practical_1_1models_1_1VisualAspectsOfAPlanet.html',1,'astro::practical::models']]]
 ];

@@ -1,14 +1,13 @@
 var searchData=
 [
-  ['name_0',['name',['../classastro_1_1practical_1_1models_1_1data_1_1CometDataElliptical.html#a934fa09ba291a97f43720640e4d83f25',1,'astro.practical.models.data.CometDataElliptical.Name'],['../classastro_1_1practical_1_1models_1_1data_1_1CometDataParabolic.html#a934fa09ba291a97f43720640e4d83f25',1,'astro.practical.models.data.CometDataParabolic.Name'],['../classastro_1_1practical_1_1models_1_1data_1_1PlanetData.html#a934fa09ba291a97f43720640e4d83f25',1,'astro.practical.models.data.PlanetData.Name'],['../classastro_1_1practical_1_1models_1_1data_1_1PlanetDataPrecise.html#a934fa09ba291a97f43720640e4d83f25',1,'astro.practical.models.data.PlanetDataPrecise.Name']]],
-  ['nautical_1',['NAUTICAL',['../enumastro_1_1practical_1_1types_1_1TwilightType.html#a8bdc2d00ce42536b2c97a75d818fbbdd',1,'astro::practical::types::TwilightType']]],
-  ['never_5frises_2',['NEVER_RISES',['../enumastro_1_1practical_1_1types_1_1RiseSetStatus.html#a5637b321e97da22f4c42d6aa170c18d7',1,'astro::practical::types::RiseSetStatus']]],
-  ['node_3',['Node',['../classastro_1_1practical_1_1models_1_1data_1_1CometDataParabolic.html#a1c6aad109b74f2d327108aafc3e67c07',1,'astro::practical::models::data::CometDataParabolic']]],
-  ['node_5flongitudeascendingnode_4',['node_LongitudeAscendingNode',['../classastro_1_1practical_1_1models_1_1data_1_1PlanetData.html#a931ac73757066655564d11e87be0993c',1,'astro::practical::models::data::PlanetData']]],
-  ['node_5flongitudeofascendingnode_5',['node_LongitudeOfAscendingNode',['../classastro_1_1practical_1_1models_1_1data_1_1CometDataElliptical.html#aba5d24bfee4450543db51ea2992610a7',1,'astro::practical::models::data::CometDataElliptical']]],
-  ['nutation_6',['nutation',['../classastro_1_1practical_1_1models_1_1Nutation.html',1,'Nutation'],['../classastro_1_1practical_1_1models_1_1Nutation.html#aaee19e0b9e3bb7420804e24ca27a95dd',1,'astro.practical.models.Nutation.Nutation()']]],
-  ['nutation_2ejava_7',['Nutation.java',['../Nutation_8java.html',1,'']]],
-  ['nutationineclipticlongitudeandobliquity_8',['nutationInEclipticLongitudeAndObliquity',['../classastro_1_1practical_1_1lib_1_1PACoordinates.html#a5bb6897b3878d2085ced03729982d7a0',1,'astro::practical::lib::PACoordinates']]],
-  ['nutatlong_9',['nutatLong',['../classastro_1_1practical_1_1lib_1_1PAMacros.html#a2860cb1ceea205d29b053626311f7872',1,'astro::practical::lib::PAMacros']]],
-  ['nutatobl_10',['nutatObl',['../classastro_1_1practical_1_1lib_1_1PAMacros.html#aca641a22163fb30495fb01ad9829166d',1,'astro::practical::lib::PAMacros']]]
+  ['main_0',['main',['../classMain.html',1,'Main'],['../classMain.html#a8b260eecbaabcef8473fd87ada040682',1,'Main.main()']]],
+  ['main_2ejava_1',['Main.java',['../Main_8java.html',1,'']]],
+  ['meanobliquityoftheecliptic_2',['meanObliquityOfTheEcliptic',['../classastro_1_1practical_1_1lib_1_1PACoordinates.html#ac0d6d6d6b92bab079372766e04fee177',1,'astro::practical::lib::PACoordinates']]],
+  ['minutes_3',['minutes',['../classastro_1_1practical_1_1models_1_1Angle.html#aa3162948b9a2411e31bc630b41c8d055',1,'astro.practical.models.Angle.minutes'],['../classastro_1_1practical_1_1models_1_1DateTime.html#ab693b677bdc9ded12b06daf49778101c',1,'astro.practical.models.DateTime.minutes'],['../classastro_1_1practical_1_1models_1_1Time.html#aa3162948b9a2411e31bc630b41c8d055',1,'astro.practical.models.Time.minutes']]],
+  ['month_4',['month',['../classastro_1_1practical_1_1models_1_1Date.html#aedb06abe5aff12fa3e7e0e71a374edfb',1,'astro.practical.models.Date.month'],['../classastro_1_1practical_1_1models_1_1DateTime.html#aedb06abe5aff12fa3e7e0e71a374edfb',1,'astro.practical.models.DateTime.month']]],
+  ['moonhp_5',['moonHP',['../classastro_1_1practical_1_1lib_1_1PAMacros.html#a333eaef694071a636ea197fb26547ef0',1,'astro::practical::lib::PAMacros']]],
+  ['moonlat_6',['moonLat',['../classastro_1_1practical_1_1lib_1_1PAMacros.html#a31c6a47f16f2ecc25732f5bc2a30a6b3',1,'astro::practical::lib::PAMacros']]],
+  ['moonlong_7',['moonLong',['../classastro_1_1practical_1_1lib_1_1PAMacros.html#a7859f2e02787937b139f1396d779609c',1,'astro::practical::lib::PAMacros']]],
+  ['morningandeveningtwilight_8',['morningandeveningtwilight',['../classastro_1_1practical_1_1models_1_1MorningAndEveningTwilight.html',1,'MorningAndEveningTwilight'],['../classastro_1_1practical_1_1models_1_1MorningAndEveningTwilight.html#a3d9e20d102672d74f3601f12fcc56e27',1,'astro.practical.models.MorningAndEveningTwilight.MorningAndEveningTwilight()'],['../classastro_1_1practical_1_1lib_1_1PASun.html#a9a0bab5e1ca305f492bddd38947ba04c',1,'astro.practical.lib.PASun.morningAndEveningTwilight()']]],
+  ['morningandeveningtwilight_2ejava_9',['MorningAndEveningTwilight.java',['../MorningAndEveningTwilight_8java.html',1,'']]]
 ];
