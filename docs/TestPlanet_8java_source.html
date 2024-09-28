@@ -99,56 +99,78 @@ $(document).ready(function(){initNavTree('TestPlanet_8java_source.html',''); ini
 <div class="contents">
 <a href="TestPlanet_8java.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">import</span> astro.practical.lib.PAPlanet;</div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">import</span> astro.practical.models.PlanetPosition;</div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">import</span> astro.practical.test.TestLib;</div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
-<div class="foldopen" id="foldopen00005" data-start="{" data-end="};">
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno"><a class="line" href="classTestPlanet.html">    5</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="classTestPlanet.html">TestPlanet</a> {</div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>    PAPlanet paPlanet;</div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
-<div class="foldopen" id="foldopen00008" data-start="{" data-end="}">
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="classTestPlanet.html#ae3c34bf99d6554f54333293a6c2851a8">    8</a></span>    <span class="keyword">public</span> <a class="code hl_function" href="classTestPlanet.html#ae3c34bf99d6554f54333293a6c2851a8">TestPlanet</a>() {</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>        paPlanet = <span class="keyword">new</span> PAPlanet();</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    }</div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">import</span> astro.practical.models.VisualAspectsOfAPlanet;</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">import</span> astro.practical.test.TestLib;</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="foldopen" id="foldopen00006" data-start="{" data-end="};">
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno"><a class="line" href="classTestPlanet.html">    6</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="classTestPlanet.html">TestPlanet</a> {</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>    PAPlanet paPlanet;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="foldopen" id="foldopen00009" data-start="{" data-end="}">
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="classTestPlanet.html#ae3c34bf99d6554f54333293a6c2851a8">    9</a></span>    <span class="keyword">public</span> <a class="code hl_function" href="classTestPlanet.html#ae3c34bf99d6554f54333293a6c2851a8">TestPlanet</a>() {</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>        paPlanet = <span class="keyword">new</span> PAPlanet();</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    }</div>
 </div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
-<div class="foldopen" id="foldopen00012" data-start="{" data-end="}">
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="classTestPlanet.html#a82e6342a5295ce9b8f65d82dc3ec4c2b">   12</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classTestPlanet.html#a82e6342a5295ce9b8f65d82dc3ec4c2b">testApproximatePositionOfPlanet</a>() {</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>        TestLib testLib = <span class="keyword">new</span> TestLib();</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        PlanetPosition planetPosition = paPlanet.approximatePositionOfPlanet(0, 0, 0, <span class="keyword">false</span>, 0, 22, 11, 2003,</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>                <span class="stringliteral">&quot;Jupiter&quot;</span>);</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        testLib.setTestName(<span class="stringliteral">&quot;Approximate Position of Planet&quot;</span>)</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>                .Assert(11, planetPosition.planetRAHour)</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>                .Assert(11, planetPosition.planetRAMin)</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>                .Assert(13.8, planetPosition.planetRASec)</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>                .Assert(6, planetPosition.planetDecDeg)</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>                .Assert(21, planetPosition.planetDecMin)</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>                .Assert(25.1, planetPosition.planetDecSec);</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    }</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="foldopen" id="foldopen00013" data-start="{" data-end="}">
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="classTestPlanet.html#a82e6342a5295ce9b8f65d82dc3ec4c2b">   13</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classTestPlanet.html#a82e6342a5295ce9b8f65d82dc3ec4c2b">testApproximatePositionOfPlanet</a>() {</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        TestLib testLib = <span class="keyword">new</span> TestLib();</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        PlanetPosition planetPosition = paPlanet.approximatePositionOfPlanet(0, 0, 0, <span class="keyword">false</span>, 0, 22, 11, 2003,</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>                <span class="stringliteral">&quot;Jupiter&quot;</span>);</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        testLib.setTestName(<span class="stringliteral">&quot;Approximate Position of Planet&quot;</span>)</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>                .Assert(11, planetPosition.planetRAHour)</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>                .Assert(11, planetPosition.planetRAMin)</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>                .Assert(13.8, planetPosition.planetRASec)</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>                .Assert(6, planetPosition.planetDecDeg)</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>                .Assert(21, planetPosition.planetDecMin)</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>                .Assert(25.1, planetPosition.planetDecSec);</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    }</div>
 </div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
-<div class="foldopen" id="foldopen00027" data-start="{" data-end="}">
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="classTestPlanet.html#a96ec271065c6467a9328c000104f90af">   27</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classTestPlanet.html#a96ec271065c6467a9328c000104f90af">testPrecisePositionOfPlanet</a>() {</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        TestLib testLib = <span class="keyword">new</span> TestLib();</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        PlanetPosition planetPosition = paPlanet.precisePositionOfPlanet(0, 0, 0, <span class="keyword">false</span>, 0, 22, 11, 2003, <span class="stringliteral">&quot;Jupiter&quot;</span>);</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        testLib.setTestName(<span class="stringliteral">&quot;Precise Position of Planet&quot;</span>)</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>                .Assert(11, planetPosition.planetRAHour)</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>                .Assert(10, planetPosition.planetRAMin)</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>                .Assert(30.99, planetPosition.planetRASec)</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>                .Assert(6, planetPosition.planetDecDeg)</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>                .Assert(25, planetPosition.planetDecMin)</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>                .Assert(49.46, planetPosition.planetDecSec);</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    }</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="foldopen" id="foldopen00028" data-start="{" data-end="}">
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="classTestPlanet.html#a96ec271065c6467a9328c000104f90af">   28</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classTestPlanet.html#a96ec271065c6467a9328c000104f90af">testPrecisePositionOfPlanet</a>() {</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        TestLib testLib = <span class="keyword">new</span> TestLib();</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        PlanetPosition planetPosition = paPlanet.precisePositionOfPlanet(0, 0, 0, <span class="keyword">false</span>, 0, 22, 11, 2003, <span class="stringliteral">&quot;Jupiter&quot;</span>);</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        testLib.setTestName(<span class="stringliteral">&quot;Precise Position of Planet&quot;</span>)</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>                .Assert(11, planetPosition.planetRAHour)</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>                .Assert(10, planetPosition.planetRAMin)</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>                .Assert(30.99, planetPosition.planetRASec)</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>                .Assert(6, planetPosition.planetDecDeg)</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>                .Assert(25, planetPosition.planetDecMin)</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>                .Assert(49.46, planetPosition.planetDecSec);</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    }</div>
 </div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>}</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="foldopen" id="foldopen00042" data-start="{" data-end="}">
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="classTestPlanet.html#a1d59f867a483a497197931ee3e5163dc">   42</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classTestPlanet.html#a1d59f867a483a497197931ee3e5163dc">testVisualAspectsOfAPlanet</a>() {</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        TestLib testLib = <span class="keyword">new</span> TestLib();</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        VisualAspectsOfAPlanet visualAspectsOfAPlanet = paPlanet.visualAspectsOfAPlanet(0, 0, 0, <span class="keyword">false</span>, 0, 22, 11, 2003,</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>                <span class="stringliteral">&quot;Jupiter&quot;</span>);</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        testLib.setTestName(<span class="stringliteral">&quot;Visual Aspects of a Planet&quot;</span>)</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>                .Assert(5.59829, visualAspectsOfAPlanet.distanceAU)</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>                .Assert(35.1, visualAspectsOfAPlanet.angDiaArcsec)</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>                .Assert(0.99, visualAspectsOfAPlanet.phase)</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>                .Assert(0, visualAspectsOfAPlanet.lightTimeHour)</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>                .Assert(46, visualAspectsOfAPlanet.lightTimeMinutes)</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>                .Assert(33.32, visualAspectsOfAPlanet.lightTimeSeconds)</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>                .Assert(113.2, visualAspectsOfAPlanet.posAngleBrightLimbDeg)</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>                .Assert(-2.0, visualAspectsOfAPlanet.approximateMagnitude);</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    }</div>
 </div>
-<div class="ttc" id="aclassTestPlanet_html"><div class="ttname"><a href="classTestPlanet.html">TestPlanet</a></div><div class="ttdef"><b>Definition</b> <a href="TestPlanet_8java_source.html#l00005">TestPlanet.java:5</a></div></div>
-<div class="ttc" id="aclassTestPlanet_html_a82e6342a5295ce9b8f65d82dc3ec4c2b"><div class="ttname"><a href="classTestPlanet.html#a82e6342a5295ce9b8f65d82dc3ec4c2b">TestPlanet.testApproximatePositionOfPlanet</a></div><div class="ttdeci">void testApproximatePositionOfPlanet()</div><div class="ttdef"><b>Definition</b> <a href="TestPlanet_8java_source.html#l00012">TestPlanet.java:12</a></div></div>
-<div class="ttc" id="aclassTestPlanet_html_a96ec271065c6467a9328c000104f90af"><div class="ttname"><a href="classTestPlanet.html#a96ec271065c6467a9328c000104f90af">TestPlanet.testPrecisePositionOfPlanet</a></div><div class="ttdeci">void testPrecisePositionOfPlanet()</div><div class="ttdef"><b>Definition</b> <a href="TestPlanet_8java_source.html#l00027">TestPlanet.java:27</a></div></div>
-<div class="ttc" id="aclassTestPlanet_html_ae3c34bf99d6554f54333293a6c2851a8"><div class="ttname"><a href="classTestPlanet.html#ae3c34bf99d6554f54333293a6c2851a8">TestPlanet.TestPlanet</a></div><div class="ttdeci">TestPlanet()</div><div class="ttdef"><b>Definition</b> <a href="TestPlanet_8java_source.html#l00008">TestPlanet.java:8</a></div></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>}</div>
+</div>
+<div class="ttc" id="aclassTestPlanet_html"><div class="ttname"><a href="classTestPlanet.html">TestPlanet</a></div><div class="ttdef"><b>Definition</b> <a href="TestPlanet_8java_source.html#l00006">TestPlanet.java:6</a></div></div>
+<div class="ttc" id="aclassTestPlanet_html_a1d59f867a483a497197931ee3e5163dc"><div class="ttname"><a href="classTestPlanet.html#a1d59f867a483a497197931ee3e5163dc">TestPlanet.testVisualAspectsOfAPlanet</a></div><div class="ttdeci">void testVisualAspectsOfAPlanet()</div><div class="ttdef"><b>Definition</b> <a href="TestPlanet_8java_source.html#l00042">TestPlanet.java:42</a></div></div>
+<div class="ttc" id="aclassTestPlanet_html_a82e6342a5295ce9b8f65d82dc3ec4c2b"><div class="ttname"><a href="classTestPlanet.html#a82e6342a5295ce9b8f65d82dc3ec4c2b">TestPlanet.testApproximatePositionOfPlanet</a></div><div class="ttdeci">void testApproximatePositionOfPlanet()</div><div class="ttdef"><b>Definition</b> <a href="TestPlanet_8java_source.html#l00013">TestPlanet.java:13</a></div></div>
+<div class="ttc" id="aclassTestPlanet_html_a96ec271065c6467a9328c000104f90af"><div class="ttname"><a href="classTestPlanet.html#a96ec271065c6467a9328c000104f90af">TestPlanet.testPrecisePositionOfPlanet</a></div><div class="ttdeci">void testPrecisePositionOfPlanet()</div><div class="ttdef"><b>Definition</b> <a href="TestPlanet_8java_source.html#l00028">TestPlanet.java:28</a></div></div>
+<div class="ttc" id="aclassTestPlanet_html_ae3c34bf99d6554f54333293a6c2851a8"><div class="ttname"><a href="classTestPlanet.html#ae3c34bf99d6554f54333293a6c2851a8">TestPlanet.TestPlanet</a></div><div class="ttdeci">TestPlanet()</div><div class="ttdef"><b>Definition</b> <a href="TestPlanet_8java_source.html#l00009">TestPlanet.java:9</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

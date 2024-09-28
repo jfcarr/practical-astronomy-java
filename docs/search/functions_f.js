@@ -36,10 +36,11 @@ var searchData=
   ['testsundistanceandangularsize_33',['testSunDistanceAndAngularSize',['../classTestSun.html#a4831ec0f3518d52a56707100eedeafeb',1,'TestSun']]],
   ['testsunriseandsunset_34',['testSunriseAndSunset',['../classTestSun.html#a835ff0f71c7d833cf35e04f86fff83c1',1,'TestSun']]],
   ['testuniversaltimetofromgreenwichsiderealtime_35',['testUniversalTimeToFromGreenwichSiderealTime',['../classTestDateTime.html#a9d2f983281f1b5de36694778e47e28f7',1,'TestDateTime']]],
-  ['time_36',['Time',['../classastro_1_1practical_1_1models_1_1Time.html#a134fdcf88f194bf704d93ef7e07e82aa',1,'astro::practical::models::Time']]],
-  ['trueanomaly_37',['trueAnomaly',['../classastro_1_1practical_1_1lib_1_1PAMacros.html#a75c31010344aaa36374d002051feada7',1,'astro::practical::lib::PAMacros']]],
-  ['twilightamlct_38',['twilightAMLCT',['../classastro_1_1practical_1_1lib_1_1PAMacros.html#a021742ae21a2a11c99e77ad8ff641480',1,'astro::practical::lib::PAMacros']]],
-  ['twilightamlctl3710_39',['twilightAMLCTL3710',['../classastro_1_1practical_1_1lib_1_1PAMacros.html#ade6000e387904117977d1e31fd570591',1,'astro::practical::lib::PAMacros']]],
-  ['twilightpmlct_40',['twilightPMLCT',['../classastro_1_1practical_1_1lib_1_1PAMacros.html#ae5e6b1f59acccf37d6f6d9473c1cfeed',1,'astro::practical::lib::PAMacros']]],
-  ['twilightpmlctl3710_41',['twilightPMLCTL3710',['../classastro_1_1practical_1_1lib_1_1PAMacros.html#aee887ce4a829cfab75445fd772d074c3',1,'astro::practical::lib::PAMacros']]]
+  ['testvisualaspectsofaplanet_36',['testVisualAspectsOfAPlanet',['../classTestPlanet.html#a1d59f867a483a497197931ee3e5163dc',1,'TestPlanet']]],
+  ['time_37',['Time',['../classastro_1_1practical_1_1models_1_1Time.html#a134fdcf88f194bf704d93ef7e07e82aa',1,'astro::practical::models::Time']]],
+  ['trueanomaly_38',['trueAnomaly',['../classastro_1_1practical_1_1lib_1_1PAMacros.html#a75c31010344aaa36374d002051feada7',1,'astro::practical::lib::PAMacros']]],
+  ['twilightamlct_39',['twilightAMLCT',['../classastro_1_1practical_1_1lib_1_1PAMacros.html#a021742ae21a2a11c99e77ad8ff641480',1,'astro::practical::lib::PAMacros']]],
+  ['twilightamlctl3710_40',['twilightAMLCTL3710',['../classastro_1_1practical_1_1lib_1_1PAMacros.html#ade6000e387904117977d1e31fd570591',1,'astro::practical::lib::PAMacros']]],
+  ['twilightpmlct_41',['twilightPMLCT',['../classastro_1_1practical_1_1lib_1_1PAMacros.html#ae5e6b1f59acccf37d6f6d9473c1cfeed',1,'astro::practical::lib::PAMacros']]],
+  ['twilightpmlctl3710_42',['twilightPMLCTL3710',['../classastro_1_1practical_1_1lib_1_1PAMacros.html#aee887ce4a829cfab75445fd772d074c3',1,'astro::practical::lib::PAMacros']]]
 ];

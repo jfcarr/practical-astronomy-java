@@ -65,5 +65,6 @@ var hierarchy =
     ] ],
     [ "TwilightStatus", "enumastro_1_1practical_1_1types_1_1TwilightStatus.html", null ],
     [ "TwilightType", "enumastro_1_1practical_1_1types_1_1TwilightType.html", null ],
+    [ "VisualAspectsOfAPlanet", "classastro_1_1practical_1_1models_1_1VisualAspectsOfAPlanet.html", null ],
     [ "WarningFlag", "enumastro_1_1practical_1_1types_1_1WarningFlag.html", null ]
 ];

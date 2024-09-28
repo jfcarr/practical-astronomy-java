@@ -56,5 +56,6 @@ public class Main {
 
 		testPlanet.testApproximatePositionOfPlanet();
 		testPlanet.testPrecisePositionOfPlanet();
+		testPlanet.testVisualAspectsOfAPlanet();
 	}
 }

@@ -40,5 +40,6 @@ var dir_c6cc56a917fee4c2cd893dcd088d9f6e =
     [ "SunriseAndSunset.java", "SunriseAndSunset_8java.html", "SunriseAndSunset_8java" ],
     [ "Time.java", "Time_8java.html", "Time_8java" ],
     [ "UniversalDateTime.java", "UniversalDateTime_8java.html", "UniversalDateTime_8java" ],
-    [ "UniversalTime.java", "UniversalTime_8java.html", "UniversalTime_8java" ]
+    [ "UniversalTime.java", "UniversalTime_8java.html", "UniversalTime_8java" ],
+    [ "VisualAspectsOfAPlanet.java", "VisualAspectsOfAPlanet_8java.html", "VisualAspectsOfAPlanet_8java" ]
 ];
