@@ -4,6 +4,7 @@ public class Main {
 		testCoordinates();
 		testSun();
 		testPlanet();
+		testComet();
 	}
 
 	public static void testDateTime() {
@@ -57,5 +58,11 @@ public class Main {
 		testPlanet.testApproximatePositionOfPlanet();
 		testPlanet.testPrecisePositionOfPlanet();
 		testPlanet.testVisualAspectsOfAPlanet();
+	}
+
+	public static void testComet() {
+		TestComet testComet = new TestComet();
+
+		testComet.testPositionOfEllipticalComet();
 	}
 }
