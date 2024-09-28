@@ -64,5 +64,6 @@ public class Main {
 		TestComet testComet = new TestComet();
 
 		testComet.testPositionOfEllipticalComet();
+		testComet.testPositionOfParabolicComet();
 	}
 }
