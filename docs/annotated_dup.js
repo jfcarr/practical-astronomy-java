@@ -3,9 +3,11 @@ var annotated_dup =
     [ "astro", null, [
       [ "practical", null, [
         [ "data", "namespaceastro_1_1practical_1_1data.html", [
+          [ "CometInfoElliptical", "classastro_1_1practical_1_1data_1_1CometInfoElliptical.html", "classastro_1_1practical_1_1data_1_1CometInfoElliptical" ],
           [ "PlanetInfo", "classastro_1_1practical_1_1data_1_1PlanetInfo.html", "classastro_1_1practical_1_1data_1_1PlanetInfo" ]
         ] ],
         [ "lib", "namespaceastro_1_1practical_1_1lib.html", [
+          [ "PAComet", "classastro_1_1practical_1_1lib_1_1PAComet.html", "classastro_1_1practical_1_1lib_1_1PAComet" ],
           [ "PACoordinates", "classastro_1_1practical_1_1lib_1_1PACoordinates.html", "classastro_1_1practical_1_1lib_1_1PACoordinates" ],
           [ "PADateTime", "classastro_1_1practical_1_1lib_1_1PADateTime.html", "classastro_1_1practical_1_1lib_1_1PADateTime" ],
           [ "PAMacros", "classastro_1_1practical_1_1lib_1_1PAMacros.html", null ],
@@ -15,6 +17,7 @@ var annotated_dup =
         ] ],
         [ "models", "namespaceastro_1_1practical_1_1models.html", [
           [ "data", "namespaceastro_1_1practical_1_1models_1_1data.html", [
+            [ "CometDataElliptical", "classastro_1_1practical_1_1models_1_1data_1_1CometDataElliptical.html", "classastro_1_1practical_1_1models_1_1data_1_1CometDataElliptical" ],
             [ "PlanetData", "classastro_1_1practical_1_1models_1_1data_1_1PlanetData.html", "classastro_1_1practical_1_1models_1_1data_1_1PlanetData" ],
             [ "PlanetDataPrecise", "classastro_1_1practical_1_1models_1_1data_1_1PlanetDataPrecise.html", "classastro_1_1practical_1_1models_1_1data_1_1PlanetDataPrecise" ]
           ] ],
@@ -47,6 +50,7 @@ var annotated_dup =
           [ "PlanetLongL4810", "classastro_1_1practical_1_1models_1_1PlanetLongL4810.html", "classastro_1_1practical_1_1models_1_1PlanetLongL4810" ],
           [ "PlanetLongL4945", "classastro_1_1practical_1_1models_1_1PlanetLongL4945.html", "classastro_1_1practical_1_1models_1_1PlanetLongL4945" ],
           [ "PlanetPosition", "classastro_1_1practical_1_1models_1_1PlanetPosition.html", "classastro_1_1practical_1_1models_1_1PlanetPosition" ],
+          [ "PositionOfEllipticalComet", "classastro_1_1practical_1_1models_1_1PositionOfEllipticalComet.html", "classastro_1_1practical_1_1models_1_1PositionOfEllipticalComet" ],
           [ "PositionOfSun", "classastro_1_1practical_1_1models_1_1PositionOfSun.html", "classastro_1_1practical_1_1models_1_1PositionOfSun" ],
           [ "RightAscension", "classastro_1_1practical_1_1models_1_1RightAscension.html", "classastro_1_1practical_1_1models_1_1RightAscension" ],
           [ "RightAscensionDeclination", "classastro_1_1practical_1_1models_1_1RightAscensionDeclination.html", "classastro_1_1practical_1_1models_1_1RightAscensionDeclination" ],
@@ -74,6 +78,7 @@ var annotated_dup =
       ] ]
     ] ],
     [ "Main", "classMain.html", null ],
+    [ "TestComet", "classTestComet.html", "classTestComet" ],
     [ "TestCoordinates", "classTestCoordinates.html", "classTestCoordinates" ],
     [ "TestDateTime", "classTestDateTime.html", "classTestDateTime" ],
     [ "TestPlanet", "classTestPlanet.html", "classTestPlanet" ],
