@@ -3,6 +3,7 @@ package astro.practical.lib;
 import astro.practical.data.PlanetInfo;
 import astro.practical.models.PlanetCoordinates;
 import astro.practical.models.PlanetPosition;
+import astro.practical.models.VisualAspectsOfAPlanet;
 import astro.practical.models.data.PlanetData;
 
 public class PAPlanet {
@@ -111,5 +112,68 @@ public class PAPlanet {
 
                 return new PlanetPosition(planetRAHour, planetRAMin, planetRASec, planetDecDeg, planetDecMin,
                                 planetDecSec);
+        }
+
+        /**
+         * Calculate several visual aspects of a planet.
+         */
+        public VisualAspectsOfAPlanet visualAspectsOfAPlanet(double lctHour, double lctMin, double lctSec,
+                        boolean isDaylightSaving, int zoneCorrectionHours, double localDateDay, int localDateMonth,
+                        int localDateYear, String planetName) {
+                int daylightSaving = isDaylightSaving ? 1 : 0;
+
+                double greenwichDateDay = PAMacros.localCivilTimeGreenwichDay(lctHour, lctMin, lctSec, daylightSaving,
+                                zoneCorrectionHours, localDateDay, localDateMonth, localDateYear);
+                int greenwichDateMonth = PAMacros.localCivilTimeGreenwichMonth(lctHour, lctMin, lctSec, daylightSaving,
+                                zoneCorrectionHours, localDateDay, localDateMonth, localDateYear);
+                int greenwichDateYear = PAMacros.localCivilTimeGreenwichYear(lctHour, lctMin, lctSec, daylightSaving,
+                                zoneCorrectionHours, localDateDay, localDateMonth, localDateYear);
+
+                PlanetCoordinates planetCoordInfo = PAMacros.planetCoordinates(lctHour, lctMin, lctSec, daylightSaving,
+                                zoneCorrectionHours, localDateDay, localDateMonth, localDateYear, planetName);
+
+                double planetRARad = Math.toRadians(PAMacros.ecRA(planetCoordInfo.planetLongitude, 0, 0,
+                                planetCoordInfo.planetLatitude, 0, 0, localDateDay, localDateMonth, localDateYear));
+                double planetDecRad = Math.toRadians(PAMacros.ecDec(planetCoordInfo.planetLongitude, 0, 0,
+                                planetCoordInfo.planetLatitude, 0, 0, localDateDay, localDateMonth, localDateYear));
+
+                double lightTravelTimeHours = planetCoordInfo.planetDistanceAU * 0.1386;
+
+                PlanetInfo planetInfo = new PlanetInfo();
+                PlanetData planetData = planetInfo.getPlanetInfo(planetName);
+
+                double angularDiameterArcsec = planetData.theta0_AngularDiameter / planetCoordInfo.planetDistanceAU;
+                double phase1 = 0.5 * (1.0 + Math
+                                .cos(Math.toRadians((planetCoordInfo.planetLongitude - planetCoordInfo.planetHLong1))));
+
+                double sunEclLongDeg = PAMacros.sunLong(lctHour, lctMin, lctSec, daylightSaving, zoneCorrectionHours,
+                                localDateDay, localDateMonth, localDateYear);
+                double sunRARad = Math.toRadians(PAMacros.ecRA(sunEclLongDeg, 0, 0, 0, 0, 0, greenwichDateDay,
+                                greenwichDateMonth, greenwichDateYear));
+                double sunDecRad = Math.toRadians(
+                                PAMacros.ecDec(sunEclLongDeg, 0, 0, 0, 0, 0, greenwichDateDay, greenwichDateMonth,
+                                                greenwichDateYear));
+
+                double y = Math.cos(sunDecRad) * Math.sin(sunRARad - planetRARad);
+                double x = Math.cos(planetDecRad) * Math.sin(sunDecRad)
+                                - Math.sin(planetDecRad) * Math.cos(sunDecRad) * Math.cos(sunRARad - planetRARad);
+
+                double chiDeg = PAMacros.wToDegrees(Math.atan2(y, x));
+                double radiusVectorAU = planetCoordInfo.planetRVect;
+                double approximateMagnitude1 = 5.0
+                                * Math.log10(radiusVectorAU * planetCoordInfo.planetDistanceAU / Math.sqrt(phase1))
+                                + planetData.v0_VisualMagnitude;
+
+                double distanceAU = PAUtil.round(planetCoordInfo.planetDistanceAU, 5);
+                double angDiaArcsec = PAUtil.round(angularDiameterArcsec, 1);
+                double phase = PAUtil.round(phase1, 2);
+                int lightTimeHour = PAMacros.decimalHoursHour(lightTravelTimeHours);
+                int lightTimeMinutes = PAMacros.decimalHoursMinute(lightTravelTimeHours);
+                double lightTimeSeconds = PAMacros.decimalHoursSecond(lightTravelTimeHours);
+                double posAngleBrightLimbDeg = PAUtil.round(chiDeg, 1);
+                double approximateMagnitude = PAUtil.round(approximateMagnitude1, 1);
+
+                return new VisualAspectsOfAPlanet(distanceAU, angDiaArcsec, phase, lightTimeHour, lightTimeMinutes,
+                                lightTimeSeconds, posAngleBrightLimbDeg, approximateMagnitude);
         }
 }
