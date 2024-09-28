@@ -5,9 +5,10 @@ var searchData=
   ['testcoordinates_2',['TestCoordinates',['../classTestCoordinates.html',1,'']]],
   ['testdatetime_3',['TestDateTime',['../classTestDateTime.html',1,'']]],
   ['testlib_4',['TestLib',['../classastro_1_1practical_1_1test_1_1TestLib.html',1,'astro::practical::test']]],
-  ['testplanet_5',['TestPlanet',['../classTestPlanet.html',1,'']]],
-  ['testsun_6',['TestSun',['../classTestSun.html',1,'']]],
-  ['time_7',['Time',['../classastro_1_1practical_1_1models_1_1Time.html',1,'astro::practical::models']]],
-  ['twilightstatus_8',['TwilightStatus',['../enumastro_1_1practical_1_1types_1_1TwilightStatus.html',1,'astro::practical::types']]],
-  ['twilighttype_9',['TwilightType',['../enumastro_1_1practical_1_1types_1_1TwilightType.html',1,'astro::practical::types']]]
+  ['testmoon_5',['TestMoon',['../classTestMoon.html',1,'']]],
+  ['testplanet_6',['TestPlanet',['../classTestPlanet.html',1,'']]],
+  ['testsun_7',['TestSun',['../classTestSun.html',1,'']]],
+  ['time_8',['Time',['../classastro_1_1practical_1_1models_1_1Time.html',1,'astro::practical::models']]],
+  ['twilightstatus_9',['TwilightStatus',['../enumastro_1_1practical_1_1types_1_1TwilightStatus.html',1,'astro::practical::types']]],
+  ['twilighttype_10',['TwilightType',['../enumastro_1_1practical_1_1types_1_1TwilightType.html',1,'astro::practical::types']]]
 ];

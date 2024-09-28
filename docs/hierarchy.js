@@ -3,6 +3,7 @@ var hierarchy =
     [ "Aberration", "classastro_1_1practical_1_1models_1_1Aberration.html", null ],
     [ "Angle", "classastro_1_1practical_1_1models_1_1Angle.html", null ],
     [ "AngleMeasure", "enumastro_1_1practical_1_1types_1_1AngleMeasure.html", null ],
+    [ "ApproximatePositionOfMoon", "classastro_1_1practical_1_1models_1_1ApproximatePositionOfMoon.html", null ],
     [ "BinaryData", "classastro_1_1practical_1_1models_1_1data_1_1BinaryData.html", null ],
     [ "BinaryInfo", "classastro_1_1practical_1_1data_1_1BinaryInfo.html", null ],
     [ "BinaryStarOrbit", "classastro_1_1practical_1_1models_1_1BinaryStarOrbit.html", null ],
@@ -36,6 +37,7 @@ var hierarchy =
     [ "PACoordinates", "classastro_1_1practical_1_1lib_1_1PACoordinates.html", null ],
     [ "PADateTime", "classastro_1_1practical_1_1lib_1_1PADateTime.html", null ],
     [ "PAMacros", "classastro_1_1practical_1_1lib_1_1PAMacros.html", null ],
+    [ "PAMoon", "classastro_1_1practical_1_1lib_1_1PAMoon.html", null ],
     [ "PAPlanet", "classastro_1_1practical_1_1lib_1_1PAPlanet.html", null ],
     [ "ParallaxHelper", "classastro_1_1practical_1_1models_1_1ParallaxHelper.html", null ],
     [ "PASun", "classastro_1_1practical_1_1lib_1_1PASun.html", null ],
@@ -67,6 +69,7 @@ var hierarchy =
     [ "TestCoordinates", "classTestCoordinates.html", null ],
     [ "TestDateTime", "classTestDateTime.html", null ],
     [ "TestLib", "classastro_1_1practical_1_1test_1_1TestLib.html", null ],
+    [ "TestMoon", "classTestMoon.html", null ],
     [ "TestPlanet", "classTestPlanet.html", null ],
     [ "TestSun", "classTestSun.html", null ],
     [ "Time", "classastro_1_1practical_1_1models_1_1Time.html", [

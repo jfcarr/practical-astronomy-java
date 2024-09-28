@@ -6,6 +6,7 @@ public class Main {
 		testPlanet();
 		testComet();
 		testBinary();
+		testMoon();
 	}
 
 	public static void testDateTime() {
@@ -72,5 +73,11 @@ public class Main {
 		TestBinary testBinary = new TestBinary();
 
 		testBinary.testBinaryStarOrbit();
+	}
+
+	public static void testMoon() {
+		TestMoon testMoon = new TestMoon();
+
+		testMoon.testApproximatePositionOfMoon();
 	}
 }

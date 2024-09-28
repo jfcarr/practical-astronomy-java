@@ -14,6 +14,7 @@ var annotated_dup =
           [ "PACoordinates", "classastro_1_1practical_1_1lib_1_1PACoordinates.html", "classastro_1_1practical_1_1lib_1_1PACoordinates" ],
           [ "PADateTime", "classastro_1_1practical_1_1lib_1_1PADateTime.html", "classastro_1_1practical_1_1lib_1_1PADateTime" ],
           [ "PAMacros", "classastro_1_1practical_1_1lib_1_1PAMacros.html", null ],
+          [ "PAMoon", "classastro_1_1practical_1_1lib_1_1PAMoon.html", "classastro_1_1practical_1_1lib_1_1PAMoon" ],
           [ "PAPlanet", "classastro_1_1practical_1_1lib_1_1PAPlanet.html", "classastro_1_1practical_1_1lib_1_1PAPlanet" ],
           [ "PASun", "classastro_1_1practical_1_1lib_1_1PASun.html", "classastro_1_1practical_1_1lib_1_1PASun" ],
           [ "PAUtil", "classastro_1_1practical_1_1lib_1_1PAUtil.html", null ]
@@ -28,6 +29,7 @@ var annotated_dup =
           ] ],
           [ "Aberration", "classastro_1_1practical_1_1models_1_1Aberration.html", "classastro_1_1practical_1_1models_1_1Aberration" ],
           [ "Angle", "classastro_1_1practical_1_1models_1_1Angle.html", "classastro_1_1practical_1_1models_1_1Angle" ],
+          [ "ApproximatePositionOfMoon", "classastro_1_1practical_1_1models_1_1ApproximatePositionOfMoon.html", "classastro_1_1practical_1_1models_1_1ApproximatePositionOfMoon" ],
           [ "BinaryStarOrbit", "classastro_1_1practical_1_1models_1_1BinaryStarOrbit.html", "classastro_1_1practical_1_1models_1_1BinaryStarOrbit" ],
           [ "CivilDate", "classastro_1_1practical_1_1models_1_1CivilDate.html", "classastro_1_1practical_1_1models_1_1CivilDate" ],
           [ "CivilDateTime", "classastro_1_1practical_1_1models_1_1CivilDateTime.html", "classastro_1_1practical_1_1models_1_1CivilDateTime" ],
@@ -90,6 +92,7 @@ var annotated_dup =
     [ "TestComet", "classTestComet.html", "classTestComet" ],
     [ "TestCoordinates", "classTestCoordinates.html", "classTestCoordinates" ],
     [ "TestDateTime", "classTestDateTime.html", "classTestDateTime" ],
+    [ "TestMoon", "classTestMoon.html", "classTestMoon" ],
     [ "TestPlanet", "classTestPlanet.html", "classTestPlanet" ],
     [ "TestSun", "classTestSun.html", "classTestSun" ]
 ];
