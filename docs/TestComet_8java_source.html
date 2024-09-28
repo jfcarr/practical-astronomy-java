@@ -99,38 +99,56 @@ $(document).ready(function(){initNavTree('TestComet_8java_source.html',''); init
 <div class="contents">
 <a href="TestComet_8java.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">import</span> astro.practical.lib.PAComet;</div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">import</span> astro.practical.models.PositionOfEllipticalComet;</div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">import</span> astro.practical.test.TestLib;</div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
-<div class="foldopen" id="foldopen00005" data-start="{" data-end="};">
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno"><a class="line" href="classTestComet.html">    5</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="classTestComet.html">TestComet</a> {</div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>    PAComet paComet;</div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
-<div class="foldopen" id="foldopen00008" data-start="{" data-end="}">
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="classTestComet.html#a14f95c37b8d0b6c28f5924dc85670d45">    8</a></span>    <span class="keyword">public</span> <a class="code hl_function" href="classTestComet.html#a14f95c37b8d0b6c28f5924dc85670d45">TestComet</a>() {</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>        paComet = <span class="keyword">new</span> PAComet();</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    }</div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">import</span> astro.practical.models.PositionOfParabolicComet;</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">import</span> astro.practical.test.TestLib;</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="foldopen" id="foldopen00006" data-start="{" data-end="};">
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno"><a class="line" href="classTestComet.html">    6</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="classTestComet.html">TestComet</a> {</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>    PAComet paComet;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>    TestLib testLib;</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="foldopen" id="foldopen00010" data-start="{" data-end="}">
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="classTestComet.html#a14f95c37b8d0b6c28f5924dc85670d45">   10</a></span>    <span class="keyword">public</span> <a class="code hl_function" href="classTestComet.html#a14f95c37b8d0b6c28f5924dc85670d45">TestComet</a>() {</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>        paComet = <span class="keyword">new</span> PAComet();</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>        testLib = <span class="keyword">new</span> TestLib();</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    }</div>
 </div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
-<div class="foldopen" id="foldopen00012" data-start="{" data-end="}">
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="classTestComet.html#aabdf2916ed340caf7a76d8bec3287c4a">   12</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classTestComet.html#aabdf2916ed340caf7a76d8bec3287c4a">testPositionOfEllipticalComet</a>() {</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>        TestLib testLib = <span class="keyword">new</span> TestLib();</div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        PositionOfEllipticalComet positionOfEllipticalComet = paComet.positionOfEllipticalComet(0, 0, 0, <span class="keyword">false</span>, 0, 1, 1,</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>                1984, <span class="stringliteral">&quot;Halley&quot;</span>);</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        testLib.setTestName(<span class="stringliteral">&quot;Position of Elliptical Comet&quot;</span>)</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>                .Assert(6, positionOfEllipticalComet.cometRAHour)</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>                .Assert(29, positionOfEllipticalComet.cometRAMin)</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>                .Assert(10, positionOfEllipticalComet.cometDecDeg)</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>                .Assert(13, positionOfEllipticalComet.cometDecMin)</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>                .Assert(8.13, positionOfEllipticalComet.cometDistEarth);</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    }</div>
+<div class="foldopen" id="foldopen00015" data-start="{" data-end="}">
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="classTestComet.html#aabdf2916ed340caf7a76d8bec3287c4a">   15</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classTestComet.html#aabdf2916ed340caf7a76d8bec3287c4a">testPositionOfEllipticalComet</a>() {</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        PositionOfEllipticalComet positionOfEllipticalComet = paComet.positionOfEllipticalComet(0, 0, 0, <span class="keyword">false</span>, 0, 1, 1,</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>                1984, <span class="stringliteral">&quot;Halley&quot;</span>);</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        testLib.setTestName(<span class="stringliteral">&quot;Position of Elliptical Comet&quot;</span>)</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>                .Assert(6, positionOfEllipticalComet.cometRAHour)</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>                .Assert(29, positionOfEllipticalComet.cometRAMin)</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>                .Assert(10, positionOfEllipticalComet.cometDecDeg)</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>                .Assert(13, positionOfEllipticalComet.cometDecMin)</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>                .Assert(8.13, positionOfEllipticalComet.cometDistEarth);</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    }</div>
 </div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>}</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="foldopen" id="foldopen00027" data-start="{" data-end="}">
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="classTestComet.html#a35dd82629decf514d1656d7570377249">   27</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classTestComet.html#a35dd82629decf514d1656d7570377249">testPositionOfParabolicComet</a>() {</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        PositionOfParabolicComet positionOfParabolicComet = paComet.positionOfParabolicComet(0, 0, 0, <span class="keyword">false</span>, 0, 25, 12,</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>                1977, <span class="stringliteral">&quot;Kohler&quot;</span>);</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        testLib.setTestName(<span class="stringliteral">&quot;Position of Parabolic Comet&quot;</span>)</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>                .Assert(23, positionOfParabolicComet.cometRAHour)</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>                .Assert(17, positionOfParabolicComet.cometRAMin)</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>                .Assert(11.53, positionOfParabolicComet.cometRASec)</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>                .Assert(-33, positionOfParabolicComet.cometDecDeg)</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>                .Assert(42, positionOfParabolicComet.cometDecMin)</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>                .Assert(26.42, positionOfParabolicComet.cometDecSec)</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>                .Assert(1.11, positionOfParabolicComet.cometDistEarth);</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    }</div>
 </div>
-<div class="ttc" id="aclassTestComet_html"><div class="ttname"><a href="classTestComet.html">TestComet</a></div><div class="ttdef"><b>Definition</b> <a href="TestComet_8java_source.html#l00005">TestComet.java:5</a></div></div>
-<div class="ttc" id="aclassTestComet_html_a14f95c37b8d0b6c28f5924dc85670d45"><div class="ttname"><a href="classTestComet.html#a14f95c37b8d0b6c28f5924dc85670d45">TestComet.TestComet</a></div><div class="ttdeci">TestComet()</div><div class="ttdef"><b>Definition</b> <a href="TestComet_8java_source.html#l00008">TestComet.java:8</a></div></div>
-<div class="ttc" id="aclassTestComet_html_aabdf2916ed340caf7a76d8bec3287c4a"><div class="ttname"><a href="classTestComet.html#aabdf2916ed340caf7a76d8bec3287c4a">TestComet.testPositionOfEllipticalComet</a></div><div class="ttdeci">void testPositionOfEllipticalComet()</div><div class="ttdef"><b>Definition</b> <a href="TestComet_8java_source.html#l00012">TestComet.java:12</a></div></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>}</div>
+</div>
+<div class="ttc" id="aclassTestComet_html"><div class="ttname"><a href="classTestComet.html">TestComet</a></div><div class="ttdef"><b>Definition</b> <a href="TestComet_8java_source.html#l00006">TestComet.java:6</a></div></div>
+<div class="ttc" id="aclassTestComet_html_a14f95c37b8d0b6c28f5924dc85670d45"><div class="ttname"><a href="classTestComet.html#a14f95c37b8d0b6c28f5924dc85670d45">TestComet.TestComet</a></div><div class="ttdeci">TestComet()</div><div class="ttdef"><b>Definition</b> <a href="TestComet_8java_source.html#l00010">TestComet.java:10</a></div></div>
+<div class="ttc" id="aclassTestComet_html_a35dd82629decf514d1656d7570377249"><div class="ttname"><a href="classTestComet.html#a35dd82629decf514d1656d7570377249">TestComet.testPositionOfParabolicComet</a></div><div class="ttdeci">void testPositionOfParabolicComet()</div><div class="ttdef"><b>Definition</b> <a href="TestComet_8java_source.html#l00027">TestComet.java:27</a></div></div>
+<div class="ttc" id="aclassTestComet_html_aabdf2916ed340caf7a76d8bec3287c4a"><div class="ttname"><a href="classTestComet.html#aabdf2916ed340caf7a76d8bec3287c4a">TestComet.testPositionOfEllipticalComet</a></div><div class="ttdeci">void testPositionOfEllipticalComet()</div><div class="ttdef"><b>Definition</b> <a href="TestComet_8java_source.html#l00015">TestComet.java:15</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

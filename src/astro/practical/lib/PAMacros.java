@@ -7,6 +7,7 @@ import java.util.Set;
 
 import astro.practical.models.L3710;
 import astro.practical.models.L3710Twilight;
+import astro.practical.models.PCometLongLatDist;
 import astro.practical.models.ParallaxHelper;
 import astro.practical.models.PlanetCoordinates;
 import astro.practical.models.PlanetLongL4685;
@@ -2961,5 +2962,90 @@ public class PAMacros {
 		}
 
 		return new PlanetLongL4945(qa, qb, qc, qd, qe, qf, qg);
+	}
+
+	/**
+	 * For W, in radians, return S, also in radians.
+	 * 
+	 * Original macro name: SolveCubic
+	 */
+	public static double solveCubic(double w) {
+		double s = w / 3.0;
+
+		while (true) {
+			double s2 = s * s;
+			double d = (s2 + 3.0) * s - w;
+
+			if (Math.abs(d) < 0.000001) {
+				return s;
+			}
+
+			s = ((2.0 * s * s2) + w) / (3.0 * (s2 + 1.0));
+		}
+	}
+
+	/**
+	 * Calculate longitude, latitude, and distance of parabolic-orbit comet.
+	 *
+	 * Original macro names: PcometLong, PcometLat, PcometDist
+	 */
+	public static PCometLongLatDist pCometLongLatDist(double lh, double lm, double ls, int ds, int zc, double dy,
+			int mn, int yr, double td, int tm, int ty, double q, double i, double p, double n) {
+		double gd = localCivilTimeGreenwichDay(lh, lm, ls, ds, zc, dy, mn, yr);
+		int gm = localCivilTimeGreenwichMonth(lh, lm, ls, ds, zc, dy, mn, yr);
+		int gy = localCivilTimeGreenwichYear(lh, lm, ls, ds, zc, dy, mn, yr);
+		double ut = localCivilTimeToUniversalTime(lh, lm, ls, ds, zc, dy, mn, yr);
+		double tpe = (ut / 365.242191) + civilDateToJulianDate(gd, gm, gy) - civilDateToJulianDate(td, tm, ty);
+		double lg = Math.toRadians(sunLong(lh, lm, ls, ds, zc, dy, mn, yr) + 180.0);
+		double re = sunDist(lh, lm, ls, ds, zc, dy, mn, yr);
+
+		double rh2 = 0.0;
+		double rd = 0.0;
+		double s3 = 0.0;
+		double c3 = 0.0;
+		double lc = 0.0;
+		double s2 = 0.0;
+		double c2 = 0.0;
+
+		for (int k = 1; k < 3; k++) {
+			double s = solveCubic(0.0364911624 * tpe / (q * Math.sqrt(q)));
+			double nu = 2.0 * Math.atan(s);
+			double r = q * (1.0 + s * s);
+			double l = nu + Math.toRadians(p);
+			double s1 = Math.sin(l);
+			double c1 = Math.cos(l);
+			double i1 = Math.toRadians(i);
+			s2 = s1 * Math.sin(i1);
+			double ps = Math.asin(s2);
+			double y = s1 * Math.cos(i1);
+			lc = Math.atan2(y, c1) + Math.toRadians(n);
+			c2 = Math.cos(ps);
+			rd = r * c2;
+			double ll = lc - lg;
+			c3 = Math.cos(ll);
+			s3 = Math.sin(ll);
+			@SuppressWarnings("unused")
+			double rh = Math.sqrt((re * re) + (r * r) - (2.0 * re * rd * c3 * Math.cos(ps)));
+			if (k == 1) {
+				rh2 = Math.sqrt(
+						(re * re) + (r * r) - (2.0 * re * r * Math.cos(ps) * Math.cos(l + Math.toRadians(n) - lg)));
+			}
+		}
+
+		double ep;
+
+		ep = (rd < re)
+				? Math.atan(-rd * s3 / (re - (rd * c3))) + lg + 3.141592654
+				: Math.atan(re * s3 / (rd - (re * c3))) + lc;
+		ep = unwind(ep);
+
+		double tb = rd * s2 * Math.sin(ep - lc) / (c2 * re * s3);
+		double bp = Math.atan(tb);
+
+		double cometLongDeg = wToDegrees(ep);
+		double cometLatDeg = wToDegrees(bp);
+		double cometDistAU = rh2;
+
+		return new PCometLongLatDist(cometLongDeg, cometLatDeg, cometDistAU);
 	}
 }

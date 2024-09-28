@@ -2,7 +2,7 @@ var searchData=
 [
   ['galacticcoordinates_0',['GalacticCoordinates',['../classastro_1_1practical_1_1models_1_1GalacticCoordinates.html#acff3ffcb6af81470a7d869d31b000f18',1,'astro::practical::models::GalacticCoordinates']]],
   ['galacticcoordinatetoequatorialcoordinate_1',['galacticCoordinateToEquatorialCoordinate',['../classastro_1_1practical_1_1lib_1_1PACoordinates.html#a6785fb42d9eb4fde7c79b213d9a541ca',1,'astro::practical::lib::PACoordinates']]],
-  ['getcometinfo_2',['getCometInfo',['../classastro_1_1practical_1_1data_1_1CometInfoElliptical.html#a1c3ac31b4bd92bdbec6b942b5dee1b2f',1,'astro::practical::data::CometInfoElliptical']]],
+  ['getcometinfo_2',['getcometinfo',['../classastro_1_1practical_1_1data_1_1CometInfoElliptical.html#a1c3ac31b4bd92bdbec6b942b5dee1b2f',1,'astro.practical.data.CometInfoElliptical.getCometInfo()'],['../classastro_1_1practical_1_1data_1_1CometInfoParabolic.html#a11651c12a12dcd0acdbe9a45e82d4d0e',1,'astro.practical.data.CometInfoParabolic.getCometInfo()']]],
   ['getdateofeaster_3',['getDateOfEaster',['../classastro_1_1practical_1_1lib_1_1PADateTime.html#a5091e5f746edf8d9d3b330d0ac66a91f',1,'astro::practical::lib::PADateTime']]],
   ['getplanetinfo_4',['getPlanetInfo',['../classastro_1_1practical_1_1data_1_1PlanetInfo.html#a55f6e30328c9d4c6acd537b46b6ab203',1,'astro::practical::data::PlanetInfo']]],
   ['greenwichsiderealtime_5',['GreenwichSiderealTime',['../classastro_1_1practical_1_1models_1_1GreenwichSiderealTime.html#ace708f8d778f72857a61f5909974413f',1,'astro::practical::models::GreenwichSiderealTime']]],

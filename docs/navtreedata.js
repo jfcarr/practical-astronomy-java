@@ -35,7 +35,7 @@ var NAVTREE =
       [ "Class Members", "functions.html", [
         [ "All", "functions.html", "functions_dup" ],
         [ "Functions", "functions_func.html", "functions_func" ],
-        [ "Variables", "functions_vars.html", null ]
+        [ "Variables", "functions_vars.html", "functions_vars" ]
       ] ]
     ] ],
     [ "Files", "files.html", [
@@ -47,8 +47,8 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "Aberration_8java.html",
-"classastro_1_1practical_1_1models_1_1CivilDate.html#a524ebd187a2f9eb64a0d9761851bfcde",
-"classastro_1_1practical_1_1models_1_1data_1_1PlanetDataPrecise.html#afca485901e363e010bc7e81855114420"
+"classastro_1_1practical_1_1models_1_1Aberration.html#a1ff58661f3f6d28fcfd2a17a4c151e37",
+"classastro_1_1practical_1_1models_1_1data_1_1CometDataElliptical.html#a934fa09ba291a97f43720640e4d83f25"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
