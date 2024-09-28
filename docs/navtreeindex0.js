@@ -120,6 +120,8 @@ var NAVTREEINDEX0 =
 "UniversalDateTime_8java_source.html":[2,0,0,0,0,2,39],
 "UniversalTime_8java.html":[2,0,0,0,0,2,40],
 "UniversalTime_8java_source.html":[2,0,0,0,0,2,40],
+"VisualAspectsOfAPlanet_8java.html":[2,0,0,0,0,2,41],
+"VisualAspectsOfAPlanet_8java_source.html":[2,0,0,0,0,2,41],
 "WarningFlag_8java.html":[2,0,0,0,0,4,5],
 "WarningFlag_8java_source.html":[2,0,0,0,0,4,5],
 "annotated.html":[1,0],
@@ -152,6 +154,7 @@ var NAVTREEINDEX0 =
 "classTestDateTime.html#aacab4bb177ff69590e9af83912075418":[1,0,3,3],
 "classTestDateTime.html#ac3a02163371fa3178e9788ca63a877ca":[1,0,3,5],
 "classTestPlanet.html":[1,0,4],
+"classTestPlanet.html#a1d59f867a483a497197931ee3e5163dc":[1,0,4,3],
 "classTestPlanet.html#a82e6342a5295ce9b8f65d82dc3ec4c2b":[1,0,4,1],
 "classTestPlanet.html#a96ec271065c6467a9328c000104f90af":[1,0,4,2],
 "classTestPlanet.html#ae3c34bf99d6554f54333293a6c2851a8":[1,0,4,0],
@@ -205,6 +208,7 @@ var NAVTREEINDEX0 =
 "classastro_1_1practical_1_1lib_1_1PAPlanet.html":[1,0,0,0,1,3],
 "classastro_1_1practical_1_1lib_1_1PAPlanet.html#aa8960e7b4177eb7009668e814e22dde6":[1,0,0,0,1,3,1],
 "classastro_1_1practical_1_1lib_1_1PAPlanet.html#abbd3e2c6bf64b3572ab57e133d1d9e33":[1,0,0,0,1,3,0],
+"classastro_1_1practical_1_1lib_1_1PAPlanet.html#abf4ab711327cbf7f32ff92b48fabe040":[1,0,0,0,1,3,2],
 "classastro_1_1practical_1_1lib_1_1PASun.html":[1,0,0,0,1,4],
 "classastro_1_1practical_1_1lib_1_1PASun.html#a22f8c8d278d1a7ce3d099251668447f4":[1,0,0,0,1,4,6],
 "classastro_1_1practical_1_1lib_1_1PASun.html#a349bb3a0a5d533a555b490733aa804e9":[1,0,0,0,1,4,3],
@@ -245,9 +249,5 @@ var NAVTREEINDEX0 =
 "classastro_1_1practical_1_1models_1_1Date.html#a38296220261d975f2a629725a00fac3e":[1,0,0,0,2,7,1],
 "classastro_1_1practical_1_1models_1_1Date.html#a85b969ba94dd6940c727fe8f91590a68":[1,0,0,0,2,7,0],
 "classastro_1_1practical_1_1models_1_1Date.html#abeac221e38b7b9ce7df8722c842bf671":[1,0,0,0,2,7,3],
-"classastro_1_1practical_1_1models_1_1Date.html#aedb06abe5aff12fa3e7e0e71a374edfb":[1,0,0,0,2,7,2],
-"classastro_1_1practical_1_1models_1_1DateTime.html":[1,0,0,0,2,8],
-"classastro_1_1practical_1_1models_1_1DateTime.html#a4c11afc03fc3ee49bab660def6558f2a":[1,0,0,0,2,8,1],
-"classastro_1_1practical_1_1models_1_1DateTime.html#a77bd4f876bdc3afed5acdd936f775d34":[1,0,0,0,2,8,5],
-"classastro_1_1practical_1_1models_1_1DateTime.html#a9312e3bbcc80dc8c52a89bf74eba3493":[1,0,0,0,2,8,0]
+"classastro_1_1practical_1_1models_1_1Date.html#aedb06abe5aff12fa3e7e0e71a374edfb":[1,0,0,0,2,7,2]
 };

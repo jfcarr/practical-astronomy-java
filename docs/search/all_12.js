@@ -10,5 +10,7 @@ var searchData=
   ['value6_7',['Value6',['../classastro_1_1practical_1_1models_1_1data_1_1PlanetDataPrecise.html#ac062a0f403e66a9585b7a96250554e54',1,'astro::practical::models::data::PlanetDataPrecise']]],
   ['value7_8',['Value7',['../classastro_1_1practical_1_1models_1_1data_1_1PlanetDataPrecise.html#acfa6eeb19477324c1fb676a300ea13d8',1,'astro::practical::models::data::PlanetDataPrecise']]],
   ['value8_9',['Value8',['../classastro_1_1practical_1_1models_1_1data_1_1PlanetDataPrecise.html#adc3d659ef572f0d26cc90c85b9c7677e',1,'astro::practical::models::data::PlanetDataPrecise']]],
-  ['value9_10',['Value9',['../classastro_1_1practical_1_1models_1_1data_1_1PlanetDataPrecise.html#aa8fa22bbd052cd09c7fc36a5adfb6f87',1,'astro::practical::models::data::PlanetDataPrecise']]]
+  ['value9_10',['Value9',['../classastro_1_1practical_1_1models_1_1data_1_1PlanetDataPrecise.html#aa8fa22bbd052cd09c7fc36a5adfb6f87',1,'astro::practical::models::data::PlanetDataPrecise']]],
+  ['visualaspectsofaplanet_11',['visualaspectsofaplanet',['../classastro_1_1practical_1_1models_1_1VisualAspectsOfAPlanet.html',1,'VisualAspectsOfAPlanet'],['../classastro_1_1practical_1_1lib_1_1PAPlanet.html#abf4ab711327cbf7f32ff92b48fabe040',1,'astro.practical.lib.PAPlanet.visualAspectsOfAPlanet()'],['../classastro_1_1practical_1_1models_1_1VisualAspectsOfAPlanet.html#a28b429513d546b0bd40c6357b4807111',1,'astro.practical.models.VisualAspectsOfAPlanet.VisualAspectsOfAPlanet()']]],
+  ['visualaspectsofaplanet_2ejava_12',['VisualAspectsOfAPlanet.java',['../VisualAspectsOfAPlanet_8java.html',1,'']]]
 ];

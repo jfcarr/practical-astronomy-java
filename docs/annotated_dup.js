@@ -57,7 +57,8 @@ var annotated_dup =
           [ "SunriseAndSunset", "classastro_1_1practical_1_1models_1_1SunriseAndSunset.html", "classastro_1_1practical_1_1models_1_1SunriseAndSunset" ],
           [ "Time", "classastro_1_1practical_1_1models_1_1Time.html", "classastro_1_1practical_1_1models_1_1Time" ],
           [ "UniversalDateTime", "classastro_1_1practical_1_1models_1_1UniversalDateTime.html", "classastro_1_1practical_1_1models_1_1UniversalDateTime" ],
-          [ "UniversalTime", "classastro_1_1practical_1_1models_1_1UniversalTime.html", "classastro_1_1practical_1_1models_1_1UniversalTime" ]
+          [ "UniversalTime", "classastro_1_1practical_1_1models_1_1UniversalTime.html", "classastro_1_1practical_1_1models_1_1UniversalTime" ],
+          [ "VisualAspectsOfAPlanet", "classastro_1_1practical_1_1models_1_1VisualAspectsOfAPlanet.html", "classastro_1_1practical_1_1models_1_1VisualAspectsOfAPlanet" ]
         ] ],
         [ "test", "namespaceastro_1_1practical_1_1test.html", [
           [ "TestLib", "classastro_1_1practical_1_1test_1_1TestLib.html", "classastro_1_1practical_1_1test_1_1TestLib" ]
