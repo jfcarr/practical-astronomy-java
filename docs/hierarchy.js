@@ -4,7 +4,9 @@ var hierarchy =
     [ "Angle", "classastro_1_1practical_1_1models_1_1Angle.html", null ],
     [ "AngleMeasure", "enumastro_1_1practical_1_1types_1_1AngleMeasure.html", null ],
     [ "CometDataElliptical", "classastro_1_1practical_1_1models_1_1data_1_1CometDataElliptical.html", null ],
+    [ "CometDataParabolic", "classastro_1_1practical_1_1models_1_1data_1_1CometDataParabolic.html", null ],
     [ "CometInfoElliptical", "classastro_1_1practical_1_1data_1_1CometInfoElliptical.html", null ],
+    [ "CometInfoParabolic", "classastro_1_1practical_1_1data_1_1CometInfoParabolic.html", null ],
     [ "CoordinatesLongLat", "classastro_1_1practical_1_1models_1_1CoordinatesLongLat.html", [
       [ "EclipticCoordinates", "classastro_1_1practical_1_1models_1_1EclipticCoordinates.html", null ],
       [ "GalacticCoordinates", "classastro_1_1practical_1_1models_1_1GalacticCoordinates.html", null ]
@@ -34,6 +36,7 @@ var hierarchy =
     [ "ParallaxHelper", "classastro_1_1practical_1_1models_1_1ParallaxHelper.html", null ],
     [ "PASun", "classastro_1_1practical_1_1lib_1_1PASun.html", null ],
     [ "PAUtil", "classastro_1_1practical_1_1lib_1_1PAUtil.html", null ],
+    [ "PCometLongLatDist", "classastro_1_1practical_1_1models_1_1PCometLongLatDist.html", null ],
     [ "PlanetCoordinates", "classastro_1_1practical_1_1models_1_1PlanetCoordinates.html", null ],
     [ "PlanetData", "classastro_1_1practical_1_1models_1_1data_1_1PlanetData.html", null ],
     [ "PlanetDataPrecise", "classastro_1_1practical_1_1models_1_1data_1_1PlanetDataPrecise.html", null ],
@@ -44,6 +47,7 @@ var hierarchy =
     [ "PlanetLongL4945", "classastro_1_1practical_1_1models_1_1PlanetLongL4945.html", null ],
     [ "PlanetPosition", "classastro_1_1practical_1_1models_1_1PlanetPosition.html", null ],
     [ "PositionOfEllipticalComet", "classastro_1_1practical_1_1models_1_1PositionOfEllipticalComet.html", null ],
+    [ "PositionOfParabolicComet", "classastro_1_1practical_1_1models_1_1PositionOfParabolicComet.html", null ],
     [ "PositionOfSun", "classastro_1_1practical_1_1models_1_1PositionOfSun.html", null ],
     [ "RightAscensionDeclination", "classastro_1_1practical_1_1models_1_1RightAscensionDeclination.html", [
       [ "EquatorialCoordinatesRA", "classastro_1_1practical_1_1models_1_1EquatorialCoordinatesRA.html", null ]
