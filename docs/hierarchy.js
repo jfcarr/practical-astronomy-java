@@ -30,6 +30,7 @@ var hierarchy =
     [ "L3710", "classastro_1_1practical_1_1models_1_1L3710.html", null ],
     [ "L3710Twilight", "classastro_1_1practical_1_1models_1_1L3710Twilight.html", null ],
     [ "Main", "classMain.html", null ],
+    [ "MoonLongLatHP", "classastro_1_1practical_1_1models_1_1MoonLongLatHP.html", null ],
     [ "MorningAndEveningTwilight", "classastro_1_1practical_1_1models_1_1MorningAndEveningTwilight.html", null ],
     [ "Nutation", "classastro_1_1practical_1_1models_1_1Nutation.html", null ],
     [ "PABinary", "classastro_1_1practical_1_1lib_1_1PABinary.html", null ],
@@ -55,6 +56,7 @@ var hierarchy =
     [ "PositionOfEllipticalComet", "classastro_1_1practical_1_1models_1_1PositionOfEllipticalComet.html", null ],
     [ "PositionOfParabolicComet", "classastro_1_1practical_1_1models_1_1PositionOfParabolicComet.html", null ],
     [ "PositionOfSun", "classastro_1_1practical_1_1models_1_1PositionOfSun.html", null ],
+    [ "PrecisePositionOfMoon", "classastro_1_1practical_1_1models_1_1PrecisePositionOfMoon.html", null ],
     [ "RightAscensionDeclination", "classastro_1_1practical_1_1models_1_1RightAscensionDeclination.html", [
       [ "EquatorialCoordinatesRA", "classastro_1_1practical_1_1models_1_1EquatorialCoordinatesRA.html", null ]
     ] ],

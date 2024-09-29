@@ -22,5 +22,6 @@ var searchData=
   ['planetposition_2ejava_19',['PlanetPosition.java',['../PlanetPosition_8java.html',1,'']]],
   ['positionofellipticalcomet_2ejava_20',['PositionOfEllipticalComet.java',['../PositionOfEllipticalComet_8java.html',1,'']]],
   ['positionofparaboliccomet_2ejava_21',['PositionOfParabolicComet.java',['../PositionOfParabolicComet_8java.html',1,'']]],
-  ['positionofsun_2ejava_22',['PositionOfSun.java',['../PositionOfSun_8java.html',1,'']]]
+  ['positionofsun_2ejava_22',['PositionOfSun.java',['../PositionOfSun_8java.html',1,'']]],
+  ['precisepositionofmoon_2ejava_23',['PrecisePositionOfMoon.java',['../PrecisePositionOfMoon_8java.html',1,'']]]
 ];
