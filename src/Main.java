@@ -79,5 +79,6 @@ public class Main {
 		TestMoon testMoon = new TestMoon();
 
 		testMoon.testApproximatePositionOfMoon();
+		testMoon.testPrecisePositionOfMoon();
 	}
 }

@@ -1,5 +1,6 @@
 import astro.practical.lib.PAMoon;
 import astro.practical.models.ApproximatePositionOfMoon;
+import astro.practical.models.PrecisePositionOfMoon;
 import astro.practical.test.TestLib;
 
 public class TestMoon {
@@ -22,5 +23,19 @@ public class TestMoon {
                 .Assert(-11, approximatePositionOfMoon.moonDecDeg)
                 .Assert(31, approximatePositionOfMoon.moonDecMin)
                 .Assert(38.27, approximatePositionOfMoon.moonDecSec);
+    }
+
+    void testPrecisePositionOfMoon() {
+        PrecisePositionOfMoon precisePositionOfMoon = paMoon.precisePositionOfMoon(0, 0, 0, false, 0, 1, 9, 2003);
+
+        testLib.setTestName("Precise Position of Moon")
+                .Assert(14, precisePositionOfMoon.moonRAHour)
+                .Assert(12, precisePositionOfMoon.moonRAMin)
+                .Assert(10.21, precisePositionOfMoon.moonRASec)
+                .Assert(-11, precisePositionOfMoon.moonDecDeg)
+                .Assert(34, precisePositionOfMoon.moonDecMin)
+                .Assert(57.83, precisePositionOfMoon.moonDecSec)
+                .Assert(367964, precisePositionOfMoon.earthMoonDistKM)
+                .Assert(0.993191, precisePositionOfMoon.moonHorParallaxDeg);
     }
 }
