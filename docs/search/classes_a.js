@@ -22,5 +22,6 @@ var searchData=
   ['planetposition_19',['PlanetPosition',['../classastro_1_1practical_1_1models_1_1PlanetPosition.html',1,'astro::practical::models']]],
   ['positionofellipticalcomet_20',['PositionOfEllipticalComet',['../classastro_1_1practical_1_1models_1_1PositionOfEllipticalComet.html',1,'astro::practical::models']]],
   ['positionofparaboliccomet_21',['PositionOfParabolicComet',['../classastro_1_1practical_1_1models_1_1PositionOfParabolicComet.html',1,'astro::practical::models']]],
-  ['positionofsun_22',['PositionOfSun',['../classastro_1_1practical_1_1models_1_1PositionOfSun.html',1,'astro::practical::models']]]
+  ['positionofsun_22',['PositionOfSun',['../classastro_1_1practical_1_1models_1_1PositionOfSun.html',1,'astro::practical::models']]],
+  ['precisepositionofmoon_23',['PrecisePositionOfMoon',['../classastro_1_1practical_1_1models_1_1PrecisePositionOfMoon.html',1,'astro::practical::models']]]
 ];
