@@ -1,7 +1,9 @@
 import astro.practical.lib.PAMoon;
 import astro.practical.models.ApproximatePositionOfMoon;
+import astro.practical.models.MoonPhase;
 import astro.practical.models.PrecisePositionOfMoon;
 import astro.practical.test.TestLib;
+import astro.practical.types.AccuracyLevel;
 
 public class TestMoon {
     PAMoon paMoon;
@@ -37,5 +39,13 @@ public class TestMoon {
                 .Assert(57.83, precisePositionOfMoon.moonDecSec)
                 .Assert(367964, precisePositionOfMoon.earthMoonDistKM)
                 .Assert(0.993191, precisePositionOfMoon.moonHorParallaxDeg);
+    }
+
+    void testMoonPhase() {
+        MoonPhase moonPhase = paMoon.moonPhase(0, 0, 0, false, 0, 1, 9, 2003, AccuracyLevel.APPROXIMATE);
+
+        testLib.setTestName("Moon Phase and Bright Limb")
+                .Assert(0.22, moonPhase.moonPhase)
+                .Assert(-71.58, moonPhase.paBrightLimbDeg);
     }
 }

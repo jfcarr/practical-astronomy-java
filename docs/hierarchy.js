@@ -1,6 +1,7 @@
 var hierarchy =
 [
     [ "Aberration", "classastro_1_1practical_1_1models_1_1Aberration.html", null ],
+    [ "AccuracyLevel", "enumastro_1_1practical_1_1types_1_1AccuracyLevel.html", null ],
     [ "Angle", "classastro_1_1practical_1_1models_1_1Angle.html", null ],
     [ "AngleMeasure", "enumastro_1_1practical_1_1types_1_1AngleMeasure.html", null ],
     [ "ApproximatePositionOfMoon", "classastro_1_1practical_1_1models_1_1ApproximatePositionOfMoon.html", null ],
@@ -31,6 +32,7 @@ var hierarchy =
     [ "L3710Twilight", "classastro_1_1practical_1_1models_1_1L3710Twilight.html", null ],
     [ "Main", "classMain.html", null ],
     [ "MoonLongLatHP", "classastro_1_1practical_1_1models_1_1MoonLongLatHP.html", null ],
+    [ "MoonPhase", "classastro_1_1practical_1_1models_1_1MoonPhase.html", null ],
     [ "MorningAndEveningTwilight", "classastro_1_1practical_1_1models_1_1MorningAndEveningTwilight.html", null ],
     [ "Nutation", "classastro_1_1practical_1_1models_1_1Nutation.html", null ],
     [ "PABinary", "classastro_1_1practical_1_1lib_1_1PABinary.html", null ],

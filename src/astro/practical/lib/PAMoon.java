@@ -2,7 +2,9 @@ package astro.practical.lib;
 
 import astro.practical.models.ApproximatePositionOfMoon;
 import astro.practical.models.MoonLongLatHP;
+import astro.practical.models.MoonPhase;
 import astro.practical.models.PrecisePositionOfMoon;
+import astro.practical.types.AccuracyLevel;
 
 public class PAMoon {
         /**
@@ -108,5 +110,53 @@ public class PAMoon {
 
                 return new PrecisePositionOfMoon(moonRAHour, moonRAMin, moonRASec, moonDecDeg, moonDecMin, moonDecSec,
                                 earthMoonDistKM, moonHorParallaxDeg);
+        }
+
+        /**
+         * Calculate Moon phase and position angle of bright limb.
+         */
+        public MoonPhase moonPhase(double lctHour, double lctMin, double lctSec, boolean isDaylightSaving,
+                        int zoneCorrectionHours, double localDateDay, int localDateMonth, int localDateYear,
+                        AccuracyLevel accuracyLevel) {
+                int daylightSaving = isDaylightSaving ? 1 : 0;
+
+                double gdateDay = PAMacros.localCivilTimeGreenwichDay(lctHour, lctMin, lctSec, daylightSaving,
+                                zoneCorrectionHours, localDateDay, localDateMonth, localDateYear);
+                int gdateMonth = PAMacros.localCivilTimeGreenwichMonth(lctHour, lctMin, lctSec, daylightSaving,
+                                zoneCorrectionHours, localDateDay, localDateMonth, localDateYear);
+                int gdateYear = PAMacros.localCivilTimeGreenwichYear(lctHour, lctMin, lctSec, daylightSaving,
+                                zoneCorrectionHours, localDateDay, localDateMonth, localDateYear);
+
+                double sunLongDeg = PAMacros.sunLong(lctHour, lctMin, lctSec, daylightSaving, zoneCorrectionHours,
+                                localDateDay, localDateMonth, localDateYear);
+                MoonLongLatHP moonResult = PAMacros.moonLongLatHP(lctHour, lctMin, lctSec, daylightSaving,
+                                zoneCorrectionHours, localDateDay, localDateMonth, localDateYear);
+                double dRad = Math.toRadians(moonResult.moonLongDeg - sunLongDeg);
+
+                double moonPhase1 = (accuracyLevel == AccuracyLevel.PRECISE)
+                                ? PAMacros.moonPhase(lctHour, lctMin, lctSec, daylightSaving, zoneCorrectionHours,
+                                                localDateDay, localDateMonth, localDateYear)
+                                : (1.0 - Math.cos(dRad)) / 2.0;
+
+                double sunRARad = Math
+                                .toRadians(PAMacros.ecRA(sunLongDeg, 0, 0, 0, 0, 0, gdateDay, gdateMonth, gdateYear));
+                double moonRARad = Math.toRadians(PAMacros.ecRA(moonResult.moonLongDeg, 0, 0, moonResult.moonLatDeg, 0,
+                                0, gdateDay, gdateMonth, gdateYear));
+                double sunDecRad = Math
+                                .toRadians(PAMacros.ecDec(sunLongDeg, 0, 0, 0, 0, 0, gdateDay, gdateMonth, gdateYear));
+                double moonDecRad = Math.toRadians(
+                                PAMacros.ecDec(moonResult.moonLongDeg, 0, 0, moonResult.moonLatDeg, 0, 0, gdateDay,
+                                                gdateMonth, gdateYear));
+
+                double y = Math.cos(sunDecRad) * Math.sin(sunRARad - moonRARad);
+                double x = Math.cos(moonDecRad) * Math.sin(sunDecRad)
+                                - Math.sin(moonDecRad) * Math.cos(sunDecRad) * Math.cos(sunRARad - moonRARad);
+
+                double chiDeg = PAMacros.wToDegrees(Math.atan2(y, x));
+
+                double moonPhase = PAUtil.round(moonPhase1, 2);
+                double paBrightLimbDeg = PAUtil.round(chiDeg, 2);
+
+                return new MoonPhase(moonPhase, paBrightLimbDeg);
         }
 }
