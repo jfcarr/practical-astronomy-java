@@ -49,6 +49,7 @@ var annotated_dup =
           [ "L3710", "classastro_1_1practical_1_1models_1_1L3710.html", "classastro_1_1practical_1_1models_1_1L3710" ],
           [ "L3710Twilight", "classastro_1_1practical_1_1models_1_1L3710Twilight.html", "classastro_1_1practical_1_1models_1_1L3710Twilight" ],
           [ "LocalSiderealTime", "classastro_1_1practical_1_1models_1_1LocalSiderealTime.html", "classastro_1_1practical_1_1models_1_1LocalSiderealTime" ],
+          [ "MoonDistAngDiamHorParallax", "classastro_1_1practical_1_1models_1_1MoonDistAngDiamHorParallax.html", "classastro_1_1practical_1_1models_1_1MoonDistAngDiamHorParallax" ],
           [ "MoonLongLatHP", "classastro_1_1practical_1_1models_1_1MoonLongLatHP.html", "classastro_1_1practical_1_1models_1_1MoonLongLatHP" ],
           [ "MoonPhase", "classastro_1_1practical_1_1models_1_1MoonPhase.html", "classastro_1_1practical_1_1models_1_1MoonPhase" ],
           [ "MorningAndEveningTwilight", "classastro_1_1practical_1_1models_1_1MorningAndEveningTwilight.html", "classastro_1_1practical_1_1models_1_1MorningAndEveningTwilight" ],

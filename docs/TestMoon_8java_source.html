@@ -99,78 +99,92 @@ $(document).ready(function(){initNavTree('TestMoon_8java_source.html',''); initR
 <div class="contents">
 <a href="TestMoon_8java.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">import</span> astro.practical.lib.PAMoon;</div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">import</span> astro.practical.models.ApproximatePositionOfMoon;</div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">import</span> astro.practical.models.MoonPhase;</div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">import</span> astro.practical.models.PrecisePositionOfMoon;</div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">import</span> astro.practical.models.TimesOfNewMoonAndFullMoon;</div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">import</span> astro.practical.test.TestLib;</div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">import</span> astro.practical.types.AccuracyLevel;</div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
-<div class="foldopen" id="foldopen00009" data-start="{" data-end="};">
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="classTestMoon.html">    9</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="classTestMoon.html">TestMoon</a> {</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    PAMoon paMoon;</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    TestLib testLib;</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
-<div class="foldopen" id="foldopen00013" data-start="{" data-end="}">
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="classTestMoon.html#a644cf77bcdf5f9bfc0f86842853ee6a5">   13</a></span>    <span class="keyword">public</span> <a class="code hl_function" href="classTestMoon.html#a644cf77bcdf5f9bfc0f86842853ee6a5">TestMoon</a>() {</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        paMoon = <span class="keyword">new</span> PAMoon();</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        testLib = <span class="keyword">new</span> TestLib();</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    }</div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">import</span> astro.practical.models.MoonDistAngDiamHorParallax;</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">import</span> astro.practical.models.MoonPhase;</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">import</span> astro.practical.models.PrecisePositionOfMoon;</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">import</span> astro.practical.models.TimesOfNewMoonAndFullMoon;</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">import</span> astro.practical.test.TestLib;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">import</span> astro.practical.types.AccuracyLevel;</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="foldopen" id="foldopen00010" data-start="{" data-end="};">
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="classTestMoon.html">   10</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="classTestMoon.html">TestMoon</a> {</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    PAMoon paMoon;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    TestLib testLib;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="foldopen" id="foldopen00014" data-start="{" data-end="}">
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="classTestMoon.html#a644cf77bcdf5f9bfc0f86842853ee6a5">   14</a></span>    <span class="keyword">public</span> <a class="code hl_function" href="classTestMoon.html#a644cf77bcdf5f9bfc0f86842853ee6a5">TestMoon</a>() {</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        paMoon = <span class="keyword">new</span> PAMoon();</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        testLib = <span class="keyword">new</span> TestLib();</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    }</div>
 </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="keywordtype">void</span> testApproximatePositionOfMoon() {</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        ApproximatePositionOfMoon approximatePositionOfMoon = paMoon.approximatePositionOfMoon(0, 0, 0, <span class="keyword">false</span>, 0, 1, 9,</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>                2003);</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        testLib.setTestName(<span class="stringliteral">&quot;Approximate Position of Moon&quot;</span>)</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>                .Assert(14, approximatePositionOfMoon.moonRAHour)</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>                .Assert(12, approximatePositionOfMoon.moonRAMin)</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>                .Assert(42.31, approximatePositionOfMoon.moonRASec)</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>                .Assert(-11, approximatePositionOfMoon.moonDecDeg)</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>                .Assert(31, approximatePositionOfMoon.moonDecMin)</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>                .Assert(38.27, approximatePositionOfMoon.moonDecSec);</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    }</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="keywordtype">void</span> testPrecisePositionOfMoon() {</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        PrecisePositionOfMoon precisePositionOfMoon = paMoon.precisePositionOfMoon(0, 0, 0, <span class="keyword">false</span>, 0, 1, 9, 2003);</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        testLib.setTestName(<span class="stringliteral">&quot;Precise Position of Moon&quot;</span>)</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>                .Assert(14, precisePositionOfMoon.moonRAHour)</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>                .Assert(12, precisePositionOfMoon.moonRAMin)</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>                .Assert(10.21, precisePositionOfMoon.moonRASec)</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>                .Assert(-11, precisePositionOfMoon.moonDecDeg)</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>                .Assert(34, precisePositionOfMoon.moonDecMin)</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>                .Assert(57.83, precisePositionOfMoon.moonDecSec)</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>                .Assert(367964, precisePositionOfMoon.earthMoonDistKM)</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>                .Assert(0.993191, precisePositionOfMoon.moonHorParallaxDeg);</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    }</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keywordtype">void</span> testMoonPhase() {</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        MoonPhase moonPhase = paMoon.moonPhase(0, 0, 0, <span class="keyword">false</span>, 0, 1, 9, 2003, AccuracyLevel.APPROXIMATE);</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        testLib.setTestName(<span class="stringliteral">&quot;Moon Phase and Bright Limb&quot;</span>)</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>                .Assert(0.22, moonPhase.moonPhase)</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>                .Assert(-71.58, moonPhase.paBrightLimbDeg);</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    }</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="keywordtype">void</span> testTimesOfNewMoonAndFullMoon() {</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        TimesOfNewMoonAndFullMoon timesOfNewMoonAndFullMoon = paMoon.timesOfNewMoonAndFullMoon(<span class="keyword">false</span>, 0, 1, 9, 2003);</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        testLib.setTestName(<span class="stringliteral">&quot;Times of New Moon and Full Moon&quot;</span>)</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>                .Assert(17, timesOfNewMoonAndFullMoon.nmLocalTimeHour)</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>                .Assert(27, timesOfNewMoonAndFullMoon.nmLocalTimeMin)</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>                .Assert(27, timesOfNewMoonAndFullMoon.nmLocalDateDay)</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>                .Assert(8, timesOfNewMoonAndFullMoon.nmLocalDateMonth)</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>                .Assert(2003, timesOfNewMoonAndFullMoon.nmLocalDateYear)</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>                .Assert(16, timesOfNewMoonAndFullMoon.fmLocalTimeHour)</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>                .Assert(36, timesOfNewMoonAndFullMoon.fmLocalTimeMin)</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>                .Assert(10, timesOfNewMoonAndFullMoon.fmLocalDateDay)</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>                .Assert(9, timesOfNewMoonAndFullMoon.fmLocalDateMonth)</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>                .Assert(2003, timesOfNewMoonAndFullMoon.fmLocalDateYear);</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    }</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>}</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="keywordtype">void</span> testApproximatePositionOfMoon() {</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        ApproximatePositionOfMoon approximatePositionOfMoon = paMoon.approximatePositionOfMoon(0, 0, 0, <span class="keyword">false</span>, 0, 1, 9,</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>                2003);</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        testLib.setTestName(<span class="stringliteral">&quot;Approximate Position of Moon&quot;</span>)</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>                .Assert(14, approximatePositionOfMoon.moonRAHour)</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>                .Assert(12, approximatePositionOfMoon.moonRAMin)</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>                .Assert(42.31, approximatePositionOfMoon.moonRASec)</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>                .Assert(-11, approximatePositionOfMoon.moonDecDeg)</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>                .Assert(31, approximatePositionOfMoon.moonDecMin)</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>                .Assert(38.27, approximatePositionOfMoon.moonDecSec);</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    }</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="keywordtype">void</span> testPrecisePositionOfMoon() {</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        PrecisePositionOfMoon precisePositionOfMoon = paMoon.precisePositionOfMoon(0, 0, 0, <span class="keyword">false</span>, 0, 1, 9, 2003);</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        testLib.setTestName(<span class="stringliteral">&quot;Precise Position of Moon&quot;</span>)</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>                .Assert(14, precisePositionOfMoon.moonRAHour)</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>                .Assert(12, precisePositionOfMoon.moonRAMin)</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>                .Assert(10.21, precisePositionOfMoon.moonRASec)</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>                .Assert(-11, precisePositionOfMoon.moonDecDeg)</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>                .Assert(34, precisePositionOfMoon.moonDecMin)</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>                .Assert(57.83, precisePositionOfMoon.moonDecSec)</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>                .Assert(367964, precisePositionOfMoon.earthMoonDistKM)</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>                .Assert(0.993191, precisePositionOfMoon.moonHorParallaxDeg);</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    }</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="keywordtype">void</span> testMoonPhase() {</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        MoonPhase moonPhase = paMoon.moonPhase(0, 0, 0, <span class="keyword">false</span>, 0, 1, 9, 2003, AccuracyLevel.APPROXIMATE);</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        testLib.setTestName(<span class="stringliteral">&quot;Moon Phase and Bright Limb&quot;</span>)</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>                .Assert(0.22, moonPhase.moonPhase)</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>                .Assert(-71.58, moonPhase.paBrightLimbDeg);</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    }</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <span class="keywordtype">void</span> testTimesOfNewMoonAndFullMoon() {</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        TimesOfNewMoonAndFullMoon timesOfNewMoonAndFullMoon = paMoon.timesOfNewMoonAndFullMoon(<span class="keyword">false</span>, 0, 1, 9, 2003);</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        testLib.setTestName(<span class="stringliteral">&quot;Times of New Moon and Full Moon&quot;</span>)</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>                .Assert(17, timesOfNewMoonAndFullMoon.nmLocalTimeHour)</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>                .Assert(27, timesOfNewMoonAndFullMoon.nmLocalTimeMin)</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>                .Assert(27, timesOfNewMoonAndFullMoon.nmLocalDateDay)</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>                .Assert(8, timesOfNewMoonAndFullMoon.nmLocalDateMonth)</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>                .Assert(2003, timesOfNewMoonAndFullMoon.nmLocalDateYear)</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>                .Assert(16, timesOfNewMoonAndFullMoon.fmLocalTimeHour)</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>                .Assert(36, timesOfNewMoonAndFullMoon.fmLocalTimeMin)</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>                .Assert(10, timesOfNewMoonAndFullMoon.fmLocalDateDay)</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>                .Assert(9, timesOfNewMoonAndFullMoon.fmLocalDateMonth)</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>                .Assert(2003, timesOfNewMoonAndFullMoon.fmLocalDateYear);</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    }</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <span class="keywordtype">void</span> testMoonDistAngDiamHorParallax() {</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        MoonDistAngDiamHorParallax moonDistAngDiamHorParallax = paMoon.moonDistAngDiamHorParallax(0, 0, 0, <span class="keyword">false</span>, 0, 1,</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>                9, 2003);</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        testLib.setTestName(<span class="stringliteral">&quot;Moon distance, angular diameter, and horizontal parallax&quot;</span>)</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>                .Assert(367964, moonDistAngDiamHorParallax.earthMoonDist)</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>                .Assert(0, moonDistAngDiamHorParallax.angDiameterDeg)</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>                .Assert(32, moonDistAngDiamHorParallax.angDiameterMin)</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>                .Assert(0, moonDistAngDiamHorParallax.horParallaxDeg)</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>                .Assert(59, moonDistAngDiamHorParallax.horParallaxMin)</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>                .Assert(35.49, moonDistAngDiamHorParallax.horParallaxSec);</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    }</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>}</div>
 </div>
-<div class="ttc" id="aclassTestMoon_html"><div class="ttname"><a href="classTestMoon.html">TestMoon</a></div><div class="ttdef"><b>Definition</b> <a href="TestMoon_8java_source.html#l00009">TestMoon.java:9</a></div></div>
-<div class="ttc" id="aclassTestMoon_html_a644cf77bcdf5f9bfc0f86842853ee6a5"><div class="ttname"><a href="classTestMoon.html#a644cf77bcdf5f9bfc0f86842853ee6a5">TestMoon.TestMoon</a></div><div class="ttdeci">TestMoon()</div><div class="ttdef"><b>Definition</b> <a href="TestMoon_8java_source.html#l00013">TestMoon.java:13</a></div></div>
+<div class="ttc" id="aclassTestMoon_html"><div class="ttname"><a href="classTestMoon.html">TestMoon</a></div><div class="ttdef"><b>Definition</b> <a href="TestMoon_8java_source.html#l00010">TestMoon.java:10</a></div></div>
+<div class="ttc" id="aclassTestMoon_html_a644cf77bcdf5f9bfc0f86842853ee6a5"><div class="ttname"><a href="classTestMoon.html#a644cf77bcdf5f9bfc0f86842853ee6a5">TestMoon.TestMoon</a></div><div class="ttdeci">TestMoon()</div><div class="ttdef"><b>Definition</b> <a href="TestMoon_8java_source.html#l00014">TestMoon.java:14</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
