@@ -1,16 +1,11 @@
 var searchData=
 [
-  ['galacticcoordinates_0',['galacticcoordinates',['../classastro_1_1practical_1_1models_1_1GalacticCoordinates.html',1,'GalacticCoordinates'],['../classastro_1_1practical_1_1models_1_1GalacticCoordinates.html#acff3ffcb6af81470a7d869d31b000f18',1,'astro.practical.models.GalacticCoordinates.GalacticCoordinates()']]],
-  ['galacticcoordinates_2ejava_1',['GalacticCoordinates.java',['../GalacticCoordinates_8java.html',1,'']]],
-  ['galacticcoordinatetoequatorialcoordinate_2',['galacticCoordinateToEquatorialCoordinate',['../classastro_1_1practical_1_1lib_1_1PACoordinates.html#a6785fb42d9eb4fde7c79b213d9a541ca',1,'astro::practical::lib::PACoordinates']]],
-  ['getbinaryinfo_3',['getBinaryInfo',['../classastro_1_1practical_1_1data_1_1BinaryInfo.html#a4df334ec73a0e028a8bae9879c187cad',1,'astro::practical::data::BinaryInfo']]],
-  ['getcometinfo_4',['getcometinfo',['../classastro_1_1practical_1_1data_1_1CometInfoElliptical.html#a1c3ac31b4bd92bdbec6b942b5dee1b2f',1,'astro.practical.data.CometInfoElliptical.getCometInfo()'],['../classastro_1_1practical_1_1data_1_1CometInfoParabolic.html#a11651c12a12dcd0acdbe9a45e82d4d0e',1,'astro.practical.data.CometInfoParabolic.getCometInfo()']]],
-  ['getdateofeaster_5',['getDateOfEaster',['../classastro_1_1practical_1_1lib_1_1PADateTime.html#a5091e5f746edf8d9d3b330d0ac66a91f',1,'astro::practical::lib::PADateTime']]],
-  ['getplanetinfo_6',['getPlanetInfo',['../classastro_1_1practical_1_1data_1_1PlanetInfo.html#a55f6e30328c9d4c6acd537b46b6ab203',1,'astro::practical::data::PlanetInfo']]],
-  ['greenwichsiderealtime_7',['greenwichsiderealtime',['../classastro_1_1practical_1_1models_1_1GreenwichSiderealTime.html',1,'GreenwichSiderealTime'],['../classastro_1_1practical_1_1models_1_1GreenwichSiderealTime.html#ace708f8d778f72857a61f5909974413f',1,'astro.practical.models.GreenwichSiderealTime.GreenwichSiderealTime()']]],
-  ['greenwichsiderealtime_2ejava_8',['GreenwichSiderealTime.java',['../GreenwichSiderealTime_8java.html',1,'']]],
-  ['greenwichsiderealtimetolocalsiderealtime_9',['greenwichsiderealtimetolocalsiderealtime',['../classastro_1_1practical_1_1lib_1_1PADateTime.html#ab2eceb5e09df3ecec388d90e51109213',1,'astro.practical.lib.PADateTime.greenwichSiderealTimeToLocalSiderealTime()'],['../classastro_1_1practical_1_1lib_1_1PAMacros.html#a4763befafc3c500153a874ad5e7dad77',1,'astro.practical.lib.PAMacros.greenwichSiderealTimeToLocalSiderealTime()']]],
-  ['greenwichsiderealtimetouniversaltime_10',['greenwichsiderealtimetouniversaltime',['../classastro_1_1practical_1_1lib_1_1PADateTime.html#ad793ce500a7f4869310fb8508db88302',1,'astro.practical.lib.PADateTime.greenwichSiderealTimeToUniversalTime()'],['../classastro_1_1practical_1_1lib_1_1PAMacros.html#aacce7a24cd53ee927a7369788de8fef3',1,'astro.practical.lib.PAMacros.greenwichSiderealTimeToUniversalTime()']]],
-  ['gst_5fto_5fut_5fconversion_5fwarning_11',['GST_TO_UT_CONVERSION_WARNING',['../enumastro_1_1practical_1_1types_1_1TwilightStatus.html#a14bfaae60d2bd1959fd66991ea4e3591',1,'astro::practical::types::TwilightStatus']]],
-  ['gst_5fut_5fconversion_5fwarning_12',['GST_UT_CONVERSION_WARNING',['../enumastro_1_1practical_1_1types_1_1RiseSetStatus.html#a35e82024e951fa3f9f0dc2de57860558',1,'astro::practical::types::RiseSetStatus']]]
+  ['f_0',['f',['../classastro_1_1practical_1_1models_1_1NewMoonFullMoonL6855.html#a2e13cbaaba1951fdfe9e83d8b031e802',1,'astro::practical::models::NewMoonFullMoonL6855']]],
+  ['fmlocaldateday_1',['fmLocalDateDay',['../classastro_1_1practical_1_1models_1_1TimesOfNewMoonAndFullMoon.html#a9ce4c25bdd6bb6ee0330e699ec2c7b72',1,'astro::practical::models::TimesOfNewMoonAndFullMoon']]],
+  ['fmlocaldatemonth_2',['fmLocalDateMonth',['../classastro_1_1practical_1_1models_1_1TimesOfNewMoonAndFullMoon.html#aee654eac7c5d8e004f1c97f4329d829c',1,'astro::practical::models::TimesOfNewMoonAndFullMoon']]],
+  ['fmlocaldateyear_3',['fmLocalDateYear',['../classastro_1_1practical_1_1models_1_1TimesOfNewMoonAndFullMoon.html#a637933b0f284a0e0c04be0dc6fca3bcb',1,'astro::practical::models::TimesOfNewMoonAndFullMoon']]],
+  ['fmlocaltimehour_4',['fmLocalTimeHour',['../classastro_1_1practical_1_1models_1_1TimesOfNewMoonAndFullMoon.html#aba0dc77bfbf6e4210760be50950d3a26',1,'astro::practical::models::TimesOfNewMoonAndFullMoon']]],
+  ['fmlocaltimemin_5',['fmLocalTimeMin',['../classastro_1_1practical_1_1models_1_1TimesOfNewMoonAndFullMoon.html#ab5ea4db6247882dd64d092dde40c66a3',1,'astro::practical::models::TimesOfNewMoonAndFullMoon']]],
+  ['fract_6',['fract',['../classastro_1_1practical_1_1lib_1_1PAMacros.html#a791d58680ec0b3a509ff3cde1d441865',1,'astro::practical::lib::PAMacros']]],
+  ['fullmoon_7',['fullMoon',['../classastro_1_1practical_1_1lib_1_1PAMacros.html#a682f7362359a72e62c799df635dd5f47',1,'astro::practical::lib::PAMacros']]]
 ];

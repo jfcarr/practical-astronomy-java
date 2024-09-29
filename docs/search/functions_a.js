@@ -1,12 +1,12 @@
 var searchData=
 [
-  ['main_0',['main',['../classMain.html#a8b260eecbaabcef8473fd87ada040682',1,'Main']]],
-  ['meanobliquityoftheecliptic_1',['meanObliquityOfTheEcliptic',['../classastro_1_1practical_1_1lib_1_1PACoordinates.html#ac0d6d6d6b92bab079372766e04fee177',1,'astro::practical::lib::PACoordinates']]],
-  ['moonhp_2',['moonHP',['../classastro_1_1practical_1_1lib_1_1PAMacros.html#a333eaef694071a636ea197fb26547ef0',1,'astro::practical::lib::PAMacros']]],
-  ['moonlat_3',['moonLat',['../classastro_1_1practical_1_1lib_1_1PAMacros.html#a31c6a47f16f2ecc25732f5bc2a30a6b3',1,'astro::practical::lib::PAMacros']]],
-  ['moonlong_4',['moonLong',['../classastro_1_1practical_1_1lib_1_1PAMacros.html#a7859f2e02787937b139f1396d779609c',1,'astro::practical::lib::PAMacros']]],
-  ['moonlonglathp_5',['moonlonglathp',['../classastro_1_1practical_1_1models_1_1MoonLongLatHP.html#aeb293989531b07d3cacdf2340427a8eb',1,'astro.practical.models.MoonLongLatHP.MoonLongLatHP()'],['../classastro_1_1practical_1_1lib_1_1PAMacros.html#a04121e1f9b6aeb54e23b8fefb9bd5952',1,'astro.practical.lib.PAMacros.moonLongLatHP(double lh, double lm, double ls, int ds, int zc, double dy, int mn, int yr)']]],
-  ['moonmeananomaly_6',['moonMeanAnomaly',['../classastro_1_1practical_1_1lib_1_1PAMacros.html#aec9b2615daca1120abda8be138a1ba6f',1,'astro::practical::lib::PAMacros']]],
-  ['moonphase_7',['moonphase',['../classastro_1_1practical_1_1models_1_1MoonPhase.html#ad8f0f2fe2822bc0420b57d864bde2a6a',1,'astro.practical.models.MoonPhase.MoonPhase()'],['../classastro_1_1practical_1_1lib_1_1PAMacros.html#a6f4593730e8110886976bc7eeb0a0d01',1,'astro.practical.lib.PAMacros.moonPhase()'],['../classastro_1_1practical_1_1lib_1_1PAMoon.html#a715b4e23a7161ccd579916542a72ce0a',1,'astro.practical.lib.PAMoon.moonPhase()']]],
-  ['morningandeveningtwilight_8',['morningandeveningtwilight',['../classastro_1_1practical_1_1lib_1_1PASun.html#a9a0bab5e1ca305f492bddd38947ba04c',1,'astro.practical.lib.PASun.morningAndEveningTwilight()'],['../classastro_1_1practical_1_1models_1_1MorningAndEveningTwilight.html#a3d9e20d102672d74f3601f12fcc56e27',1,'astro.practical.models.MorningAndEveningTwilight.MorningAndEveningTwilight()']]]
+  ['l3710_0',['L3710',['../classastro_1_1practical_1_1models_1_1L3710.html#aac213df71a68abd3fafa2876fb879caf',1,'astro::practical::models::L3710']]],
+  ['l3710twilight_1',['L3710Twilight',['../classastro_1_1practical_1_1models_1_1L3710Twilight.html#a72331d116d87b14d9517c53d6102832e',1,'astro::practical::models::L3710Twilight']]],
+  ['lint_2',['lint',['../classastro_1_1practical_1_1lib_1_1PAMacros.html#a8dc0e857d5e4b116895295d623cd9db9',1,'astro::practical::lib::PAMacros']]],
+  ['localciviltimegreenwichday_3',['localCivilTimeGreenwichDay',['../classastro_1_1practical_1_1lib_1_1PAMacros.html#a98e609771ea51a4668f30c9a1dea0d3c',1,'astro::practical::lib::PAMacros']]],
+  ['localciviltimegreenwichmonth_4',['localCivilTimeGreenwichMonth',['../classastro_1_1practical_1_1lib_1_1PAMacros.html#ad1a1fd46742c751436743b696fa7ab91',1,'astro::practical::lib::PAMacros']]],
+  ['localciviltimegreenwichyear_5',['localCivilTimeGreenwichYear',['../classastro_1_1practical_1_1lib_1_1PAMacros.html#af2273dfe51fad31729ba8f0a35f3f611',1,'astro::practical::lib::PAMacros']]],
+  ['localciviltimetouniversaltime_6',['localciviltimetouniversaltime',['../classastro_1_1practical_1_1lib_1_1PADateTime.html#a130dd9088ca87486b2e9461a74a7c195',1,'astro.practical.lib.PADateTime.localCivilTimeToUniversalTime()'],['../classastro_1_1practical_1_1lib_1_1PAMacros.html#a73de3c96487a3a54d71e617934ace021',1,'astro.practical.lib.PAMacros.localCivilTimeToUniversalTime()']]],
+  ['localsiderealtime_7',['LocalSiderealTime',['../classastro_1_1practical_1_1models_1_1LocalSiderealTime.html#a415382804c4e535d3baa6d3e8e768349',1,'astro::practical::models::LocalSiderealTime']]],
+  ['localsiderealtimetogreenwichsiderealtime_8',['localsiderealtimetogreenwichsiderealtime',['../classastro_1_1practical_1_1lib_1_1PADateTime.html#abc0290c7903a62b2ac6427b5ec273833',1,'astro.practical.lib.PADateTime.localSiderealTimeToGreenwichSiderealTime()'],['../classastro_1_1practical_1_1lib_1_1PAMacros.html#a643e8667d6a73d1211dbdf66096108fb',1,'astro.practical.lib.PAMacros.localSiderealTimeToGreenwichSiderealTime()']]]
 ];

@@ -1,9 +1,20 @@
 var searchData=
 [
-  ['name_0',['name',['../classastro_1_1practical_1_1models_1_1data_1_1BinaryData.html#a934fa09ba291a97f43720640e4d83f25',1,'astro.practical.models.data.BinaryData.Name'],['../classastro_1_1practical_1_1models_1_1data_1_1CometDataElliptical.html#a934fa09ba291a97f43720640e4d83f25',1,'astro.practical.models.data.CometDataElliptical.Name'],['../classastro_1_1practical_1_1models_1_1data_1_1CometDataParabolic.html#a934fa09ba291a97f43720640e4d83f25',1,'astro.practical.models.data.CometDataParabolic.Name'],['../classastro_1_1practical_1_1models_1_1data_1_1PlanetData.html#a934fa09ba291a97f43720640e4d83f25',1,'astro.practical.models.data.PlanetData.Name'],['../classastro_1_1practical_1_1models_1_1data_1_1PlanetDataPrecise.html#a934fa09ba291a97f43720640e4d83f25',1,'astro.practical.models.data.PlanetDataPrecise.Name']]],
-  ['nautical_1',['NAUTICAL',['../enumastro_1_1practical_1_1types_1_1TwilightType.html#a8bdc2d00ce42536b2c97a75d818fbbdd',1,'astro::practical::types::TwilightType']]],
-  ['never_5frises_2',['NEVER_RISES',['../enumastro_1_1practical_1_1types_1_1RiseSetStatus.html#a5637b321e97da22f4c42d6aa170c18d7',1,'astro::practical::types::RiseSetStatus']]],
-  ['node_3',['Node',['../classastro_1_1practical_1_1models_1_1data_1_1CometDataParabolic.html#a1c6aad109b74f2d327108aafc3e67c07',1,'astro::practical::models::data::CometDataParabolic']]],
-  ['node_5flongitudeascendingnode_4',['node_LongitudeAscendingNode',['../classastro_1_1practical_1_1models_1_1data_1_1PlanetData.html#a931ac73757066655564d11e87be0993c',1,'astro::practical::models::data::PlanetData']]],
-  ['node_5flongitudeofascendingnode_5',['node_LongitudeOfAscendingNode',['../classastro_1_1practical_1_1models_1_1data_1_1CometDataElliptical.html#aba5d24bfee4450543db51ea2992610a7',1,'astro::practical::models::data::CometDataElliptical']]]
+  ['la_0',['la',['../classastro_1_1practical_1_1models_1_1L3710Twilight.html#a7c5c962413e7b54fde1f44db08451677',1,'astro.practical.models.L3710Twilight.la'],['../classastro_1_1practical_1_1models_1_1L3710.html#a7c5c962413e7b54fde1f44db08451677',1,'astro.practical.models.L3710.la']]],
+  ['lasts_5fall_5fnight_1',['LASTS_ALL_NIGHT',['../enumastro_1_1practical_1_1types_1_1TwilightStatus.html#a486d1d38e48cf768fb46944228c4eec4',1,'astro::practical::types::TwilightStatus']]],
+  ['latitudedegrees_2',['latitudeDegrees',['../classastro_1_1practical_1_1models_1_1CoordinatesLongLat.html#a4b61e2bf872ba83cc205c56c22361a18',1,'astro::practical::models::CoordinatesLongLat']]],
+  ['latitudeminutes_3',['latitudeMinutes',['../classastro_1_1practical_1_1models_1_1CoordinatesLongLat.html#a9f686947be6a055f65a253b2e327f2db',1,'astro::practical::models::CoordinatesLongLat']]],
+  ['latitudeseconds_4',['latitudeSeconds',['../classastro_1_1practical_1_1models_1_1CoordinatesLongLat.html#ada16cff4bac8db00bf81d222921252a3',1,'astro::practical::models::CoordinatesLongLat']]],
+  ['lighttimehour_5',['lightTimeHour',['../classastro_1_1practical_1_1models_1_1VisualAspectsOfAPlanet.html#aab18dec5cdee77815e0d7c7ac422a421',1,'astro::practical::models::VisualAspectsOfAPlanet']]],
+  ['lighttimeminutes_6',['lightTimeMinutes',['../classastro_1_1practical_1_1models_1_1VisualAspectsOfAPlanet.html#aa6fcd7372e9dbce59888a037e7442a04',1,'astro::practical::models::VisualAspectsOfAPlanet']]],
+  ['lighttimeseconds_7',['lightTimeSeconds',['../classastro_1_1practical_1_1models_1_1VisualAspectsOfAPlanet.html#afd8f37c3ceb160999dd676e8a6a549a3',1,'astro::practical::models::VisualAspectsOfAPlanet']]],
+  ['localsunrisehour_8',['localSunriseHour',['../classastro_1_1practical_1_1models_1_1SunriseAndSunset.html#a4cf80faa8d89dc59031052c72490baa7',1,'astro::practical::models::SunriseAndSunset']]],
+  ['localsunriseminute_9',['localSunriseMinute',['../classastro_1_1practical_1_1models_1_1SunriseAndSunset.html#a7c035dae0cb9db036d3b9c40785bfd80',1,'astro::practical::models::SunriseAndSunset']]],
+  ['localsunsethour_10',['localSunsetHour',['../classastro_1_1practical_1_1models_1_1SunriseAndSunset.html#ae157aefa99bf122023f2cb01d33d45bd',1,'astro::practical::models::SunriseAndSunset']]],
+  ['localsunsetminute_11',['localSunsetMinute',['../classastro_1_1practical_1_1models_1_1SunriseAndSunset.html#a87111fdf6e18eb98a5be9d5db5405c68',1,'astro::practical::models::SunriseAndSunset']]],
+  ['long_5flongitudeepoch_12',['long_LongitudeEpoch',['../classastro_1_1practical_1_1models_1_1data_1_1PlanetData.html#a8059043964722078c933563278826c45',1,'astro::practical::models::data::PlanetData']]],
+  ['longitudedegrees_13',['longitudeDegrees',['../classastro_1_1practical_1_1models_1_1CoordinatesLongLat.html#a623d9e58238c87f269f583b6463e9a32',1,'astro::practical::models::CoordinatesLongLat']]],
+  ['longitudeminutes_14',['longitudeMinutes',['../classastro_1_1practical_1_1models_1_1CoordinatesLongLat.html#ac48dc8a6362bfb343783cf025b5294c5',1,'astro::practical::models::CoordinatesLongLat']]],
+  ['longitudeseconds_15',['longitudeSeconds',['../classastro_1_1practical_1_1models_1_1CoordinatesLongLat.html#ab24bcd7c469aebd058463fd3546a0e00',1,'astro::practical::models::CoordinatesLongLat']]],
+  ['longperi_16',['LongPeri',['../classastro_1_1practical_1_1models_1_1data_1_1BinaryData.html#a537106fc6e9831691745c9133aed21ee',1,'astro::practical::models::data::BinaryData']]]
 ];
