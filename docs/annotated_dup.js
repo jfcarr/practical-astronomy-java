@@ -52,6 +52,7 @@ var annotated_dup =
           [ "MoonLongLatHP", "classastro_1_1practical_1_1models_1_1MoonLongLatHP.html", "classastro_1_1practical_1_1models_1_1MoonLongLatHP" ],
           [ "MoonPhase", "classastro_1_1practical_1_1models_1_1MoonPhase.html", "classastro_1_1practical_1_1models_1_1MoonPhase" ],
           [ "MorningAndEveningTwilight", "classastro_1_1practical_1_1models_1_1MorningAndEveningTwilight.html", "classastro_1_1practical_1_1models_1_1MorningAndEveningTwilight" ],
+          [ "NewMoonFullMoonL6855", "classastro_1_1practical_1_1models_1_1NewMoonFullMoonL6855.html", "classastro_1_1practical_1_1models_1_1NewMoonFullMoonL6855" ],
           [ "Nutation", "classastro_1_1practical_1_1models_1_1Nutation.html", "classastro_1_1practical_1_1models_1_1Nutation" ],
           [ "ParallaxHelper", "classastro_1_1practical_1_1models_1_1ParallaxHelper.html", "classastro_1_1practical_1_1models_1_1ParallaxHelper" ],
           [ "PCometLongLatDist", "classastro_1_1practical_1_1models_1_1PCometLongLatDist.html", "classastro_1_1practical_1_1models_1_1PCometLongLatDist" ],
@@ -73,6 +74,7 @@ var annotated_dup =
           [ "SunDistanceAndAngularSize", "classastro_1_1practical_1_1models_1_1SunDistanceAndAngularSize.html", "classastro_1_1practical_1_1models_1_1SunDistanceAndAngularSize" ],
           [ "SunriseAndSunset", "classastro_1_1practical_1_1models_1_1SunriseAndSunset.html", "classastro_1_1practical_1_1models_1_1SunriseAndSunset" ],
           [ "Time", "classastro_1_1practical_1_1models_1_1Time.html", "classastro_1_1practical_1_1models_1_1Time" ],
+          [ "TimesOfNewMoonAndFullMoon", "classastro_1_1practical_1_1models_1_1TimesOfNewMoonAndFullMoon.html", "classastro_1_1practical_1_1models_1_1TimesOfNewMoonAndFullMoon" ],
           [ "UniversalDateTime", "classastro_1_1practical_1_1models_1_1UniversalDateTime.html", "classastro_1_1practical_1_1models_1_1UniversalDateTime" ],
           [ "UniversalTime", "classastro_1_1practical_1_1models_1_1UniversalTime.html", "classastro_1_1practical_1_1models_1_1UniversalTime" ],
           [ "VisualAspectsOfAPlanet", "classastro_1_1practical_1_1models_1_1VisualAspectsOfAPlanet.html", "classastro_1_1practical_1_1models_1_1VisualAspectsOfAPlanet" ]

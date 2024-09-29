@@ -26,6 +26,7 @@ var dir_c6cc56a917fee4c2cd893dcd088d9f6e =
     [ "MoonLongLatHP.java", "MoonLongLatHP_8java.html", "MoonLongLatHP_8java" ],
     [ "MoonPhase.java", "MoonPhase_8java.html", "MoonPhase_8java" ],
     [ "MorningAndEveningTwilight.java", "MorningAndEveningTwilight_8java.html", "MorningAndEveningTwilight_8java" ],
+    [ "NewMoonFullMoonL6855.java", "NewMoonFullMoonL6855_8java.html", "NewMoonFullMoonL6855_8java" ],
     [ "Nutation.java", "Nutation_8java.html", "Nutation_8java" ],
     [ "ParallaxHelper.java", "ParallaxHelper_8java.html", "ParallaxHelper_8java" ],
     [ "PCometLongLatDist.java", "PCometLongLatDist_8java.html", "PCometLongLatDist_8java" ],
@@ -47,6 +48,7 @@ var dir_c6cc56a917fee4c2cd893dcd088d9f6e =
     [ "SunDistanceAndAngularSize.java", "SunDistanceAndAngularSize_8java.html", "SunDistanceAndAngularSize_8java" ],
     [ "SunriseAndSunset.java", "SunriseAndSunset_8java.html", "SunriseAndSunset_8java" ],
     [ "Time.java", "Time_8java.html", "Time_8java" ],
+    [ "TimesOfNewMoonAndFullMoon.java", "TimesOfNewMoonAndFullMoon_8java.html", "TimesOfNewMoonAndFullMoon_8java" ],
     [ "UniversalDateTime.java", "UniversalDateTime_8java.html", "UniversalDateTime_8java" ],
     [ "UniversalTime.java", "UniversalTime_8java.html", "UniversalTime_8java" ],
     [ "VisualAspectsOfAPlanet.java", "VisualAspectsOfAPlanet_8java.html", "VisualAspectsOfAPlanet_8java" ]

@@ -2,6 +2,7 @@ import astro.practical.lib.PAMoon;
 import astro.practical.models.ApproximatePositionOfMoon;
 import astro.practical.models.MoonPhase;
 import astro.practical.models.PrecisePositionOfMoon;
+import astro.practical.models.TimesOfNewMoonAndFullMoon;
 import astro.practical.test.TestLib;
 import astro.practical.types.AccuracyLevel;
 
@@ -47,5 +48,21 @@ public class TestMoon {
         testLib.setTestName("Moon Phase and Bright Limb")
                 .Assert(0.22, moonPhase.moonPhase)
                 .Assert(-71.58, moonPhase.paBrightLimbDeg);
+    }
+
+    void testTimesOfNewMoonAndFullMoon() {
+        TimesOfNewMoonAndFullMoon timesOfNewMoonAndFullMoon = paMoon.timesOfNewMoonAndFullMoon(false, 0, 1, 9, 2003);
+
+        testLib.setTestName("Times of New Moon and Full Moon")
+                .Assert(17, timesOfNewMoonAndFullMoon.nmLocalTimeHour)
+                .Assert(27, timesOfNewMoonAndFullMoon.nmLocalTimeMin)
+                .Assert(27, timesOfNewMoonAndFullMoon.nmLocalDateDay)
+                .Assert(8, timesOfNewMoonAndFullMoon.nmLocalDateMonth)
+                .Assert(2003, timesOfNewMoonAndFullMoon.nmLocalDateYear)
+                .Assert(16, timesOfNewMoonAndFullMoon.fmLocalTimeHour)
+                .Assert(36, timesOfNewMoonAndFullMoon.fmLocalTimeMin)
+                .Assert(10, timesOfNewMoonAndFullMoon.fmLocalDateDay)
+                .Assert(9, timesOfNewMoonAndFullMoon.fmLocalDateMonth)
+                .Assert(2003, timesOfNewMoonAndFullMoon.fmLocalDateYear);
     }
 }

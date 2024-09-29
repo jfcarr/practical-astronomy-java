@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['y_0',['y',['../classastro_1_1practical_1_1models_1_1L3710.html#ab927965981178aa1fba979a37168db2a',1,'astro.practical.models.L3710.y'],['../classastro_1_1practical_1_1models_1_1L3710Twilight.html#ab927965981178aa1fba979a37168db2a',1,'astro.practical.models.L3710Twilight.y']]],
-  ['year_1',['year',['../classastro_1_1practical_1_1models_1_1Date.html#abeac221e38b7b9ce7df8722c842bf671',1,'astro.practical.models.Date.year'],['../classastro_1_1practical_1_1models_1_1DateTime.html#abeac221e38b7b9ce7df8722c842bf671',1,'astro.practical.models.DateTime.year']]]
+  ['warning_0',['WARNING',['../enumastro_1_1practical_1_1types_1_1WarningFlag.html#a1dfc73ab73898d3f4f348d462a5d126a',1,'astro::practical::types::WarningFlag']]],
+  ['warningflag_1',['warningFlag',['../classastro_1_1practical_1_1models_1_1UniversalTime.html#a83a7887d0ba3363d42077e14ad835018',1,'astro::practical::models::UniversalTime']]]
 ];

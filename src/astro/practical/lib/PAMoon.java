@@ -4,12 +4,11 @@ import astro.practical.models.ApproximatePositionOfMoon;
 import astro.practical.models.MoonLongLatHP;
 import astro.practical.models.MoonPhase;
 import astro.practical.models.PrecisePositionOfMoon;
+import astro.practical.models.TimesOfNewMoonAndFullMoon;
 import astro.practical.types.AccuracyLevel;
 
 public class PAMoon {
-        /**
-         * Calculate approximate position of the Moon.
-         */
+        /** Calculate approximate position of the Moon. */
         public ApproximatePositionOfMoon approximatePositionOfMoon(double lctHour, double lctMin, double lctSec,
                         boolean isDaylightSaving, int zoneCorrectionHours, double localDateDay, int localDateMonth,
                         int localDateYear) {
@@ -73,9 +72,7 @@ public class PAMoon {
                                 moonDecSec);
         }
 
-        /**
-         * Calculate precise position of the Moon.
-         */
+        /** Calculate precise position of the Moon. */
         public PrecisePositionOfMoon precisePositionOfMoon(double lctHour, double lctMin, double lctSec,
                         boolean isDaylightSaving, int zoneCorrectionHours, double localDateDay, int localDateMonth,
                         int localDateYear) {
@@ -112,9 +109,7 @@ public class PAMoon {
                                 earthMoonDistKM, moonHorParallaxDeg);
         }
 
-        /**
-         * Calculate Moon phase and position angle of bright limb.
-         */
+        /** Calculate Moon phase and position angle of bright limb. */
         public MoonPhase moonPhase(double lctHour, double lctMin, double lctSec, boolean isDaylightSaving,
                         int zoneCorrectionHours, double localDateDay, int localDateMonth, int localDateYear,
                         AccuracyLevel accuracyLevel) {
@@ -158,5 +153,56 @@ public class PAMoon {
                 double paBrightLimbDeg = PAUtil.round(chiDeg, 2);
 
                 return new MoonPhase(moonPhase, paBrightLimbDeg);
+        }
+
+        /** Calculate new moon and full moon instances. */
+        public TimesOfNewMoonAndFullMoon timesOfNewMoonAndFullMoon(boolean isDaylightSaving, int zoneCorrectionHours,
+                        double localDateDay, int localDateMonth, int localDateYear) {
+                int daylightSaving = isDaylightSaving ? 1 : 0;
+
+                double jdOfNewMoonDays = PAMacros.newMoon(daylightSaving, zoneCorrectionHours, localDateDay,
+                                localDateMonth, localDateYear);
+                double jdOfFullMoonDays = PAMacros.fullMoon(3, zoneCorrectionHours, localDateDay, localDateMonth,
+                                localDateYear);
+
+                double gDateOfNewMoonDay = PAMacros.julianDateDay(jdOfNewMoonDays);
+                double integerDay1 = Math.floor(gDateOfNewMoonDay);
+                int gDateOfNewMoonMonth = PAMacros.julianDateMonth(jdOfNewMoonDays);
+                int gDateOfNewMoonYear = PAMacros.julianDateYear(jdOfNewMoonDays);
+
+                double gDateOfFullMoonDay = PAMacros.julianDateDay(jdOfFullMoonDays);
+                double integerDay2 = Math.floor(gDateOfFullMoonDay);
+                int gDateOfFullMoonMonth = PAMacros.julianDateMonth(jdOfFullMoonDays);
+                int gDateOfFullMoonYear = PAMacros.julianDateYear(jdOfFullMoonDays);
+
+                double utOfNewMoonHours = 24.0 * (gDateOfNewMoonDay - integerDay1);
+                double utOfFullMoonHours = 24.0 * (gDateOfFullMoonDay - integerDay2);
+                double lctOfNewMoonHours = PAMacros.universalTimeToLocalCivilTime(utOfNewMoonHours + 0.008333, 0, 0,
+                                daylightSaving, zoneCorrectionHours, integerDay1, gDateOfNewMoonMonth,
+                                gDateOfNewMoonYear);
+                double lctOfFullMoonHours = PAMacros.universalTimeToLocalCivilTime(utOfFullMoonHours + 0.008333, 0, 0,
+                                daylightSaving, zoneCorrectionHours, integerDay2, gDateOfFullMoonMonth,
+                                gDateOfFullMoonYear);
+
+                int nmLocalTimeHour = PAMacros.decimalHoursHour(lctOfNewMoonHours);
+                int nmLocalTimeMin = PAMacros.decimalHoursMinute(lctOfNewMoonHours);
+                double nmLocalDateDay = PAMacros.universalTimeLocalCivilDay(utOfNewMoonHours, 0, 0, daylightSaving,
+                                zoneCorrectionHours, integerDay1, gDateOfNewMoonMonth, gDateOfNewMoonYear);
+                int nmLocalDateMonth = PAMacros.universalTimeLocalCivilMonth(utOfNewMoonHours, 0, 0, daylightSaving,
+                                zoneCorrectionHours, integerDay1, gDateOfNewMoonMonth, gDateOfNewMoonYear);
+                int nmLocalDateYear = PAMacros.universalTimeLocalCivilYear(utOfNewMoonHours, 0, 0, daylightSaving,
+                                zoneCorrectionHours, integerDay1, gDateOfNewMoonMonth, gDateOfNewMoonYear);
+                int fmLocalTimeHour = PAMacros.decimalHoursHour(lctOfFullMoonHours);
+                int fmLocalTimeMin = PAMacros.decimalHoursMinute(lctOfFullMoonHours);
+                double fmLocalDateDay = PAMacros.universalTimeLocalCivilDay(utOfFullMoonHours, 0, 0, daylightSaving,
+                                zoneCorrectionHours, integerDay2, gDateOfFullMoonMonth, gDateOfFullMoonYear);
+                int fmLocalDateMonth = PAMacros.universalTimeLocalCivilMonth(utOfFullMoonHours, 0, 0, daylightSaving,
+                                zoneCorrectionHours, integerDay2, gDateOfFullMoonMonth, gDateOfFullMoonYear);
+                int fmLocalDateYear = PAMacros.universalTimeLocalCivilYear(utOfFullMoonHours, 0, 0, daylightSaving,
+                                zoneCorrectionHours, integerDay2, gDateOfFullMoonMonth, gDateOfFullMoonYear);
+
+                return new TimesOfNewMoonAndFullMoon(nmLocalTimeHour, nmLocalTimeMin, nmLocalDateDay, nmLocalDateMonth,
+                                nmLocalDateYear, fmLocalTimeHour, fmLocalTimeMin, fmLocalDateDay, fmLocalDateMonth,
+                                fmLocalDateYear);
         }
 }

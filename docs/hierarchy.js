@@ -34,6 +34,7 @@ var hierarchy =
     [ "MoonLongLatHP", "classastro_1_1practical_1_1models_1_1MoonLongLatHP.html", null ],
     [ "MoonPhase", "classastro_1_1practical_1_1models_1_1MoonPhase.html", null ],
     [ "MorningAndEveningTwilight", "classastro_1_1practical_1_1models_1_1MorningAndEveningTwilight.html", null ],
+    [ "NewMoonFullMoonL6855", "classastro_1_1practical_1_1models_1_1NewMoonFullMoonL6855.html", null ],
     [ "Nutation", "classastro_1_1practical_1_1models_1_1Nutation.html", null ],
     [ "PABinary", "classastro_1_1practical_1_1lib_1_1PABinary.html", null ],
     [ "PAComet", "classastro_1_1practical_1_1lib_1_1PAComet.html", null ],
@@ -84,6 +85,7 @@ var hierarchy =
       [ "RightAscension", "classastro_1_1practical_1_1models_1_1RightAscension.html", null ],
       [ "UniversalTime", "classastro_1_1practical_1_1models_1_1UniversalTime.html", null ]
     ] ],
+    [ "TimesOfNewMoonAndFullMoon", "classastro_1_1practical_1_1models_1_1TimesOfNewMoonAndFullMoon.html", null ],
     [ "TwilightStatus", "enumastro_1_1practical_1_1types_1_1TwilightStatus.html", null ],
     [ "TwilightType", "enumastro_1_1practical_1_1types_1_1TwilightType.html", null ],
     [ "VisualAspectsOfAPlanet", "classastro_1_1practical_1_1models_1_1VisualAspectsOfAPlanet.html", null ],
