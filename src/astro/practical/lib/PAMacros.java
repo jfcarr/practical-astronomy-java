@@ -8,6 +8,7 @@ import java.util.Set;
 import astro.practical.models.L3710;
 import astro.practical.models.L3710Twilight;
 import astro.practical.models.MoonLongLatHP;
+import astro.practical.models.NewMoonFullMoonL6855;
 import astro.practical.models.PCometLongLatDist;
 import astro.practical.models.ParallaxHelper;
 import astro.practical.models.PlanetCoordinates;
@@ -258,6 +259,53 @@ public class PAMacros {
 		double e1 = Math.floor(e);
 
 		return 24 * (e - e1);
+	}
+
+	/**
+	 * Get Local Civil Day for Universal Time
+	 * 
+	 * Original macro name: UTLcDay
+	 */
+	public static double universalTimeLocalCivilDay(double uHours, double uMinutes, double uSeconds,
+			int daylightSaving, int zoneCorrection, double greenwichDay, int greenwichMonth, int greenwichYear) {
+		double a = hmsToDH(uHours, uMinutes, uSeconds);
+		double b = a + zoneCorrection;
+		double c = b + daylightSaving;
+		double d = civilDateToJulianDate(greenwichDay, greenwichMonth, greenwichYear) + (c / 24.0);
+		double e = julianDateDay(d);
+		double e1 = Math.floor(e);
+
+		return e1;
+	}
+
+	/**
+	 * Get Local Civil Month for Universal Time
+	 * 
+	 * Original macro name: UTLcMonth
+	 */
+	public static int universalTimeLocalCivilMonth(double uHours, double uMinutes, double uSeconds, int daylightSaving,
+			int zoneCorrection, double greenwichDay, int greenwichMonth, int greenwichYear) {
+		double a = hmsToDH(uHours, uMinutes, uSeconds);
+		double b = a + zoneCorrection;
+		double c = b + daylightSaving;
+		double d = civilDateToJulianDate(greenwichDay, greenwichMonth, greenwichYear) + (c / 24.0);
+
+		return julianDateMonth(d);
+	}
+
+	/**
+	 * Get Local Civil Year for Universal Time
+	 * 
+	 * Original macro name: UTLcYear
+	 */
+	public static int universalTimeLocalCivilYear(double uHours, double uMinutes, double uSeconds, int daylightSaving,
+			int zoneCorrection, double greenwichDay, int greenwichMonth, int greenwichYear) {
+		double a = hmsToDH(uHours, uMinutes, uSeconds);
+		double b = a + zoneCorrection;
+		double c = b + daylightSaving;
+		double d = civilDateToJulianDate(greenwichDay, greenwichMonth, greenwichYear) + (c / 24.0);
+
+		return julianDateYear(d);
 	}
 
 	/**
@@ -820,9 +868,7 @@ public class PAMacros {
 		return wToDegrees(q + rf);
 	}
 
-	/**
-	 * Helper function for Refract
-	 */
+	/** Helper function for refract */
 	public static double refract_L3035(double pr, double tr, double y, double d) {
 		if (y < 0.2617994) {
 			if (y < -0.087)
@@ -903,9 +949,7 @@ public class PAMacros {
 		// return DecimalDegreesToDegreeHours(Degrees(0));
 	}
 
-	/**
-	 * Helper function for parallax_ha
-	 */
+	/** Helper function for parallaxHA */
 	public static ParallaxHelper parallaxHA_L2870(double x, double y, double rc, double rp, double rs, double tp) {
 		double cx = Math.cos(x);
 		double sy = Math.sin(y);
@@ -986,9 +1030,7 @@ public class PAMacros {
 		// return Degrees(0.0);
 	}
 
-	/**
-	 * Helper function for parallax_dec
-	 */
+	/** Helper function for parallaxDec */
 	public static ParallaxHelper parallaxDec_L2870(double x, double y, double rc, double rp, double rs, double tp) {
 		double cx = Math.cos(x);
 		double sy = Math.sin(y);
@@ -1513,9 +1555,7 @@ public class PAMacros {
 		return xx;
 	}
 
-	/**
-	 * Helper function for sunrise_lct()
-	 */
+	/** Helper function for sunriseLCT() */
 	public static L3710 sunriseLCTL3710(double gd, int gm, int gy, double sr, double di, double gp) {
 		double a = sr + nutatLong(gd, gm, gy) - 0.005694;
 		double x = ecRA(a, 0, 0, 0, 0, 0, gd, gm, gy);
@@ -1611,9 +1651,7 @@ public class PAMacros {
 		}
 	}
 
-	/**
-	 * Helper function for e_sun_rs()
-	 */
+	/** Helper function for eSunRS() */
 	public static L3710 eSunRSL3710(double gd, int gm, int gy, double sr, double di, double gp) {
 		double a = sr + nutatLong(gd, gm, gy) - 0.005694;
 		double x = ecRA(a, 0, 0, 0, 0, 0, gd, gm, gy);
@@ -1659,9 +1697,7 @@ public class PAMacros {
 		return riseSetAzimuthRise(decimalDegreesToDegreeHours(x), 0, 0, result2.y, 0.0, 0.0, di, gp);
 	}
 
-	/**
-	 * Helper function for sunrise_az()
-	 */
+	/** Helper function for sunriseAZ() */
 	public static L3710 sunriseAZL3710(double gd, int gm, int gy, double sr, double di, double gp) {
 		double a = sr + nutatLong(gd, gm, gy) - 0.005694;
 		double x = ecRA(a, 0, 0, 0, 0, 0, gd, gm, gy);
@@ -1707,9 +1743,7 @@ public class PAMacros {
 		return riseSetAzimuthSet(decimalDegreesToDegreeHours(x), 0, 0, result2.y, 0, 0, di, gp);
 	}
 
-	/**
-	 * Helper function for sunset_az()
-	 */
+	/** Helper function for sunsetAZ() */
 	public static L3710 sunsetAZL3710(double gd, int gm, int gy, double sr, double di, double gp) {
 		double a = sr + nutatLong(gd, gm, gy) - 0.005694;
 		double x = ecRA(a, 0, 0, 0, 0, 0, gd, gm, gy);
@@ -1860,9 +1894,7 @@ public class PAMacros {
 		return xx;
 	}
 
-	/**
-	 * Helper function for twilight_am_lct()
-	 */
+	/** Helper function for twilightAMLCT() */
 	public static L3710 twilightAMLCTL3710(double gd, int gm, int gy, double sr, double di, double gp) {
 		double a = sr + nutatLong(gd, gm, gy) - 0.005694;
 		double x = ecRA(a, 0, 0, 0, 0, 0, gd, gm, gy);
@@ -1911,9 +1943,7 @@ public class PAMacros {
 		return universalTimeToLocalCivilTime(ut, 0, 0, ds, zc, gd, gm, gy);
 	}
 
-	/**
-	 * Helper function for twilight_pm_lct()
-	 */
+	/** Helper function for twilightPMLCT() */
 	public static L3710 twilightPMLCTL3710(double gd, int gm, int gy, double sr, double di, double gp) {
 		double a = sr + nutatLong(gd, gm, gy) - 0.005694;
 		double x = ecRA(a, 0, 0, 0, 0, 0, gd, gm, gy);
@@ -1963,9 +1993,7 @@ public class PAMacros {
 		return result2.s;
 	}
 
-	/**
-	 * Helper function for e_twilight()
-	 */
+	/** Helper function for eTwilight() */
 	public static L3710Twilight eTwilightL3710(double gd, int gm, int gy, double sr, double di, double gp) {
 		double a = sr + nutatLong(gd, gm, gy) - 0.005694;
 		double x = ecRA(a, 0, 0, 0, 0, 0, gd, gm, gy);
@@ -2623,9 +2651,7 @@ public class PAMacros {
 				planetHLat, planetRVect);
 	}
 
-	/**
-	 * Helper function for planet_long_lat()
-	 */
+	/** Helper function for planetCoordinates() */
 	public static PlanetLongL4685 planetLongL4685(List<PlanetDataPrecise> pl) {
 		double qa = 0.00204 * Math.cos(5.0 * pl.get(2).APValue - 2.0 * pl.get(1).APValue + 0.21328);
 		qa += 0.00103 * Math.cos(2.0 * pl.get(2).APValue - pl.get(1).APValue - 2.8046);
@@ -2640,9 +2666,7 @@ public class PAMacros {
 		return new PlanetLongL4685(qa, qb);
 	}
 
-	/**
-	 * Helper function for planet_long_lat()
-	 */
+	/** Helper function for planetCoordinates() */
 	public static PlanetLongL4735 planetLongL4735(List<PlanetDataPrecise> pl, double ms, double t) {
 		double qc = 0.00077 * Math.sin(4.1406 + t * 2.6227);
 		qc = Math.toRadians(qc);
@@ -2665,9 +2689,7 @@ public class PAMacros {
 		return new PlanetLongL4735(qa, qb, qc, qe);
 	}
 
-	/**
-	 * Helper function for planet_long_lat()
-	 */
+	/** Helper function for planetCoordinates() */
 	public static PlanetLongL4810 planetLongL4810(List<PlanetDataPrecise> pl, double ms) {
 		double a = 3.0 * pl.get(4).APValue - 8.0 * pl.get(3).APValue + 4.0 * ms;
 		double sa = Math.sin(a);
@@ -2703,9 +2725,7 @@ public class PAMacros {
 		return new PlanetLongL4810(a, sa, ca, qc, qe, qa, qb);
 	}
 
-	/**
-	 * Helper function for planet_long_lat()
-	 */
+	/** Helper function for planetCoordinates() */
 	public static PlanetLongL4945 planetLongL4945(double t, PlanetDataPrecise planet) {
 		double qa = 0.0;
 		double qb = 0.0;
@@ -3267,5 +3287,123 @@ public class PAMacros {
 		md = md + 0.000817 * s1 + s3 + 0.002541 * s2;
 
 		return Math.toRadians(md);
+	}
+
+	/**
+	 * Calculate Julian date of New Moon.
+	 * 
+	 * Original macro name: NewMoon
+	 */
+	public static double newMoon(int ds, int zc, double dy, int mn, int yr) {
+		double d0 = localCivilTimeGreenwichDay(12.0, 0.0, 0.0, ds, zc, dy, mn, yr);
+		int m0 = localCivilTimeGreenwichMonth(12.0, 0.0, 0.0, ds, zc, dy, mn, yr);
+		int y0 = localCivilTimeGreenwichYear(12.0, 0.0, 0.0, ds, zc, dy, mn, yr);
+
+		double j0 = civilDateToJulianDate(0.0, 1, y0) - 2415020.0;
+		double dj = civilDateToJulianDate(d0, m0, y0) - 2415020.0;
+		double k = lint(((y0 - 1900.0 + ((dj - j0) / 365.0)) * 12.3685) + 0.5);
+		double tn = k / 1236.85;
+		double tf = (k + 0.5) / 1236.85;
+		double t = tn;
+		NewMoonFullMoonL6855 nmfmResult1 = newMoonFullMoonL6855(k, t);
+		double ni = nmfmResult1.a;
+		double nf = nmfmResult1.b;
+		t = tf;
+		k += 0.5;
+		@SuppressWarnings("unused")
+		NewMoonFullMoonL6855 nmfmResult2 = newMoonFullMoonL6855(k, t);
+
+		return ni + 2415020.0 + nf;
+	}
+
+	/**
+	 * Calculate Julian date of Full Moon.
+	 * 
+	 * Original macro name: FullMoon
+	 */
+	public static double fullMoon(int ds, int zc, double dy, int mn, int yr) {
+		double d0 = localCivilTimeGreenwichDay(12.0, 0.0, 0.0, ds, zc, dy, mn, yr);
+		int m0 = localCivilTimeGreenwichMonth(12.0, 0.0, 0.0, ds, zc, dy, mn, yr);
+		int y0 = localCivilTimeGreenwichYear(12.0, 0.0, 0.0, ds, zc, dy, mn, yr);
+
+		double j0 = civilDateToJulianDate(0.0, 1, y0) - 2415020.0;
+		double dj = civilDateToJulianDate(d0, m0, y0) - 2415020.0;
+		double k = lint(((y0 - 1900.0 + ((dj - j0) / 365.0)) * 12.3685) + 0.5);
+		double tn = k / 1236.85;
+		double tf = (k + 0.5) / 1236.85;
+		double t = tn;
+		@SuppressWarnings("unused")
+		NewMoonFullMoonL6855 nmfnResult1 = newMoonFullMoonL6855(k, t);
+		t = tf;
+		k += 0.5;
+		NewMoonFullMoonL6855 nmfnResult2 = newMoonFullMoonL6855(k, t);
+		double fi = nmfnResult2.a;
+		double ff = nmfnResult2.b;
+
+		return fi + 2415020.0 + ff;
+	}
+
+	/** Helper function for newMoon() and fullMoon() */
+	public static NewMoonFullMoonL6855 newMoonFullMoonL6855(double k, double t) {
+		double t2 = t * t;
+		double e = 29.53 * k;
+		double c = 166.56 + (132.87 - 0.009173 * t) * t;
+		c = Math.toRadians(c);
+		double b = 0.00058868 * k + (0.0001178 - 0.000000155 * t) * t2;
+		b = b + 0.00033 * Math.sin(c) + 0.75933;
+		double a = k / 12.36886;
+		double a1 = 359.2242 + 360.0 * fract(a) - (0.0000333 + 0.00000347 * t) * t2;
+		double a2 = 306.0253 + 360.0 * fract(k / 0.9330851);
+		a2 += (0.0107306 + 0.00001236 * t) * t2;
+		a = k / 0.9214926;
+		double f = 21.2964 + 360.0 * fract(a) - (0.0016528 + 0.00000239 * t) * t2;
+		a1 = unwindDeg(a1);
+		a2 = unwindDeg(a2);
+		f = unwindDeg(f);
+		a1 = Math.toRadians(a1);
+		a2 = Math.toRadians(a2);
+		f = Math.toRadians(f);
+
+		double dd = (0.1734 - 0.000393 * t) * Math.sin(a1) + 0.0021 * Math.sin(2.0 * a1);
+		dd = dd - 0.4068 * Math.sin(a2) + 0.0161 * Math.sin(2.0 * a2) - 0.0004 * Math.sin(3.0 * a2);
+		dd = dd + 0.0104 * Math.sin(2.0 * f) - 0.0051 * Math.sin(a1 + a2);
+		dd = dd - 0.0074 * Math.sin(a1 - a2) + 0.0004 * Math.sin(2.0 * f + a1);
+		dd = dd - 0.0004 * Math.sin(2.0 * f - a1) - 0.0006 * Math.sin(2.0 * f + a2) + 0.001 * Math.sin(2.0 * f - a2);
+		dd += 0.0005 * Math.sin(a1 + 2.0 * a2);
+		double e1 = Math.floor(e);
+		b = b + dd + (e - e1);
+		double b1 = Math.floor(b);
+		a = e1 + b1;
+		b -= b1;
+
+		return new NewMoonFullMoonL6855(a, b, f);
+	}
+
+	/** Original macro name: FRACT */
+	public static double fract(double w) {
+		return w - lint(w);
+	}
+
+	/** Original macro name: LINT */
+	public static double lint(double w) {
+		return iInt(w) + iInt(((1.0 * sign(w)) - 1.0) / 2.0);
+	}
+
+	/** Original macro name: IINT */
+	public static double iInt(double w) {
+		return sign(w) * Math.floor(Math.abs(w));
+	}
+
+	/** Calculate sign of number. */
+	public static double sign(double numberToCheck) {
+		double signValue = 0.0;
+
+		if (numberToCheck < 0.0)
+			signValue = -1.0;
+
+		if (numberToCheck > 0.0)
+			signValue = 1.0;
+
+		return signValue;
 	}
 }
