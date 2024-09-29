@@ -23,6 +23,7 @@ var dir_c6cc56a917fee4c2cd893dcd088d9f6e =
     [ "L3710.java", "L3710_8java.html", "L3710_8java" ],
     [ "L3710Twilight.java", "L3710Twilight_8java.html", "L3710Twilight_8java" ],
     [ "LocalSiderealTime.java", "LocalSiderealTime_8java.html", "LocalSiderealTime_8java" ],
+    [ "MoonDistAngDiamHorParallax.java", "MoonDistAngDiamHorParallax_8java.html", "MoonDistAngDiamHorParallax_8java" ],
     [ "MoonLongLatHP.java", "MoonLongLatHP_8java.html", "MoonLongLatHP_8java" ],
     [ "MoonPhase.java", "MoonPhase_8java.html", "MoonPhase_8java" ],
     [ "MorningAndEveningTwilight.java", "MorningAndEveningTwilight_8java.html", "MorningAndEveningTwilight_8java" ],

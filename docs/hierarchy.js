@@ -31,6 +31,7 @@ var hierarchy =
     [ "L3710", "classastro_1_1practical_1_1models_1_1L3710.html", null ],
     [ "L3710Twilight", "classastro_1_1practical_1_1models_1_1L3710Twilight.html", null ],
     [ "Main", "classMain.html", null ],
+    [ "MoonDistAngDiamHorParallax", "classastro_1_1practical_1_1models_1_1MoonDistAngDiamHorParallax.html", null ],
     [ "MoonLongLatHP", "classastro_1_1practical_1_1models_1_1MoonLongLatHP.html", null ],
     [ "MoonPhase", "classastro_1_1practical_1_1models_1_1MoonPhase.html", null ],
     [ "MorningAndEveningTwilight", "classastro_1_1practical_1_1models_1_1MorningAndEveningTwilight.html", null ],

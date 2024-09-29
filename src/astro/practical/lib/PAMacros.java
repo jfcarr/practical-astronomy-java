@@ -1345,11 +1345,11 @@ public class PAMacros {
 		double c = Math.toRadians(na + 275.05 - 2.3 * t);
 		double s4 = Math.sin(c);
 
-		ml += 0.000233 * s1 + s3 + 0.001964 * s2;
+		ml = ml + 0.000233 * s1 + s3 + 0.001964 * s2;
 		ms -= 0.001778 * s1;
-		md += 0.000817 * s1 + s3 + 0.002541 * s2;
-		mf += s3 - 0.024691 * s2 - 0.004328 * s4;
-		me1 += 0.002011 * s1 + s3 + 0.001964 * s2;
+		md = md + 0.000817 * s1 + s3 + 0.002541 * s2;
+		mf = mf + s3 - 0.024691 * s2 - 0.004328 * s4;
+		me1 = me1 + 0.002011 * s1 + s3 + 0.001964 * s2;
 
 		double e = 1.0 - (0.002495 + 0.00000752 * t) * t;
 		double e2 = e * e;
@@ -1360,23 +1360,48 @@ public class PAMacros {
 		md = Math.toRadians(md);
 
 		double pm = 0.950724 + 0.051818 * Math.cos(md) + 0.009531 * Math.cos(2.0 * me1 - md);
-		pm += 0.007843 * Math.cos(2.0 * me1) + 0.002824 * Math.cos(2.0 * md);
-		pm += 0.000857 * Math.cos(2.0 * me1 + md) + e * 0.000533 * Math.cos(2.0 * me1 - ms);
+		pm = pm + 0.007843 * Math.cos(2.0 * me1) + 0.002824 * Math.cos(2.0 * md);
+		pm = pm + 0.000857 * Math.cos(2.0 * me1 + md) + e * 0.000533 * Math.cos(2.0 * me1 - ms);
 		pm += e * 0.000401 * Math.cos(2.0 * me1 - md - ms);
-		pm += e * 0.00032 * Math.cos(md - ms) - 0.000271 * Math.cos(me1);
-		pm -= e * 0.000264 * Math.cos(ms + md) - 0.000198 * Math.cos(2.0 * mf - md);
-		pm += 0.000173 * Math.cos(3.0 * md) + 0.000167 * Math.cos(4.0 * me1 - md);
-		pm -= e * 0.000111 * Math.cos(ms) + 0.000103 * Math.cos(4.0 * me1 - 2.0 * md);
-		pm -= 0.000084 * Math.cos(2.0 * md - 2.0 * me1) - e * 0.000083 * Math.cos(2.0 * me1 + ms);
-		pm += 0.000079 * Math.cos(2.0 * me1 + 2.0 * md) + 0.000072 * Math.cos(4.0 * me1);
-		pm += e * 0.000064 * Math.cos(2.0 * me1 - ms + md) - e * 0.000063 * Math.cos(2.0 * me1 + ms - md);
-		pm += e * 0.000041 * Math.cos(ms + me1) + e * 0.000035 * Math.cos(2.0 * md - ms);
-		pm -= 0.000033 * Math.cos(3.0 * md - 2.0 * me1) + 0.00003 * Math.cos(md + me1);
-		pm -= 0.000029 * Math.cos(2.0 * (mf - me1)) - e * 0.000029 * Math.cos(2.0 * md + ms);
-		pm += e2 * 0.000026 * Math.cos(2.0 * (me1 - ms)) - 0.000023 * Math.cos(2.0 * (mf - me1) + md);
+		pm = pm + e * 0.00032 * Math.cos(md - ms) - 0.000271 * Math.cos(me1);
+		pm = pm - e * 0.000264 * Math.cos(ms + md) - 0.000198 * Math.cos(2.0 * mf - md);
+		pm = pm + 0.000173 * Math.cos(3.0 * md) + 0.000167 * Math.cos(4.0 * me1 - md);
+		pm = pm - e * 0.000111 * Math.cos(ms) + 0.000103 * Math.cos(4.0 * me1 - 2.0 * md);
+		pm = pm - 0.000084 * Math.cos(2.0 * md - 2.0 * me1) - e * 0.000083 * Math.cos(2.0 * me1 + ms);
+		pm = pm + 0.000079 * Math.cos(2.0 * me1 + 2.0 * md) + 0.000072 * Math.cos(4.0 * me1);
+		pm = pm + e * 0.000064 * Math.cos(2.0 * me1 - ms + md) - e * 0.000063 * Math.cos(2.0 * me1 + ms - md);
+		pm = pm + e * 0.000041 * Math.cos(ms + me1) + e * 0.000035 * Math.cos(2.0 * md - ms);
+		pm = pm - 0.000033 * Math.cos(3.0 * md - 2.0 * me1) - 0.00003 * Math.cos(md + me1);
+		pm = pm - 0.000029 * Math.cos(2.0 * (mf - me1)) - e * 0.000029 * Math.cos(2.0 * md + ms);
+		pm = pm + e2 * 0.000026 * Math.cos(2.0 * (me1 - ms)) - 0.000023 * Math.cos(2.0 * (mf - me1) + md);
 		pm += e * 0.000019 * Math.cos(4.0 * me1 - ms - md);
 
 		return pm;
+	}
+
+	/**
+	 * Calculate distance from the Earth to the Moon (km)
+	 * 
+	 * Original macro name: MoonDist
+	 */
+	public static double moonDist(double lh, double lm, double ls, int ds, int zc, double dy, int mn, int yr) {
+		double hp = Math.toRadians(moonHP(lh, lm, ls, ds, zc, dy, mn, yr));
+		double r = 6378.14 / Math.sin(hp);
+
+		return r;
+	}
+
+	/**
+	 * Calculate the Moon's angular diameter (degrees)
+	 * 
+	 * Original macro name: MoonSize
+	 */
+	public static double moonSize(double lh, double lm, double ls, int ds, int zc, double dy, int mn, int yr) {
+		double hp = Math.toRadians(moonHP(lh, lm, ls, ds, zc, dy, mn, yr));
+		double r = 6378.14 / Math.sin(hp);
+		double th = 384401.0 * 0.5181 / r;
+
+		return th;
 	}
 
 	/**
