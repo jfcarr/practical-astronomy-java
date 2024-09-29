@@ -3196,4 +3196,76 @@ public class PAMacros {
 
 		return new MoonLongLatHP(moonLongDeg, moonLatDeg, moonHorPara);
 	}
+
+	/**
+	 * Calculate current phase of Moon.
+	 * 
+	 * Original macro name: MoonPhase
+	 */
+	public static double moonPhase(double lh, double lm, double ls, int ds, int zc, double dy, int mn, int yr) {
+		MoonLongLatHP moonResult = moonLongLatHP(lh, lm, ls, ds, zc, dy, mn, yr);
+
+		double cd = Math.cos(Math.toRadians((moonResult.moonLongDeg - sunLong(lh, lm, ls, ds, zc, dy, mn, yr))))
+				* Math.cos(Math.toRadians(moonResult.moonLatDeg));
+
+		double d = Math.acos(cd);
+		double sd = Math.sin(d);
+		double i = 0.1468 * sd * (1.0 - 0.0549 * Math.sin(moonMeanAnomaly(lh, lm, ls, ds, zc, dy, mn, yr)));
+		i /= (1.0 - 0.0167 * Math.sin(sunMeanAnomaly(lh, lm, ls, ds, zc, dy, mn, yr)));
+		i = 3.141592654 - d - Math.toRadians(i);
+		double k = (1.0 + Math.cos(i)) / 2.0;
+
+		return PAUtil.round(k, 2);
+	}
+
+	/**
+	 * Calculate the Moon's mean anomaly.
+	 * 
+	 * Original macro name: MoonMeanAnomaly
+	 */
+	public static double moonMeanAnomaly(double lh, double lm, double ls, int ds, int zc, double dy, int mn, int yr) {
+		double ut = localCivilTimeToUniversalTime(lh, lm, ls, ds, zc, dy, mn, yr);
+		double gd = localCivilTimeGreenwichDay(lh, lm, ls, ds, zc, dy, mn, yr);
+		int gm = localCivilTimeGreenwichMonth(lh, lm, ls, ds, zc, dy, mn, yr);
+		int gy = localCivilTimeGreenwichYear(lh, lm, ls, ds, zc, dy, mn, yr);
+		double t = ((civilDateToJulianDate(gd, gm, gy) - 2415020.0) / 36525.0) + (ut / 876600.0);
+		double t2 = t * t;
+
+		double m1 = 27.32158213;
+		double m2 = 365.2596407;
+		double m3 = 27.55455094;
+		double m4 = 29.53058868;
+		double m5 = 27.21222039;
+		double m6 = 6798.363307;
+		double q = civilDateToJulianDate(gd, gm, gy) - 2415020.0 + (ut / 24.0);
+		m1 = q / m1;
+		m2 = q / m2;
+		m3 = q / m3;
+		m4 = q / m4;
+		m5 = q / m5;
+		m6 = q / m6;
+		m1 = 360.0 * (m1 - Math.floor(m1));
+		m2 = 360.0 * (m2 - Math.floor(m2));
+		m3 = 360.0 * (m3 - Math.floor(m3));
+		m4 = 360.0 * (m4 - Math.floor(m4));
+		m5 = 360.0 * (m5 - Math.floor(m5));
+		m6 = 360.0 * (m6 - Math.floor(m6));
+
+		@SuppressWarnings("unused")
+		double ml = 270.434164 + m1 - (0.001133 - 0.0000019 * t) * t2;
+		@SuppressWarnings("unused")
+		double ms = 358.475833 + m2 - (0.00015 + 0.0000033 * t) * t2;
+		double md = 296.104608 + m3 + (0.009192 + 0.0000144 * t) * t2;
+		double na = 259.183275 - m6 + (0.002078 + 0.0000022 * t) * t2;
+		double a = Math.toRadians(51.2 + 20.2 * t);
+		double s1 = Math.sin(a);
+		double s2 = Math.sin(Math.toRadians(na));
+		double b = 346.56 + (132.87 - 0.0091731 * t) * t;
+		double s3 = 0.003964 * Math.sin(Math.toRadians(b));
+		@SuppressWarnings("unused")
+		double c = Math.toRadians(na + 275.05 - 2.3 * t);
+		md = md + 0.000817 * s1 + s3 + 0.002541 * s2;
+
+		return Math.toRadians(md);
+	}
 }
