@@ -1,6 +1,7 @@
 package astro.practical.lib;
 
 import astro.practical.models.ApproximatePositionOfMoon;
+import astro.practical.models.MoonDistAngDiamHorParallax;
 import astro.practical.models.MoonLongLatHP;
 import astro.practical.models.MoonPhase;
 import astro.practical.models.PrecisePositionOfMoon;
@@ -204,5 +205,29 @@ public class PAMoon {
                 return new TimesOfNewMoonAndFullMoon(nmLocalTimeHour, nmLocalTimeMin, nmLocalDateDay, nmLocalDateMonth,
                                 nmLocalDateYear, fmLocalTimeHour, fmLocalTimeMin, fmLocalDateDay, fmLocalDateMonth,
                                 fmLocalDateYear);
+        }
+
+        /** Calculate Moon's distance, angular diameter, and horizontal parallax. */
+        public MoonDistAngDiamHorParallax moonDistAngDiamHorParallax(double lctHour, double lctMin, double lctSec,
+                        boolean isDaylightSaving, int zoneCorrectionHours, double localDateDay, int localDateMonth,
+                        int localDateYear) {
+                int daylightSaving = isDaylightSaving ? 1 : 0;
+
+                double moonDistance = PAMacros.moonDist(lctHour, lctMin, lctSec, daylightSaving, zoneCorrectionHours,
+                                localDateDay, localDateMonth, localDateYear);
+                double moonAngularDiameter = PAMacros.moonSize(lctHour, lctMin, lctSec, daylightSaving,
+                                zoneCorrectionHours, localDateDay, localDateMonth, localDateYear);
+                double moonHorizontalParallax = PAMacros.moonHP(lctHour, lctMin, lctSec, daylightSaving,
+                                zoneCorrectionHours, localDateDay, localDateMonth, localDateYear);
+
+                double earthMoonDist = PAUtil.round(moonDistance, 0);
+                double angDiameterDeg = PAMacros.decimalDegreesDegrees(moonAngularDiameter + 0.008333);
+                double angDiameterMin = PAMacros.decimalDegreesMinutes(moonAngularDiameter + 0.008333);
+                double horParallaxDeg = PAMacros.decimalDegreesDegrees(moonHorizontalParallax);
+                double horParallaxMin = PAMacros.decimalDegreesMinutes(moonHorizontalParallax);
+                double horParallaxSec = PAMacros.decimalDegreesSeconds(moonHorizontalParallax);
+
+                return new MoonDistAngDiamHorParallax(earthMoonDist, angDiameterDeg, angDiameterMin, horParallaxDeg,
+                                horParallaxMin, horParallaxSec);
         }
 }

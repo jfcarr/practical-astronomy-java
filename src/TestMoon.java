@@ -1,5 +1,6 @@
 import astro.practical.lib.PAMoon;
 import astro.practical.models.ApproximatePositionOfMoon;
+import astro.practical.models.MoonDistAngDiamHorParallax;
 import astro.practical.models.MoonPhase;
 import astro.practical.models.PrecisePositionOfMoon;
 import astro.practical.models.TimesOfNewMoonAndFullMoon;
@@ -64,5 +65,18 @@ public class TestMoon {
                 .Assert(10, timesOfNewMoonAndFullMoon.fmLocalDateDay)
                 .Assert(9, timesOfNewMoonAndFullMoon.fmLocalDateMonth)
                 .Assert(2003, timesOfNewMoonAndFullMoon.fmLocalDateYear);
+    }
+
+    void testMoonDistAngDiamHorParallax() {
+        MoonDistAngDiamHorParallax moonDistAngDiamHorParallax = paMoon.moonDistAngDiamHorParallax(0, 0, 0, false, 0, 1,
+                9, 2003);
+
+        testLib.setTestName("Moon distance, angular diameter, and horizontal parallax")
+                .Assert(367964, moonDistAngDiamHorParallax.earthMoonDist)
+                .Assert(0, moonDistAngDiamHorParallax.angDiameterDeg)
+                .Assert(32, moonDistAngDiamHorParallax.angDiameterMin)
+                .Assert(0, moonDistAngDiamHorParallax.horParallaxDeg)
+                .Assert(59, moonDistAngDiamHorParallax.horParallaxMin)
+                .Assert(35.49, moonDistAngDiamHorParallax.horParallaxSec);
     }
 }
