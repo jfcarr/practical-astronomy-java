@@ -2,8 +2,10 @@ package astro.practical.lib;
 
 import astro.practical.models.ApproximatePositionOfMoon;
 import astro.practical.models.MoonDistAngDiamHorParallax;
+import astro.practical.models.MoonLcDMY;
 import astro.practical.models.MoonLongLatHP;
 import astro.practical.models.MoonPhase;
+import astro.practical.models.MoonriseAndMoonset;
 import astro.practical.models.PrecisePositionOfMoon;
 import astro.practical.models.TimesOfNewMoonAndFullMoon;
 import astro.practical.types.AccuracyLevel;
@@ -229,5 +231,44 @@ public class PAMoon {
 
                 return new MoonDistAngDiamHorParallax(earthMoonDist, angDiameterDeg, angDiameterMin, horParallaxDeg,
                                 horParallaxMin, horParallaxSec);
+        }
+
+        /**
+         * Calculate date/time of local moonrise and moonset.
+         */
+        public MoonriseAndMoonset moonriseAndMoonset(double localDateDay, int localDateMonth, int localDateYear,
+                        boolean isDaylightSaving, int zoneCorrectionHours, double geogLongDeg, double geogLatDeg) {
+                int daylightSaving = isDaylightSaving ? 1 : 0;
+
+                double localTimeOfMoonriseHours = PAMacros.moonRiseLCT(localDateDay, localDateMonth, localDateYear,
+                                daylightSaving, zoneCorrectionHours, geogLongDeg, geogLatDeg);
+                MoonLcDMY moonRiseLCResult = PAMacros.moonRiseLcDMY(localDateDay, localDateMonth, localDateYear,
+                                daylightSaving, zoneCorrectionHours, geogLongDeg, geogLatDeg);
+                double localAzimuthDeg1 = PAMacros.moonRiseAz(localDateDay, localDateMonth, localDateYear,
+                                daylightSaving, zoneCorrectionHours, geogLongDeg, geogLatDeg);
+
+                double localTimeOfMoonsetHours = PAMacros.moonSetLCT(localDateDay, localDateMonth, localDateYear,
+                                daylightSaving, zoneCorrectionHours, geogLongDeg, geogLatDeg);
+                MoonLcDMY moonSetLCResult = PAMacros.moonSetLcDMY(localDateDay, localDateMonth, localDateYear,
+                                daylightSaving, zoneCorrectionHours, geogLongDeg, geogLatDeg);
+                double localAzimuthDeg2 = PAMacros.moonSetAz(localDateDay, localDateMonth, localDateYear,
+                                daylightSaving, zoneCorrectionHours, geogLongDeg, geogLatDeg);
+
+                int mrLTHour = PAMacros.decimalHoursHour(localTimeOfMoonriseHours + 0.008333);
+                int mrLTMin = PAMacros.decimalHoursMinute(localTimeOfMoonriseHours + 0.008333);
+                double mrLocalDateDay = moonRiseLCResult.dy1;
+                int mrLocalDateMonth = moonRiseLCResult.mn1;
+                int mrLocalDateYear = moonRiseLCResult.yr1;
+                double mrAzimuthDeg = PAUtil.round(localAzimuthDeg1, 2);
+                int msLTHour = PAMacros.decimalHoursHour(localTimeOfMoonsetHours + 0.008333);
+                int msLTMin = PAMacros.decimalHoursMinute(localTimeOfMoonsetHours + 0.008333);
+                double msLocalDateDay = moonSetLCResult.dy1;
+                int msLocalDateMonth = moonSetLCResult.mn1;
+                int msLocalDateYear = moonSetLCResult.yr1;
+                double msAzimuthDeg = PAUtil.round(localAzimuthDeg2, 2);
+
+                return new MoonriseAndMoonset(mrLTHour, mrLTMin, mrLocalDateDay, mrLocalDateMonth, mrLocalDateYear,
+                                mrAzimuthDeg, msLTHour, msLTMin, msLocalDateDay, msLocalDateMonth, msLocalDateYear,
+                                msAzimuthDeg);
         }
 }

@@ -83,5 +83,6 @@ public class Main {
 		testMoon.testMoonPhase();
 		testMoon.testTimesOfNewMoonAndFullMoon();
 		testMoon.testMoonDistAngDiamHorParallax();
+		testMoon.testMoonriseAndMoonset();
 	}
 }

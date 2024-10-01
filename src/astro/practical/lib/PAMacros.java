@@ -7,7 +7,11 @@ import java.util.Set;
 
 import astro.practical.models.L3710;
 import astro.practical.models.L3710Twilight;
+import astro.practical.models.MoonAzL6700;
 import astro.practical.models.MoonLongLatHP;
+import astro.practical.models.MoonL6680;
+import astro.practical.models.MoonL6700;
+import astro.practical.models.MoonLcDMY;
 import astro.practical.models.NewMoonFullMoonL6855;
 import astro.practical.models.PCometLongLatDist;
 import astro.practical.models.ParallaxHelper;
@@ -3430,5 +3434,654 @@ public class PAMacros {
 			signValue = 1.0;
 
 		return signValue;
+	}
+
+	/** Original macro name: UTDayAdjust */
+	public static double utDayAdjust(double ut, double g1) {
+		double returnValue = ut;
+
+		if ((ut - g1) < -6.0)
+			returnValue = ut + 24.0;
+
+		if ((ut - g1) > 6.0)
+			returnValue = ut - 24.0;
+
+		return returnValue;
+	}
+
+	/** Original macro name: Fpart */
+	public static double fPart(double w) {
+		return w - lint(w);
+	}
+
+	/**
+	 * Local time of moonrise.
+	 * 
+	 * Original macro name: MoonRiseLCT
+	 */
+	public static double moonRiseLCT(double dy, int mn, int yr, int ds, int zc, double gLong, double gLat) {
+		double gdy = localCivilTimeGreenwichDay(12.0, 0.0, 0.0, ds, zc, dy, mn, yr);
+		int gmn = localCivilTimeGreenwichMonth(12.0, 0.0, 0.0, ds, zc, dy, mn, yr);
+		int gyr = localCivilTimeGreenwichYear(12.0, 0.0, 0.0, ds, zc, dy, mn, yr);
+		double lct = 12.0;
+		double dy1 = dy;
+		int mn1 = mn;
+		int yr1 = yr;
+
+		MoonL6700 lct6700result1 = moonRiseLCTL6700(lct, ds, zc, dy1, mn1, yr1, gdy, gmn, gyr, gLat);
+		double lu = lct6700result1.lu;
+		lct = lct6700result1.lct;
+
+		if (lct == -99.0)
+			return lct;
+
+		double la = lu;
+
+		double x;
+		double ut;
+		double g1 = 0.0;
+		double gu = 0.0;
+
+		for (int k = 1; k < 9; k++) {
+			x = localSiderealTimeToGreenwichSiderealTime(la, 0.0, 0.0, gLong);
+			ut = greenwichSiderealTimeToUniversalTime(x, 0.0, 0.0, gdy, gmn, gyr);
+
+			g1 = (k == 1) ? ut : gu;
+
+			gu = ut;
+			ut = gu;
+
+			MoonL6680 lct6680result = moonRiseLCTL6680(x, ds, zc, gdy, gmn, gyr, g1, ut);
+			lct = lct6680result.lct;
+			dy1 = lct6680result.dy1;
+			mn1 = lct6680result.mn1;
+			yr1 = lct6680result.yr1;
+			gdy = lct6680result.gdy;
+			gmn = lct6680result.gmn;
+			gyr = lct6680result.gyr;
+
+			MoonL6700 lct6700result2 = moonRiseLCTL6700(lct, ds, zc, dy1, mn1, yr1, gdy, gmn, gyr, gLat);
+			lu = lct6700result2.lu;
+			lct = lct6700result2.lct;
+
+			if (lct == -99.0)
+				return lct;
+
+			la = lu;
+		}
+
+		x = localSiderealTimeToGreenwichSiderealTime(la, 0.0, 0.0, gLong);
+		ut = greenwichSiderealTimeToUniversalTime(x, 0.0, 0.0, gdy, gmn, gyr);
+
+		if (eGstUt(x, 0.0, 0.0, gdy, gmn, gyr) != WarningFlag.OK)
+			if (Math.abs(g1 - ut) > 0.5)
+				ut += 23.93447;
+
+		ut = utDayAdjust(ut, g1);
+		lct = universalTimeToLocalCivilTime(ut, 0.0, 0.0, ds, zc, gdy, gmn, gyr);
+
+		return lct;
+	}
+
+	/** Helper function for moonRiseLCT */
+	public static MoonL6680 moonRiseLCTL6680(double x, int ds, int zc, double gdy, int gmn, int gyr, double g1,
+			double ut) {
+		if (eGstUt(x, 0.0, 0.0, gdy, gmn, gyr) != WarningFlag.OK)
+			if (Math.abs(g1 - ut) > 0.5)
+				ut += 23.93447;
+
+		ut = utDayAdjust(ut, g1);
+		double lct = universalTimeToLocalCivilTime(ut, 0.0, 0.0, ds, zc, gdy, gmn, gyr);
+		double dy1 = universalTimeLocalCivilDay(ut, 0.0, 0.0, ds, zc, gdy, gmn, gyr);
+		int mn1 = universalTimeLocalCivilMonth(ut, 0.0, 0.0, ds, zc, gdy, gmn, gyr);
+		int yr1 = universalTimeLocalCivilYear(ut, 0.0, 0.0, ds, zc, gdy, gmn, gyr);
+		gdy = localCivilTimeGreenwichDay(lct, 0.0, 0.0, ds, zc, dy1, mn1, yr1);
+		gmn = localCivilTimeGreenwichMonth(lct, 0.0, 0.0, ds, zc, dy1, mn1, yr1);
+		gyr = localCivilTimeGreenwichYear(lct, 0.0, 0.0, ds, zc, dy1, mn1, yr1);
+		ut -= 24.0 * Math.floor(ut / 24.0);
+
+		return new MoonL6680(ut, lct, dy1, mn1, yr1, gdy, gmn, gyr);
+	}
+
+	/** Helper function for moonRiseLCT */
+	public static MoonL6700 moonRiseLCTL6700(double lct, int ds, int zc, double dy1, int mn1, int yr1,
+			double gdy, int gmn, int gyr, double gLat) {
+		double mm = moonLong(lct, 0.0, 0.0, ds, zc, dy1, mn1, yr1);
+		double bm = moonLat(lct, 0.0, 0.0, ds, zc, dy1, mn1, yr1);
+		double pm = Math.toRadians(moonHP(lct, 0.0, 0.0, ds, zc, dy1, mn1, yr1));
+		double dp = nutatLong(gdy, gmn, gyr);
+		double th = 0.27249 * Math.sin(pm);
+		double di = th + 0.0098902 - pm;
+		double p = decimalDegreesToDegreeHours(ecRA(mm + dp, 0.0, 0.0, bm, 0.0, 0.0, gdy, gmn, gyr));
+		double q = ecDec(mm + dp, 0.0, 0.0, bm, 0.0, 0.0, gdy, gmn, gyr);
+		double lu = riseSetLocalSiderealTimeRise(p, 0.0, 0.0, q, 0.0, 0.0, wToDegrees(di), gLat);
+
+		if (eRS(p, 0.0, 0.0, q, 0.0, 0.0, wToDegrees(di), gLat) != RiseSetStatus.OK)
+			lct = -99.0;
+
+		return new MoonL6700(mm, bm, pm, dp, th, di, p, q, lu, lct);
+	}
+
+	/**
+	 * Local date of moonrise.
+	 * 
+	 * Original macro names: MoonRiseLcDay, MoonRiseLcMonth, MoonRiseLcYear
+	 */
+	public static MoonLcDMY moonRiseLcDMY(double dy, int mn, int yr, int ds, int zc, double gLong, double gLat) {
+		double gdy = localCivilTimeGreenwichDay(12.0, 0.0, 0.0, ds, zc, dy, mn, yr);
+		int gmn = localCivilTimeGreenwichMonth(12.0, 0.0, 0.0, ds, zc, dy, mn, yr);
+		int gyr = localCivilTimeGreenwichYear(12.0, 0.0, 0.0, ds, zc, dy, mn, yr);
+		double lct = 12.0;
+		double dy1 = dy;
+		int mn1 = mn;
+		int yr1 = yr;
+
+		MoonL6700 lct6700result1 = moonRiseLcDMYL6700(lct, ds, zc, dy1, mn1, yr1, gdy, gmn, gyr, gLat);
+		double lu = lct6700result1.lu;
+		lct = lct6700result1.lct;
+
+		if (lct == -99.0)
+			return new MoonLcDMY(lct, (int) lct, (int) lct);
+
+		double la = lu;
+
+		double x;
+		double ut;
+		double g1 = 0.0;
+		double gu = 0.0;
+		for (int k = 1; k < 9; k++) {
+			x = localSiderealTimeToGreenwichSiderealTime(la, 0.0, 0.0, gLong);
+			ut = greenwichSiderealTimeToUniversalTime(x, 0.0, 0.0, gdy, gmn, gyr);
+
+			g1 = (k == 1) ? ut : gu;
+
+			gu = ut;
+			ut = gu;
+
+			MoonL6680 lct6680result1 = moonRiseLcDMYL6680(x, ds, zc, gdy, gmn, gyr, g1, ut);
+			lct = lct6680result1.lct;
+			dy1 = lct6680result1.dy1;
+			mn1 = lct6680result1.mn1;
+			yr1 = lct6680result1.yr1;
+			gdy = lct6680result1.gdy;
+			gmn = lct6680result1.gmn;
+			gyr = lct6680result1.gyr;
+
+			MoonL6700 lct6700result2 = moonRiseLcDMYL6700(lct, ds, zc, dy1, mn1, yr1, gdy, gmn, gyr, gLat);
+
+			lu = lct6700result2.lu;
+			lct = lct6700result2.lct;
+
+			if (lct == -99.0)
+				return new MoonLcDMY(lct, (int) lct, (int) lct);
+
+			la = lu;
+		}
+
+		x = localSiderealTimeToGreenwichSiderealTime(la, 0.0, 0.0, gLong);
+		ut = greenwichSiderealTimeToUniversalTime(x, 0.0, 0.0, gdy, gmn, gyr);
+
+		if (eGstUt(x, 0.0, 0.0, gdy, gmn, gyr) != WarningFlag.OK)
+			if (Math.abs(g1 - ut) > 0.5)
+				ut += 23.93447;
+
+		ut = utDayAdjust(ut, g1);
+		dy1 = universalTimeLocalCivilDay(ut, 0.0, 0.0, ds, zc, gdy, gmn, gyr);
+		mn1 = universalTimeLocalCivilMonth(ut, 0.0, 0.0, ds, zc, gdy, gmn, gyr);
+		yr1 = universalTimeLocalCivilYear(ut, 0.0, 0.0, ds, zc, gdy, gmn, gyr);
+
+		return new MoonLcDMY(dy1, mn1, yr1);
+	}
+
+	/** Helper function for moonRiseLcDMY */
+	public static MoonL6680 moonRiseLcDMYL6680(double x, int ds, int zc, double gdy, int gmn, int gyr, double g1,
+			double ut) {
+		if (eGstUt(x, 0.0, 0.0, gdy, gmn, gyr) != WarningFlag.OK)
+			if (Math.abs(g1 - ut) > 0.5)
+				ut += 23.93447;
+
+		ut = utDayAdjust(ut, g1);
+		double lct = universalTimeToLocalCivilTime(ut, 0.0, 0.0, ds, zc, gdy, gmn, gyr);
+		double dy1 = universalTimeLocalCivilDay(ut, 0.0, 0.0, ds, zc, gdy, gmn, gyr);
+		int mn1 = universalTimeLocalCivilMonth(ut, 0.0, 0.0, ds, zc, gdy, gmn, gyr);
+		int yr1 = universalTimeLocalCivilYear(ut, 0.0, 0.0, ds, zc, gdy, gmn, gyr);
+		gdy = localCivilTimeGreenwichDay(lct, 0.0, 0.0, ds, zc, dy1, mn1, yr1);
+		gmn = localCivilTimeGreenwichMonth(lct, 0.0, 0.0, ds, zc, dy1, mn1, yr1);
+		gyr = localCivilTimeGreenwichYear(lct, 0.0, 0.0, ds, zc, dy1, mn1, yr1);
+		ut -= 24.0 * Math.floor(ut / 24.0);
+
+		return new MoonL6680(ut, lct, dy1, mn1, yr1, gdy, gmn, gyr);
+	}
+
+	/** Helper function for moonRiseLcDMY */
+	public static MoonL6700 moonRiseLcDMYL6700(double lct, int ds, int zc, double dy1, int mn1, int yr1,
+			double gdy, int gmn, int gyr, double gLat) {
+		double mm = moonLong(lct, 0.0, 0.0, ds, zc, dy1, mn1, yr1);
+		double bm = moonLat(lct, 0.0, 0.0, ds, zc, dy1, mn1, yr1);
+		double pm = Math.toRadians(moonHP(lct, 0.0, 0.0, ds, zc, dy1, mn1, yr1));
+		double dp = nutatLong(gdy, gmn, gyr);
+		double th = 0.27249 * Math.sin(pm);
+		double di = th + 0.0098902 - pm;
+		double p = decimalDegreesToDegreeHours(ecRA(mm + dp, 0.0, 0.0, bm, 0.0, 0.0, gdy, gmn, gyr));
+		double q = ecDec(mm + dp, 0.0, 0.0, bm, 0.0, 0.0, gdy, gmn, gyr);
+		double lu = riseSetLocalSiderealTimeRise(p, 0.0, 0.0, q, 0.0, 0.0, wToDegrees(di), gLat);
+
+		return new MoonL6700(mm, bm, pm, dp, th, di, p, q, lu, lct);
+	}
+
+	/**
+	 * Local azimuth of moonrise.
+	 * 
+	 * Original macro name: MoonRiseAz
+	 */
+	public static double moonRiseAz(double dy, int mn, int yr, int ds, int zc, double gLong, double gLat) {
+		double gdy = localCivilTimeGreenwichDay(12.0, 0.0, 0.0, ds, zc, dy, mn, yr);
+		int gmn = localCivilTimeGreenwichMonth(12.0, 0.0, 0.0, ds, zc, dy, mn, yr);
+		int gyr = localCivilTimeGreenwichYear(12.0, 0.0, 0.0, ds, zc, dy, mn, yr);
+		double lct = 12.0;
+		double dy1 = dy;
+		int mn1 = mn;
+		int yr1 = yr;
+
+		MoonAzL6700 az6700result1 = moonRiseAzL6700(lct, ds, zc, dy1, mn1, yr1, gdy, gmn, gyr, gLat);
+		double lu = az6700result1.lu;
+		lct = az6700result1.lct;
+		double au;
+
+		if (lct == -99.0)
+			return lct;
+
+		double la = lu;
+
+		double x;
+		double ut;
+		double g1;
+		double gu = 0.0;
+		double aa = 0.0;
+		for (int k = 1; k < 9; k++) {
+			x = localSiderealTimeToGreenwichSiderealTime(la, 0.0, 0.0, gLong);
+			ut = greenwichSiderealTimeToUniversalTime(x, 0.0, 0.0, gdy, gmn, gyr);
+
+			g1 = (k == 1) ? ut : gu;
+
+			gu = ut;
+			ut = gu;
+
+			MoonL6680 az6680result1 = moonRiseAzL6680(x, ds, zc, gdy, gmn, gyr, g1, ut);
+			lct = az6680result1.lct;
+			dy1 = az6680result1.dy1;
+			mn1 = az6680result1.mn1;
+			yr1 = az6680result1.yr1;
+			gdy = az6680result1.gdy;
+			gmn = az6680result1.gmn;
+			gyr = az6680result1.gyr;
+
+			MoonAzL6700 az6700result2 = moonRiseAzL6700(lct, ds, zc, dy1, mn1, yr1, gdy, gmn, gyr, gLat);
+			lu = az6700result2.lu;
+			lct = az6700result2.lct;
+			au = az6700result2.au;
+
+			if (lct == -99.0)
+				return lct;
+
+			la = lu;
+			aa = au;
+		}
+
+		au = aa;
+
+		return au;
+	}
+
+	/** Helper function for moonRiseAz */
+	public static MoonL6680 moonRiseAzL6680(double x, int ds, int zc, double gdy, int gmn, int gyr, double g1,
+			double ut) {
+		if (eGstUt(x, 0.0, 0.0, gdy, gmn, gyr) != WarningFlag.OK)
+			if (Math.abs(g1 - ut) > 0.5)
+				ut += 23.93447;
+
+		ut = utDayAdjust(ut, g1);
+		double lct = universalTimeToLocalCivilTime(ut, 0.0, 0.0, ds, zc, gdy, gmn, gyr);
+		double dy1 = universalTimeLocalCivilDay(ut, 0.0, 0.0, ds, zc, gdy, gmn, gyr);
+		int mn1 = universalTimeLocalCivilMonth(ut, 0.0, 0.0, ds, zc, gdy, gmn, gyr);
+		int yr1 = universalTimeLocalCivilYear(ut, 0.0, 0.0, ds, zc, gdy, gmn, gyr);
+		gdy = localCivilTimeGreenwichDay(lct, 0.0, 0.0, ds, zc, dy1, mn1, yr1);
+		gmn = localCivilTimeGreenwichMonth(lct, 0.0, 0.0, ds, zc, dy1, mn1, yr1);
+		gyr = localCivilTimeGreenwichYear(lct, 0.0, 0.0, ds, zc, dy1, mn1, yr1);
+		ut -= 24.0 * Math.floor(ut / 24.0);
+
+		return new MoonL6680(ut, lct, dy1, mn1, yr1, gdy, gmn, gyr);
+	}
+
+	/** Helper function for moonRiseAz */
+	public static MoonAzL6700 moonRiseAzL6700(double lct, int ds, int zc, double dy1, int mn1, int yr1, double gdy,
+			int gmn, int gyr, double gLat) {
+		double mm = moonLong(lct, 0.0, 0.0, ds, zc, dy1, mn1, yr1);
+		double bm = moonLat(lct, 0.0, 0.0, ds, zc, dy1, mn1, yr1);
+		double pm = Math.toRadians(moonHP(lct, 0.0, 0.0, ds, zc, dy1, mn1, yr1));
+		double dp = nutatLong(gdy, gmn, gyr);
+		double th = 0.27249 * Math.sin(pm);
+		double di = th + 0.0098902 - pm;
+		double p = decimalDegreesToDegreeHours(ecRA(mm + dp, 0.0, 0.0, bm, 0.0, 0.0, gdy, gmn, gyr));
+		double q = ecDec(mm + dp, 0.0, 0.0, bm, 0.0, 0.0, gdy, gmn, gyr);
+		double lu = riseSetLocalSiderealTimeRise(p, 0.0, 0.0, q, 0.0, 0.0, wToDegrees(di), gLat);
+		double au = riseSetAzimuthRise(p, 0.0, 0.0, q, 0.0, 0.0, wToDegrees(di), gLat);
+
+		return new MoonAzL6700(mm, bm, pm, dp, th, di, p, q, lu, lct, au);
+	}
+
+	/**
+	 * Local time of moonset.
+	 * 
+	 * Original macro name: MoonSetLCT
+	 */
+	public static double moonSetLCT(double dy, int mn, int yr, int ds, int zc, double gLong, double gLat) {
+		double gdy = localCivilTimeGreenwichDay(12.0, 0.0, 0.0, ds, zc, dy, mn, yr);
+		int gmn = localCivilTimeGreenwichMonth(12.0, 0.0, 0.0, ds, zc, dy, mn, yr);
+		int gyr = localCivilTimeGreenwichYear(12.0, 0.0, 0.0, ds, zc, dy, mn, yr);
+		double lct = 12.0;
+		double dy1 = dy;
+		int mn1 = mn;
+		int yr1 = yr;
+
+		MoonL6700 lct6700result1 = moonSetLCTL6700(lct, ds, zc, dy1, mn1, yr1, gdy, gmn, gyr, gLat);
+		double lu = lct6700result1.lu;
+		lct = lct6700result1.lct;
+
+		if (lct == -99.0)
+			return lct;
+
+		double la = lu;
+
+		double x;
+		double ut;
+		double g1 = 0.0;
+		double gu = 0.0;
+		for (int k = 1; k < 9; k++) {
+			x = localSiderealTimeToGreenwichSiderealTime(la, 0.0, 0.0, gLong);
+			ut = greenwichSiderealTimeToUniversalTime(x, 0.0, 0.0, gdy, gmn, gyr);
+
+			g1 = (k == 1) ? ut : gu;
+
+			gu = ut;
+			ut = gu;
+
+			MoonL6680 lct6680result1 = moonSetLCTL6680(x, ds, zc, gdy, gmn, gyr, g1, ut);
+			lct = lct6680result1.lct;
+			dy1 = lct6680result1.dy1;
+			mn1 = lct6680result1.mn1;
+			yr1 = lct6680result1.yr1;
+			gdy = lct6680result1.gdy;
+			gmn = lct6680result1.gmn;
+			gyr = lct6680result1.gyr;
+
+			MoonL6700 lct6700result2 = moonSetLCTL6700(lct, ds, zc, dy1, mn1, yr1, gdy, gmn, gyr, gLat);
+			lu = lct6700result2.lu;
+			lct = lct6700result2.lct;
+
+			if (lct == -99.0)
+				return lct;
+
+			la = lu;
+		}
+
+		x = localSiderealTimeToGreenwichSiderealTime(la, 0.0, 0.0, gLong);
+		ut = greenwichSiderealTimeToUniversalTime(x, 0.0, 0.0, gdy, gmn, gyr);
+
+		if (eGstUt(x, 0.0, 0.0, gdy, gmn, gyr) != WarningFlag.OK)
+			if (Math.abs(g1 - ut) > 0.5)
+				ut += 23.93447;
+
+		ut = utDayAdjust(ut, g1);
+		lct = universalTimeToLocalCivilTime(ut, 0.0, 0.0, ds, zc, gdy, gmn, gyr);
+
+		return lct;
+	}
+
+	/** Helper function for moonSetLCT */
+	public static MoonL6680 moonSetLCTL6680(double x, int ds, int zc, double gdy, int gmn, int gyr, double g1,
+			double ut) {
+		if (eGstUt(x, 0.0, 0.0, gdy, gmn, gyr) != WarningFlag.OK)
+			if (Math.abs(g1 - ut) > 0.5)
+				ut += 23.93447;
+
+		ut = utDayAdjust(ut, g1);
+		double lct = universalTimeToLocalCivilTime(ut, 0.0, 0.0, ds, zc, gdy, gmn, gyr);
+		double dy1 = universalTimeLocalCivilDay(ut, 0.0, 0.0, ds, zc, gdy, gmn, gyr);
+		int mn1 = universalTimeLocalCivilMonth(ut, 0.0, 0.0, ds, zc, gdy, gmn, gyr);
+		int yr1 = universalTimeLocalCivilYear(ut, 0.0, 0.0, ds, zc, gdy, gmn, gyr);
+		gdy = localCivilTimeGreenwichDay(lct, 0.0, 0.0, ds, zc, dy1, mn1, yr1);
+		gmn = localCivilTimeGreenwichMonth(lct, 0.0, 0.0, ds, zc, dy1, mn1, yr1);
+		gyr = localCivilTimeGreenwichYear(lct, 0.0, 0.0, ds, zc, dy1, mn1, yr1);
+		ut -= 24.0 * Math.floor(ut / 24.0);
+
+		return new MoonL6680(ut, lct, dy1, mn1, yr1, gdy, gmn, gyr);
+	}
+
+	/** Helper function for moonSetLCT */
+	public static MoonL6700 moonSetLCTL6700(double lct, int ds, int zc, double dy1, int mn1, int yr1, double gdy,
+			int gmn, int gyr, double gLat) {
+		double mm = moonLong(lct, 0.0, 0.0, ds, zc, dy1, mn1, yr1);
+		double bm = moonLat(lct, 0.0, 0.0, ds, zc, dy1, mn1, yr1);
+		double pm = Math.toRadians(moonHP(lct, 0.0, 0.0, ds, zc, dy1, mn1, yr1));
+		double dp = nutatLong(gdy, gmn, gyr);
+		double th = 0.27249 * Math.sin(pm);
+		double di = th + 0.0098902 - pm;
+		double p = decimalDegreesToDegreeHours(ecRA(mm + dp, 0.0, 0.0, bm, 0.0, 0.0, gdy, gmn, gyr));
+		double q = ecDec(mm + dp, 0.0, 0.0, bm, 0.0, 0.0, gdy, gmn, gyr);
+		double lu = riseSetLocalSiderealTimeSet(p, 0.0, 0.0, q, 0.0, 0.0, wToDegrees(di), gLat);
+
+		if (eRS(p, 0.0, 0.0, q, 0.0, 0.0, wToDegrees(di), gLat) != RiseSetStatus.OK)
+			lct = -99.0;
+
+		return new MoonL6700(mm, bm, pm, dp, th, di, p, q, lu, lct);
+	}
+
+	/**
+	 * Local date of moonset.
+	 * 
+	 * Original macro names: MoonSetLcDay, MoonSetLcMonth, MoonSetLcYear
+	 */
+	public static MoonLcDMY moonSetLcDMY(double dy, int mn, int yr, int ds, int zc, double gLong, double gLat) {
+		double gdy = localCivilTimeGreenwichDay(12.0, 0.0, 0.0, ds, zc, dy, mn, yr);
+		int gmn = localCivilTimeGreenwichMonth(12.0, 0.0, 0.0, ds, zc, dy, mn, yr);
+		int gyr = localCivilTimeGreenwichYear(12.0, 0.0, 0.0, ds, zc, dy, mn, yr);
+		double lct = 12.0;
+		double dy1 = dy;
+		int mn1 = mn;
+		int yr1 = yr;
+
+		MoonL6700 dmy6700result1 = moonSetLcDMYL6700(lct, ds, zc, dy1, mn1, yr1, gdy, gmn, gyr, gLat);
+		double lu = dmy6700result1.lu;
+		lct = dmy6700result1.lct;
+
+		if (lct == -99.0)
+			return new MoonLcDMY(lct, (int) lct, (int) lct);
+
+		double la = lu;
+
+		double x;
+		double ut;
+		double g1 = 0.0;
+		double gu = 0.0;
+		for (int k = 1; k < 9; k++) {
+			x = localSiderealTimeToGreenwichSiderealTime(la, 0.0, 0.0, gLong);
+			ut = greenwichSiderealTimeToUniversalTime(x, 0.0, 0.0, gdy, gmn, gyr);
+
+			g1 = (k == 1) ? ut : gu;
+
+			gu = ut;
+			ut = gu;
+
+			MoonL6680 dmy6680result1 = moonSetLcDMYL6680(x, ds, zc, gdy, gmn, gyr, g1, ut);
+			lct = dmy6680result1.lct;
+			dy1 = dmy6680result1.dy1;
+			mn1 = dmy6680result1.mn1;
+			yr1 = dmy6680result1.yr1;
+			gdy = dmy6680result1.gdy;
+			gmn = dmy6680result1.gmn;
+			gyr = dmy6680result1.gyr;
+
+			MoonL6700 dmy6700result2 = moonSetLcDMYL6700(lct, ds, zc, dy1, mn1, yr1, gdy, gmn, gyr, gLat);
+			lu = dmy6700result2.lu;
+			lct = dmy6700result2.lct;
+
+			if (lct == -99.0)
+				return new MoonLcDMY(lct, (int) lct, (int) lct);
+
+			la = lu;
+		}
+
+		x = localSiderealTimeToGreenwichSiderealTime(la, 0.0, 0.0, gLong);
+		ut = greenwichSiderealTimeToUniversalTime(x, 0.0, 0.0, gdy, gmn, gyr);
+
+		if (eGstUt(x, 0.0, 0.0, gdy, gmn, gyr) != WarningFlag.OK)
+			if (Math.abs(g1 - ut) > 0.5)
+				ut += 23.93447;
+
+		ut = utDayAdjust(ut, g1);
+		dy1 = universalTimeLocalCivilDay(ut, 0.0, 0.0, ds, zc, gdy, gmn, gyr);
+		mn1 = universalTimeLocalCivilMonth(ut, 0.0, 0.0, ds, zc, gdy, gmn, gyr);
+		yr1 = universalTimeLocalCivilYear(ut, 0.0, 0.0, ds, zc, gdy, gmn, gyr);
+
+		return new MoonLcDMY(dy1, mn1, yr1);
+	}
+
+	/** Helper function for moonSetLcDMY */
+	public static MoonL6680 moonSetLcDMYL6680(double x, int ds, int zc, double gdy, int gmn, int gyr, double g1,
+			double ut) {
+		if (eGstUt(x, 0.0, 0.0, gdy, gmn, gyr) != WarningFlag.OK)
+			if (Math.abs(g1 - ut) > 0.5)
+				ut += 23.93447;
+
+		ut = utDayAdjust(ut, g1);
+		double lct = universalTimeToLocalCivilTime(ut, 0.0, 0.0, ds, zc, gdy, gmn, gyr);
+		double dy1 = universalTimeLocalCivilDay(ut, 0.0, 0.0, ds, zc, gdy, gmn, gyr);
+		int mn1 = universalTimeLocalCivilMonth(ut, 0.0, 0.0, ds, zc, gdy, gmn, gyr);
+		int yr1 = universalTimeLocalCivilYear(ut, 0.0, 0.0, ds, zc, gdy, gmn, gyr);
+		gdy = localCivilTimeGreenwichDay(lct, 0.0, 0.0, ds, zc, dy1, mn1, yr1);
+		gmn = localCivilTimeGreenwichMonth(lct, 0.0, 0.0, ds, zc, dy1, mn1, yr1);
+		gyr = localCivilTimeGreenwichYear(lct, 0.0, 0.0, ds, zc, dy1, mn1, yr1);
+		ut -= 24.0 * Math.floor(ut / 24.0);
+
+		return new MoonL6680(ut, lct, dy1, mn1, yr1, gdy, gmn, gyr);
+	}
+
+	/** Helper function for moonSetLcDMY */
+	public static MoonL6700 moonSetLcDMYL6700(double lct, int ds, int zc, double dy1, int mn1, int yr1, double gdy,
+			int gmn, int gyr, double gLat) {
+		double mm = moonLong(lct, 0.0, 0.0, ds, zc, dy1, mn1, yr1);
+		double bm = moonLat(lct, 0.0, 0.0, ds, zc, dy1, mn1, yr1);
+		double pm = Math.toRadians(moonHP(lct, 0.0, 0.0, ds, zc, dy1, mn1, yr1));
+		double dp = nutatLong(gdy, gmn, gyr);
+		double th = 0.27249 * Math.sin(pm);
+		double di = th + 0.0098902 - pm;
+		double p = decimalDegreesToDegreeHours(ecRA(mm + dp, 0.0, 0.0, bm, 0.0, 0.0, gdy, gmn, gyr));
+		double q = ecDec(mm + dp, 0.0, 0.0, bm, 0.0, 0.0, gdy, gmn, gyr);
+		double lu = riseSetLocalSiderealTimeSet(p, 0.0, 0.0, q, 0.0, 0.0, wToDegrees(di), gLat);
+
+		return new MoonL6700(mm, bm, pm, dp, th, di, p, q, lu, lct);
+	}
+
+	/**
+	 * Local azimuth of moonset.
+	 * 
+	 * Original macro name: MoonSetAz
+	 */
+	public static double moonSetAz(double dy, int mn, int yr, int ds, int zc, double gLong, double gLat) {
+		double gdy = localCivilTimeGreenwichDay(12.0, 0.0, 0.0, ds, zc, dy, mn, yr);
+		int gmn = localCivilTimeGreenwichMonth(12.0, 0.0, 0.0, ds, zc, dy, mn, yr);
+		int gyr = localCivilTimeGreenwichYear(12.0, 0.0, 0.0, ds, zc, dy, mn, yr);
+		double lct = 12.0;
+		double dy1 = dy;
+		int mn1 = mn;
+		int yr1 = yr;
+
+		MoonAzL6700 az6700result1 = moonSetAzL6700(lct, ds, zc, dy1, mn1, yr1, gdy, gmn, gyr, gLat);
+		double lu = az6700result1.lu;
+		lct = az6700result1.lct;
+
+		double au;
+
+		if (lct == -99.0)
+			return lct;
+
+		double la = lu;
+
+		double x;
+		double ut;
+		double g1;
+		double gu = 0.0;
+		double aa = 0.0;
+		for (int k = 1; k < 9; k++) {
+			x = localSiderealTimeToGreenwichSiderealTime(la, 0.0, 0.0, gLong);
+			ut = greenwichSiderealTimeToUniversalTime(x, 0.0, 0.0, gdy, gmn, gyr);
+
+			g1 = (k == 1) ? ut : gu;
+
+			gu = ut;
+			ut = gu;
+
+			MoonL6680 az6680result1 = moonSetAzL6680(x, ds, zc, gdy, gmn, gyr, g1, ut);
+			lct = az6680result1.lct;
+			dy1 = az6680result1.dy1;
+			mn1 = az6680result1.mn1;
+			yr1 = az6680result1.yr1;
+			gdy = az6680result1.gdy;
+			gmn = az6680result1.gmn;
+			gyr = az6680result1.gyr;
+
+			MoonAzL6700 az6700result2 = moonSetAzL6700(lct, ds, zc, dy1, mn1, yr1, gdy, gmn, gyr, gLat);
+			lu = az6700result2.lu;
+			lct = az6700result2.lct;
+			au = az6700result2.au;
+
+			if (lct == -99.0)
+				return lct;
+
+			la = lu;
+			aa = au;
+		}
+
+		au = aa;
+
+		return au;
+	}
+
+	/** Helper function for moonSetAz */
+	public static MoonL6680 moonSetAzL6680(double x, int ds, int zc, double gdy, int gmn, int gyr, double g1,
+			double ut) {
+		if (eGstUt(x, 0.0, 0.0, gdy, gmn, gyr) != WarningFlag.OK)
+			if (Math.abs(g1 - ut) > 0.5)
+				ut += 23.93447;
+
+		ut = utDayAdjust(ut, g1);
+		double lct = universalTimeToLocalCivilTime(ut, 0.0, 0.0, ds, zc, gdy, gmn, gyr);
+		double dy1 = universalTimeLocalCivilDay(ut, 0.0, 0.0, ds, zc, gdy, gmn, gyr);
+		int mn1 = universalTimeLocalCivilMonth(ut, 0.0, 0.0, ds, zc, gdy, gmn, gyr);
+		int yr1 = universalTimeLocalCivilYear(ut, 0.0, 0.0, ds, zc, gdy, gmn, gyr);
+		gdy = localCivilTimeGreenwichDay(lct, 0.0, 0.0, ds, zc, dy1, mn1, yr1);
+		gmn = localCivilTimeGreenwichMonth(lct, 0.0, 0.0, ds, zc, dy1, mn1, yr1);
+		gyr = localCivilTimeGreenwichYear(lct, 0.0, 0.0, ds, zc, dy1, mn1, yr1);
+		ut -= 24.0 * Math.floor(ut / 24.0);
+
+		return new MoonL6680(ut, lct, dy1, mn1, yr1, gdy, gmn, gyr);
+	}
+
+	/** Helper function for moonSetAz */
+	public static MoonAzL6700 moonSetAzL6700(double lct, int ds, int zc, double dy1, int mn1, int yr1, double gdy,
+			int gmn, int gyr, double gLat) {
+		double mm = moonLong(lct, 0.0, 0.0, ds, zc, dy1, mn1, yr1);
+		double bm = moonLat(lct, 0.0, 0.0, ds, zc, dy1, mn1, yr1);
+		double pm = Math.toRadians(moonHP(lct, 0.0, 0.0, ds, zc, dy1, mn1, yr1));
+		double dp = nutatLong(gdy, gmn, gyr);
+		double th = 0.27249 * Math.sin(pm);
+		double di = th + 0.0098902 - pm;
+		double p = decimalDegreesToDegreeHours(ecRA(mm + dp, 0.0, 0.0, bm, 0.0, 0.0, gdy, gmn, gyr));
+		double q = ecDec(mm + dp, 0.0, 0.0, bm, 0.0, 0.0, gdy, gmn, gyr);
+		double lu = riseSetLocalSiderealTimeSet(p, 0.0, 0.0, q, 0.0, 0.0, wToDegrees(di), gLat);
+		double au = riseSetAzimuthSet(p, 0.0, 0.0, q, 0.0, 0.0, wToDegrees(di), gLat);
+
+		return new MoonAzL6700(mm, bm, pm, dp, th, di, p, q, lu, lct, au);
 	}
 }
