@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['date_0',['date',['../classastro_1_1practical_1_1models_1_1Date.html#a85b969ba94dd6940c727fe8f91590a68',1,'astro.practical.models.Date.Date()'],['../classastro_1_1practical_1_1models_1_1Date.html',1,'Date']]],
+  ['date_0',['date',['../classastro_1_1practical_1_1models_1_1Date.html',1,'Date'],['../classastro_1_1practical_1_1models_1_1Date.html#a85b969ba94dd6940c727fe8f91590a68',1,'astro.practical.models.Date.Date()']]],
   ['date_2ejava_1',['Date.java',['../Date_8java.html',1,'']]],
   ['datetime_2',['datetime',['../classastro_1_1practical_1_1models_1_1DateTime.html',1,'DateTime'],['../classastro_1_1practical_1_1models_1_1DateTime.html#a9312e3bbcc80dc8c52a89bf74eba3493',1,'astro.practical.models.DateTime.DateTime()']]],
   ['datetime_2ejava_3',['DateTime.java',['../DateTime_8java.html',1,'']]],
@@ -18,7 +18,10 @@ var searchData=
   ['declinationminutes_15',['declinationminutes',['../classastro_1_1practical_1_1models_1_1EquatorialCoordinatesHA.html#a83b659dc07f60582db6856071b5eb37a',1,'astro.practical.models.EquatorialCoordinatesHA.declinationMinutes'],['../classastro_1_1practical_1_1models_1_1RightAscensionDeclination.html#a83b659dc07f60582db6856071b5eb37a',1,'astro.practical.models.RightAscensionDeclination.declinationMinutes']]],
   ['declinationseconds_16',['declinationseconds',['../classastro_1_1practical_1_1models_1_1EquatorialCoordinatesHA.html#a77facc7f7692581ebfac7ac12d3084cf',1,'astro.practical.models.EquatorialCoordinatesHA.declinationSeconds'],['../classastro_1_1practical_1_1models_1_1RightAscensionDeclination.html#a77facc7f7692581ebfac7ac12d3084cf',1,'astro.practical.models.RightAscensionDeclination.declinationSeconds']]],
   ['degreehourstodecimaldegrees_17',['degreeHoursToDecimalDegrees',['../classastro_1_1practical_1_1lib_1_1PAMacros.html#a58f634d321d89d19dd649477de6091b4',1,'astro::practical::lib::PAMacros']]],
-  ['degrees_18',['degrees',['../enumastro_1_1practical_1_1types_1_1AngleMeasure.html#a5db093d15160c38f9d871829c6008294',1,'astro.practical.types.AngleMeasure.DEGREES'],['../classastro_1_1practical_1_1models_1_1Angle.html#ac9c3526f8a8d8ffbcc82fc45ca293209',1,'astro.practical.models.Angle.degrees']]],
+  ['degrees_18',['degrees',['../classastro_1_1practical_1_1models_1_1Angle.html#ac9c3526f8a8d8ffbcc82fc45ca293209',1,'astro.practical.models.Angle.degrees'],['../enumastro_1_1practical_1_1types_1_1AngleMeasure.html#a5db093d15160c38f9d871829c6008294',1,'astro.practical.types.AngleMeasure.DEGREES']]],
   ['degreesminutessecondstodecimaldegrees_19',['degreesMinutesSecondsToDecimalDegrees',['../classastro_1_1practical_1_1lib_1_1PAMacros.html#a7a08e59a46e81f47d9e9fe359b9134a5',1,'astro::practical::lib::PAMacros']]],
-  ['distanceau_20',['distanceAU',['../classastro_1_1practical_1_1models_1_1VisualAspectsOfAPlanet.html#a9a82737e8ea63dbaef4dac2c2e7fb874',1,'astro::practical::models::VisualAspectsOfAPlanet']]]
+  ['di_20',['di',['../classastro_1_1practical_1_1models_1_1MoonAzL6700.html#ad6c045cf0c17bc8d94cc2f943a01b916',1,'astro.practical.models.MoonAzL6700.di'],['../classastro_1_1practical_1_1models_1_1MoonL6700.html#ad6c045cf0c17bc8d94cc2f943a01b916',1,'astro.practical.models.MoonL6700.di']]],
+  ['distanceau_21',['distanceAU',['../classastro_1_1practical_1_1models_1_1VisualAspectsOfAPlanet.html#a9a82737e8ea63dbaef4dac2c2e7fb874',1,'astro::practical::models::VisualAspectsOfAPlanet']]],
+  ['dp_22',['dp',['../classastro_1_1practical_1_1models_1_1MoonAzL6700.html#ae571d69d755e366904e8663a4c643901',1,'astro.practical.models.MoonAzL6700.dp'],['../classastro_1_1practical_1_1models_1_1MoonL6700.html#ae571d69d755e366904e8663a4c643901',1,'astro.practical.models.MoonL6700.dp']]],
+  ['dy1_23',['dy1',['../classastro_1_1practical_1_1models_1_1MoonL6680.html#a5c68d647ca590e19cc6c51bd95b156d9',1,'astro.practical.models.MoonL6680.dy1'],['../classastro_1_1practical_1_1models_1_1MoonLcDMY.html#a5c68d647ca590e19cc6c51bd95b156d9',1,'astro.practical.models.MoonLcDMY.dy1']]]
 ];

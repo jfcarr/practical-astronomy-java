@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['p_0',['p',['../classastro_1_1practical_1_1models_1_1ParallaxHelper.html#aace2d484b0e3651abd108f04803d316c',1,'astro::practical::models::ParallaxHelper']]],
+  ['p_0',['p',['../classastro_1_1practical_1_1models_1_1MoonL6700.html#aace2d484b0e3651abd108f04803d316c',1,'astro.practical.models.MoonL6700.p'],['../classastro_1_1practical_1_1models_1_1MoonAzL6700.html#aace2d484b0e3651abd108f04803d316c',1,'astro.practical.models.MoonAzL6700.p'],['../classastro_1_1practical_1_1models_1_1ParallaxHelper.html#aace2d484b0e3651abd108f04803d316c',1,'astro.practical.models.ParallaxHelper.p']]],
   ['pabrightlimbdeg_1',['paBrightLimbDeg',['../classastro_1_1practical_1_1models_1_1MoonPhase.html#a7e9ab133152886a013c8b0705a05d58b',1,'astro::practical::models::MoonPhase']]],
   ['panode_2',['PANode',['../classastro_1_1practical_1_1models_1_1data_1_1BinaryData.html#a8ff4ef4c9f4efeb418e5da6db3f3ecff',1,'astro::practical::models::data::BinaryData']]],
   ['peri_5flongitudeofperihelion_3',['peri_LongitudeOfPerihelion',['../classastro_1_1practical_1_1models_1_1data_1_1CometDataElliptical.html#a7d82c54f91ecdfb05682c535171f53fd',1,'astro::practical::models::data::CometDataElliptical']]],
@@ -22,10 +22,11 @@ var searchData=
   ['planetramin_19',['planetRAMin',['../classastro_1_1practical_1_1models_1_1PlanetPosition.html#a97c55716aa81d6b863cc433e8c12007e',1,'astro::practical::models::PlanetPosition']]],
   ['planetrasec_20',['planetRASec',['../classastro_1_1practical_1_1models_1_1PlanetPosition.html#aaa75d8b5ef8eee6c0a84b60079af70a1',1,'astro::practical::models::PlanetPosition']]],
   ['planetrvect_21',['planetRVect',['../classastro_1_1practical_1_1models_1_1PlanetCoordinates.html#a0d24332db58c8769eec1d3e7cb86cca4',1,'astro::practical::models::PlanetCoordinates']]],
-  ['pmtwilightendshour_22',['pmTwilightEndsHour',['../classastro_1_1practical_1_1models_1_1MorningAndEveningTwilight.html#a0afe158455e1f615bdc44a243979df61',1,'astro::practical::models::MorningAndEveningTwilight']]],
-  ['pmtwilightendsmin_23',['pmTwilightEndsMin',['../classastro_1_1practical_1_1models_1_1MorningAndEveningTwilight.html#a86cf24c029c4f27c7aced83ab964552d',1,'astro::practical::models::MorningAndEveningTwilight']]],
-  ['posanglebrightlimbdeg_24',['posAngleBrightLimbDeg',['../classastro_1_1practical_1_1models_1_1VisualAspectsOfAPlanet.html#a5bc840160b499293b5ede14c1446bb9a',1,'astro::practical::models::VisualAspectsOfAPlanet']]],
-  ['positionangledeg_25',['positionAngleDeg',['../classastro_1_1practical_1_1models_1_1BinaryStarOrbit.html#abfba47e8ddb85b0ea173363f64679dab',1,'astro::practical::models::BinaryStarOrbit']]],
-  ['positionangleofpole_26',['positionAngleOfPole',['../classastro_1_1practical_1_1models_1_1SelenographicCoordinates1.html#a31604cc375b75df1301da06356544bb5',1,'astro::practical::models::SelenographicCoordinates1']]],
-  ['precise_27',['PRECISE',['../enumastro_1_1practical_1_1types_1_1AccuracyLevel.html#a98ae5b8e9ae9cae80e0e0f33bca48a84',1,'astro::practical::types::AccuracyLevel']]]
+  ['pm_22',['pm',['../classastro_1_1practical_1_1models_1_1MoonAzL6700.html#a3ecaad3990b70fc9e254a08748a5bcdc',1,'astro.practical.models.MoonAzL6700.pm'],['../classastro_1_1practical_1_1models_1_1MoonL6700.html#a3ecaad3990b70fc9e254a08748a5bcdc',1,'astro.practical.models.MoonL6700.pm']]],
+  ['pmtwilightendshour_23',['pmTwilightEndsHour',['../classastro_1_1practical_1_1models_1_1MorningAndEveningTwilight.html#a0afe158455e1f615bdc44a243979df61',1,'astro::practical::models::MorningAndEveningTwilight']]],
+  ['pmtwilightendsmin_24',['pmTwilightEndsMin',['../classastro_1_1practical_1_1models_1_1MorningAndEveningTwilight.html#a86cf24c029c4f27c7aced83ab964552d',1,'astro::practical::models::MorningAndEveningTwilight']]],
+  ['posanglebrightlimbdeg_25',['posAngleBrightLimbDeg',['../classastro_1_1practical_1_1models_1_1VisualAspectsOfAPlanet.html#a5bc840160b499293b5ede14c1446bb9a',1,'astro::practical::models::VisualAspectsOfAPlanet']]],
+  ['positionangledeg_26',['positionAngleDeg',['../classastro_1_1practical_1_1models_1_1BinaryStarOrbit.html#abfba47e8ddb85b0ea173363f64679dab',1,'astro::practical::models::BinaryStarOrbit']]],
+  ['positionangleofpole_27',['positionAngleOfPole',['../classastro_1_1practical_1_1models_1_1SelenographicCoordinates1.html#a31604cc375b75df1301da06356544bb5',1,'astro::practical::models::SelenographicCoordinates1']]],
+  ['precise_28',['PRECISE',['../enumastro_1_1practical_1_1types_1_1AccuracyLevel.html#a98ae5b8e9ae9cae80e0e0f33bca48a84',1,'astro::practical::types::AccuracyLevel']]]
 ];
