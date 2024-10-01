@@ -2,6 +2,7 @@ import astro.practical.lib.PAMoon;
 import astro.practical.models.ApproximatePositionOfMoon;
 import astro.practical.models.MoonDistAngDiamHorParallax;
 import astro.practical.models.MoonPhase;
+import astro.practical.models.MoonriseAndMoonset;
 import astro.practical.models.PrecisePositionOfMoon;
 import astro.practical.models.TimesOfNewMoonAndFullMoon;
 import astro.practical.test.TestLib;
@@ -78,5 +79,23 @@ public class TestMoon {
                 .Assert(0, moonDistAngDiamHorParallax.horParallaxDeg)
                 .Assert(59, moonDistAngDiamHorParallax.horParallaxMin)
                 .Assert(35.49, moonDistAngDiamHorParallax.horParallaxSec);
+    }
+
+    void testMoonriseAndMoonset() {
+        MoonriseAndMoonset moonriseAndMoonset = paMoon.moonriseAndMoonset(6, 3, 1986, false, -5, -71.05, 42.3667);
+
+        testLib.setTestName("Moonrise and Moonset")
+                .Assert(4, moonriseAndMoonset.mrLTHour)
+                .Assert(21, moonriseAndMoonset.mrLTMin)
+                .Assert(6, moonriseAndMoonset.mrLocalDateDay)
+                .Assert(3, moonriseAndMoonset.mrLocalDateMonth)
+                .Assert(1986, moonriseAndMoonset.mrLocalDateYear)
+                .Assert(127.33, moonriseAndMoonset.mrAzimuthDeg)
+                .Assert(13, moonriseAndMoonset.msLTHour)
+                .Assert(8, moonriseAndMoonset.msLTMin)
+                .Assert(6, moonriseAndMoonset.msLocalDateDay)
+                .Assert(3, moonriseAndMoonset.msLocalDateMonth)
+                .Assert(1986, moonriseAndMoonset.msLocalDateYear)
+                .Assert(234.06, moonriseAndMoonset.msAzimuthDeg);
     }
 }
