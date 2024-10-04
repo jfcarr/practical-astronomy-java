@@ -7,6 +7,7 @@ import java.util.Set;
 
 import astro.practical.models.L3710;
 import astro.practical.models.L3710Twilight;
+import astro.practical.models.LunarEclipseOccurrenceL6855;
 import astro.practical.models.MoonAzL6700;
 import astro.practical.models.MoonLongLatHP;
 import astro.practical.models.MoonL6680;
@@ -23,6 +24,7 @@ import astro.practical.models.PlanetLongL4945;
 import astro.practical.models.data.PlanetDataPrecise;
 import astro.practical.types.AngleMeasure;
 import astro.practical.types.CoordinateType;
+import astro.practical.types.LunarEclipseOccurrence;
 import astro.practical.types.WarningFlag;
 import astro.practical.types.RiseSetStatus;
 import astro.practical.types.TwilightStatus;
@@ -1174,29 +1176,30 @@ public class PAMacros {
 		l = l + 0.658309 * Math.sin(2.0 * me1) + 0.213616 * Math.sin(2.0 * md);
 		l = l - e * 0.185596 * Math.sin(ms) - 0.114336 * Math.sin(2.0 * mf);
 		l += 0.058793 * Math.sin(2.0 * (me1 - md));
-		l += 0.057212 * e * Math.sin(2.0 * me1 - ms - md) + 0.05332 * Math.sin(2.0 * me1 + md);
-		l += 0.045874 * e * Math.sin(2.0 * me1 - ms) + 0.041024 * e * Math.sin(md - ms);
-		l -= 0.034718 * Math.sin(me1) - e * 0.030465 * Math.sin(ms + md);
-		l += 0.015326 * Math.sin(2.0 * (me1 - mf)) - 0.012528 * Math.sin(2.0 * mf + md);
-		l -= 0.01098 * Math.sin(2.0 * mf - md) + 0.010674 * Math.sin(4.0 * me1 - md);
-		l += 0.010034 * Math.sin(3.0 * md) + 0.008548 * Math.sin(4.0 * me1 - 2.0 * md);
-		l -= e * 0.00791 * Math.sin(ms - md + 2.0 * me1) - e * 0.006783 * Math.sin(2.0 * me1 + ms);
-		l += 0.005162 * Math.sin(md - me1) + e * 0.005 * Math.sin(ms + me1);
-		l += 0.003862 * Math.sin(4.0 * me1) + e * 0.004049 * Math.sin(md - ms + 2.0 * me1);
-		l += 0.003996 * Math.sin(2.0 * (md + me1)) + 0.003665 * Math.sin(2.0 * me1 - 3.0 * md);
-		l += e * 0.002695 * Math.sin(2.0 * md - ms) + 0.002602 * Math.sin(md - 2.0 * (mf + me1));
-		l += e * 0.002396 * Math.sin(2.0 * (me1 - md) - ms) - 0.002349 * Math.sin(md + me1);
-		l += e2 * 0.002249 * Math.sin(2.0 * (me1 - ms)) - e * 0.002125 * Math.sin(2.0 * md + ms);
-		l -= e2 * 0.002079 * Math.sin(2.0 * ms) + e2 * 0.002059 * Math.sin(2.0 * (me1 - ms) - md);
-		l -= 0.001773 * Math.sin(md + 2.0 * (me1 - mf)) - 0.001595 * Math.sin(2.0 * (mf + me1));
-		l += e * 0.00122 * Math.sin(4.0 * me1 - ms - md) - 0.00111 * Math.sin(2.0 * (md + mf));
-		l += 0.000892 * Math.sin(md - 3.0 * me1) - e * 0.000811 * Math.sin(ms + md + 2.0 * me1);
+		l = l + 0.057212 * e * Math.sin(2.0 * me1 - ms - md) + 0.05332 * Math.sin(2.0 * me1 + md);
+		l = l + 0.045874 * e * Math.sin(2.0 * me1 - ms) + 0.041024 * e * Math.sin(md - ms);
+		l = l - 0.034718 * Math.sin(me1) - e * 0.030465 * Math.sin(ms + md);
+		l = l + 0.015326 * Math.sin(2.0 * (me1 - mf)) - 0.012528 * Math.sin(2.0 * mf + md);
+		l = l - 0.01098 * Math.sin(2.0 * mf - md) + 0.010674 * Math.sin(4.0 * me1 - md);
+		l = l + 0.010034 * Math.sin(3.0 * md) + 0.008548 * Math.sin(4.0 * me1 - 2.0 * md);
+		l = l - e * 0.00791 * Math.sin(ms - md + 2.0 * me1) - e * 0.006783 * Math.sin(2.0 * me1 + ms);
+		l = l + 0.005162 * Math.sin(md - me1) + e * 0.005 * Math.sin(ms + me1);
+		l = l + 0.003862 * Math.sin(4.0 * me1) + e * 0.004049 * Math.sin(md - ms + 2.0 * me1);
+		l = l + 0.003996 * Math.sin(2.0 * (md + me1)) + 0.003665 * Math.sin(2.0 * me1 - 3.0 * md);
+		l = l + e * 0.002695 * Math.sin(2.0 * md - ms) + 0.002602 * Math.sin(md - 2.0 * (mf + me1));
+		l = l + e * 0.002396 * Math.sin(2.0 * (me1 - md) - ms) - 0.002349 * Math.sin(md + me1);
+		l = l + e2 * 0.002249 * Math.sin(2.0 * (me1 - ms)) - e * 0.002125 * Math.sin(2.0 * md + ms);
+		l = l - e2 * 0.002079 * Math.sin(2.0 * ms) + e2 * 0.002059 * Math.sin(2.0 * (me1 - ms) - md);
+		l = l - 0.001773 * Math.sin(md + 2.0 * (me1 - mf)) - 0.001595 * Math.sin(2.0 * (mf + me1));
+		l = l + e * 0.00122 * Math.sin(4.0 * me1 - ms - md) - 0.00111 * Math.sin(2.0 * (md + mf));
+		l = l + 0.000892 * Math.sin(md - 3.0 * me1) - e * 0.000811 * Math.sin(ms + md + 2.0 * me1);
+
 		l += e * 0.000761 * Math.sin(4.0 * me1 - ms - 2.0 * md);
 		l += e2 * 0.000704 * Math.sin(md - 2.0 * (ms + me1));
 		l += e * 0.000693 * Math.sin(ms - 2.0 * (md - me1));
 		l += e * 0.000598 * Math.sin(2.0 * (me1 - mf) - ms);
-		l += 0.00055 * Math.sin(md + 4.0 * me1) + 0.000538 * Math.sin(4.0 * md);
-		l += e * 0.000521 * Math.sin(4.0 * me1 - ms) + 0.000486 * Math.sin(2.0 * md - me1);
+		l = l + 0.00055 * Math.sin(md + 4.0 * me1) + 0.000538 * Math.sin(4.0 * md);
+		l = l + e * 0.000521 * Math.sin(4.0 * me1 - ms) + 0.000486 * Math.sin(2.0 * md - me1);
 		l += e2 * 0.000717 * Math.sin(md - 2.0 * ms);
 
 		double mm = unwind(ml + Math.toRadians(l));
@@ -1269,30 +1272,30 @@ public class PAMacros {
 		md = Math.toRadians(md);
 
 		double g = 5.128189 * Math.sin(mf) + 0.280606 * Math.sin(md + mf);
-		g += 0.277693 * Math.sin(md - mf) + 0.173238 * Math.sin(2.0 * me1 - mf);
-		g += 0.055413 * Math.sin(2.0 * me1 + mf - md) + 0.046272 * Math.sin(2.0 * me1 - mf - md);
-		g += 0.032573 * Math.sin(2.0 * me1 + mf) + 0.017198 * Math.sin(2.0 * md + mf);
-		g += 0.009267 * Math.sin(2.0 * me1 + md - mf) + 0.008823 * Math.sin(2.0 * md - mf);
-		g += e * 0.008247 * Math.sin(2.0 * me1 - ms - mf) + 0.004323 * Math.sin(2.0 * (me1 - md) - mf);
-		g += 0.0042 * Math.sin(2.0 * me1 + mf + md) + e * 0.003372 * Math.sin(mf - ms - 2.0 * me1);
+		g = g + 0.277693 * Math.sin(md - mf) + 0.173238 * Math.sin(2.0 * me1 - mf);
+		g = g + 0.055413 * Math.sin(2.0 * me1 + mf - md) + 0.046272 * Math.sin(2.0 * me1 - mf - md);
+		g = g + 0.032573 * Math.sin(2.0 * me1 + mf) + 0.017198 * Math.sin(2.0 * md + mf);
+		g = g + 0.009267 * Math.sin(2.0 * me1 + md - mf) + 0.008823 * Math.sin(2.0 * md - mf);
+		g = g + e * 0.008247 * Math.sin(2.0 * me1 - ms - mf) + 0.004323 * Math.sin(2.0 * (me1 - md) - mf);
+		g = g + 0.0042 * Math.sin(2.0 * me1 + mf + md) + e * 0.003372 * Math.sin(mf - ms - 2.0 * me1);
 		g += e * 0.002472 * Math.sin(2.0 * me1 + mf - ms - md);
 		g += e * 0.002222 * Math.sin(2.0 * me1 + mf - ms);
 		g += e * 0.002072 * Math.sin(2.0 * me1 - mf - ms - md);
-		g += e * 0.001877 * Math.sin(mf - ms + md) + 0.001828 * Math.sin(4.0 * me1 - mf - md);
-		g -= e * 0.001803 * Math.sin(mf + ms) - 0.00175 * Math.sin(3.0 * mf);
-		g += e * 0.00157 * Math.sin(md - ms - mf) - 0.001487 * Math.sin(mf + me1);
-		g -= e * 0.001481 * Math.sin(mf + ms + md) + e * 0.001417 * Math.sin(mf - ms - md);
-		g += e * 0.00135 * Math.sin(mf - ms) + 0.00133 * Math.sin(mf - me1);
-		g += 0.001106 * Math.sin(mf + 3.0 * md) + 0.00102 * Math.sin(4.0 * me1 - mf);
-		g += 0.000833 * Math.sin(mf + 4.0 * me1 - md) + 0.000781 * Math.sin(md - 3.0 * mf);
-		g += 0.00067 * Math.sin(mf + 4.0 * me1 - 2.0 * md) + 0.000606 * Math.sin(2.0 * me1 - 3.0 * mf);
+		g = g + e * 0.001877 * Math.sin(mf - ms + md) + 0.001828 * Math.sin(4.0 * me1 - mf - md);
+		g = g - e * 0.001803 * Math.sin(mf + ms) - 0.00175 * Math.sin(3.0 * mf);
+		g = g + e * 0.00157 * Math.sin(md - ms - mf) - 0.001487 * Math.sin(mf + me1);
+		g = g - e * 0.001481 * Math.sin(mf + ms + md) + e * 0.001417 * Math.sin(mf - ms - md);
+		g = g + e * 0.00135 * Math.sin(mf - ms) + 0.00133 * Math.sin(mf - me1);
+		g = g + 0.001106 * Math.sin(mf + 3.0 * md) + 0.00102 * Math.sin(4.0 * me1 - mf);
+		g = g + 0.000833 * Math.sin(mf + 4.0 * me1 - md) + 0.000781 * Math.sin(md - 3.0 * mf);
+		g = g + 0.00067 * Math.sin(mf + 4.0 * me1 - 2.0 * md) + 0.000606 * Math.sin(2.0 * me1 - 3.0 * mf);
 		g += 0.000597 * Math.sin(2.0 * (me1 + md) - mf);
-		g += e * 0.000492 * Math.sin(2.0 * me1 + md - ms - mf) + 0.00045 * Math.sin(2.0 * (md - me1) - mf);
-		g += 0.000439 * Math.sin(3.0 * md - mf) + 0.000423 * Math.sin(mf + 2.0 * (me1 + md));
-		g += 0.000422 * Math.sin(2.0 * me1 - mf - 3.0 * md) - e * 0.000367 * Math.sin(ms + mf + 2.0 * me1 - md);
-		g -= e * 0.000353 * Math.sin(ms + mf + 2.0 * me1) + 0.000331 * Math.sin(mf + 4.0 * me1);
+		g = g + e * 0.000492 * Math.sin(2.0 * me1 + md - ms - mf) + 0.00045 * Math.sin(2.0 * (md - me1) - mf);
+		g = g + 0.000439 * Math.sin(3.0 * md - mf) + 0.000423 * Math.sin(mf + 2.0 * (me1 + md));
+		g = g + 0.000422 * Math.sin(2.0 * me1 - mf - 3.0 * md) - e * 0.000367 * Math.sin(ms + mf + 2.0 * me1 - md);
+		g = g - e * 0.000353 * Math.sin(ms + mf + 2.0 * me1) + 0.000331 * Math.sin(mf + 4.0 * me1);
 		g += e * 0.000317 * Math.sin(2.0 * me1 + mf - ms + md);
-		g += e2 * 0.000306 * Math.sin(2.0 * (me1 - ms) - mf) - 0.000283 * Math.sin(md + 3.0 * mf);
+		g = g + e2 * 0.000306 * Math.sin(2.0 * (me1 - ms) - mf) - 0.000283 * Math.sin(md + 3.0 * mf);
 
 		double w1 = 0.0004664 * Math.cos(na);
 		double w2 = 0.0000754 * Math.cos(c);
@@ -4083,5 +4086,785 @@ public class PAMacros {
 		double au = riseSetAzimuthSet(p, 0.0, 0.0, q, 0.0, 0.0, wToDegrees(di), gLat);
 
 		return new MoonAzL6700(mm, bm, pm, dp, th, di, p, q, lu, lct, au);
+	}
+
+	/**
+	 * Determine if a lunar eclipse is likely to occur.
+	 * 
+	 * Original macro name: LEOccurrence
+	 */
+	public static LunarEclipseOccurrence lunarEclipseOccurrence(int ds, int zc, double dy, int mn, int yr) {
+		double d0 = localCivilTimeGreenwichDay(12.0, 0.0, 0.0, ds, zc, dy, mn, yr);
+		int m0 = localCivilTimeGreenwichMonth(12.0, 0.0, 0.0, ds, zc, dy, mn, yr);
+		int y0 = localCivilTimeGreenwichYear(12.0, 0.0, 0.0, ds, zc, dy, mn, yr);
+
+		double j0 = civilDateToJulianDate(0.0, 1, y0);
+		double dj = civilDateToJulianDate(d0, m0, y0);
+		double k = (y0 - 1900.0 + ((dj - j0) * 1.0 / 365.0)) * 12.3685;
+		k = lint(k + 0.5);
+		double tn = k / 1236.85;
+		double tf = (k + 0.5) / 1236.85;
+		double t = tn;
+		@SuppressWarnings("unused")
+		LunarEclipseOccurrenceL6855 l6855result1 = lunarEclipseOccurrenceL6855(t, k);
+		t = tf;
+		k += 0.5;
+		LunarEclipseOccurrenceL6855 l6855result2 = lunarEclipseOccurrenceL6855(t, k);
+		double fb = l6855result2.f;
+
+		double df = Math.abs(fb - 3.141592654 * lint(fb / 3.141592654));
+
+		if (df > 0.37)
+			df = 3.141592654 - df;
+
+		LunarEclipseOccurrence s = LunarEclipseOccurrence.LUNAR_ECLIPSE_CERTAIN;
+		if (df >= 0.242600766) {
+			s = LunarEclipseOccurrence.LUNAR_ECLIPSE_POSSIBLE;
+
+			if (df > 0.37)
+				s = LunarEclipseOccurrence.NO_LUNAR_ECLIPSE;
+		}
+
+		return s;
+	}
+
+	/** Helper function for lunarEclipseOccurrence */
+	public static LunarEclipseOccurrenceL6855 lunarEclipseOccurrenceL6855(double t, double k) {
+		double t2 = t * t;
+		double e = 29.53 * k;
+		double c = 166.56 + (132.87 - 0.009173 * t) * t;
+		c = Math.toRadians(c);
+		double b = 0.00058868 * k + (0.0001178 - 0.000000155 * t) * t2;
+		b = b + 0.00033 * Math.sin(c) + 0.75933;
+		double a = k / 12.36886;
+		double a1 = 359.2242 + 360.0 * fPart(a) - (0.0000333 + 0.00000347 * t) * t2;
+		double a2 = 306.0253 + 360.0 * fPart(k / 0.9330851);
+		a2 += (0.0107306 + 0.00001236 * t) * t2;
+		a = k / 0.9214926;
+		double f = 21.2964 + 360.0 * fPart(a) - (0.0016528 + 0.00000239 * t) * t2;
+		a1 = unwindDeg(a1);
+		a2 = unwindDeg(a2);
+		f = unwindDeg(f);
+		a1 = Math.toRadians(a1);
+		a2 = Math.toRadians(a2);
+		f = Math.toRadians(f);
+
+		double dd = (0.1734 - 0.000393 * t) * Math.sin(a1) + 0.0021 * Math.sin(2.0 * a1);
+		dd = dd - 0.4068 * Math.sin(a2) + 0.0161 * Math.sin(2.0 * a2) - 0.0004 * Math.sin(3.0 * a2);
+		dd = dd + 0.0104 * Math.sin(2.0 * f) - 0.0051 * Math.sin(a1 + a2);
+		dd = dd - 0.0074 * Math.sin(a1 - a2) + 0.0004 * Math.sin(2.0 * f + a1);
+		dd = dd - 0.0004 * Math.sin(2.0 * f - a1) - 0.0006 * (2.0 * f + a2) + 0.001 * Math.sin(2.0 * f - a2);
+		dd += 0.0005 * Math.sin(a1 + 2.0 * a2);
+		double e1 = Math.floor(e);
+		b = b + dd + (e - e1);
+		double b1 = Math.floor(b);
+		a = e1 + b1;
+		b -= b1;
+
+		return new LunarEclipseOccurrenceL6855(f, dd, e1, b1, a, b);
+	}
+
+	/**
+	 * Calculate time of maximum shadow for lunar eclipse (UT)
+	 * 
+	 * Original macro name: UTMaxLunarEclipse
+	 */
+	public static double utMaxLunarEclipse(double dy, int mn, int yr, int ds, int zc) {
+		double tp = 2.0 * Math.PI;
+
+		if (lunarEclipseOccurrence(ds, zc, dy, mn, yr) == LunarEclipseOccurrence.NO_LUNAR_ECLIPSE)
+			return -99.0;
+
+		double dj = fullMoon(ds, zc, dy, mn, yr);
+		double gday = julianDateDay(dj);
+		int gmonth = julianDateMonth(dj);
+		int gyear = julianDateYear(dj);
+		double igday = Math.floor(gday);
+		double xi = gday - igday;
+		double utfm = xi * 24.0;
+		double ut = utfm - 1.0;
+		@SuppressWarnings("unused")
+		double ly = Math.toRadians(sunLong(ut, 0.0, 0.0, 0, 0, igday, gmonth, gyear));
+		double my = Math.toRadians(moonLong(ut, 0.0, 0.0, 0, 0, igday, gmonth, gyear));
+		double by = Math.toRadians(moonLat(ut, 0.0, 0.0, 0, 0, igday, gmonth, gyear));
+		double hy = Math.toRadians(moonHP(ut, 0.0, 0.0, 0, 0, igday, gmonth, gyear));
+		ut = utfm + 1.0;
+		double sb = Math.toRadians(sunLong(ut, 0.0, 0.0, 0, 0, igday, gmonth, gyear)) - ly;
+		double mz = Math.toRadians(moonLong(ut, 0.0, 0.0, 0, 0, igday, gmonth, gyear));
+		double bz = Math.toRadians(moonLat(ut, 0.0, 0.0, 0, 0, igday, gmonth, gyear));
+		double hz = Math.toRadians(moonHP(ut, 0.0, 0.0, 0, 0, igday, gmonth, gyear));
+
+		if (sb < 0.0)
+			sb += tp;
+
+		double xh = utfm;
+		double x0 = xh + 1.0 - (2.0 * bz / (bz - by));
+		double dm = mz - my;
+
+		if (dm < 0.0)
+			dm += tp;
+
+		double lj = (dm - sb) / 2.0;
+		double q = 0.0;
+		double mr = my + (dm * (x0 - xh + 1.0) / 2.0);
+		ut = x0 - 0.13851852;
+		double rr = sunDist(ut, 0.0, 0.0, 0, 0, igday, gmonth, gyear);
+		double sr = Math.toRadians(sunLong(ut, 0.0, 0.0, 0, 0, igday, gmonth, gyear));
+		sr += Math.toRadians(nutatLong(igday, gmonth, gyear) - 0.00569);
+		sr = sr + Math.PI - lint((sr + Math.PI) / tp) * tp;
+		by -= q;
+		bz -= q;
+		double p3 = 0.00004263;
+		double zh = (sr - mr) / lj;
+		double tc = x0 + zh;
+		double sh = (((bz - by) * (tc - xh - 1.0) / 2.0) + bz) / lj;
+		double s2 = sh * sh;
+		double z2 = zh * zh;
+		double ps = p3 / (rr * lj);
+		double z1 = (zh * z2 / (z2 + s2)) + x0;
+		double h0 = (hy + hz) / (2.0 * lj);
+		double rm = 0.272446 * h0;
+		double rn = 0.00465242 / (lj * rr);
+		double hd = h0 * 0.99834;
+		double rp = (hd + rn + ps) * 1.02;
+		double r = rm + rp;
+		double dd = z1 - x0;
+		dd = dd * dd - ((z2 - (r * r)) * dd / zh);
+
+		if (dd < 0.0)
+			return -99.0;
+
+		return z1;
+	}
+
+	/**
+	 * Calculate time of first shadow contact for lunar eclipse (UT)
+	 * 
+	 * Original macro name: UTFirstContactLunarEclipse
+	 */
+	public static double utFirstContactLunarEclipse(double dy, int mn, int yr, int ds, int zc) {
+		double tp = 2.0 * Math.PI;
+
+		if (lunarEclipseOccurrence(ds, zc, dy, mn, yr) == LunarEclipseOccurrence.NO_LUNAR_ECLIPSE)
+			return -99.0;
+
+		double dj = fullMoon(ds, zc, dy, mn, yr);
+		double gday = julianDateDay(dj);
+		int gmonth = julianDateMonth(dj);
+		int gyear = julianDateYear(dj);
+		double igday = Math.floor(gday);
+		double xi = gday - igday;
+		double utfm = xi * 24.0;
+		double ut = utfm - 1.0;
+		double ly = Math.toRadians(sunLong(ut, 0.0, 0.0, 0, 0, igday, gmonth, gyear));
+		double my = Math.toRadians(moonLong(ut, 0.0, 0.0, 0, 0, igday, gmonth, gyear));
+		double by = Math.toRadians(moonLat(ut, 0.0, 0.0, 0, 0, igday, gmonth, gyear));
+		double hy = Math.toRadians(moonHP(ut, 0.0, 0.0, 0, 0, igday, gmonth, gyear));
+		ut = utfm + 1.0;
+		double sb = Math.toRadians(sunLong(ut, 0.0, 0.0, 0, 0, igday, gmonth, gyear)) - ly;
+		double mz = Math.toRadians(moonLong(ut, 0.0, 0.0, 0, 0, igday, gmonth, gyear));
+		double bz = Math.toRadians(moonLat(ut, 0.0, 0.0, 0, 0, igday, gmonth, gyear));
+		double hz = Math.toRadians(moonHP(ut, 0.0, 0.0, 0, 0, igday, gmonth, gyear));
+
+		if (sb < 0.0)
+			sb += tp;
+
+		double xh = utfm;
+		double x0 = xh + 1.0 - (2.0 * bz / (bz - by));
+		double dm = mz - my;
+
+		if (dm < 0.0)
+			dm += tp;
+
+		double lj = (dm - sb) / 2.0;
+		double q = 0.0;
+		double mr = my + (dm * (x0 - xh + 1.0) / 2.0);
+		ut = x0 - 0.13851852;
+		double rr = sunDist(ut, 0.0, 0.0, 0, 0, igday, gmonth, gyear);
+		double sr = Math.toRadians(sunLong(ut, 0.0, 0.0, 0, 0, igday, gmonth, gyear));
+		sr += Math.toRadians(nutatLong(igday, gmonth, gyear) - 0.00569);
+		sr = sr + Math.PI - lint((sr + Math.PI) / tp) * tp;
+		by -= q;
+		bz -= q;
+		double p3 = 0.00004263;
+		double zh = (sr - mr) / lj;
+		double tc = x0 + zh;
+		double sh = (((bz - by) * (tc - xh - 1.0) / 2.0) + bz) / lj;
+		double s2 = sh * sh;
+		double z2 = zh * zh;
+		double ps = p3 / (rr * lj);
+		double z1 = (zh * z2 / (z2 + s2)) + x0;
+		double h0 = (hy + hz) / (2.0 * lj);
+		double rm = 0.272446 * h0;
+		double rn = 0.00465242 / (lj * rr);
+		double hd = h0 * 0.99834;
+		double rp = (hd + rn + ps) * 1.02;
+		double r = rm + rp;
+		double dd = z1 - x0;
+		dd = dd * dd - ((z2 - (r * r)) * dd / zh);
+
+		if (dd < 0.0)
+			return -99.0;
+
+		double zd = Math.sqrt(dd);
+		double z6 = z1 - zd;
+
+		if (z6 < 0.0)
+			z6 += 24.0;
+
+		return z6;
+	}
+
+	/**
+	 * Calculate time of last shadow contact for lunar eclipse (UT)
+	 * 
+	 * Original macro name: UTLastContactLunarEclipse
+	 */
+	public static double utLastContactLunarEclipse(double dy, int mn, int yr, int ds, int zc) {
+		double tp = 2.0 * Math.PI;
+
+		if (lunarEclipseOccurrence(ds, zc, dy, mn, yr) == LunarEclipseOccurrence.NO_LUNAR_ECLIPSE)
+			return -99.0;
+
+		double dj = fullMoon(ds, zc, dy, mn, yr);
+		double gday = julianDateDay(dj);
+		int gmonth = julianDateMonth(dj);
+		int gyear = julianDateYear(dj);
+		double igday = Math.floor(gday);
+		double xi = gday - igday;
+		double utfm = xi * 24.0;
+		double ut = utfm - 1.0;
+		double ly = Math.toRadians(sunLong(ut, 0.0, 0.0, 0, 0, igday, gmonth, gyear));
+		double my = Math.toRadians(moonLong(ut, 0.0, 0.0, 0, 0, igday, gmonth, gyear));
+		double by = Math.toRadians(moonLat(ut, 0.0, 0.0, 0, 0, igday, gmonth, gyear));
+		double hy = Math.toRadians(moonHP(ut, 0.0, 0.0, 0, 0, igday, gmonth, gyear));
+		ut = utfm + 1.0;
+		double sb = Math.toRadians(sunLong(ut, 0.0, 0.0, 0, 0, igday, gmonth, gyear)) - ly;
+		double mz = Math.toRadians(moonLong(ut, 0.0, 0.0, 0, 0, igday, gmonth, gyear));
+		double bz = Math.toRadians(moonLat(ut, 0.0, 0.0, 0, 0, igday, gmonth, gyear));
+		double hz = Math.toRadians(moonHP(ut, 0.0, 0.0, 0, 0, igday, gmonth, gyear));
+
+		if (sb < 0.0)
+			sb += tp;
+
+		double xh = utfm;
+		double x0 = xh + 1.0 - (2.0 * bz / (bz - by));
+		double dm = mz - my;
+
+		if (dm < 0.0)
+			dm += tp;
+
+		double lj = (dm - sb) / 2.0;
+		double q = 0.0;
+		double mr = my + (dm * (x0 - xh + 1.0) / 2.0);
+		ut = x0 - 0.13851852;
+		double rr = sunDist(ut, 0.0, 0.0, 0, 0, igday, gmonth, gyear);
+		double sr = Math.toRadians(sunLong(ut, 0.0, 0.0, 0, 0, igday, gmonth, gyear));
+		sr += Math.toRadians(nutatLong(igday, gmonth, gyear) - 0.00569);
+		sr = sr + Math.PI - lint((sr + Math.PI) / tp) * tp;
+		by -= q;
+		bz -= q;
+		double p3 = 0.00004263;
+		double zh = (sr - mr) / lj;
+		double tc = x0 + zh;
+		double sh = (((bz - by) * (tc - xh - 1.0) / 2.0) + bz) / lj;
+		double s2 = sh * sh;
+		double z2 = zh * zh;
+		double ps = p3 / (rr * lj);
+		double z1 = (zh * z2 / (z2 + s2)) + x0;
+		double h0 = (hy + hz) / (2.0 * lj);
+		double rm = 0.272446 * h0;
+		double rn = 0.00465242 / (lj * rr);
+		double hd = h0 * 0.99834;
+		double rp = (hd + rn + ps) * 1.02;
+		double r = rm + rp;
+		double dd = z1 - x0;
+		dd = dd * dd - ((z2 - (r * r)) * dd / zh);
+
+		if (dd < 0.0)
+			return -99.0;
+
+		double zd = Math.sqrt(dd);
+		double z7 = z1 + zd - lint((z1 + zd) / 24.0) * 24.0;
+
+		return z7;
+	}
+
+	/**
+	 * Calculate start time of umbra phase of lunar eclipse (UT)
+	 * 
+	 * Original macro name: UTStartUmbraLunarEclipse
+	 */
+	public static double utStartUmbraLunarEclipse(double dy, int mn, int yr, int ds, int zc) {
+		double tp = 2.0 * Math.PI;
+
+		if (lunarEclipseOccurrence(ds, zc, dy, mn, yr) == LunarEclipseOccurrence.NO_LUNAR_ECLIPSE)
+			return -99.0;
+
+		double dj = fullMoon(ds, zc, dy, mn, yr);
+		double gday = julianDateDay(dj);
+		int gmonth = julianDateMonth(dj);
+		int gyear = julianDateYear(dj);
+		double igday = Math.floor(gday);
+		double xi = gday - igday;
+		double utfm = xi * 24.0;
+		double ut = utfm - 1.0;
+		double ly = Math.toRadians(sunLong(ut, 0.0, 0.0, 0, 0, igday, gmonth, gyear));
+		double my = Math.toRadians(moonLong(ut, 0.0, 0.0, 0, 0, igday, gmonth, gyear));
+		double by = Math.toRadians(moonLat(ut, 0.0, 0.0, 0, 0, igday, gmonth, gyear));
+		double hy = Math.toRadians(moonHP(ut, 0.0, 0.0, 0, 0, igday, gmonth, gyear));
+		ut = utfm + 1.0;
+		double sb = Math.toRadians(sunLong(ut, 0.0, 0.0, 0, 0, igday, gmonth, gyear)) - ly;
+		double mz = Math.toRadians(moonLong(ut, 0.0, 0.0, 0, 0, igday, gmonth, gyear));
+		double bz = Math.toRadians(moonLat(ut, 0.0, 0.0, 0, 0, igday, gmonth, gyear));
+		double hz = Math.toRadians(moonHP(ut, 0.0, 0.0, 0, 0, igday, gmonth, gyear));
+
+		if (sb < 0.0)
+			sb += tp;
+
+		double xh = utfm;
+		double x0 = xh + 1.0 - (2.0 * bz / (bz - by));
+		double dm = mz - my;
+
+		if (dm < 0.0)
+			dm += tp;
+
+		double lj = (dm - sb) / 2.0;
+		double q = 0.0;
+		double mr = my + (dm * (x0 - xh + 1.0) / 2.0);
+		ut = x0 - 0.13851852;
+		double rr = sunDist(ut, 0.0, 0.0, 0, 0, igday, gmonth, gyear);
+		double sr = Math.toRadians(sunLong(ut, 0.0, 0.0, 0, 0, igday, gmonth, gyear));
+		sr += Math.toRadians(nutatLong(igday, gmonth, gyear) - 0.00569);
+		sr = sr + Math.PI - lint((sr + Math.PI) / tp) * tp;
+		by -= q;
+		bz -= q;
+		double p3 = 0.00004263;
+		double zh = (sr - mr) / lj;
+		double tc = x0 + zh;
+		double sh = (((bz - by) * (tc - xh - 1.0) / 2.0) + bz) / lj;
+		double s2 = sh * sh;
+		double z2 = zh * zh;
+		double ps = p3 / (rr * lj);
+		double z1 = (zh * z2 / (z2 + s2)) + x0;
+		double h0 = (hy + hz) / (2.0 * lj);
+		double rm = 0.272446 * h0;
+		double rn = 0.00465242 / (lj * rr);
+		double hd = h0 * 0.99834;
+		double ru = (hd - rn + ps) * 1.02;
+		double rp = (hd + rn + ps) * 1.02;
+		@SuppressWarnings("unused")
+		double pj = Math.abs(sh * zh / Math.sqrt(s2 + z2));
+		double r = rm + rp;
+		double dd = z1 - x0;
+		dd = dd * dd - ((z2 - (r * r)) * dd / zh);
+
+		if (dd < 0.0)
+			return -99.0;
+
+		double zd = Math.sqrt(dd);
+		@SuppressWarnings("unused")
+		double z6 = z1 - zd;
+
+		r = rm + ru;
+		dd = z1 - x0;
+		dd = dd * dd - ((z2 - (r * r)) * dd / zh);
+
+		if (dd < 0.0)
+			return -99.0;
+
+		zd = Math.sqrt(dd);
+		double z8 = z1 - zd;
+
+		if (z8 < 0.0)
+			z8 += 24.0;
+
+		return z8;
+	}
+
+	/**
+	 * Calculate end time of umbra phase of lunar eclipse (UT)
+	 * 
+	 * Original macro name: UTEndUmbraLunarEclipse
+	 */
+	public static double utEndUmbraLunarEclipse(double dy, int mn, int yr, int ds, int zc) {
+		double tp = 2.0 * Math.PI;
+
+		if (lunarEclipseOccurrence(ds, zc, dy, mn, yr) == LunarEclipseOccurrence.NO_LUNAR_ECLIPSE)
+			return -99.0;
+
+		double dj = fullMoon(ds, zc, dy, mn, yr);
+		double gday = julianDateDay(dj);
+		int gmonth = julianDateMonth(dj);
+		int gyear = julianDateYear(dj);
+		double igday = Math.floor(gday);
+		double xi = gday - igday;
+		double utfm = xi * 24.0;
+		double ut = utfm - 1.0;
+		double ly = Math.toRadians(sunLong(ut, 0.0, 0.0, 0, 0, igday, gmonth, gyear));
+		double my = Math.toRadians(moonLong(ut, 0.0, 0.0, 0, 0, igday, gmonth, gyear));
+		double by = Math.toRadians(moonLat(ut, 0.0, 0.0, 0, 0, igday, gmonth, gyear));
+		double hy = Math.toRadians(moonHP(ut, 0.0, 0.0, 0, 0, igday, gmonth, gyear));
+		ut = utfm + 1.0;
+		double sb = Math.toRadians(sunLong(ut, 0.0, 0.0, 0, 0, igday, gmonth, gyear)) - ly;
+		double mz = Math.toRadians(moonLong(ut, 0.0, 0.0, 0, 0, igday, gmonth, gyear));
+		double bz = Math.toRadians(moonLat(ut, 0.0, 0.0, 0, 0, igday, gmonth, gyear));
+		double hz = Math.toRadians(moonHP(ut, 0.0, 0.0, 0, 0, igday, gmonth, gyear));
+
+		if (sb < 0.0)
+			sb += tp;
+
+		double xh = utfm;
+		double x0 = xh + 1.0 - (2.0 * bz / (bz - by));
+		double dm = mz - my;
+
+		if (dm < 0.0)
+			dm += tp;
+
+		double lj = (dm - sb) / 2.0;
+		double q = 0.0;
+		double mr = my + (dm * (x0 - xh + 1.0) / 2.0);
+		ut = x0 - 0.13851852;
+		double rr = sunDist(ut, 0.0, 0.0, 0, 0, igday, gmonth, gyear);
+		double sr = Math.toRadians(sunLong(ut, 0.0, 0.0, 0, 0, igday, gmonth, gyear));
+		sr += Math.toRadians(nutatLong(igday, gmonth, gyear) - 0.00569);
+		sr = sr + Math.PI - lint((sr + Math.PI) / tp) * tp;
+		by -= q;
+		bz -= q;
+		double p3 = 0.00004263;
+		double zh = (sr - mr) / lj;
+		double tc = x0 + zh;
+		double sh = (((bz - by) * (tc - xh - 1.0) / 2.0) + bz) / lj;
+		double s2 = sh * sh;
+		double z2 = zh * zh;
+		double ps = p3 / (rr * lj);
+		double z1 = (zh * z2 / (z2 + s2)) + x0;
+		double h0 = (hy + hz) / (2.0 * lj);
+		double rm = 0.272446 * h0;
+		double rn = 0.00465242 / (lj * rr);
+		double hd = h0 * 0.99834;
+		double ru = (hd - rn + ps) * 1.02;
+		double rp = (hd + rn + ps) * 1.02;
+		@SuppressWarnings("unused")
+		double pj = Math.abs(sh * zh / Math.sqrt(s2 + z2));
+		double r = rm + rp;
+		double dd = z1 - x0;
+		dd = dd * dd - ((z2 - (r * r)) * dd / zh);
+
+		if (dd < 0.0)
+			return -99.0;
+
+		double zd = Math.sqrt(dd);
+		@SuppressWarnings("unused")
+		double z6 = z1 - zd;
+
+		r = rm + ru;
+		dd = z1 - x0;
+		dd = dd * dd - ((z2 - (r * r)) * dd / zh);
+
+		if (dd < 0.0)
+			return -99.0;
+
+		zd = Math.sqrt(dd);
+		double z9 = z1 + zd - lint((z1 + zd) / 24.0) * 24.0;
+
+		return z9;
+	}
+
+	/**
+	 * Calculate start time of total phase of lunar eclipse (UT)
+	 * 
+	 * Original macro name: UTStartTotalLunarEclipse
+	 */
+	public static double utStartTotalLunarEclipse(double dy, int mn, int yr, int ds, int zc) {
+		double tp = 2.0 * Math.PI;
+
+		if (lunarEclipseOccurrence(ds, zc, dy, mn, yr) == LunarEclipseOccurrence.NO_LUNAR_ECLIPSE)
+			return -99.0;
+
+		double dj = fullMoon(ds, zc, dy, mn, yr);
+		double gday = julianDateDay(dj);
+		int gmonth = julianDateMonth(dj);
+		int gyear = julianDateYear(dj);
+		double igday = Math.floor(gday);
+		double xi = gday - igday;
+		double utfm = xi * 24.0;
+		double ut = utfm - 1.0;
+		double ly = Math.toRadians(sunLong(ut, 0.0, 0.0, 0, 0, igday, gmonth, gyear));
+		double my = Math.toRadians(moonLong(ut, 0.0, 0.0, 0, 0, igday, gmonth, gyear));
+		double by = Math.toRadians(moonLat(ut, 0.0, 0.0, 0, 0, igday, gmonth, gyear));
+		double hy = Math.toRadians(moonHP(ut, 0.0, 0.0, 0, 0, igday, gmonth, gyear));
+		ut = utfm + 1.0;
+		double sb = Math.toRadians(sunLong(ut, 0.0, 0.0, 0, 0, igday, gmonth, gyear)) - ly;
+		double mz = Math.toRadians(moonLong(ut, 0.0, 0.0, 0, 0, igday, gmonth, gyear));
+		double bz = Math.toRadians(moonLat(ut, 0.0, 0.0, 0, 0, igday, gmonth, gyear));
+		double hz = Math.toRadians(moonHP(ut, 0.0, 0.0, 0, 0, igday, gmonth, gyear));
+
+		if (sb < 0.0)
+			sb += tp;
+
+		double xh = utfm;
+		double x0 = xh + 1.0 - (2.0 * bz / (bz - by));
+		double dm = mz - my;
+
+		if (dm < 0.0)
+			dm += tp;
+
+		double lj = (dm - sb) / 2.0;
+		double q = 0.0;
+		double mr = my + (dm * (x0 - xh + 1.0) / 2.0);
+		ut = x0 - 0.13851852;
+		double rr = sunDist(ut, 0.0, 0.0, 0, 0, igday, gmonth, gyear);
+		double sr = Math.toRadians(sunLong(ut, 0.0, 0.0, 0, 0, igday, gmonth, gyear));
+		sr += Math.toRadians(nutatLong(igday, gmonth, gyear) - 0.00569);
+		sr = sr + Math.PI - lint((sr + Math.PI) / tp) * tp;
+		by -= q;
+		bz -= q;
+		double p3 = 0.00004263;
+		double zh = (sr - mr) / lj;
+		double tc = x0 + zh;
+		double sh = (((bz - by) * (tc - xh - 1.0) / 2.0) + bz) / lj;
+		double s2 = sh * sh;
+		double z2 = zh * zh;
+		double ps = p3 / (rr * lj);
+		double z1 = (zh * z2 / (z2 + s2)) + x0;
+		double h0 = (hy + hz) / (2.0 * lj);
+		double rm = 0.272446 * h0;
+		double rn = 0.00465242 / (lj * rr);
+		double hd = h0 * 0.99834;
+		double ru = (hd - rn + ps) * 1.02;
+		double rp = (hd + rn + ps) * 1.02;
+		@SuppressWarnings("unused")
+		double pj = Math.abs(sh * zh / Math.sqrt(s2 + z2));
+		double r = rm + rp;
+		double dd = z1 - x0;
+		dd = dd * dd - ((z2 - (r * r)) * dd / zh);
+
+		if (dd < 0.0)
+			return -99.0;
+
+		double zd = Math.sqrt(dd);
+		@SuppressWarnings("unused")
+		double z6 = z1 - zd;
+
+		r = rm + ru;
+		dd = z1 - x0;
+		dd = dd * dd - ((z2 - (r * r)) * dd / zh);
+
+		if (dd < 0.0)
+			return -99.0;
+
+		zd = Math.sqrt(dd);
+		@SuppressWarnings("unused")
+		double z8 = z1 - zd;
+
+		r = ru - rm;
+		dd = z1 - x0;
+		dd = dd * dd - ((z2 - (r * r)) * dd / zh);
+
+		if (dd < 0.0)
+			return -99.0;
+
+		zd = Math.sqrt(dd);
+		double zcc = z1 - zd;
+
+		if (zcc < 0.0)
+			zcc = zc + 24.0;
+
+		return zcc;
+	}
+
+	/**
+	 * Calculate end time of total phase of lunar eclipse (UT)
+	 * 
+	 * Original macro name: UTEndTotalLunarEclipse
+	 */
+	public static double utEndTotalLunarEclipse(double dy, int mn, int yr, int ds, int zc) {
+		double tp = 2.0 * Math.PI;
+
+		if (lunarEclipseOccurrence(ds, zc, dy, mn, yr) == LunarEclipseOccurrence.NO_LUNAR_ECLIPSE)
+			return -99.0;
+
+		double dj = fullMoon(ds, zc, dy, mn, yr);
+		double gday = julianDateDay(dj);
+		int gmonth = julianDateMonth(dj);
+		int gyear = julianDateYear(dj);
+		double igday = Math.floor(gday);
+		double xi = gday - igday;
+		double utfm = xi * 24.0;
+		double ut = utfm - 1.0;
+		double ly = Math.toRadians(sunLong(ut, 0.0, 0.0, 0, 0, igday, gmonth, gyear));
+		double my = Math.toRadians(moonLong(ut, 0.0, 0.0, 0, 0, igday, gmonth, gyear));
+		double by = Math.toRadians(moonLat(ut, 0.0, 0.0, 0, 0, igday, gmonth, gyear));
+		double hy = Math.toRadians(moonHP(ut, 0.0, 0.0, 0, 0, igday, gmonth, gyear));
+		ut = utfm + 1.0;
+		double sb = Math.toRadians(sunLong(ut, 0.0, 0.0, 0, 0, igday, gmonth, gyear)) - ly;
+		double mz = Math.toRadians(moonLong(ut, 0.0, 0.0, 0, 0, igday, gmonth, gyear));
+		double bz = Math.toRadians(moonLat(ut, 0.0, 0.0, 0, 0, igday, gmonth, gyear));
+		double hz = Math.toRadians(moonHP(ut, 0.0, 0.0, 0, 0, igday, gmonth, gyear));
+
+		if (sb < 0.0)
+			sb += tp;
+
+		double xh = utfm;
+		double x0 = xh + 1.0 - (2.0 * bz / (bz - by));
+		double dm = mz - my;
+
+		if (dm < 0.0)
+			dm += tp;
+
+		double lj = (dm - sb) / 2.0;
+		double q = 0.0;
+		double mr = my + (dm * (x0 - xh + 1.0) / 2.0);
+		ut = x0 - 0.13851852;
+		double rr = sunDist(ut, 0.0, 0.0, 0, 0, igday, gmonth, gyear);
+		double sr = Math.toRadians(sunLong(ut, 0.0, 0.0, 0, 0, igday, gmonth, gyear));
+		sr += Math.toRadians(nutatLong(igday, gmonth, gyear) - 0.00569);
+		sr = sr + Math.PI - lint((sr + Math.PI) / tp) * tp;
+		by -= q;
+		bz -= q;
+		double p3 = 0.00004263;
+		double zh = (sr - mr) / lj;
+		double tc = x0 + zh;
+		double sh = (((bz - by) * (tc - xh - 1.0) / 2.0) + bz) / lj;
+		double s2 = sh * sh;
+		double z2 = zh * zh;
+		double ps = p3 / (rr * lj);
+		double z1 = (zh * z2 / (z2 + s2)) + x0;
+		double h0 = (hy + hz) / (2.0 * lj);
+		double rm = 0.272446 * h0;
+		double rn = 0.00465242 / (lj * rr);
+		double hd = h0 * 0.99834;
+		double ru = (hd - rn + ps) * 1.02;
+		double rp = (hd + rn + ps) * 1.02;
+		@SuppressWarnings("unused")
+		double pj = Math.abs(sh * zh / Math.sqrt(s2 + z2));
+		double r = rm + rp;
+		double dd = z1 - x0;
+		dd = dd * dd - ((z2 - (r * r)) * dd / zh);
+
+		if (dd < 0.0)
+			return -99.0;
+
+		double zd = Math.sqrt(dd);
+		@SuppressWarnings("unused")
+		double z6 = z1 - zd;
+
+		r = rm + ru;
+		dd = z1 - x0;
+		dd = dd * dd - ((z2 - (r * r)) * dd / zh);
+
+		if (dd < 0.0)
+			return -99.0;
+
+		zd = Math.sqrt(dd);
+		@SuppressWarnings("unused")
+		double z8 = z1 - zd;
+
+		r = ru - rm;
+		dd = z1 - x0;
+		dd = dd * dd - ((z2 - (r * r)) * dd / zh);
+
+		if (dd < 0.0)
+			return -99.0;
+
+		zd = Math.sqrt(dd);
+		double zb = z1 + zd - lint((z1 + zd) / 24.0) * 24.0;
+
+		return zb;
+	}
+
+	/**
+	 * Calculate magnitude of lunar eclipse.
+	 * 
+	 * Original macro name: MagLunarEclipse
+	 */
+	public static double magLunarEclipse(double dy, int mn, int yr, int ds, int zc) {
+		double tp = 2.0 * Math.PI;
+
+		if (lunarEclipseOccurrence(ds, zc, dy, mn, yr) == LunarEclipseOccurrence.NO_LUNAR_ECLIPSE)
+			return -99.0;
+
+		double dj = fullMoon(ds, zc, dy, mn, yr);
+		double gday = julianDateDay(dj);
+		int gmonth = julianDateMonth(dj);
+		int gyear = julianDateYear(dj);
+		double igday = Math.floor(gday);
+		double xi = gday - igday;
+		double utfm = xi * 24.0;
+		double ut = utfm - 1.0;
+		double ly = Math.toRadians(sunLong(ut, 0.0, 0.0, 0, 0, igday, gmonth, gyear));
+		double my = Math.toRadians(moonLong(ut, 0.0, 0.0, 0, 0, igday, gmonth, gyear));
+		double by = Math.toRadians(moonLat(ut, 0.0, 0.0, 0, 0, igday, gmonth, gyear));
+		double hy = Math.toRadians(moonHP(ut, 0.0, 0.0, 0, 0, igday, gmonth, gyear));
+		ut = utfm + 1.0;
+		double sb = Math.toRadians(sunLong(ut, 0.0, 0.0, 0, 0, igday, gmonth, gyear)) - ly;
+		double mz = Math.toRadians(moonLong(ut, 0.0, 0.0, 0, 0, igday, gmonth, gyear));
+		double bz = Math.toRadians(moonLat(ut, 0.0, 0.0, 0, 0, igday, gmonth, gyear));
+		double hz = Math.toRadians(moonHP(ut, 0.0, 0.0, 0, 0, igday, gmonth, gyear));
+
+		if (sb < 0.0)
+			sb += tp;
+
+		double xh = utfm;
+		double x0 = xh + 1.0 - (2.0 * bz / (bz - by));
+		double dm = mz - my;
+
+		if (dm < 0.0)
+			dm += tp;
+
+		double lj = (dm - sb) / 2.0;
+		double q = 0.0;
+		double mr = my + (dm * (x0 - xh + 1.0) / 2.0);
+		ut = x0 - 0.13851852;
+		double rr = sunDist(ut, 0.0, 0.0, 0, 0, igday, gmonth, gyear);
+		double sr = Math.toRadians(sunLong(ut, 0.0, 0.0, 0, 0, igday, gmonth, gyear));
+		sr += Math.toRadians(nutatLong(igday, gmonth, gyear) - 0.00569);
+		sr = sr + Math.PI - lint((sr + Math.PI) / tp) * tp;
+		by -= q;
+		bz -= q;
+		double p3 = 0.00004263;
+		double zh = (sr - mr) / lj;
+		double tc = x0 + zh;
+		double sh = (((bz - by) * (tc - xh - 1.0) / 2.0) + bz) / lj;
+		double s2 = sh * sh;
+		double z2 = zh * zh;
+		double ps = p3 / (rr * lj);
+		double z1 = (zh * z2 / (z2 + s2)) + x0;
+		double h0 = (hy + hz) / (2.0 * lj);
+		double rm = 0.272446 * h0;
+		double rn = 0.00465242 / (lj * rr);
+		double hd = h0 * 0.99834;
+		double ru = (hd - rn + ps) * 1.02;
+		double rp = (hd + rn + ps) * 1.02;
+		double pj = Math.abs(sh * zh / Math.sqrt(s2 + z2));
+		double r = rm + rp;
+		double dd = z1 - x0;
+		dd = dd * dd - ((z2 - (r * r)) * dd / zh);
+
+		if (dd < 0.0)
+			return -99.0;
+
+		double zd = Math.sqrt(dd);
+		@SuppressWarnings("unused")
+		double z6 = z1 - zd;
+
+		r = rm + ru;
+		dd = z1 - x0;
+		dd = dd * dd - ((z2 - (r * r)) * dd / zh);
+		double mg = (rm + rp - pj) / (2.0 * rm);
+
+		if (dd < 0.0)
+			return mg;
+
+		zd = Math.sqrt(dd);
+		@SuppressWarnings("unused")
+		double z8 = z1 - zd;
+
+		r = ru - rm;
+		dd = z1 - x0;
+		mg = (rm + ru - pj) / (2.0 * rm);
+
+		return mg;
 	}
 }

@@ -7,6 +7,7 @@ public class Main {
 		testComet();
 		testBinary();
 		testMoon();
+		testEclipses();
 	}
 
 	public static void testDateTime() {
@@ -84,5 +85,12 @@ public class Main {
 		testMoon.testTimesOfNewMoonAndFullMoon();
 		testMoon.testMoonDistAngDiamHorParallax();
 		testMoon.testMoonriseAndMoonset();
+	}
+
+	public static void testEclipses() {
+		TestEclipses testEclipses = new TestEclipses();
+
+		testEclipses.testLunarEclipseOccurrenceDetails();
+		testEclipses.testLunarEclipseCircumstances();
 	}
 }
