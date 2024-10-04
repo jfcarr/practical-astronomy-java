@@ -5,7 +5,7 @@ var searchData=
   ['datetime_2',['datetime',['../classastro_1_1practical_1_1models_1_1DateTime.html',1,'DateTime'],['../classastro_1_1practical_1_1models_1_1DateTime.html#a9312e3bbcc80dc8c52a89bf74eba3493',1,'astro.practical.models.DateTime.DateTime()']]],
   ['datetime_2ejava_3',['DateTime.java',['../DateTime_8java.html',1,'']]],
   ['day_4',['day',['../classastro_1_1practical_1_1models_1_1Date.html#a38296220261d975f2a629725a00fac3e',1,'astro.practical.models.Date.day'],['../classastro_1_1practical_1_1models_1_1DateTime.html#a4c11afc03fc3ee49bab660def6558f2a',1,'astro.practical.models.DateTime.day']]],
-  ['dd_5',['dd',['../classastro_1_1practical_1_1models_1_1LunarEclipseOccurrenceL6855.html#ac47fb7efa6b9610bdc78116f1f94ec42',1,'astro::practical::models::LunarEclipseOccurrenceL6855']]],
+  ['dd_5',['dd',['../classastro_1_1practical_1_1models_1_1EclipseOccurrenceL6855.html#ac47fb7efa6b9610bdc78116f1f94ec42',1,'astro::practical::models::EclipseOccurrenceL6855']]],
   ['decimaldegreesdegrees_6',['decimalDegreesDegrees',['../classastro_1_1practical_1_1lib_1_1PAMacros.html#ab78ff0f9ed8803437d341aba37ae72f5',1,'astro::practical::lib::PAMacros']]],
   ['decimaldegreesminutes_7',['decimalDegreesMinutes',['../classastro_1_1practical_1_1lib_1_1PAMacros.html#ab5082700e793463508aed2b4f4bccb5f',1,'astro::practical::lib::PAMacros']]],
   ['decimaldegreesseconds_8',['decimalDegreesSeconds',['../classastro_1_1practical_1_1lib_1_1PAMacros.html#ad11f9008e32f59f1d16c23ef098ab02d',1,'astro::practical::lib::PAMacros']]],

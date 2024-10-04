@@ -1,6 +1,6 @@
 package astro.practical.models;
 
-public class LunarEclipseOccurrenceL6855 {
+public class EclipseOccurrenceL6855 {
     public double f;
     public double dd;
     public double e1;
@@ -8,7 +8,7 @@ public class LunarEclipseOccurrenceL6855 {
     public double a;
     public double b;
 
-    public LunarEclipseOccurrenceL6855(double f, double dd, double e1, double b1, double a, double b) {
+    public EclipseOccurrenceL6855(double f, double dd, double e1, double b1, double a, double b) {
         this.f = f;
         this.dd = dd;
         this.e1 = e1;

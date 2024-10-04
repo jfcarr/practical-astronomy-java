@@ -11,7 +11,7 @@ var searchData=
   ['nmlocaldateyear_8',['nmLocalDateYear',['../classastro_1_1practical_1_1models_1_1TimesOfNewMoonAndFullMoon.html#abece7740bff99460c123183628264bc3',1,'astro::practical::models::TimesOfNewMoonAndFullMoon']]],
   ['nmlocaltimehour_9',['nmLocalTimeHour',['../classastro_1_1practical_1_1models_1_1TimesOfNewMoonAndFullMoon.html#a97c77252a37c6ff2db8dff37d165a0f9',1,'astro::practical::models::TimesOfNewMoonAndFullMoon']]],
   ['nmlocaltimemin_10',['nmLocalTimeMin',['../classastro_1_1practical_1_1models_1_1TimesOfNewMoonAndFullMoon.html#af58ba202feed9a557d2ce73a5160f547',1,'astro::practical::models::TimesOfNewMoonAndFullMoon']]],
-  ['no_5flunar_5feclipse_11',['NO_LUNAR_ECLIPSE',['../enumastro_1_1practical_1_1types_1_1LunarEclipseOccurrence.html#a3515928686eae1a8cc73a50d5586f709',1,'astro::practical::types::LunarEclipseOccurrence']]],
+  ['no_5feclipse_11',['NO_ECLIPSE',['../enumastro_1_1practical_1_1types_1_1EclipseOccurrence.html#af08e14766c60c963337e70cc2143d953',1,'astro::practical::types::EclipseOccurrence']]],
   ['node_12',['Node',['../classastro_1_1practical_1_1models_1_1data_1_1CometDataParabolic.html#a1c6aad109b74f2d327108aafc3e67c07',1,'astro::practical::models::data::CometDataParabolic']]],
   ['node_5flongitudeascendingnode_13',['node_LongitudeAscendingNode',['../classastro_1_1practical_1_1models_1_1data_1_1PlanetData.html#a931ac73757066655564d11e87be0993c',1,'astro::practical::models::data::PlanetData']]],
   ['node_5flongitudeofascendingnode_14',['node_LongitudeOfAscendingNode',['../classastro_1_1practical_1_1models_1_1data_1_1CometDataElliptical.html#aba5d24bfee4450543db51ea2992610a7',1,'astro::practical::models::data::CometDataElliptical']]],

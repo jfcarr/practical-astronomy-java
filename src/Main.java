@@ -92,5 +92,7 @@ public class Main {
 
 		testEclipses.testLunarEclipseOccurrenceDetails();
 		testEclipses.testLunarEclipseCircumstances();
+		testEclipses.testSolarEclipseOccurrence();
+		testEclipses.testSolarEclipseCircumstances();
 	}
 }

@@ -100,66 +100,96 @@ $(document).ready(function(){initNavTree('TestEclipses_8java_source.html',''); i
 <a href="TestEclipses_8java.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">import</span> astro.practical.lib.PAEclipses;</div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">import</span> astro.practical.models.LunarEclipseCircumstances;</div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">import</span> astro.practical.models.LunarEclipseOccurrenceDetails;</div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">import</span> astro.practical.test.TestLib;</div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">import</span> astro.practical.types.LunarEclipseOccurrence;</div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
-<div class="foldopen" id="foldopen00007" data-start="{" data-end="};">
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno"><a class="line" href="classTestEclipses.html">    7</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="classTestEclipses.html">TestEclipses</a> {</div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>    PAEclipses paEclipses;</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    TestLib testLib;</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
-<div class="foldopen" id="foldopen00011" data-start="{" data-end="}">
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="classTestEclipses.html#a90f7f4f7086f928281120b53f82346be">   11</a></span>    <span class="keyword">public</span> <a class="code hl_function" href="classTestEclipses.html#a90f7f4f7086f928281120b53f82346be">TestEclipses</a>() {</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>        paEclipses = <span class="keyword">new</span> PAEclipses();</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>        testLib = <span class="keyword">new</span> TestLib();</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    }</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">import</span> astro.practical.models.SolarEclipseCircumstances;</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">import</span> astro.practical.models.SolarEclipseOccurrence;</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">import</span> astro.practical.test.TestLib;</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">import</span> astro.practical.types.EclipseOccurrence;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="foldopen" id="foldopen00009" data-start="{" data-end="};">
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="classTestEclipses.html">    9</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="classTestEclipses.html">TestEclipses</a> {</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    PAEclipses paEclipses;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    TestLib testLib;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="foldopen" id="foldopen00013" data-start="{" data-end="}">
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="classTestEclipses.html#a90f7f4f7086f928281120b53f82346be">   13</a></span>    <span class="keyword">public</span> <a class="code hl_function" href="classTestEclipses.html#a90f7f4f7086f928281120b53f82346be">TestEclipses</a>() {</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        paEclipses = <span class="keyword">new</span> PAEclipses();</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        testLib = <span class="keyword">new</span> TestLib();</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    }</div>
 </div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
-<div class="foldopen" id="foldopen00016" data-start="{" data-end="}">
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="classTestEclipses.html#a3ec27c5be6100d8eaecf00343354e410">   16</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classTestEclipses.html#a3ec27c5be6100d8eaecf00343354e410">testLunarEclipseOccurrenceDetails</a>() {</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        LunarEclipseOccurrenceDetails lunarEclipseOccurrenceDetails = paEclipses.lunarEclipseOccurrenceDetails(1, 4,</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>                2015, <span class="keyword">false</span>, 10);</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        testLib.setTestName(<span class="stringliteral">&quot;Lunar Eclipse Occurrence Details&quot;</span>)</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>                .Assert(LunarEclipseOccurrence.LUNAR_ECLIPSE_CERTAIN, lunarEclipseOccurrenceDetails.status)</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>                .Assert(4, lunarEclipseOccurrenceDetails.eventDateDay)</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>                .Assert(4, lunarEclipseOccurrenceDetails.eventDateMonth)</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>                .Assert(2015, lunarEclipseOccurrenceDetails.eventDateYear);</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    }</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="foldopen" id="foldopen00018" data-start="{" data-end="}">
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="classTestEclipses.html#a3ec27c5be6100d8eaecf00343354e410">   18</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classTestEclipses.html#a3ec27c5be6100d8eaecf00343354e410">testLunarEclipseOccurrenceDetails</a>() {</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        LunarEclipseOccurrenceDetails lunarEclipseOccurrenceDetails = paEclipses.lunarEclipseOccurrenceDetails(1, 4,</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>                2015, <span class="keyword">false</span>, 10);</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        testLib.setTestName(<span class="stringliteral">&quot;Lunar Eclipse Occurrence Details&quot;</span>)</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>                .Assert(EclipseOccurrence.ECLIPSE_CERTAIN, lunarEclipseOccurrenceDetails.status)</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>                .Assert(4, lunarEclipseOccurrenceDetails.eventDateDay)</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>                .Assert(4, lunarEclipseOccurrenceDetails.eventDateMonth)</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>                .Assert(2015, lunarEclipseOccurrenceDetails.eventDateYear);</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    }</div>
 </div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
-<div class="foldopen" id="foldopen00027" data-start="{" data-end="}">
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="classTestEclipses.html#a648424891893974eaa3f7f5d79d96958">   27</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classTestEclipses.html#a648424891893974eaa3f7f5d79d96958">testLunarEclipseCircumstances</a>() {</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        LunarEclipseCircumstances lunarEclipseCircumstances = paEclipses.lunarEclipseCircumstances(1, 4, 2015, <span class="keyword">false</span>,</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>                10);</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        testLib.setTestName(<span class="stringliteral">&quot;Lunar Eclipse Circumstances&quot;</span>)</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>                .Assert(4, lunarEclipseCircumstances.lunarEclipseCertainDateDay)</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>                .Assert(4, lunarEclipseCircumstances.lunarEclipseCertainDateMonth)</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>                .Assert(2015, lunarEclipseCircumstances.lunarEclipseCertainDateYear)</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>                .Assert(9, lunarEclipseCircumstances.utStartPenPhaseHour)</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>                .Assert(0, lunarEclipseCircumstances.utStartPenPhaseMinutes)</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>                .Assert(10, lunarEclipseCircumstances.utStartUmbralPhaseHour)</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>                .Assert(16, lunarEclipseCircumstances.utStartUmbralPhaseMinutes)</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>                .Assert(11, lunarEclipseCircumstances.utStartTotalPhaseHour)</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>                .Assert(55, lunarEclipseCircumstances.utStartTotalPhaseMinutes)</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>                .Assert(12, lunarEclipseCircumstances.utMidEclipseHour)</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>                .Assert(1, lunarEclipseCircumstances.utMidEclipseMinutes)</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>                .Assert(12, lunarEclipseCircumstances.utEndTotalPhaseHour)</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>                .Assert(7, lunarEclipseCircumstances.utEndTotalPhaseMinutes)</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>                .Assert(13, lunarEclipseCircumstances.utEndUmbralPhaseHour)</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>                .Assert(46, lunarEclipseCircumstances.utEndUmbralPhaseMinutes)</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>                .Assert(15, lunarEclipseCircumstances.utEndPenPhaseHour)</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>                .Assert(1, lunarEclipseCircumstances.utEndPenPhaseMinutes)</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>                .Assert(1.01, lunarEclipseCircumstances.eclipseMagnitude);</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    }</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="foldopen" id="foldopen00029" data-start="{" data-end="}">
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="classTestEclipses.html#a648424891893974eaa3f7f5d79d96958">   29</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classTestEclipses.html#a648424891893974eaa3f7f5d79d96958">testLunarEclipseCircumstances</a>() {</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        LunarEclipseCircumstances lunarEclipseCircumstances = paEclipses.lunarEclipseCircumstances(1, 4, 2015, <span class="keyword">false</span>,</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>                10);</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        testLib.setTestName(<span class="stringliteral">&quot;Lunar Eclipse Circumstances&quot;</span>)</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>                .Assert(4, lunarEclipseCircumstances.lunarEclipseCertainDateDay)</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>                .Assert(4, lunarEclipseCircumstances.lunarEclipseCertainDateMonth)</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>                .Assert(2015, lunarEclipseCircumstances.lunarEclipseCertainDateYear)</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>                .Assert(9, lunarEclipseCircumstances.utStartPenPhaseHour)</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>                .Assert(0, lunarEclipseCircumstances.utStartPenPhaseMinutes)</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>                .Assert(10, lunarEclipseCircumstances.utStartUmbralPhaseHour)</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>                .Assert(16, lunarEclipseCircumstances.utStartUmbralPhaseMinutes)</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>                .Assert(11, lunarEclipseCircumstances.utStartTotalPhaseHour)</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>                .Assert(55, lunarEclipseCircumstances.utStartTotalPhaseMinutes)</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>                .Assert(12, lunarEclipseCircumstances.utMidEclipseHour)</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>                .Assert(1, lunarEclipseCircumstances.utMidEclipseMinutes)</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>                .Assert(12, lunarEclipseCircumstances.utEndTotalPhaseHour)</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>                .Assert(7, lunarEclipseCircumstances.utEndTotalPhaseMinutes)</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>                .Assert(13, lunarEclipseCircumstances.utEndUmbralPhaseHour)</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>                .Assert(46, lunarEclipseCircumstances.utEndUmbralPhaseMinutes)</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>                .Assert(15, lunarEclipseCircumstances.utEndPenPhaseHour)</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>                .Assert(1, lunarEclipseCircumstances.utEndPenPhaseMinutes)</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>                .Assert(1.01, lunarEclipseCircumstances.eclipseMagnitude);</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    }</div>
 </div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>}</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <span class="keywordtype">void</span> testSolarEclipseOccurrence() {</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        SolarEclipseOccurrence solarEclipseOccurrence = paEclipses.solarEclipseOccurrence(1, 4, 2015, <span class="keyword">false</span>, 0);</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        testLib.setTestName(<span class="stringliteral">&quot;Solar Eclipse Occurrence&quot;</span>)</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>                .Assert(EclipseOccurrence.ECLIPSE_CERTAIN, solarEclipseOccurrence.status)</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>                .Assert(20, solarEclipseOccurrence.eventDateDay)</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>                .Assert(3, solarEclipseOccurrence.eventDateMonth)</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>                .Assert(2015, solarEclipseOccurrence.eventDateYear);</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    }</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <span class="keywordtype">void</span> testSolarEclipseCircumstances() {</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        SolarEclipseCircumstances solarEclipseCircumstances = paEclipses.solarEclipseCircumstances(20, 3, 2015, <span class="keyword">false</span>,</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>                0, 0, 68.65);</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        testLib.setTestName(<span class="stringliteral">&quot;Solar Eclipse Circumstances&quot;</span>)</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>                .Assert(20, solarEclipseCircumstances.solarEclipseCertainDateDay)</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>                .Assert(3, solarEclipseCircumstances.solarEclipseCertainDateMonth)</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>                .Assert(2015, solarEclipseCircumstances.solarEclipseCertainDateYear)</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>                .Assert(8, solarEclipseCircumstances.utFirstContactHour)</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>                .Assert(55, solarEclipseCircumstances.utFirstContactMinutes)</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>                .Assert(9, solarEclipseCircumstances.utMidEclipseHour)</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>                .Assert(57, solarEclipseCircumstances.utMidEclipseMinutes)</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>                .Assert(10, solarEclipseCircumstances.utLastContactHour)</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>                .Assert(58, solarEclipseCircumstances.utLastContactMinutes)</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>                .Assert(1.016, solarEclipseCircumstances.eclipseMagnitude);</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    }</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>}</div>
 </div>
-<div class="ttc" id="aclassTestEclipses_html"><div class="ttname"><a href="classTestEclipses.html">TestEclipses</a></div><div class="ttdef"><b>Definition</b> <a href="TestEclipses_8java_source.html#l00007">TestEclipses.java:7</a></div></div>
-<div class="ttc" id="aclassTestEclipses_html_a3ec27c5be6100d8eaecf00343354e410"><div class="ttname"><a href="classTestEclipses.html#a3ec27c5be6100d8eaecf00343354e410">TestEclipses.testLunarEclipseOccurrenceDetails</a></div><div class="ttdeci">void testLunarEclipseOccurrenceDetails()</div><div class="ttdef"><b>Definition</b> <a href="TestEclipses_8java_source.html#l00016">TestEclipses.java:16</a></div></div>
-<div class="ttc" id="aclassTestEclipses_html_a648424891893974eaa3f7f5d79d96958"><div class="ttname"><a href="classTestEclipses.html#a648424891893974eaa3f7f5d79d96958">TestEclipses.testLunarEclipseCircumstances</a></div><div class="ttdeci">void testLunarEclipseCircumstances()</div><div class="ttdef"><b>Definition</b> <a href="TestEclipses_8java_source.html#l00027">TestEclipses.java:27</a></div></div>
-<div class="ttc" id="aclassTestEclipses_html_a90f7f4f7086f928281120b53f82346be"><div class="ttname"><a href="classTestEclipses.html#a90f7f4f7086f928281120b53f82346be">TestEclipses.TestEclipses</a></div><div class="ttdeci">TestEclipses()</div><div class="ttdef"><b>Definition</b> <a href="TestEclipses_8java_source.html#l00011">TestEclipses.java:11</a></div></div>
+<div class="ttc" id="aclassTestEclipses_html"><div class="ttname"><a href="classTestEclipses.html">TestEclipses</a></div><div class="ttdef"><b>Definition</b> <a href="TestEclipses_8java_source.html#l00009">TestEclipses.java:9</a></div></div>
+<div class="ttc" id="aclassTestEclipses_html_a3ec27c5be6100d8eaecf00343354e410"><div class="ttname"><a href="classTestEclipses.html#a3ec27c5be6100d8eaecf00343354e410">TestEclipses.testLunarEclipseOccurrenceDetails</a></div><div class="ttdeci">void testLunarEclipseOccurrenceDetails()</div><div class="ttdef"><b>Definition</b> <a href="TestEclipses_8java_source.html#l00018">TestEclipses.java:18</a></div></div>
+<div class="ttc" id="aclassTestEclipses_html_a648424891893974eaa3f7f5d79d96958"><div class="ttname"><a href="classTestEclipses.html#a648424891893974eaa3f7f5d79d96958">TestEclipses.testLunarEclipseCircumstances</a></div><div class="ttdeci">void testLunarEclipseCircumstances()</div><div class="ttdef"><b>Definition</b> <a href="TestEclipses_8java_source.html#l00029">TestEclipses.java:29</a></div></div>
+<div class="ttc" id="aclassTestEclipses_html_a90f7f4f7086f928281120b53f82346be"><div class="ttname"><a href="classTestEclipses.html#a90f7f4f7086f928281120b53f82346be">TestEclipses.TestEclipses</a></div><div class="ttdeci">TestEclipses()</div><div class="ttdef"><b>Definition</b> <a href="TestEclipses_8java_source.html#l00013">TestEclipses.java:13</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
