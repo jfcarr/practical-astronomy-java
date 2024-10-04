@@ -18,5 +18,10 @@ var searchData=
   ['longitudeminutes_15',['longitudeMinutes',['../classastro_1_1practical_1_1models_1_1CoordinatesLongLat.html#ac48dc8a6362bfb343783cf025b5294c5',1,'astro::practical::models::CoordinatesLongLat']]],
   ['longitudeseconds_16',['longitudeSeconds',['../classastro_1_1practical_1_1models_1_1CoordinatesLongLat.html#ab24bcd7c469aebd058463fd3546a0e00',1,'astro::practical::models::CoordinatesLongLat']]],
   ['longperi_17',['LongPeri',['../classastro_1_1practical_1_1models_1_1data_1_1BinaryData.html#a537106fc6e9831691745c9133aed21ee',1,'astro::practical::models::data::BinaryData']]],
-  ['lu_18',['lu',['../classastro_1_1practical_1_1models_1_1MoonAzL6700.html#afffd2d45a0bc7ebec828b02cfcdd7d11',1,'astro.practical.models.MoonAzL6700.lu'],['../classastro_1_1practical_1_1models_1_1MoonL6700.html#afffd2d45a0bc7ebec828b02cfcdd7d11',1,'astro.practical.models.MoonL6700.lu']]]
+  ['lu_18',['lu',['../classastro_1_1practical_1_1models_1_1MoonAzL6700.html#afffd2d45a0bc7ebec828b02cfcdd7d11',1,'astro.practical.models.MoonAzL6700.lu'],['../classastro_1_1practical_1_1models_1_1MoonL6700.html#afffd2d45a0bc7ebec828b02cfcdd7d11',1,'astro.practical.models.MoonL6700.lu']]],
+  ['lunar_5feclipse_5fcertain_19',['LUNAR_ECLIPSE_CERTAIN',['../enumastro_1_1practical_1_1types_1_1LunarEclipseOccurrence.html#a2c478f84402638e0795c723fc2356f32',1,'astro::practical::types::LunarEclipseOccurrence']]],
+  ['lunar_5feclipse_5fpossible_20',['LUNAR_ECLIPSE_POSSIBLE',['../enumastro_1_1practical_1_1types_1_1LunarEclipseOccurrence.html#a0205ff61f2b595a2e9ec7fb144283a63',1,'astro::practical::types::LunarEclipseOccurrence']]],
+  ['lunareclipsecertaindateday_21',['lunarEclipseCertainDateDay',['../classastro_1_1practical_1_1models_1_1LunarEclipseCircumstances.html#a0bb215aac5d60fb76cd90239878ab766',1,'astro::practical::models::LunarEclipseCircumstances']]],
+  ['lunareclipsecertaindatemonth_22',['lunarEclipseCertainDateMonth',['../classastro_1_1practical_1_1models_1_1LunarEclipseCircumstances.html#acd2cec987302d7ea60329e41f8eb54bc',1,'astro::practical::models::LunarEclipseCircumstances']]],
+  ['lunareclipsecertaindateyear_23',['lunarEclipseCertainDateYear',['../classastro_1_1practical_1_1models_1_1LunarEclipseCircumstances.html#abfa20d124874a477f547e0d0873f3759',1,'astro::practical::models::LunarEclipseCircumstances']]]
 ];
