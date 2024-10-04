@@ -2,7 +2,7 @@ package astro.practical.test;
 
 import astro.practical.lib.PAUtil;
 import astro.practical.types.WarningFlag;
-import astro.practical.types.LunarEclipseOccurrence;
+import astro.practical.types.EclipseOccurrence;
 import astro.practical.types.RiseSetStatus;
 import astro.practical.types.TwilightStatus;
 
@@ -73,7 +73,7 @@ public class TestLib {
 	}
 
 	/** Assert that two LunarEclipseOccurrence values are equal. */
-	public TestLib Assert(LunarEclipseOccurrence expectedValue, LunarEclipseOccurrence actualValue) {
+	public TestLib Assert(EclipseOccurrence expectedValue, EclipseOccurrence actualValue) {
 		LogMessage((expectedValue == actualValue), expectedValue, actualValue);
 
 		return this;

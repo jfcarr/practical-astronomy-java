@@ -2,13 +2,13 @@ package astro.practical.models;
 
 import astro.practical.types.EclipseOccurrence;
 
-public class LunarEclipseOccurrenceDetails {
+public class SolarEclipseOccurrence {
     public EclipseOccurrence status;
     public double eventDateDay;
     public int eventDateMonth;
     public int eventDateYear;
 
-    public LunarEclipseOccurrenceDetails(EclipseOccurrence status, double eventDateDay, int eventDateMonth,
+    public SolarEclipseOccurrence(EclipseOccurrence status, double eventDateDay, int eventDateMonth,
             int eventDateYear) {
         this.status = status;
         this.eventDateDay = eventDateDay;
