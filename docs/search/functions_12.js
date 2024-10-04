@@ -13,8 +13,14 @@ var searchData=
   ['utendtotallunareclipse_10',['utEndTotalLunarEclipse',['../classastro_1_1practical_1_1lib_1_1PAMacros.html#a46e6905c302e1808d37b9b5e3825137b',1,'astro::practical::lib::PAMacros']]],
   ['utendumbralunareclipse_11',['utEndUmbraLunarEclipse',['../classastro_1_1practical_1_1lib_1_1PAMacros.html#abfbae5eae780406720c9167b9ca9a7ff',1,'astro::practical::lib::PAMacros']]],
   ['utfirstcontactlunareclipse_12',['utFirstContactLunarEclipse',['../classastro_1_1practical_1_1lib_1_1PAMacros.html#aac23f475fa3acf502df612893ef7fc88',1,'astro::practical::lib::PAMacros']]],
-  ['utlastcontactlunareclipse_13',['utLastContactLunarEclipse',['../classastro_1_1practical_1_1lib_1_1PAMacros.html#a2ff75e66de9b252ba3cef1567df370b6',1,'astro::practical::lib::PAMacros']]],
-  ['utmaxlunareclipse_14',['utMaxLunarEclipse',['../classastro_1_1practical_1_1lib_1_1PAMacros.html#a28797df0f3d308e4c6edbf07c74d6ddf',1,'astro::practical::lib::PAMacros']]],
-  ['utstarttotallunareclipse_15',['utStartTotalLunarEclipse',['../classastro_1_1practical_1_1lib_1_1PAMacros.html#a1504fbd6238a534508eb5de6b954a840',1,'astro::practical::lib::PAMacros']]],
-  ['utstartumbralunareclipse_16',['utStartUmbraLunarEclipse',['../classastro_1_1practical_1_1lib_1_1PAMacros.html#a6667e79df7d62c5044f65b38ef46a9e4',1,'astro::practical::lib::PAMacros']]]
+  ['utfirstcontactsolareclipse_13',['utFirstContactSolarEclipse',['../classastro_1_1practical_1_1lib_1_1PAMacros.html#acd9898290f2821cc912483c1ae883c71',1,'astro::practical::lib::PAMacros']]],
+  ['utfirstcontactsolareclipsel7390_14',['utFirstContactSolarEclipseL7390',['../classastro_1_1practical_1_1lib_1_1PAMacros.html#aec4fa56a401e2a105e39893746dcff88',1,'astro::practical::lib::PAMacros']]],
+  ['utlastcontactlunareclipse_15',['utLastContactLunarEclipse',['../classastro_1_1practical_1_1lib_1_1PAMacros.html#a2ff75e66de9b252ba3cef1567df370b6',1,'astro::practical::lib::PAMacros']]],
+  ['utlastcontactsolareclipse_16',['utLastContactSolarEclipse',['../classastro_1_1practical_1_1lib_1_1PAMacros.html#a22f6da644bce88e68164afceca292b2a',1,'astro::practical::lib::PAMacros']]],
+  ['utlastcontactsolareclipsel7390_17',['utLastContactSolarEclipseL7390',['../classastro_1_1practical_1_1lib_1_1PAMacros.html#a7082ab73009d1c270d42fa20fc793b08',1,'astro::practical::lib::PAMacros']]],
+  ['utmaxlunareclipse_18',['utMaxLunarEclipse',['../classastro_1_1practical_1_1lib_1_1PAMacros.html#a28797df0f3d308e4c6edbf07c74d6ddf',1,'astro::practical::lib::PAMacros']]],
+  ['utmaxsolareclipse_19',['utMaxSolarEclipse',['../classastro_1_1practical_1_1lib_1_1PAMacros.html#a257b5b3b8221ff561fe915e5669a0242',1,'astro::practical::lib::PAMacros']]],
+  ['utmaxsolareclipsel7390_20',['utMaxSolarEclipseL7390',['../classastro_1_1practical_1_1lib_1_1PAMacros.html#a431a0ee0df27d9a7822ebfc951b7e057',1,'astro::practical::lib::PAMacros']]],
+  ['utstarttotallunareclipse_21',['utStartTotalLunarEclipse',['../classastro_1_1practical_1_1lib_1_1PAMacros.html#a1504fbd6238a534508eb5de6b954a840',1,'astro::practical::lib::PAMacros']]],
+  ['utstartumbralunareclipse_22',['utStartUmbraLunarEclipse',['../classastro_1_1practical_1_1lib_1_1PAMacros.html#a6667e79df7d62c5044f65b38ef46a9e4',1,'astro::practical::lib::PAMacros']]]
 ];
