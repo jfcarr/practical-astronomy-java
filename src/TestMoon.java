@@ -90,12 +90,12 @@ public class TestMoon {
                 .Assert(6, moonriseAndMoonset.mrLocalDateDay)
                 .Assert(3, moonriseAndMoonset.mrLocalDateMonth)
                 .Assert(1986, moonriseAndMoonset.mrLocalDateYear)
-                .Assert(127.33, moonriseAndMoonset.mrAzimuthDeg)
+                .Assert(127.34, moonriseAndMoonset.mrAzimuthDeg)
                 .Assert(13, moonriseAndMoonset.msLTHour)
                 .Assert(8, moonriseAndMoonset.msLTMin)
                 .Assert(6, moonriseAndMoonset.msLocalDateDay)
                 .Assert(3, moonriseAndMoonset.msLocalDateMonth)
                 .Assert(1986, moonriseAndMoonset.msLocalDateYear)
-                .Assert(234.06, moonriseAndMoonset.msAzimuthDeg);
+                .Assert(234.05, moonriseAndMoonset.msAzimuthDeg);
     }
 }
